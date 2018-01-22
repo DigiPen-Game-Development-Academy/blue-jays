@@ -1,0 +1,30 @@
+class PlayerController : ZilchComponent
+{
+    [Dependency] var Transform : Transform;
+    [Dependency] var RigidBody : RigidBody;
+    
+    [Property] var Speed : Real = 1;
+    [Property] var JumpHeight : Real = 1;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var vel = 0;
+        if(Zero.Keyboard.KeyIsDown(Keys.D)) vel += 1;
+        if(Zero.Keyboard.KeyIsDown(Keys.A)) vel -= 1;
+        this.RigidBody.Velocity = Real3(vel * this.Speed * 1,this.RigidBody.Velocity.Y,0);
+        if(Zero.Keyboard.KeyIsDown(Keys.W))
+        {
+            if(Math.Abs(this.RigidBody.Velocity.Y) <= 0.0001) this.RigidBody.ApplyForce(Real3(0,1,0) * this.JumpHeight);
+        }
+        if(Zero.Keyboard.KeyIsPressed(Keys.Space))
+        {
+            this.Space.CreateAtPosition(Archetype.BasicTurret, this.Transform.Translation + Real3(1,0,0));
+        }
+        Console.WriteLine(this.RigidBody.Velocity);
+    }
+}
