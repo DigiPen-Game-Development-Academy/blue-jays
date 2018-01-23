@@ -13,7 +13,7 @@ class PlayerController : ZilchComponent
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
-
+    
     function OnLogicUpdate(event : UpdateEvent)
     {
         var vel = 0;
@@ -29,7 +29,7 @@ class PlayerController : ZilchComponent
         }
         if(Zero.Keyboard.KeyIsPressed(Keys.Space))
         {
-            this.Space.CreateAtPosition(Archetype.BasicTurret, this.Transform.Translation);
+            this.Space.CreateAtPosition(Archetype.KnightOfSwords, this.Transform.Translation);
         }
     }
 }

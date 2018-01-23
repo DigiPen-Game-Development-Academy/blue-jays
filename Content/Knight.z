@@ -1,0 +1,25 @@
+// Author: Eli Miller
+// Purpose: AI for the "Knight" turrets.
+
+class Knight : ZilchComponent
+{
+    [Property] var Speed : Real = 1;
+    
+    var Timer : Real = 1;
+    var Random : Random = Random();
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.Timer -= event.Dt;
+        if(this.Timer <= 0)
+        {
+            this.Owner.RigidBody.Velocity = Real3(this.Random.Real2(-this.Speed, this.Speed), 0);
+            this.Timer = 1;
+        }
+    }
+}
