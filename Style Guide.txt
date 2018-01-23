@@ -1,0 +1,15 @@
+Max lines per .z file: 500
+Comments right before function declarations explaining the function (except for zero.connect functions)
+Comments on convoluted/unintuitive lines
+C-style brackets
+100 max characters per line
+
+Capitalization:
+Members: UpperCase
+Function-locals: camelCase
+Functions: UpperCase
+Classes + Scripts: UpperCase
+Archetypes: UpperCase
+Enum Names: UpperCase
+Enum Values: ALL_CAPS
+Other: UpperCase
