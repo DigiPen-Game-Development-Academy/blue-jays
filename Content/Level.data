@@ -515,22 +515,4 @@ Level =
 			Vec3 AngularVelocity = [0, 0, 0],
 		},
 	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a1c1664de0b4de6:KnightOfSwords",
-		LinkId = 
-		{
-			uint Id = 10,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [12.5411615, 6.18861103, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Turret",
-		},
-	},
 },
