@@ -1,8 +1,9 @@
 Max lines per .z file: 500
-Comments right before function declarations explaining the function (except for zero.connect functions)
+Comments right before function declarations explaining the function (except for zero.connect functions and initialize)
 Comments on convoluted/unintuitive lines
 C-style brackets
 100 max characters per line
+Add comments with author and purpose at beginning of files
 
 Capitalization:
 Members: UpperCase

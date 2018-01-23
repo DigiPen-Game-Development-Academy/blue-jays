@@ -1,3 +1,6 @@
+// Author: Eli Miller
+// Purpose: Takes keyboard input to control the player's movement and turret placement.
+
 class PlayerController : ZilchComponent
 {
     [Dependency] var Transform : Transform;
@@ -19,12 +22,14 @@ class PlayerController : ZilchComponent
         this.RigidBody.Velocity = Real3(vel * this.Speed * 1,this.RigidBody.Velocity.Y,0);
         if(Zero.Keyboard.KeyIsDown(Keys.W))
         {
-            if(Math.Abs(this.RigidBody.Velocity.Y) <= 0.0001) this.RigidBody.ApplyForce(Real3(0,1,0) * this.JumpHeight);
+            if(Math.Abs(this.RigidBody.Velocity.Y) <= 0.0001)
+            {
+                this.RigidBody.ApplyForce(Real3(0,1,0) * this.JumpHeight);
+            }
         }
         if(Zero.Keyboard.KeyIsPressed(Keys.Space))
         {
-            this.Space.CreateAtPosition(Archetype.BasicTurret, this.Transform.Translation + Real3(1,0,0));
+            this.Space.CreateAtPosition(Archetype.BasicTurret, this.Transform.Translation);
         }
-        Console.WriteLine(this.RigidBody.Velocity);
     }
 }
