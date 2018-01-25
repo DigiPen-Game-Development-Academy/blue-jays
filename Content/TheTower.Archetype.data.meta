@@ -2,8 +2,8 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "BasicTurent",
-		uint64 ResourceId = 5a11d402af729681,
+		string Name = "TheTower",
+		uint64 ResourceId = 5a8bf32146ffed37,
 		string LoaderType = "Cog",
 		uint Version = 0,
 		bool ShowInEditor = true,

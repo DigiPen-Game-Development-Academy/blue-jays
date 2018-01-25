@@ -3,33 +3,27 @@
 
 class Shoot : ZilchComponent
 {
-     [Property]
-    var TimeTillShoot :Real;
-    var TimeBetweenShots : Real ;
-    
+    [Property] var TimeBetweenShots : Real = 1;
+    var TimeTillShoot : Real;
     
     function Initialize(init : CogInitializer)
     {
+        this.TimeTillShoot = this.TimeBetweenShots;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
-
-
     function OnLogicUpdate(event : UpdateEvent)
     {
-       //couting down timer
+        //couting down timer
         this.TimeTillShoot -= event.Dt;
         //check if we can shoot
-        if (Zero.Keyboard.KeyIsPressed(Keys.J)&& this.TimeTillShoot <=0)
+        if (this.TimeTillShoot <= 0)
         {
             //Creae the bullet
             var arrow = this.Space.CreateAtPosition(Archetype.Arrow, this.Owner.Transform.WorldTranslation);
             //Launch the bullet
-            arrow.RigidBody;
-            
             arrow.RigidBody.Velocity = Real3(10,0,0);
             //Reset our time
-            
             this.TimeTillShoot = this.TimeBetweenShots;
         
         }
