@@ -8,9 +8,13 @@ Cog =
 	{
 		string Name = "Icon",
 	},
+	Archetyped = 
+	{
+		string Name = "5a8b9e9de3846054:TurretIcon",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [-16.5, 7.5, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -221,11 +225,79 @@ Cog =
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 				string FontName = "4e7bac697bec55c5:Verdana",
-				uint FontSize = 28,
-				string Text = "Sprite Text...",
+				uint FontSize = 56,
+				string Text = "Name",
 				TextAlign Align = Center,
-				float PixelsPerUnit = 64,
-				bool Smoothing = true,
+				float PixelsPerUnit = 128,
+				bool Smoothing = false,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 8,
+			},
+			Named = 
+			{
+				string Name = "Number",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-1.5, 1.5, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			SpriteText = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string FontName = "4e7bac697bec55c5:Verdana",
+				uint FontSize = 96,
+				string Text = "0",
+				TextAlign Align = Left,
+				float PixelsPerUnit = 128,
+				bool Smoothing = false,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 9,
+			},
+			Named = 
+			{
+				string Name = "Fate",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [1.5, 1.5, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			SpriteText = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string FontName = "4e7bac697bec55c5:Verdana",
+				uint FontSize = 72,
+				string Text = "0 Fate",
+				TextAlign Align = Right,
+				float PixelsPerUnit = 128,
+				bool Smoothing = false,
 			},
 		},
 	},
