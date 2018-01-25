@@ -1,0 +1,26 @@
+class TurretIcon : ZilchComponent
+{
+    var Turret : Turret;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.UpdateBox);
+    }
+    
+    function Init(turret : Turret)
+    {
+        this.Turret = turret;
+        this.Owner.FindChildByName("Text").SpriteText.Text = this.Turret.Name;
+        this.Owner.FindChildByName("Sprite").Sprite.SpriteSource = this.Turret.Sprite;
+    }
+    
+    function UpdateBox(event : UpdateEvent)
+    {
+        var playerTurret = this.Space.FindObjectByName("Player").PlayerController.CurrentTurret;
+        foreach(var wall in this.Owner.FindAllChildrenByName("BoxWall"))
+        {
+            
+            wall.Sprite.Visible = playerTurret == this.Turret;
+        }
+    }
+}

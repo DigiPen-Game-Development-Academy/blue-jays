@@ -4,7 +4,7 @@
 class Globals : ZilchComponent
 {
     var KnightOfSwords : Turret = Turret(TurretType.KNIGHT, Archetype.KnightOfSwords,
-        "The Knight of Swords", SpriteSource.Square);
+        "Knight of Swords", SpriteSource.Square);
     
     var TheTower : Turret = Turret(TurretType.STATIONARY, Archetype.BasicTurret,
         "The Tower", SpriteSource.Square);
