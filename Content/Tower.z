@@ -16,23 +16,25 @@ class Tower : ZilchComponent
         // probley need something here.
     }
 }
+
 // makes the arrow spawn
 class Arrow : ZilchComponent
 {
+    [Property]
+    var TimeTillShoot : Real;
+    var TimeBetweenShots : Real;
     var TheTower : Turret = Turret(TurretType.STATIONARY, Archetype.BasicTurret,
         "The Tower", SpriteSource.Square);
     function Intitalize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
-    [Property]
-    var TimeTillShoot :Real =0.0;
-    var TimeBetweenShots : Real=0.0;
+    
     function OnLogicUpdate(event : UpdateEvent)
     {
          this.TimeTillShoot -= event.Dt;
         //check if we can shoot
-        if (this.TimeTillShoot <=0)
+        if (Zero.Keyboard.KeyIsPressed(Keys.J)&& this.TimeTillShoot <=0)
         {
             //Creae the bullet
             var arrow = this.Space.CreateAtPosition(Archetype.Arrow, this.Owner.Transform.WorldTranslation);
@@ -47,6 +49,7 @@ class Arrow : ZilchComponent
         }
     }
 }
+
   
 class Shoot : ZilchComponent
 {
@@ -54,7 +57,8 @@ class Shoot : ZilchComponent
         "The Tower", SpriteSource.Square);
      [Property]
     var TimeTillShoot :Real;
-    var TimeBetweenShots : Real;
+    var TimeBetweenShots : Real ;
+    
     
     function Initialize(init : CogInitializer)
     {
@@ -65,7 +69,7 @@ class Shoot : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        //couting down timer
+       //couting down timer
         this.TimeTillShoot -= event.Dt;
         //check if we can shoot
         if (Zero.Keyboard.KeyIsPressed(Keys.J)&& this.TimeTillShoot <=0)
@@ -85,38 +89,7 @@ class Shoot : ZilchComponent
     }
 }
 
-class Timer : ZilchComponent
-{
-    [Property]
-    var Timer : Real = 0.0;
-    
-    
-    [Property]
-    var LevelToLoad:Level;
-    
-    function Initialize(init : CogInitializer)
-    {
-        
-        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-    }
 
-    function OnLogicUpdate(event : UpdateEvent)
-    {
-        if (this.Timer <= 20.0)
-        {
-            this.Timer += event.Dt;
-            this.Timer = Math.Round(this.Timer, -2);
-            this.Owner.SpriteText.Text = "Timer: `this.Timer`";
-            
-            }
-            else
-            {
-               this.Space.LoadLevel(this.LevelToLoad);
-            }
-        
-        
-    }
-}
 
 
 /*
