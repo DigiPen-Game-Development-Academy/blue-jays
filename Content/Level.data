@@ -227,7 +227,8 @@ Level =
 		PlayerController = 
 		{
 			float Speed = 10,
-			float JumpHeight = 700,
+			float Acceleration = 5,
+			float JumpHeight = 400,
 		},
 	},
 	Cog = 
@@ -299,9 +300,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [17.25, 0, 0],
-			Vec3 Scale = [1, 20, 1],
-			Quat Rotation = [0, 0, 0, 1],
+			Vec3 Translation = [0, 9.5, 0],
+			Vec3 Scale = [35.5, 1, 1],
+			Quat Rotation = [-0, 0, 1, -4.37113883e-08],
 		},
 		Sprite = 
 		{
@@ -356,9 +357,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 9.5, 0],
-			Vec3 Scale = [35.5, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
+			Vec3 Translation = [-17.25, 0, 0],
+			Vec3 Scale = [20, 1, 1],
+			Quat Rotation = [0, 0, 0.707106829, 0.707106829],
 		},
 		Sprite = 
 		{
@@ -413,9 +414,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-17.25, 0, 0],
-			Vec3 Scale = [1, 20, 1],
-			Quat Rotation = [0, 0, 0, 1],
+			Vec3 Translation = [17.25, 0, 0],
+			Vec3 Scale = [20, 1, 1],
+			Quat Rotation = [0, 0, 0.707106829, 0.707106829],
 		},
 		Sprite = 
 		{

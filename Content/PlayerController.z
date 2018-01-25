@@ -7,11 +7,16 @@ class PlayerController : ZilchComponent
     [Dependency] var RigidBody : RigidBody;
     
     [Property] var Speed : Real = 1;
+    [Property] var Acceleration : Real = 1;
     [Property] var JumpHeight : Real = 1;
+    
+    var JumpReady : Boolean = false;
     
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionPersisted, this.EnableJump);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.EnableJump);
     }
     
     function OnLogicUpdate(event : UpdateEvent)
@@ -19,10 +24,11 @@ class PlayerController : ZilchComponent
         var vel = 0;
         if(Zero.Keyboard.KeyIsDown(Keys.D)) vel += 1;
         if(Zero.Keyboard.KeyIsDown(Keys.A)) vel -= 1;
-        this.RigidBody.Velocity = Real3(vel * this.Speed * 1,this.RigidBody.Velocity.Y,0);
+        var target = Real3(vel * this.Speed * 1, this.RigidBody.Velocity.Y, 0);
+        this.RigidBody.Velocity = Math.Lerp(this.RigidBody.Velocity,target,this.Acceleration * event.Dt);
         if(Zero.Keyboard.KeyIsDown(Keys.W))
         {
-            if(Math.Abs(this.RigidBody.Velocity.Y) <= 0.0001)
+            if(this.JumpReady)
             {
                 this.RigidBody.ApplyForce(Real3(0,1,0) * this.JumpHeight);
             }
@@ -30,6 +36,15 @@ class PlayerController : ZilchComponent
         if(Zero.Keyboard.KeyIsPressed(Keys.Space))
         {
             this.Space.CreateAtPosition(Archetype.KnightOfSwords, this.Transform.Translation);
+        }
+        this.JumpReady = false;
+    }
+    
+    function EnableJump(event : CollisionEvent)
+    {
+        if(Math.Abs(event.OtherObject.Transform.EulerAngles.Z) < Math.Pi/4)
+        {
+            this.JumpReady = true;
         }
     }
 }
