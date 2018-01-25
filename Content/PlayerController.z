@@ -15,8 +15,7 @@ class PlayerController : ZilchComponent
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        Zero.Connect(this.Owner, Events.CollisionPersisted, this.EnableJump);
-        Zero.Connect(this.Owner, Events.CollisionStarted, this.EnableJump);
+        Zero.Connect(this.Owner, Events.AnyCollision, this.EnableJump);
     }
     
     function OnLogicUpdate(event : UpdateEvent)
@@ -40,9 +39,9 @@ class PlayerController : ZilchComponent
         this.JumpReady = false;
     }
     
-    function EnableJump(event : CollisionEvent)
+    function EnableJump(event : AnyCollisionEvent)
     {
-        if(Math.Abs(event.OtherObject.Transform.EulerAngles.Z) < Math.Pi/4)
+        if(Math.Abs(Math.ATan2(event.ContactNormal.X, event.ContactNormal.Y) + Math.Pi) < Math.Pi/4)
         {
             this.JumpReady = true;
         }
