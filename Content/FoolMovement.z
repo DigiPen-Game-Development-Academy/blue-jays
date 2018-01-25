@@ -1,0 +1,49 @@
+//Christian Yan
+//Fool Movement
+class FoolMovement : ZilchComponent
+{
+    [Property]
+        var PaceSpeed: Real = 5.0;
+    [Property]
+        var MaxMoveDistance: Real = 10.0;
+        var PaceDirection: Real3 = Real3(0.0, 1.0, 0.0);
+        var StartPosition: Real3 = Real3();
+
+
+
+    [Dependency]
+    var Transform: Transform = null;
+    function Initialize(init : CogInitializer)
+    {
+        // update the fool whenever this updates
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        // track where the fool started and how far he has moved
+        this.StartPosition = this.Owner.Transform.Translation;
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        // moving back and forth
+        this.PaceBackAndForth(event);
+    }
+
+    function PaceBackAndForth(event: UpdateEvent)
+    {
+          // how far he has moved from where he started
+    var displacement = this.Owner.Transform.Translation - this.StartPosition;
+    var distanceFromStart = Math.Length(displacement);
+
+    // check if fool has moved past max distance
+  if (distanceFromStart >= this.MaxMoveDistance)
+  {
+      // once he goes past max switch directions
+      this.PaceDirection = -displacement;
+  }
+
+    // make the PaceDirection only a direction via normlization
+    this.PaceDirection = Math.Normalize(this.PaceDirection);
+
+    // movement
+    this.Owner.Transform.Translation += this.PaceDirection * event.Dt * this.PaceSpeed;
+    }
+}

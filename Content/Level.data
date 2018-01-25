@@ -91,6 +91,9 @@ Level =
 			int HilightInterval = 10,
 			bool FollowEditorCamera = false,
 		},
+		DrawIcons = 
+		{
+		},
 	},
 	Cog = 
 	{
@@ -104,7 +107,11 @@ Level =
 		},
 		Transform = 
 		{
+<<<<<<< HEAD
 			Vec3 Translation = [-8.03178978, -1.76231849, 49.9990005],
+=======
+			Vec3 Translation = [0.646709204, -8.42412281, 50],
+>>>>>>> 41cf3d3a16bb9670f3eeeb8a9a1578fd97006648
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +123,11 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
+<<<<<<< HEAD
 			float Size = 22.1034164,
+=======
+			float Size = 24.428051,
+>>>>>>> 41cf3d3a16bb9670f3eeeb8a9a1578fd97006648
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +135,11 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
+<<<<<<< HEAD
 			Vec3 LookTarget = [-8.03178978, -1.76231849, -0.00099909876],
+=======
+			Vec3 LookTarget = [0.275037497, 0.561741292, 0],
+>>>>>>> 41cf3d3a16bb9670f3eeeb8a9a1578fd97006648
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -303,7 +318,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-11.5, 4.5, 0],
+			Vec3 Translation = [-12, 4.5, 0],
 			Vec3 Scale = [2, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -360,7 +375,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [11.5, 4.5, 0],
+			Vec3 Translation = [12, 4.5, 0],
 			Vec3 Scale = [2, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -417,7 +432,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4, 2.5, 0],
+			Vec3 Translation = [4.5, 2.5, 0],
 			Vec3 Scale = [2, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -474,7 +489,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4, 2.5, 0],
+			Vec3 Translation = [-4.5, 2.5, 0],
 			Vec3 Scale = [2, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -869,6 +884,7 @@ Level =
 		},
 		Named = 
 		{
+<<<<<<< HEAD
 			string Name = "Enmy",
 		},
 		Transform = 
@@ -928,6 +944,18 @@ Level =
 		{
 			Vec3 Translation = [-8.03178978, -4.98210812, -0.00099909876],
 			Vec3 Scale = [1, 1, 1],
+=======
+			string Name = "Fool",
+		},
+		Archetyped = 
+		{
+			string Name = "5a8bec975106c9a3:Fool",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.109869957, -8.71620941, 0],
+			Vec3 Scale = [1.5, 1.5, 1],
+>>>>>>> 41cf3d3a16bb9670f3eeeb8a9a1578fd97006648
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -936,7 +964,11 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
+<<<<<<< HEAD
 			Vec4 Color = [1, 1, 1, 1],
+=======
+			Vec4 Color = [1, 0, 0, 1],
+>>>>>>> 41cf3d3a16bb9670f3eeeb8a9a1578fd97006648
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -948,12 +980,23 @@ Level =
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
 		},
+<<<<<<< HEAD
 		Tower = 
 		{
 		},
 		RigidBody = 
 		{
 			bool Static = true,
+=======
+		FoolMovement = 
+		{
+			float PaceSpeed = 10,
+			float MaxMoveDistance = 20,
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+>>>>>>> 41cf3d3a16bb9670f3eeeb8a9a1578fd97006648
 			bool Asleep = false,
 			bool Kinematic = false,
 			bool RotationLocked = false,
@@ -973,6 +1016,7 @@ Level =
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
 		},
+<<<<<<< HEAD
 		Shoot = 
 		{
 			float TimeTillShoot = 5,
@@ -981,5 +1025,7 @@ Level =
 		{
 			float TimeTillShoot = 0,
 		},
+=======
+>>>>>>> 41cf3d3a16bb9670f3eeeb8a9a1578fd97006648
 	},
 },
