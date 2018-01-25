@@ -34,7 +34,7 @@ class PlayerController : ZilchComponent
         }
         if(Zero.Keyboard.KeyIsPressed(Keys.Space))
         {
-            this.Space.CreateAtPosition(Archetype.KnightOfSwords, this.Transform.Translation);
+            this.Space.CreateAtPosition(Archetype.BasicTurret, this.Transform.Translation);
         }
         this.JumpReady = false;
     }

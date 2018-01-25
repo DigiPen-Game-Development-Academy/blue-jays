@@ -1,0 +1,172 @@
+//Aouther: Hunter Fosler
+//Puprose: Shooting Logic, and Colison Logic For Tower.
+
+
+class Tower : ZilchComponent
+{
+    var TheTower : Turret = Turret(TurretType.STATIONARY, Archetype.BasicTurret,
+        "The Tower", SpriteSource.Square);
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        // probley need something here.
+    }
+}
+// makes the arrow spawn
+class Arrow : ZilchComponent
+{
+    var TheTower : Turret = Turret(TurretType.STATIONARY, Archetype.BasicTurret,
+        "The Tower", SpriteSource.Square);
+    function Intitalize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+    [Property]
+    var TimeTillShoot :Real =0.0;
+    var TimeBetweenShots : Real=0.0;
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+         this.TimeTillShoot -= event.Dt;
+        //check if we can shoot
+        if (this.TimeTillShoot <=0)
+        {
+            //Creae the bullet
+            var arrow = this.Space.CreateAtPosition(Archetype.Arrow, this.Owner.Transform.WorldTranslation);
+            //Launch the bullet
+            arrow.RigidBody;
+            
+            arrow.RigidBody.Velocity = Real3(10,0,0);
+            //Reset our time
+            
+            this.TimeTillShoot = this.TimeBetweenShots;
+        
+        }
+    }
+}
+  
+class Shoot : ZilchComponent
+{
+    var TheTower : Turret = Turret(TurretType.STATIONARY, Archetype.BasicTurret,
+        "The Tower", SpriteSource.Square);
+     [Property]
+    var TimeTillShoot :Real;
+    var TimeBetweenShots : Real;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        //couting down timer
+        this.TimeTillShoot -= event.Dt;
+        //check if we can shoot
+        if (Zero.Keyboard.KeyIsPressed(Keys.J)&& this.TimeTillShoot <=0)
+        {
+            //Creae the bullet
+            var arrow = this.Space.CreateAtPosition(Archetype.Arrow, this.Owner.Transform.WorldTranslation);
+            //Launch the bullet
+            arrow.RigidBody;
+            
+            arrow.RigidBody.Velocity = Real3(10,0,0);
+            //Reset our time
+            
+            this.TimeTillShoot = this.TimeBetweenShots;
+        
+        }
+        
+    }
+}
+
+class Timer : ZilchComponent
+{
+    [Property]
+    var Timer : Real = 0.0;
+    
+    
+    [Property]
+    var LevelToLoad:Level;
+    
+    function Initialize(init : CogInitializer)
+    {
+        
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if (this.Timer <= 20.0)
+        {
+            this.Timer += event.Dt;
+            this.Timer = Math.Round(this.Timer, -2);
+            this.Owner.SpriteText.Text = "Timer: `this.Timer`";
+            
+            }
+            else
+            {
+               this.Space.LoadLevel(this.LevelToLoad);
+            }
+        
+        
+    }
+}
+
+
+/*
+[Property] var Projectile : Archetype = Archetype.Find("Arrow");
+[Property] var FireSpeed : Real= 50.0;
+var TimeBetweenShots : Real;
+var TimeTillShoot : Real;
+var Rand : Real3; 
+class Shoot : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        //couting down timer
+        this.TimeTillShoot -= event.Dt;
+        //check if we can shoot
+        if (Zero.Keyboard.KeyIsPressed(Keys.J)&& this.TimeTillShoot <=0)
+        {
+            //Creae the bullet
+            var bullet = this.Space.CreateAtPosition(Archetype.Arrow, this.Owner.Transform.WorldTranslation);
+            //Launch the bullet
+            Arrow.RigidBody;
+            
+            Arrow.RigidBody.Velocity = Real3(10,0,0);
+            //Reset our time
+            
+            this.TimeTillShoot = this.TimeBetweenShots;
+        
+        }
+        
+    }
+}
+    class Bullet : ZilchComponent
+{
+    function Initialize (init : CogInitializer)
+    {
+        Zero.Connect(this.Owner,Events.CollisionStarted, this.OnCollisionStarted);
+    }
+
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        if (event.OtherObject.Name == "Player")return;
+        this.Owner.Destroy();
+        event.OtherObject.Destroy;
+    }
+}
+*/
