@@ -22,18 +22,18 @@ class PlayerController : ZilchComponent
         var vel = 0;
         if(Zero.Keyboard.KeyIsDown(Keys.D)) vel += 1;
         if(Zero.Keyboard.KeyIsDown(Keys.A)) vel -= 1;
-        // helps prevent sticking to walls
         var target = Real3(vel * this.Speed * 1, this.RigidBody.Velocity.Y, 0);
         this.RigidBody.Velocity = Math.Lerp(this.RigidBody.Velocity,target,this.Acceleration * event.Dt);
-        
-        if(Zero.Keyboard.KeyIsDown(Keys.W) && this.JumpReady)
+        if(Zero.Keyboard.KeyIsDown(Keys.W))
         {
-            this.RigidBody.ApplyForce(Real3(0,1,0) * this.JumpHeight);
+            if(this.JumpReady)
+            {
+                this.RigidBody.ApplyForce(Real3(0,1,0) * this.JumpHeight);
+            }
         }
         this.JumpReady = false;
     }
     
-    // Decide whether the player should be able to jump.
     function EnableJump(event : AnyCollisionEvent)
     {
         if(Math.Abs(Math.ATan2(event.ContactNormal.X, event.ContactNormal.Y) + Math.Pi) < Math.Pi/4)

@@ -9,8 +9,8 @@ class Turret
     var Archetype : Archetype = Archetype.DefaultArchetype;
     var Name : String = "Unnamed";
     var Sprite : SpriteSource = SpriteSource.DefaultSprite;
-    var Fate : Integer = 0;
-    constructor (t : TurretType, a : Archetype, n : String, s : SpriteSource, f : Integer)
+    var Fate : Real;
+    constructor (t : TurretType, a : Archetype, n : String, s : SpriteSource, f : Real)
     {
         this.Type = t;
         this.Archetype = a;
@@ -19,3 +19,8 @@ class Turret
         this.Fate = f;
     }
 }
+
+
+
+
+
