@@ -38,7 +38,7 @@ Cog =
 	},
 	Knight = 
 	{
-		float Speed = 5,
+		float Speed = 1,
 	},
 	RigidBody = 
 	{

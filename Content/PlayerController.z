@@ -11,18 +11,11 @@ class PlayerController : ZilchComponent
     [Property] var JumpHeight : Real = 1;
     
     var JumpReady : Boolean = false;
-    var TurretList : Array[Turret];
-    var TurretNum : Integer;
-    var CurrentTurret : Turret;
     
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        Zero.Connect(this.Space, Events.MouseScroll, this.OnScroll);
         Zero.Connect(this.Owner, Events.AnyCollision, this.EnableJump);
-        this.TurretList = this.Space.Globals.SwordsList;
-        this.CurrentTurret = this.TurretList[0];
-        this.LevelSettings.DrawIcons.Draw(this.TurretList);
     }
     
     function OnLogicUpdate(event : UpdateEvent)
@@ -30,84 +23,27 @@ class PlayerController : ZilchComponent
         var vel = 0;
         if(Zero.Keyboard.KeyIsDown(Keys.D)) vel += 1;
         if(Zero.Keyboard.KeyIsDown(Keys.A)) vel -= 1;
-        // helps prevent sticking to walls
         var target = Real3(vel * this.Speed * 1, this.RigidBody.Velocity.Y, 0);
         this.RigidBody.Velocity = Math.Lerp(this.RigidBody.Velocity,target,this.Acceleration * event.Dt);
-        
-        if(Zero.Keyboard.KeyIsDown(Keys.W) && this.JumpReady)
+        if(Zero.Keyboard.KeyIsDown(Keys.W))
         {
-            this.RigidBody.ApplyForce(Real3(0,1,0) * this.JumpHeight);
+            if(this.JumpReady)
+            {
+                this.RigidBody.ApplyForce(Real3(0,1,0) * this.JumpHeight);
+            }
         }
         if(Zero.Keyboard.KeyIsPressed(Keys.Space))
         {
-<<<<<<< HEAD
             this.Space.CreateAtPosition(Archetype.BasicTurret, this.Transform.Translation);
-=======
-            this.Space.CreateAtPosition(this.CurrentTurret.Archetype, this.Transform.Translation);
->>>>>>> 41cf3d3a16bb9670f3eeeb8a9a1578fd97006648
         }
         this.JumpReady = false;
-        
-        if(Zero.Keyboard.KeyIsPressed(Keys.One))
-        {
-            this.CurrentTurret = this.TurretList[0];
-            this.TurretNum = 0;
-        }
-        if(Zero.Keyboard.KeyIsPressed(Keys.Two))
-        {
-            this.CurrentTurret = this.TurretList[1];
-            this.TurretNum = 1;
-        }
-        if(Zero.Keyboard.KeyIsPressed(Keys.Three))
-        {
-            this.CurrentTurret = this.TurretList[2];
-            this.TurretNum = 2;
-        }
-        if(Zero.Keyboard.KeyIsPressed(Keys.Four))
-        {
-            this.CurrentTurret = this.TurretList[3];
-            this.TurretNum = 3;
-        }
-        if(Zero.Keyboard.KeyIsPressed(Keys.Five))
-        {
-            this.CurrentTurret = this.TurretList[4];
-            this.TurretNum = 4;
-        }
     }
     
-    // Decide whether the player should be able to jump.
     function EnableJump(event : AnyCollisionEvent)
     {
         if(Math.Abs(Math.ATan2(event.ContactNormal.X, event.ContactNormal.Y) + Math.Pi) < Math.Pi/4)
         {
             this.JumpReady = true;
         }
-    }
-    
-    function OnScroll(event : MouseEvent)
-    {
-        if(event.Scroll.Y > 0)
-        {
-            if(this.TurretNum == this.TurretList.Count - 1)
-            {
-                this.TurretNum = 0;
-            }
-            else
-            {
-                this.TurretNum += 1;
-            }
-        }
-        else
-        {
-            if(this.TurretNum == 0)
-            {
-                this.TurretNum = this.TurretList.Count - 1;
-            }
-            else
-            {
-                this.TurretNum -= 1;
-            }
-        }
-        this.CurrentTurret = this.TurretList[this.TurretNum];
     }
 }

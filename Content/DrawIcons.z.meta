@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "DrawIcons",
-		uint64 ResourceId = 5a8b9ef4e409edad,
-	},
-},
