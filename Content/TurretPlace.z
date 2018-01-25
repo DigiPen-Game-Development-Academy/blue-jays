@@ -1,0 +1,90 @@
+class TurretPlace : ZilchComponent
+{
+    [Dependency] var Transform : Transform;
+    
+    [Property] var FateRate : Real = 1;
+    [Property] var MaxFate : Real = 1;
+    
+    var TurretList : Array[Turret];
+    var TurretNum : Integer = 0;
+    var CurrentTurret : Turret;
+    var Fate : Real;
+    
+    function Initialize(init : CogInitializer)
+    {
+        this.Fate = this.MaxFate;
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Space, Events.MouseScroll, this.OnScroll);
+        this.TurretList = this.Space.Globals.SwordsList;
+        this.CurrentTurret = this.TurretList[0];
+        this.LevelSettings.DrawIcons.Draw(this.TurretList);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(Zero.Keyboard.KeyIsPressed(Keys.Space))
+        {
+            if(this.Fate >= this.CurrentTurret.Fate)
+            {
+                this.Space.CreateAtPosition(this.CurrentTurret.Archetype, this.Transform.Translation);
+                this.Fate -= this.CurrentTurret.Fate;
+            }
+        }
+        if(Zero.Keyboard.KeyIsPressed(Keys.One))
+        {
+            this.CurrentTurret = this.TurretList[0];
+            this.TurretNum = 0;
+        }
+        if(Zero.Keyboard.KeyIsPressed(Keys.Two))
+        {
+            this.CurrentTurret = this.TurretList[1];
+            this.TurretNum = 1;
+        }
+        if(Zero.Keyboard.KeyIsPressed(Keys.Three))
+        {
+            this.CurrentTurret = this.TurretList[2];
+            this.TurretNum = 2;
+        }
+        if(Zero.Keyboard.KeyIsPressed(Keys.Four))
+        {
+            this.CurrentTurret = this.TurretList[3];
+            this.TurretNum = 3;
+        }
+        if(Zero.Keyboard.KeyIsPressed(Keys.Five))
+        {
+            this.CurrentTurret = this.TurretList[4];
+            this.TurretNum = 4;
+        }
+        if(this.Fate < this.MaxFate)
+        {
+            this.Fate += event.Dt * this.FateRate;
+        }
+    }
+    
+    function OnScroll(event : MouseEvent)
+    {
+        if(event.Scroll.Y > 0)
+        {
+            if(this.TurretNum == this.TurretList.Count - 1)
+            {
+                this.TurretNum = 0;
+            }
+            else
+            {
+                this.TurretNum += 1;
+            }
+        }
+        else
+        {
+            if(this.TurretNum == 0)
+            {
+                this.TurretNum = this.TurretList.Count - 1;
+            }
+            else
+            {
+                this.TurretNum -= 1;
+            }
+        }
+        this.CurrentTurret = this.TurretList[this.TurretNum];
+    }
+}

@@ -233,6 +233,11 @@ Level =
 			float Acceleration = 5,
 			float JumpHeight = 325,
 		},
+		TurretPlace = 
+		{
+			float FateRate = 1,
+			float MaxFate = 100,
+		},
 		Contact = 
 		{
 		},
@@ -862,6 +867,86 @@ Level =
 			bool Inherit2DMode = true,
 			Vec3 Velocity = [0, 0, 0],
 			Vec3 AngularVelocity = [0, 0, 0],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 16,
+		},
+		Named = 
+		{
+			string Name = "FateBar",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [13, 8.5, 0],
+			Vec3 Scale = [10, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0, 0, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Area = 
+		{
+			Vec2 Size = [1, 1],
+			Location Origin = CenterRight,
+		},
+		FateBar = 
+		{
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 17,
+		},
+		Named = 
+		{
+			string Name = "FateText",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [13, 9, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "4e7bac697bec55c5:Verdana",
+			uint FontSize = 100,
+			string Text = "Fate: 100/100",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 128,
+			bool Smoothing = false,
+		},
+		FateText = 
+		{
 		},
 	},
 },

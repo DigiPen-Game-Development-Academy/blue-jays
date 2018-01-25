@@ -18,7 +18,7 @@ class TurretIcon : ZilchComponent
     
     function UpdateBox(event : UpdateEvent)
     {
-        var playerTurret = this.Space.FindObjectByName("Player").PlayerController.CurrentTurret;
+        var playerTurret = this.Space.FindObjectByName("Player").TurretPlace.CurrentTurret;
         foreach(var wall in this.Owner.FindAllChildrenByName("BoxWall"))
         {
             wall.Sprite.Visible = playerTurret == this.Turret;
