@@ -1,0 +1,19 @@
+// Author: Eli Miller
+// Purpose: Easily accessible global variables that stay the same between levels.
+
+class Globals : ZilchComponent
+{
+    var KnightOfSwords : Turret = Turret(TurretType.KNIGHT, Archetype.KnightOfSwords,
+        "The Knight of Swords", SpriteSource.Square);
+    
+    var TheTower : Turret = Turret(TurretType.STATIONARY, Archetype.BasicTurret,
+        "The Tower", SpriteSource.Square);
+    
+    var SwordsList : Array[Turret] = new Array[Turret]();
+    
+    function Initialize(init : CogInitializer)
+    {
+        this.SwordsList.Add(this.KnightOfSwords);
+        this.SwordsList.Add(this.TheTower);
+    }
+}

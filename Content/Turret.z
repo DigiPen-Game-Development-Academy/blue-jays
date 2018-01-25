@@ -1,5 +1,5 @@
 // Author: Eli Miller
-// Purpose: Class for turrets, and list to contain them.
+// Purpose: Class for turrets.
 
 enum TurretType {KNIGHT, STATIONARY, UNIQUE, BOSS, NULL}
 
@@ -16,12 +16,4 @@ class Turret
         this.Name = n;
         this.Sprite = s;
     }
-}
-
-class TurretList
-{
-    [Static] var KnightOfSwords : Turret = Turret(TurretType.KNIGHT,
-        Archetype.KnightOfSwords, "The Knight of Swords", SpriteSource.Square);
-    
-    [Static] var SwordsList : Array[Turret] = new Array[Turret]();
 }
