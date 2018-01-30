@@ -107,11 +107,7 @@ Level =
 		},
 		Transform = 
 		{
-<<<<<<< HEAD
 			Vec3 Translation = [0.623741388, 0.645939589, 50.0099983],
-=======
-			Vec3 Translation = [-4.05489969, 0.872561455, 50],
->>>>>>> 04484013937227fa23ab8f3d50e40996232f3e2c
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -123,11 +119,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-<<<<<<< HEAD
-			float Size = 24.4280453,
-=======
 			float Size = 32.974411,
->>>>>>> 04484013937227fa23ab8f3d50e40996232f3e2c
 		},
 		EditorCameraController = 
 		{
@@ -135,11 +127,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-<<<<<<< HEAD
-			Vec3 LookTarget = [0.623741388, 0.645939589, 0.00999958534],
-=======
 			Vec3 LookTarget = [-4.05489969, 0.872561455, -3.28099048e-07],
->>>>>>> 04484013937227fa23ab8f3d50e40996232f3e2c
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1117,7 +1105,6 @@ Level =
 		},
 		Transform = 
 		{
-<<<<<<< HEAD
 			Vec3 Translation = [0, 11.25, 0.100000001],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
@@ -1157,10 +1144,6 @@ Level =
 		{
 			Vec3 Translation = [0, 10.75, 0.00999999978],
 			Vec3 Scale = [20, 1, 1],
-=======
-			Vec3 Translation = [11.1864586, -8.5, 0],
-			Vec3 Scale = [10, 1, 1],
->>>>>>> 04484013937227fa23ab8f3d50e40996232f3e2c
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -1202,11 +1185,7 @@ Level =
 		},
 		Transform = 
 		{
-<<<<<<< HEAD
 			Vec3 Translation = [0, -10.25, 0.100000001],
-=======
-			Vec3 Translation = [11.322341, -8, 0],
->>>>>>> 04484013937227fa23ab8f3d50e40996232f3e2c
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1222,11 +1201,7 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "4e7bac697bec55c5:Verdana",
 			uint FontSize = 100,
-<<<<<<< HEAD
 			string Text = "Charge: 100%",
-=======
-			string Text = "Health: 1000/1000",
->>>>>>> 04484013937227fa23ab8f3d50e40996232f3e2c
 			TextAlign Align = Left,
 			float PixelsPerUnit = 128,
 			bool Smoothing = false,
