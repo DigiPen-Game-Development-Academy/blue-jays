@@ -4,6 +4,10 @@ Space =
 	{
 		uint Id = 1,
 	},
+	Named = 
+	{
+		string Name = "PauseGame",
+	},
 	Archetyped = 
 	{
 		string Name = "554cea0f94af6dc4:Space",

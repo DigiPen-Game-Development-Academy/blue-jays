@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, -9, 0],
+		Vec3 Translation = [0, -9.13588333, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -66,7 +66,11 @@ Cog =
 	},
 	HP = 
 	{
-		float MaxHealth = 100,
+		float MaxHealth = 1000,
+	},
+	DamageOnColide = 
+	{
+		float Damage = 10,
 	},
 	FoolAttack = 
 	{

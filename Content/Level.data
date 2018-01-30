@@ -107,7 +107,11 @@ Level =
 		},
 		Transform = 
 		{
+<<<<<<< HEAD
 			Vec3 Translation = [0.623741388, 0.645939589, 50.0099983],
+=======
+			Vec3 Translation = [-4.05489969, 0.872561455, 50],
+>>>>>>> 04484013937227fa23ab8f3d50e40996232f3e2c
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -119,7 +123,11 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
+<<<<<<< HEAD
 			float Size = 24.4280453,
+=======
+			float Size = 32.974411,
+>>>>>>> 04484013937227fa23ab8f3d50e40996232f3e2c
 		},
 		EditorCameraController = 
 		{
@@ -127,7 +135,11 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
+<<<<<<< HEAD
 			Vec3 LookTarget = [0.623741388, 0.645939589, 0.00999958534],
+=======
+			Vec3 LookTarget = [-4.05489969, 0.872561455, -3.28099048e-07],
+>>>>>>> 04484013937227fa23ab8f3d50e40996232f3e2c
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1105,6 +1117,7 @@ Level =
 		},
 		Transform = 
 		{
+<<<<<<< HEAD
 			Vec3 Translation = [0, 11.25, 0.100000001],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
@@ -1144,6 +1157,10 @@ Level =
 		{
 			Vec3 Translation = [0, 10.75, 0.00999999978],
 			Vec3 Scale = [20, 1, 1],
+=======
+			Vec3 Translation = [11.1864586, -8.5, 0],
+			Vec3 Scale = [10, 1, 1],
+>>>>>>> 04484013937227fa23ab8f3d50e40996232f3e2c
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -1185,7 +1202,11 @@ Level =
 		},
 		Transform = 
 		{
+<<<<<<< HEAD
 			Vec3 Translation = [0, -10.25, 0.100000001],
+=======
+			Vec3 Translation = [11.322341, -8, 0],
+>>>>>>> 04484013937227fa23ab8f3d50e40996232f3e2c
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1201,7 +1222,11 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "4e7bac697bec55c5:Verdana",
 			uint FontSize = 100,
+<<<<<<< HEAD
 			string Text = "Charge: 100%",
+=======
+			string Text = "Health: 1000/1000",
+>>>>>>> 04484013937227fa23ab8f3d50e40996232f3e2c
 			TextAlign Align = Left,
 			float PixelsPerUnit = 128,
 			bool Smoothing = false,
@@ -1253,22 +1278,79 @@ Level =
 		{
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "5a916c8c1094a85b:Fool",
 		LinkId = 
 		{
 			uint Id = 19,
 		},
-		Transform = 
-		{
-			Vec3 Translation = [0, -9, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
 		Named = 
 		{
 			string Name = "Boss",
+		},
+		Archetyped = 
+		{
+			string Name = "5a916c8c1094a85b:Fool",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -9.13588333, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a91640833bb1ccd:fool",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "5a916d3ed1b57688:Boss",
+			Vec3 Offset = [0, -0.100000001, 0],
+			Vec3 Size = [0.375, 0.800000012, 0.5],
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		FoolMovement = 
+		{
+			float PaceSpeed = 5,
+			float MaxMoveDistance = 10,
+			Vec3 PaceDirection = [1, 0, 0],
+		},
+		HP = 
+		{
+			float MaxHealth = 1000,
+		},
+		DamageOnColide = 
+		{
+			float Damage = 10,
 		},
 	},
 },
