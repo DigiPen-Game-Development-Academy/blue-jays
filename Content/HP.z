@@ -1,0 +1,21 @@
+class HP : ZilchComponent
+{
+    [Property] var MaxHealth : Real = 100;
+    
+    var Health : Real;
+    
+    function Initialize(init : CogInitializer)
+    {
+        this.Health = this.MaxHealth;
+    }
+    
+    // Damages the entity
+    function Damage(damage : Real)
+    {
+        this.Health -= damage;
+        if(this.Health <= 0)
+        {
+            this.Space.LoadLevel(Level.Level);
+        }
+    }
+}

@@ -45,12 +45,12 @@ class TurretPlace : ZilchComponent
             this.CurrentTurret = this.TurretList[2];
             this.TurretNum = 2;
         }
-        if(Zero.Keyboard.KeyIsPressed(Keys.Four))
+        if(Zero.Keyboard.KeyIsPressed(Keys.Four) && this.TurretNum >= 4)
         {
             this.CurrentTurret = this.TurretList[3];
             this.TurretNum = 3;
         }
-        if(Zero.Keyboard.KeyIsPressed(Keys.Five))
+        if(Zero.Keyboard.KeyIsPressed(Keys.Five) && this.TurretNum >= 5)
         {
             this.CurrentTurret = this.TurretList[4];
             this.TurretNum = 4;
