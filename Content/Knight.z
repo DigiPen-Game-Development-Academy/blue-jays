@@ -17,6 +17,7 @@ class Knight : ZilchComponent
     {
         this.Target = this.Space.FindObjectByName("Player");
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner,Events.CollisionStarted, this.OnCollide);
     }
 
     function OnLogicUpdate(event : UpdateEvent)
@@ -44,5 +45,13 @@ class Knight : ZilchComponent
             this.Directed = false;
         }
         this.RigidBody.Velocity = Real3(this.Vel, this.RigidBody.Velocity.Y, 0);
+    }
+    
+    function OnCollide(event : CollisionEvent)
+    {
+        if(event.OtherObject.HP != null)
+        {
+            this.Owner.Destroy();
+        }
     }
 }

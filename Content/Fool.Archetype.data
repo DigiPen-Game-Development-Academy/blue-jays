@@ -8,9 +8,13 @@ Cog =
 	{
 		string Name = "Fool",
 	},
+	Archetyped = 
+	{
+		string Name = "5a916c8c1094a85b:Fool",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [0, -9.5, 0],
+		Vec3 Translation = [0, -9.75, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -59,5 +63,9 @@ Cog =
 		float PaceSpeed = 5,
 		float MaxMoveDistance = 10,
 		Vec3 PaceDirection = [1, 0, 0],
+	},
+	HP = 
+	{
+		float MaxHealth = 100,
 	},
 },

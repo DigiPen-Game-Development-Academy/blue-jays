@@ -1,14 +1,22 @@
 class HealthBar : ZilchComponent
 {
+    [Property] var Target : CogPath;
     var HP : HP;
     function Initialize(init : CogInitializer)
     {
-        this.HP = this.Space.FindObjectByName("Player").HP;
+        this.HP = this.Target.Cog.HP;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.Owner.Area.Size = Real2((this.HP.Health/this.HP.MaxHealth),1);
+        if(this.HP == null)
+        {
+            this.Owner.Destroy();
+        }
+        else
+        {
+            this.Owner.Area.Size = Real2((this.HP.Health/this.HP.MaxHealth),1);
+        }
     }
 }

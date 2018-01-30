@@ -15,7 +15,14 @@ class HP : ZilchComponent
         this.Health -= damage;
         if(this.Health <= 0)
         {
-            this.Space.LoadLevel(Level.Level);
+            if(this.Owner.Name == "Player")
+            {
+                this.Space.LoadLevel(Level.Level);
+            }
+            else
+            {
+                this.Owner.Destroy();
+            }
         }
     }
 }
