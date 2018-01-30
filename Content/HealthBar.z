@@ -10,13 +10,6 @@ class HealthBar : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(this.HP == null)
-        {
-            this.Owner.Destroy();
-        }
-        else
-        {
-            this.Owner.Area.Size = Real2((this.HP.Health/this.HP.MaxHealth),1);
-        }
+        this.Owner.Area.Size = Real2((this.HP.Health/this.HP.MaxHealth),1);
     }
 }

@@ -1,0 +1,14 @@
+class ChargeBar : ZilchComponent
+{
+    var FA : FoolAttack;
+    function Initialize(init : CogInitializer)
+    {
+        this.FA = this.Space.FindObjectByName("Boss").FoolAttack;
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.Owner.Area.Size = Real2(this.FA.SpecialAttackCounter/this.FA.SpecialCooldown,1);
+    }
+}

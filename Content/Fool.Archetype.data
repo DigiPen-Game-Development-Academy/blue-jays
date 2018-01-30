@@ -51,7 +51,7 @@ Cog =
 		bool Static = false,
 		bool Asleep = false,
 		bool Kinematic = false,
-		bool RotationLocked = false,
+		bool RotationLocked = true,
 		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
@@ -71,5 +71,14 @@ Cog =
 	DamageOnColide = 
 	{
 		float Damage = 10,
+	},
+	FoolAttack = 
+	{
+		float BombSpeed = 30,
+		float BasicCooldown = 1,
+		float SpecialCooldown = 10,
+	},
+	Hierarchy = 
+	{
 	},
 },

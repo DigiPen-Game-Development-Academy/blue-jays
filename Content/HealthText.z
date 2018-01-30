@@ -10,13 +10,6 @@ class HealthText : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(this.HP == null)
-        {
-            this.Owner.Destroy();
-        }
-        else
-        {
-            this.Owner.SpriteText.Text = "Health: `Math.Floor(this.HP.Health)`/`this.HP.MaxHealth`";
-        }
+        this.Owner.SpriteText.Text = "Health: `Math.Floor(this.HP.Health)`/`this.HP.MaxHealth`";
     }
 }

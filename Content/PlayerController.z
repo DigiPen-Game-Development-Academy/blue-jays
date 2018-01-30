@@ -10,6 +10,7 @@ class PlayerController : ZilchComponent
     [Property] var JumpHeight : Real = 1;
     
     var JumpReady : Boolean = false;
+    var Stunned : Boolean = false;
     
     function Initialize(init : CogInitializer)
     {
@@ -25,6 +26,10 @@ class PlayerController : ZilchComponent
         if(Zero.Keyboard.KeyIsDown(Keys.D)) vel += 1;
         if(Zero.Keyboard.KeyIsDown(Keys.A)) vel -= 1;
         var target = Real3(vel * this.Speed * 1, this.RigidBody.Velocity.Y, 0);
+        if(this.Stunned)
+        {
+            target = Real3(-target.X,target.Y,0);
+        }
         this.RigidBody.Velocity = Math.Lerp(this.RigidBody.Velocity,target,this.Acceleration * event.Dt);
         if(Zero.Keyboard.KeyIsDown(Keys.W))
         {
