@@ -60,7 +60,7 @@ Cog =
 	},
 	DamageOnColide = 
 	{
-		float Damage = 10,
+		float Damage = 100,
 	},
 	DestroyOnCollide = 
 	{

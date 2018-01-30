@@ -60,7 +60,7 @@ Cog =
 	},
 	Shoot = 
 	{
-		float TimeBetweenShots = 1,
+		float TimeBetweenShots = 2,
 		Vec3 ShootVelocity = [10, 10, 0],
 	},
 },

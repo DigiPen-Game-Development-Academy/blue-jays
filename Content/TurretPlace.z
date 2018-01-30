@@ -22,42 +22,46 @@ class TurretPlace : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(Zero.Keyboard.KeyIsPressed(Keys.Space))
+        if (this.Space.TimeSpace.TimeScale == 1)
         {
-            if(this.Fate >= this.CurrentTurret.Fate)
+            if(Zero.Keyboard.KeyIsPressed(Keys.Space))
             {
-                this.Space.CreateAtPosition(this.CurrentTurret.Archetype, this.Transform.Translation);
-                this.Fate -= this.CurrentTurret.Fate;
+                if(this.Fate >= this.CurrentTurret.Fate)
+                {
+                    this.Space.CreateAtPosition(this.CurrentTurret.Archetype, this.Transform.Translation);
+                    this.Fate -= this.CurrentTurret.Fate;
+                }
             }
-        }
-        if(Zero.Keyboard.KeyIsPressed(Keys.One))
-        {
-            this.CurrentTurret = this.TurretList[0];
-            this.TurretNum = 0;
-        }
-        if(Zero.Keyboard.KeyIsPressed(Keys.Two))
-        {
-            this.CurrentTurret = this.TurretList[1];
-            this.TurretNum = 1;
-        }
-        if(Zero.Keyboard.KeyIsPressed(Keys.Three))
-        {
-            this.CurrentTurret = this.TurretList[2];
-            this.TurretNum = 2;
-        }
-        if(Zero.Keyboard.KeyIsPressed(Keys.Four) && this.TurretNum >= 4)
-        {
-            this.CurrentTurret = this.TurretList[3];
-            this.TurretNum = 3;
-        }
-        if(Zero.Keyboard.KeyIsPressed(Keys.Five) && this.TurretNum >= 5)
-        {
-            this.CurrentTurret = this.TurretList[4];
-            this.TurretNum = 4;
-        }
-        if(this.Fate < this.MaxFate)
-        {
-            this.Fate += event.Dt * this.FateRate;
+        
+            if(Zero.Keyboard.KeyIsPressed(Keys.One))
+            {
+                this.CurrentTurret = this.TurretList[0];
+                this.TurretNum = 0;
+            }
+            if(Zero.Keyboard.KeyIsPressed(Keys.Two))
+            {
+                this.CurrentTurret = this.TurretList[1];
+                this.TurretNum = 1;
+            }
+            if(Zero.Keyboard.KeyIsPressed(Keys.Three))
+            {
+                this.CurrentTurret = this.TurretList[2];
+                this.TurretNum = 2;
+            }
+            if(Zero.Keyboard.KeyIsPressed(Keys.Four) && this.TurretNum >= 4)
+            {
+                this.CurrentTurret = this.TurretList[3];
+                this.TurretNum = 3;
+            }
+            if(Zero.Keyboard.KeyIsPressed(Keys.Five) && this.TurretNum >= 5)
+            {
+                this.CurrentTurret = this.TurretList[4];
+                this.TurretNum = 4;
+            }
+            if(this.Fate < this.MaxFate)
+            {
+                this.Fate += event.Dt * this.FateRate;
+            }
         }
     }
     

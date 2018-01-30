@@ -38,7 +38,7 @@ Cog =
 	},
 	Knight = 
 	{
-		float Speed = 1,
+		float Speed = 5,
 	},
 	RigidBody = 
 	{
@@ -64,6 +64,6 @@ Cog =
 	},
 	DamageOnColide = 
 	{
-		float Damage = 10,
+		float Damage = 25,
 	},
 },

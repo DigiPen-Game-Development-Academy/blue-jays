@@ -38,9 +38,9 @@ class PlayerController : ZilchComponent
         {
             if (Zero.Keyboard.KeyIsPressed(Keys.P))
             {
-                this.Space.TimeSpace.TimeScale = 0.001;
+                //We need all the zeros!
+                this.Space.TimeSpace.TimeScale = 0.000000001;
                 
-                Console.WriteLine("blah");
             }
         }
         if (Zero.Keyboard.KeyIsPressed(Keys.U))
