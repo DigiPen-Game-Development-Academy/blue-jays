@@ -1,5 +1,6 @@
 class DestroyOnCollide : ZilchComponent
 {
+    [Property] var Replacement : Archetype = null;
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Owner,Events.CollisionStarted, this.OnCollide);
@@ -7,6 +8,10 @@ class DestroyOnCollide : ZilchComponent
     
     function OnCollide(event : CollisionEvent)
     {
+        if (this.Replacement != null)
+        {
+            this.Space.CreateAtPosition(this.Replacement, this.Owner.Transform.Translation);
+        }
         this.Owner.Destroy();
     }
 }

@@ -19,6 +19,10 @@ class HP : ZilchComponent
             {
                 this.Space.LoadLevel(Level.Level);
             }
+            else if(this.Owner.Name == "Boss")
+            {
+                this.Space.LoadLevel(Level.Level);
+            }
             else
             {
                 this.Owner.Destroy();

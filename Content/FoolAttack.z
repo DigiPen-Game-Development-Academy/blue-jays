@@ -1,0 +1,70 @@
+class FoolAttack : ZilchComponent
+{
+    [Property] var BombSpeed : Real = 10;
+    [Property] var BasicCooldown : Real = 1.5;
+    [Property] var SpecialCooldown : Real = 10;
+    [Property] var StunCooldown : Real = 16;
+    [Property] var StunDuration : Real = 2;
+    
+    var BasicAttackCounter : Real = 0;
+    var SpecialAttackCounter : Real = 0;
+    var StunCounter : Real = 0;
+    var StunReverseCounter : Real = 0;
+    var SpecialAttackLocations : Array[Real3] = Array[Real3]();
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        this.SpecialAttackLocations.Add(Real3(-12,5.25,0));
+        this.SpecialAttackLocations.Add(Real3(12,5.25,0));
+        this.SpecialAttackLocations.Add(Real3(-4.5,3.25,0));
+        this.SpecialAttackLocations.Add(Real3(4.5,3.25,0));
+        this.SpecialAttackLocations.Add(Real3(0,-1.25,0));
+        this.SpecialAttackLocations.Add(Real3(-8,-5.25,0));
+        this.SpecialAttackLocations.Add(Real3(8,-5.25,0));
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.BasicAttackCounter += event.Dt;
+        this.SpecialAttackCounter += event.Dt;
+        this.StunCounter += event.Dt;
+        this.StunReverseCounter += event.Dt;
+        if(this.BasicAttackCounter >= this.BasicCooldown)
+        {
+            this.Shoot();
+            this.BasicAttackCounter = 0;
+        }
+        if(this.SpecialAttackCounter >= this.SpecialCooldown)
+        {
+            this.SpecialAttack();
+            this.SpecialAttackCounter = 0;
+        }
+        if(this.StunCounter >= this.StunCooldown)
+        {
+            this.Space.FindObjectByName("Player").PlayerController.Stunned = true;
+            this.StunCounter = 0;
+            this.StunReverseCounter = 0;
+        }
+        if(this.StunReverseCounter >= this.StunDuration)
+        {
+            this.Space.FindObjectByName("Player").PlayerController.Stunned = false;
+        }
+    }
+    
+    function Shoot()
+    {
+        var bomb = this.Space.CreateAtPosition(Archetype.Bomb, this.Owner.Transform.Translation);
+        var vec = this.Space.FindObjectByName("Player").Transform.Translation - this.Owner.Transform.Translation;
+        vec = Math.Normalize(vec);
+        bomb.RigidBody.Velocity = vec * this.BombSpeed;
+    }
+    
+    function SpecialAttack()
+    {
+        foreach(var pos in this.SpecialAttackLocations)
+        {
+            this.Space.CreateAtPosition(Archetype.Explosion, pos);
+        }
+    }
+}

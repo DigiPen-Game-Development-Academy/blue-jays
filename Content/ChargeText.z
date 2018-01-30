@@ -1,0 +1,14 @@
+class ChargeText : ZilchComponent
+{
+    var FA : FoolAttack;
+    function Initialize(init : CogInitializer)
+    {
+        this.FA = this.Space.FindObjectByName("Boss").FoolAttack;
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.Owner.SpriteText.Text = "Charge: `Math.Floor(100*this.FA.SpecialAttackCounter/this.FA.SpecialCooldown)`%";
+    }
+}
