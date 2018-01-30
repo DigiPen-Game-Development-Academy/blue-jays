@@ -119,7 +119,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 29.836483,
+			float Size = 24.428051,
 		},
 		EditorCameraController = 
 		{
@@ -183,7 +183,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -1, 0],
+			Vec3 Translation = [0, -0.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -197,7 +197,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "5a916408338446d3:swords",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -212,8 +212,8 @@ Level =
 			bool Seamless = true,
 			string MaterialName = "5a1cee2c4a245b06:NoBounce",
 			string SerializedGroupName = "5a911294c1ded749:Player",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.5, 0.5, 0.5],
+			Vec3 Offset = [0, -0.100000001, 0],
+			Vec3 Size = [0.375, 0.800000012, 0.5],
 		},
 		RigidBody = 
 		{
@@ -231,7 +231,7 @@ Level =
 		{
 			float Speed = 10,
 			float Acceleration = 5,
-			float JumpHeight = 325,
+			float JumpHeight = 400,
 		},
 		TurretPlace = 
 		{
@@ -1182,13 +1182,13 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -9.75, 0],
+			Vec3 Translation = [0, -9, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
 		{
-			string Name = "Fool",
+			string Name = "Boss",
 		},
 	},
 },

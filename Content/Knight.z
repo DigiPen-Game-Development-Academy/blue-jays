@@ -10,46 +10,29 @@ class Knight : ZilchComponent
     //var Timer : Real = 1;
     //var Random : Random = Random();
     var Target : Cog;
-    var Directed : Boolean = false;
-    var Vel : Real = 1;
+    var Vel : Real = 0;
     
     function Initialize(init : CogInitializer)
     {
-        this.Target = this.Space.FindObjectByName("Player");
+        this.Target = this.Space.FindObjectByName("Boss");
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner,Events.CollisionStarted, this.OnCollide);
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        /*
-        this.Timer -= event.Dt;
-        if(this.Timer <= 0)
-        {
-            this.Owner.RigidBody.Velocity = Real3(this.Random.Real2(-this.Speed, this.Speed), 0);
-            this.Timer = 1;
-        }
-        */
-        if((this.RigidBody.Velocity.Y > 0.0001) && !this.Directed)
-        {
-            var mod = -1;
-            if (this.Owner.Transform.Translation.X < this.Target.Transform.Translation.X)
-            {
-                mod = 1;
-            }
-            this.Vel = this.Speed * mod;
-            this.Directed = true;
-        }
-        else if(this.Directed)
-        {
-            this.Directed = false;
-        }
         this.RigidBody.Velocity = Real3(this.Vel, this.RigidBody.Velocity.Y, 0);
     }
     
     function OnCollide(event : CollisionEvent)
     {
-        if(event.OtherObject.HP != null)
+        var mod = -1;
+        if (this.Owner.Transform.Translation.X < this.Target.Transform.Translation.X)
+        {
+            mod = 1;
+        }
+        this.Vel = this.Speed * mod;
+        if(event.OtherObject.Name == "Boss")
         {
             this.Owner.Destroy();
         }

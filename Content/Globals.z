@@ -10,7 +10,7 @@ class Globals : ZilchComponent
         "The Tower", SpriteSource.Square, 20);
         
     var TheChariot : Turret = Turret(TurretType.UNIQUE, Archetype.TheChariot,
-        "The Chariot", SpriteSource.Square, 25);
+        "The Chariot", SpriteSource.Find("chariot"), 25);
     
     var SwordsList : Array[Turret] = new Array[Turret]();
     
