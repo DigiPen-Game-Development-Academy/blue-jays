@@ -4,6 +4,7 @@
 class Shoot : ZilchComponent
 {
     [Property] var TimeBetweenShots : Real = 1;
+    [Property] var ShootSpeed : Real = 1;
     var TimeTillShoot : Real;
     
     function Initialize(init : CogInitializer)
@@ -19,7 +20,7 @@ class Shoot : ZilchComponent
         //check if we can shoot
         if (this.TimeTillShoot <= 0)
         {
-            var vel = this.Space.FindObjectByName("Boss").Transform.Translation - this.Owner.Transform.Translation;
+            var vel = (this.Space.FindObjectByName("Boss").Transform.Translation - this.Owner.Transform.Translation) * this.ShootSpeed;
             //Create the bullet
             var arrow = this.Space.CreateAtPosition(Archetype.Arrow, this.Owner.Transform.WorldTranslation + vel / 100);
             //Launch the bullet

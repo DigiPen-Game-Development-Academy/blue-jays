@@ -1,0 +1,23 @@
+enum Menu {MAIN, CHAR_SELECT}
+
+class MenuController : ZilchComponent
+{
+    [Property] var Menu : Menu;
+    function Initialize(init : CogInitializer)
+    {
+        if(this.Menu == Menu.MAIN)
+        {
+            this.MainMenu();
+        }
+    }
+    
+    function MainMenu()
+    {
+        this.Space.FindObjectByName("StartGame").Button.ToCall = this.LoadFool;
+    }
+    
+    function LoadFool()
+    {
+        this.Space.LoadLevel(Level.Find("Fool"));
+    }
+}

@@ -50,6 +50,8 @@ class FoolAttack : ZilchComponent
         {
             this.Space.FindObjectByName("Player").PlayerController.Stunned = false;
         }
+        var emit = (this.SpecialAttackCounter/this.SpecialCooldown) * (this.SpecialAttackCounter/this.SpecialCooldown) * 1000;
+        this.Owner.FindChildByName("Sparks").SphericalParticleEmitter.EmitRate = emit;
     }
     
     function Shoot()

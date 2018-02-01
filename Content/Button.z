@@ -1,0 +1,39 @@
+class Button : ZilchComponent
+{
+    [Dependency] var Area : Area;
+    [Dependency] var Transform : Transform;
+    
+    [Property] var ScaleFactor : Real = 1;
+    
+    var ToCall : delegate() = null;
+    var Selected : Boolean = false;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.MouseUpdate, this.OnMouseUpdate);
+    }
+
+    function OnMouseUpdate(event : ViewportMouseEvent)
+    {
+        var mousepos = event.ToWorldZPlane(0);
+        var max : Real2 = this.Transform.Translation.XY + this.Area.Size;
+        var min : Real2 = this.Transform.Translation.XY - this.Area.Size;
+        if(mousepos.X < max.X && mousepos.Y < max.Y && mousepos.X > min.X && mousepos.Y > min.Y)
+        {
+            if(!this.Selected)
+            {
+                this.Selected = true;
+                this.Transform.Scale *= this.ScaleFactor;
+            }
+            if(event.IsButtonDown(MouseButtons.Left) && this.ToCall != null)
+            {
+                this.ToCall();
+            }
+        }
+        else if(this.Selected)
+        {
+            this.Selected = false;
+            this.Transform.Scale /= this.ScaleFactor;
+        }
+    }
+}

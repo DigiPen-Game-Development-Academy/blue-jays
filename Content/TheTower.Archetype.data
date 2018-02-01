@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -55,11 +55,12 @@ Cog =
 		bool Seamless = true,
 		string MaterialName = "5a8bf27c76932016:VeryHeavy",
 		string SerializedGroupName = "5a08f02201e5b825:StationaryTurret",
-		Vec3 Offset = [0, 0, 0],
-		Vec3 Size = [0.5, 0.5, 0.5],
+		Vec3 Offset = [0, -0.100000001, 0],
+		Vec3 Size = [0.400000006, 1.5, 0.5],
 	},
 	Shoot = 
 	{
 		float TimeBetweenShots = 2,
+		float ShootSpeed = 3,
 	},
 },
