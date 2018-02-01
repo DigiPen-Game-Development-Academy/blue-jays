@@ -2,8 +2,8 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "EditorCam",
-		uint64 ResourceId = 5a08fb536b6be728,
+		string Name = "Death",
+		uint64 ResourceId = 5a08ed61eb246184,
 		string LoaderType = "Cog",
 		uint Version = 0,
 		bool ShowInEditor = true,

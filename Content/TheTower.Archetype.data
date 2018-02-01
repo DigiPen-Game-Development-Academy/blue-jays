@@ -54,13 +54,12 @@ Cog =
 		bool SendsMessages = true,
 		bool Seamless = true,
 		string MaterialName = "5a8bf27c76932016:VeryHeavy",
-		string SerializedGroupName = "5a916d23d1622478:Turret",
+		string SerializedGroupName = "5a08f02201e5b825:StationaryTurret",
 		Vec3 Offset = [0, 0, 0],
 		Vec3 Size = [0.5, 0.5, 0.5],
 	},
 	Shoot = 
 	{
 		float TimeBetweenShots = 2,
-		Vec3 ShootVelocity = [10, 10, 0],
 	},
 },
