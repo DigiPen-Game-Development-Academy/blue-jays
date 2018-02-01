@@ -1,14 +1,32 @@
 class ChargeBar : ZilchComponent
 {
-    var FA : FoolAttack;
+    var Boss : Cog;
+    var Type : Boss;
     function Initialize(init : CogInitializer)
     {
-        this.FA = this.Space.FindObjectByName("Boss").FoolAttack;
+        this.Boss = this.Space.FindObjectByName("Boss");
+        if(this.Boss.FoolAttack != null)
+        {
+            this.Type = Boss.FOOL;
+        }
+        else
+        {
+            this.Type = Boss.DEATH;
+        }
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.Owner.Area.Size = Real2(this.FA.SpecialAttackCounter/this.FA.SpecialCooldown,1);
+        var charge : Real = 0;
+        if(this.Type == Boss.FOOL)
+        {
+            charge = this.Boss.FoolAttack.SpecialAttackCounter/this.Boss.FoolAttack.SpecialCooldown;
+        }
+        else
+        {
+            charge = 1;
+        }
+        this.Owner.Area.Size = Real2(charge,1);
     }
 }

@@ -6,15 +6,11 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Boss",
-	},
-	Archetyped = 
-	{
-		string Name = "5a916c8c1094a85b:Fool",
+		string Name = "Player",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, -9.25, 0],
+		Vec3 Translation = [0, -0.5, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -28,7 +24,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5a91640833bb1ccd:fool",
+		string SpriteSource = "5a916408338446d3:swords",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -41,8 +37,8 @@ Cog =
 		bool Ghost = false,
 		bool SendsMessages = true,
 		bool Seamless = true,
-		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-		string SerializedGroupName = "5a916d3ed1b57688:Boss",
+		string MaterialName = "5a1cee2c4a245b06:NoBounce",
+		string SerializedGroupName = "5a911294c1ded749:Player",
 		Vec3 Offset = [0, -0.100000001, 0],
 		Vec3 Size = [0.375, 0.800000012, 0.5],
 	},
@@ -58,29 +54,22 @@ Cog =
 		Vec3 Velocity = [0, 0, 0],
 		Vec3 AngularVelocity = [0, 0, 0],
 	},
-	FoolMovement = 
+	PlayerController = 
 	{
-		float PaceSpeed = 5,
-		float MaxMoveDistance = 10,
-		Vec3 PaceDirection = [1, 0, 0],
+		float Speed = 10,
+		float Acceleration = 5,
+		float JumpHeight = 400,
+	},
+	TurretPlace = 
+	{
+		float FateRate = 2,
+		float MaxFate = 100,
+	},
+	Contact = 
+	{
 	},
 	HP = 
 	{
-		float MaxHealth = 500,
-	},
-	DamageOnColide = 
-	{
-		float Damage = 10,
-	},
-	FoolAttack = 
-	{
-		float BombSpeed = 30,
-		float BasicCooldown = 2,
-		float SpecialCooldown = 15,
-		float StunCooldown = 16,
-		float StunDuration = 2,
-	},
-	Hierarchy = 
-	{
+		float MaxHealth = 100,
 	},
 },

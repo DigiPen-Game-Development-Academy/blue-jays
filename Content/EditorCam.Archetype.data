@@ -1,0 +1,44 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "EditorCamera",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [10, -10.75, 50.5],
+		Vec3 Scale = [1, 1, 1],
+		Quat Rotation = [-0, -1.09278471e-08, 0, 1],
+	},
+	Camera = 
+	{
+		ProjectionMode ProjectionMode = Orthographic,
+		Facing Facing = NegativeZ,
+		CameraTransparentSort TransparentSort = ZDepth,
+		float FieldOfView = 45,
+		float NearPlane = 0.5,
+		float FarPlane = 500,
+		float Size = 29.8364697,
+	},
+	EditorCameraController = 
+	{
+		ControlMode ControlMode = ZPlane,
+		float LookDistance = 50,
+		float VerticalAngle = 0,
+		float HorizontalAngle = 0,
+		Vec3 LookTarget = [10, -10.75, 0.5],
+		float MoveSensitivity = 1,
+	},
+	EditorRenderer = 
+	{
+		Vec4 ClearColor = [0.155000001, 0.155000001, 0.155000001, 1],
+		bool DrawNonVisible = true,
+		bool DrawDebugObjects = true,
+		bool DrawEditorIcons = true,
+		bool Wireframe = false,
+	},
+},

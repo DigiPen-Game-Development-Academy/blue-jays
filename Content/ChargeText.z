@@ -1,14 +1,34 @@
+enum Boss {FOOL, DEATH}
+
 class ChargeText : ZilchComponent
 {
-    var FA : FoolAttack;
+    var Boss : Cog;
+    var Type : Boss;
     function Initialize(init : CogInitializer)
     {
-        this.FA = this.Space.FindObjectByName("Boss").FoolAttack;
+        this.Boss = this.Space.FindObjectByName("Boss");
+        if(this.Boss.FoolAttack != null)
+        {
+            this.Type = Boss.FOOL;
+        }
+        else
+        {
+            this.Type = Boss.DEATH;
+        }
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.Owner.SpriteText.Text = "Charge: `Math.Floor(100*this.FA.SpecialAttackCounter/this.FA.SpecialCooldown)`%";
+        var charge : Real = 0;
+        if(this.Type == Boss.FOOL)
+        {
+            charge = Math.Floor(100*this.Boss.FoolAttack.SpecialAttackCounter/this.Boss.FoolAttack.SpecialCooldown);
+        }
+        else
+        {
+            charge = 1;
+        }
+        this.Owner.SpriteText.Text = "Charge: `charge`%";
     }
 }
