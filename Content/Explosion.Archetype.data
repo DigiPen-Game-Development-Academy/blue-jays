@@ -22,6 +22,10 @@ Cog =
 	{
 		float Timer = 5,
 	},
+	PlaySoundOnSpawn = 
+	{
+		string Sound = "5a08118bf47cb1a5:Explosion6",
+	},
 	Hierarchy = 
 	{
 		Cog = 
