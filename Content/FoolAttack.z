@@ -61,7 +61,7 @@ class FoolAttack : ZilchComponent
         vec = Math.Normalize(vec);
         bomb.RigidBody.Velocity = vec * this.BombSpeed;
     }
-    
+
     function SpecialAttack()
     {
         foreach(var pos in this.SpecialAttackLocations)
@@ -70,3 +70,4 @@ class FoolAttack : ZilchComponent
         }
     }
 }
+ 

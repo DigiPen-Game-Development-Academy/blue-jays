@@ -66,4 +66,8 @@ Cog =
 	{
 		float Damage = 150,
 	},
+	ChariotCoolDown = 
+	{
+		float ChaiotCoolDown = 5,
+	},
 },

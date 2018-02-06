@@ -11,6 +11,7 @@ class PlayerController : ZilchComponent
     
     var JumpReady : Boolean = false;
     var Stunned : Boolean = false;
+    var ChariotCoolDown : Boolean = false;
     
     function Initialize(init : CogInitializer)
     {

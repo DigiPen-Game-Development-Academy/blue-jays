@@ -1,0 +1,41 @@
+class ChariotCoolDown : ZilchComponent
+{
+    [Property] var ChaiotCoolDown : Real =0;
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.ChaiotCoolDown += event.Dt;
+        if (this.ChaiotCoolDown <= this.ChaiotCoolDown)
+        {
+           this.Space.FindObjectByName("Turret").PlayerController.Stunned;
+        }
+    }
+}
+    /* function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.BasicAttackCounter += event.Dt;
+        this.SpecialAttackCounter += event.Dt;
+        this.StunCounter += event.Dt;
+        this.StunReverseCounter += event.Dt;
+        if(this.BasicAttackCounter >= this.BasicCooldown)
+        {
+            this.Shoot();
+            this.BasicAttackCounter = 0;
+        }
+        if(this.SpecialAttackCounter >= this.SpecialCooldown)
+        {
+            this.SpecialAttack();
+            this.SpecialAttackCounter = 0;
+        }
+        if(this.StunCounter >= this.StunCooldown)
+        {
+            this.Space.FindObjectByName("Player").PlayerController.Stunned = true;
+            this.StunCounter = 0;
+            this.StunReverseCounter = 0;
+        }
+        if(this.StunReverseCounter >= this.StunDuration)
+        {
+            this.Space.FindObjectByName("Player").PlayerController.Stunned = false;
+        }
+}
+*/
