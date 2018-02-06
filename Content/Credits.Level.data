@@ -93,7 +93,7 @@ Level =
 		},
 		MenuController = 
 		{
-			Enum Menu = MAIN,
+			Enum Menu = CREDITS,
 		},
 	},
 	Cog = 
@@ -149,7 +149,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 40],
+			Vec3 Translation = [0, 0, 30],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -160,14 +160,14 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5a026539282b70ed:StartButton",
+		string Name = "5a02651333da9589:MenuButton",
 		LinkId = 
 		{
 			uint Id = 4,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 1, 0],
+			Vec3 Translation = [-8.5, -6.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -178,26 +178,21 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "StartGame",
+			string Name = "Menu",
 		},
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5a02652e364fba53:CreditsButton",
+		string Name = "5a0264e63d507015:Credits",
 		LinkId = 
 		{
 			uint Id = 5,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -2, 0],
+			Vec3 Translation = [0, 2, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
-		},
-		Area = 
-		{
-			Vec2 Size = [5, 1],
-			Location Origin = Center,
 		},
 		Named = 
 		{
