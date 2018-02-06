@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "ChariotCoolDown",
+		uint64 ResourceId = 5a019c64584b082f,
+	},
+},
