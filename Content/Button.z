@@ -11,6 +11,7 @@ class Button : ZilchComponent
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.MouseUpdate, this.OnMouseUpdate);
+        Zero.Connect(this.Space, Events.LeftMouseDown, this.OnLeftClick);
     }
 
     function OnMouseUpdate(event : ViewportMouseEvent)
@@ -25,15 +26,19 @@ class Button : ZilchComponent
                 this.Selected = true;
                 this.Transform.Scale *= this.ScaleFactor;
             }
-            if(event.IsButtonDown(MouseButtons.Left) && this.ToCall != null)
-            {
-                this.ToCall();
-            }
         }
         else if(this.Selected)
         {
             this.Selected = false;
             this.Transform.Scale /= this.ScaleFactor;
+        }
+    }
+    
+    function OnLeftClick(event : ViewportMouseEvent)
+    {
+        if(this.Selected && (this.ToCall != null))
+        {
+            this.ToCall();
         }
     }
 }

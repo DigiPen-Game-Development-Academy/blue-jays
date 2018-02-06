@@ -94,6 +94,10 @@ Level =
 		DrawIcons = 
 		{
 		},
+		MenuController = 
+		{
+			Enum Menu = LEVEL,
+		},
 	},
 	Cog = 
 	{
@@ -107,7 +111,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 3.51032257, 50],
+			Vec3 Translation = [0.0173053741, 0, 48.9990005],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -127,7 +131,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0, 3.51032257, 0],
+			Vec3 LookTarget = [0.0173053741, 0, -1.00100005],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -227,6 +231,108 @@ Level =
 		Named = 
 		{
 			string Name = "Boss",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a026066ef8b66c0:PauseOverlay",
+		LinkId = 
+		{
+			uint Id = 8,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PauseOverlay",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 9,
+		},
+		Named = 
+		{
+			string Name = "OptionsOverlay",
+		},
+		Archetyped = 
+		{
+			string Name = "5a019c947ab2b196:OptionsOverlay",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		OverlayToggle = 
+		{
+			Vec2 ButtonSize = [5, 1],
+		},
+		Hierarchy = 
+		{
+			ArchetypeInstance = 
+			{
+				string Name = "5a019c7b87e28758:ExitOptionsButton",
+				LinkId = 
+				{
+					uint Id = 10,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Area = 
+				{
+					Vec2 Size = [5, 1],
+					Location Origin = Center,
+				},
+				Named = 
+				{
+					string Name = "Back",
+				},
+				EditorFlags = 
+				{
+					bool Locked = false,
+					bool Hidden = true,
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "5a019b8a397689ba:MuteButton",
+				LinkId = 
+				{
+					uint Id = 11,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 3, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Area = 
+				{
+					Vec2 Size = [5, 1],
+					Location Origin = Center,
+				},
+				Named = 
+				{
+					string Name = "Mute",
+				},
+				EditorFlags = 
+				{
+					bool Locked = false,
+					bool Hidden = true,
+				},
+			},
 		},
 	},
 },
