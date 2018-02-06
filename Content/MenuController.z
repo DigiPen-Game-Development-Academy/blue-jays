@@ -1,4 +1,4 @@
-enum Menu {MAIN, CHAR_SELECT}
+enum Menu {MAIN, CREDITS}
 
 class MenuController : ZilchComponent
 {
@@ -9,15 +9,35 @@ class MenuController : ZilchComponent
         {
             this.MainMenu();
         }
+        else if(this.Menu == Menu.CREDITS)
+        {
+            this.Credits();
+        }
     }
     
     function MainMenu()
     {
         this.Space.FindObjectByName("StartGame").Button.ToCall = this.LoadFool;
+        this.Space.FindObjectByName("Credits").Button.ToCall = this.LoadCredits;
+    }
+    
+    function Credits()
+    {
+        this.Space.FindObjectByName("Menu").Button.ToCall = this.LoadMenu;
     }
     
     function LoadFool()
     {
         this.Space.LoadLevel(Level.Find("Fool"));
+    }
+    
+    function LoadCredits()
+    {
+        this.Space.LoadLevel(Level.Find("Credits"));
+    }
+    
+    function LoadMenu()
+    {
+        this.Space.LoadLevel(Level.Find("MainMenu"));
     }
 }

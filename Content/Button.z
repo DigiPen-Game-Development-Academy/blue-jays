@@ -16,8 +16,8 @@ class Button : ZilchComponent
     function OnMouseUpdate(event : ViewportMouseEvent)
     {
         var mousepos = event.ToWorldZPlane(0);
-        var max : Real2 = this.Transform.Translation.XY + this.Area.Size;
-        var min : Real2 = this.Transform.Translation.XY - this.Area.Size;
+        var max : Real2 = this.Transform.Translation.XY + this.Area.Size / 2;
+        var min : Real2 = this.Transform.Translation.XY - this.Area.Size / 2;
         if(mousepos.X < max.X && mousepos.Y < max.Y && mousepos.X > min.X && mousepos.Y > min.Y)
         {
             if(!this.Selected)
