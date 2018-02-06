@@ -14,11 +14,23 @@ class OverlayToggle : ZilchComponent
             if(!button.FindChildByName("SpriteText").SpriteText.Visible)
             {
                 button.Area.Size = this.ButtonSize;
+                if(button.Name == "Slider")
+                {
+                    button.FindChildByName("Bar").Sprite.Visible = true;
+                    button.FindChildByName("Circle").Sprite.Visible = true;
+                    button.FindChildByName("Inner").Sprite.Visible = true;
+                }
                 button.FindChildByName("SpriteText").SpriteText.Visible = true;
             }
             else
             {
                 button.Area.Size = Real2(0,0);
+                if(button.Name == "Slider")
+                {
+                    button.FindChildByName("Bar").Sprite.Visible = false;
+                    button.FindChildByName("Circle").Sprite.Visible = false;
+                    button.FindChildByName("Inner").Sprite.Visible = false;
+                }
                 button.FindChildByName("SpriteText").SpriteText.Visible = false;
             }
         }

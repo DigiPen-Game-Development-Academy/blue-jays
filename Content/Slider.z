@@ -1,0 +1,34 @@
+class Slider : ZilchComponent
+{
+    [Property] var MaxMove : Real;
+    
+    var OrigPos : Real3;
+    
+    function Initialize(init : CogInitializer)
+    {
+        this.OrigPos = this.Owner.Transform.WorldTranslation;
+        Zero.Connect(this.Space, Events.MouseMove, this.OnDrag);
+    }
+
+    function OnDrag(event : ViewportMouseEvent)
+    {
+        if(event.IsButtonDown(MouseButtons.Left) && Math.Distance(this.Owner.Transform.WorldTranslation, event.ToWorldZPlane(1)) < this.Owner.Transform.Scale.X + 0.25)
+        {
+            var newx = event.ToWorldZPlane(0).X;
+            if(newx > this.OrigPos.X + this.MaxMove)
+            {
+                newx = this.OrigPos.X + this.MaxMove;
+            }
+            if(newx < this.OrigPos.X - this.MaxMove)
+            {
+                newx = this.OrigPos.X - this.MaxMove;
+            }
+            this.Owner.Transform.WorldTranslation = Real3(newx,this.OrigPos.YZ);
+        }
+    }
+    
+    function GetPercentage() : Real
+    {
+        return (0.8 - (this.Owner.Transform.Translation.X - this.OrigPos.X) / (this.MaxMove)) / 2;
+    }
+}

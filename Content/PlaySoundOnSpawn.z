@@ -3,6 +3,6 @@ class PlaySoundOnSpawn : ZilchComponent
     [Property] var Sound : SoundCue;
     function Initialize(init : CogInitializer)
     {
-        if(!this.Space.Globals.Muted) this.Space.SoundSpace.PlayCue(this.Sound);
+        this.Space.SoundSpace.PlayCue(this.Sound);
     }
 }

@@ -3,8 +3,6 @@
 
 class Globals : ZilchComponent
 {
-    var Muted : Boolean = false;
-    
     var KnightOfSwords : Turret = Turret(TurretType.KNIGHT, Archetype.KnightOfSwords,
         "Knight of Swords", SpriteSource.Find("knight_swords"), 10);
     

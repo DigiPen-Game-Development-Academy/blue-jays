@@ -36,13 +36,14 @@ class MenuController : ZilchComponent
         this.Space.FindObjectByName("Resume").Button.ToCall = this.Resume;
         this.Space.FindObjectByName("Options").Button.ToCall = this.ToggleOptions;
         this.Space.FindObjectByName("Back").Button.ToCall = this.ToggleOptions;
-        this.Space.FindObjectByName("Mute").Button.ToCall = this.ToggleMute;
     }
     
     function Resume()
     {
         this.Space.FindObjectByName("PauseOverlay").OverlayToggle.Toggle();
         this.Space.TimeSpace.TimeScale = 1;
+        this.Space.SoundSpace.Volume = this.Space.FindObjectByName("Circle").Slider.GetPercentage();
+        Console.WriteLine(this.Space.FindObjectByName("Circle").Slider.GetPercentage());
     }
     
     function ToggleOptions()
@@ -70,10 +71,5 @@ class MenuController : ZilchComponent
     {
         this.Space.LoadLevel(Level.Find("MainMenu"));
         this.Space.TimeSpace.TimeScale = 1;
-    }
-    
-    function ToggleMute()
-    {
-        this.Space.Globals.Muted = !this.Space.Globals.Muted;
     }
 }
