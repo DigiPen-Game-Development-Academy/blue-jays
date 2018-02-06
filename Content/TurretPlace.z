@@ -30,6 +30,7 @@ class TurretPlace : ZilchComponent
                 {
                     this.Space.CreateAtPosition(this.CurrentTurret.Archetype, this.Transform.Translation);
                     this.Fate -= this.CurrentTurret.Fate;
+                    
                 }
             }
         
