@@ -64,10 +64,11 @@ Cog =
 	},
 	DamageOnColide = 
 	{
-		float Damage = 150,
+		float Damage = 100,
 	},
 	ChariotCoolDown = 
 	{
-		float ChaiotCoolDown = 5,
+		string WhatToSpawn = "5a8be71044b57a71:TheChariot",
+		float SpawnTime = 5,
 	},
 },
