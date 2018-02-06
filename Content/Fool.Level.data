@@ -94,6 +94,10 @@ Level =
 		DrawIcons = 
 		{
 		},
+		MenuController = 
+		{
+			Enum Menu = LEVEL,
+		},
 	},
 	Cog = 
 	{
@@ -227,6 +231,42 @@ Level =
 		Named = 
 		{
 			string Name = "Boss",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a026066ef8b66c0:PauseOverlay",
+		LinkId = 
+		{
+			uint Id = 8,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -0.5, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PauseOverlay",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a019c947ab2b196:OptionsOverlay",
+		LinkId = 
+		{
+			uint Id = 9,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -0.5, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "OptionsOverlay",
 		},
 	},
 },

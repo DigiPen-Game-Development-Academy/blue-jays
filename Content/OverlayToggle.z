@@ -1,0 +1,26 @@
+class OverlayToggle : ZilchComponent
+{
+    [Property] var ButtonSize : Real2 = Real2(5,1);
+    
+    function Initialize(init : CogInitializer)
+    {
+        this.Toggle();
+    }
+    
+    function Toggle()
+    {
+        foreach(var button in this.Owner.Children)
+        {
+            if(!button.FindChildByName("SpriteText").SpriteText.Visible)
+            {
+                button.Area.Size = this.ButtonSize;
+                button.FindChildByName("SpriteText").SpriteText.Visible = true;
+            }
+            else
+            {
+                button.Area.Size = Real2(0,0);
+                button.FindChildByName("SpriteText").SpriteText.Visible = false;
+            }
+        }
+    }
+}

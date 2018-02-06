@@ -16,9 +16,7 @@ class PlayerController : ZilchComponent
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.AnyCollision, this.EnableJump);
-        this.Space.TimeSpace.Paused == false;
     }
-    //var TogglePause:Boolean = false;
     
     function OnLogicUpdate(event : UpdateEvent)
     {
@@ -43,14 +41,17 @@ class PlayerController : ZilchComponent
         {
             if (Zero.Keyboard.KeyIsPressed(Keys.P))
             {
+                this.Space.FindObjectByName("PauseOverlay").OverlayToggle.Toggle();
                 //We need all the zeros!
-                this.Space.TimeSpace.TimeScale = 0.000000001;
-                
+                if(this.Space.TimeSpace.TimeScale == 1)
+                {
+                    this.Space.TimeSpace.TimeScale = 0.000000001;
+                }
+                else
+                {
+                    this.Space.TimeSpace.TimeScale = 1;
+                }
             }
-        }
-        if (Zero.Keyboard.KeyIsPressed(Keys.U))
-        {   
-            this.Space.TimeSpace.TimeScale = 1;
         }
     }  
     

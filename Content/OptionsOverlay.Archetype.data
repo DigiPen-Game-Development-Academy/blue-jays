@@ -1,0 +1,51 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "OptionsOverlay",
+	},
+	Archetyped = 
+	{
+		string Name = "5a019c947ab2b196:OptionsOverlay",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [0, -0.5, 0],
+		Vec3 Scale = [1, 1, 1],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	OverlayToggle = 
+	{
+		Vec2 ButtonSize = [5, 1],
+	},
+	Hierarchy = 
+	{
+		ArchetypeInstance = 
+		{
+			string Name = "5a019c7b87e28758:ExitOptionsButton",
+			LinkId = 
+			{
+				uint Id = 2,
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, 0, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Area = 
+			{
+				Vec2 Size = [5, 1],
+				Location Origin = Center,
+			},
+			Named = 
+			{
+				string Name = "Back",
+			},
+		},
+	},
+},

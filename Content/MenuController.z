@@ -1,4 +1,4 @@
-enum Menu {MAIN, CREDITS}
+enum Menu {MAIN, CREDITS, LEVEL}
 
 class MenuController : ZilchComponent
 {
@@ -13,6 +13,10 @@ class MenuController : ZilchComponent
         {
             this.Credits();
         }
+        else if(this.Menu == Menu.LEVEL)
+        {
+            this.Level();
+        }
     }
     
     function MainMenu()
@@ -24,6 +28,26 @@ class MenuController : ZilchComponent
     function Credits()
     {
         this.Space.FindObjectByName("Menu").Button.ToCall = this.LoadMenu;
+    }
+    
+    function Level()
+    {
+        this.Space.FindObjectByName("Menu").Button.ToCall = this.LoadMenuWithUnpause;
+        this.Space.FindObjectByName("Resume").Button.ToCall = this.Resume;
+        this.Space.FindObjectByName("Options").Button.ToCall = this.ToggleOptions;
+        this.Space.FindObjectByName("Back").Button.ToCall = this.ToggleOptions;
+    }
+    
+    function Resume()
+    {
+        this.Space.FindObjectByName("PauseOverlay").OverlayToggle.Toggle();
+        this.Space.TimeSpace.TimeScale = 1;
+    }
+    
+    function ToggleOptions()
+    {
+        this.Space.FindObjectByName("PauseOverlay").OverlayToggle.Toggle();
+        this.Space.FindObjectByName("OptionsOverlay").OverlayToggle.Toggle();
     }
     
     function LoadFool()
@@ -39,5 +63,11 @@ class MenuController : ZilchComponent
     function LoadMenu()
     {
         this.Space.LoadLevel(Level.Find("MainMenu"));
+    }
+    
+    function LoadMenuWithUnpause()
+    {
+        this.Space.LoadLevel(Level.Find("MainMenu"));
+        this.Space.TimeSpace.TimeScale = 1;
     }
 }
