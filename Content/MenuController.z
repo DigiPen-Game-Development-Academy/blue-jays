@@ -36,6 +36,7 @@ class MenuController : ZilchComponent
         this.Space.FindObjectByName("Resume").Button.ToCall = this.Resume;
         this.Space.FindObjectByName("Options").Button.ToCall = this.ToggleOptions;
         this.Space.FindObjectByName("Back").Button.ToCall = this.ToggleOptions;
+        this.Space.FindObjectByName("Mute").Button.ToCall = this.ToggleMute;
     }
     
     function Resume()
@@ -69,5 +70,10 @@ class MenuController : ZilchComponent
     {
         this.Space.LoadLevel(Level.Find("MainMenu"));
         this.Space.TimeSpace.TimeScale = 1;
+    }
+    
+    function ToggleMute()
+    {
+        this.Space.Globals.Muted = !this.Space.Globals.Muted;
     }
 }

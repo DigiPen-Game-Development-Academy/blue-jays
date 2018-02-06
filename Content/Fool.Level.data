@@ -111,7 +111,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 3.51032257, 50],
+			Vec3 Translation = [0.0173053741, 0, 48.9990005],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -131,7 +131,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0, 3.51032257, 0],
+			Vec3 LookTarget = [0.0173053741, 0, -1.00100005],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -236,9 +236,13 @@ Level =
 	ArchetypeInstance = 
 	{
 		string Name = "5a026066ef8b66c0:PauseOverlay",
+		LinkId = 
+		{
+			uint Id = 8,
+		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -0.5, 1],
+			Vec3 Translation = [0, 0, 1],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -247,57 +251,88 @@ Level =
 			string Name = "PauseOverlay",
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "5a019c947ab2b196:OptionsOverlay",
 		LinkId = 
 		{
 			uint Id = 9,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, -0.5, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
 		{
 			string Name = "OptionsOverlay",
 		},
-	},
-	Cog = 
-	{
-		LinkId = 
+		Archetyped = 
 		{
-			uint Id = 8,
-		},
-		Named = 
-		{
-			string Name = "Sprite",
+			string Name = "5a019c947ab2b196:OptionsOverlay",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.117466331, 0.221261024, -1],
-			Vec3 Scale = [2.17159534, 2.17159534, 2.17159534],
+			Vec3 Translation = [0, 0, 1],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
+		OverlayToggle = 
 		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a019c4472b93c3e:FoolBg",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
+			Vec2 ButtonSize = [5, 1],
+		},
+		Hierarchy = 
+		{
+			ArchetypeInstance = 
+			{
+				string Name = "5a019c7b87e28758:ExitOptionsButton",
+				LinkId = 
+				{
+					uint Id = 10,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Area = 
+				{
+					Vec2 Size = [5, 1],
+					Location Origin = Center,
+				},
+				Named = 
+				{
+					string Name = "Back",
+				},
+				EditorFlags = 
+				{
+					bool Locked = false,
+					bool Hidden = true,
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "5a019b8a397689ba:MuteButton",
+				LinkId = 
+				{
+					uint Id = 11,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 3, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Area = 
+				{
+					Vec2 Size = [5, 1],
+					Location Origin = Center,
+				},
+				Named = 
+				{
+					string Name = "Mute",
+				},
+				EditorFlags = 
+				{
+					bool Locked = false,
+					bool Hidden = true,
+				},
+			},
 		},
 	},
 },

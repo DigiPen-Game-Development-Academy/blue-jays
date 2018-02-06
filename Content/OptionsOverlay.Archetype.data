@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, -0.5, 0],
+		Vec3 Translation = [0, 0, 1],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -45,6 +45,39 @@ Cog =
 			Named = 
 			{
 				string Name = "Back",
+			},
+			EditorFlags = 
+			{
+				bool Locked = false,
+				bool Hidden = true,
+			},
+		},
+		ArchetypeInstance = 
+		{
+			string Name = "5a019b8a397689ba:MuteButton",
+			LinkId = 
+			{
+				uint Id = 3,
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, 3, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Area = 
+			{
+				Vec2 Size = [5, 1],
+				Location Origin = Center,
+			},
+			Named = 
+			{
+				string Name = "Mute",
+			},
+			EditorFlags = 
+			{
+				bool Locked = false,
+				bool Hidden = true,
 			},
 		},
 	},
