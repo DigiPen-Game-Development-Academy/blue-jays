@@ -19,6 +19,7 @@ class TurretPlace : ZilchComponent
         this.CurrentTurret = this.TurretList[0];
         this.LevelSettings.DrawIcons.Draw(this.TurretList);
     }
+    var ChariotCoolDown : Boolean;
 
     function OnLogicUpdate(event : UpdateEvent)
     {

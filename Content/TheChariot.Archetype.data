@@ -64,7 +64,7 @@ Cog =
 	},
 	DamageOnColide = 
 	{
-		float Damage = 150,
+		float Damage = 100,
 	},
 	ChariotCoolDown = 
 	{
