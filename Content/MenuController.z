@@ -1,4 +1,4 @@
-enum Menu {MAIN, CREDITS, LEVEL, CHAR_SELECT}
+enum Menu {MAIN, CREDITS, LEVEL}
 
 class MenuController : ZilchComponent
 {
@@ -17,15 +17,11 @@ class MenuController : ZilchComponent
         {
             this.Level();
         }
-        else if(this.Menu == Menu.CHAR_SELECT)
-        {
-            this.CharacterSelect();
-        }
     }
     
     function MainMenu()
     {
-        this.Space.FindObjectByName("StartGame").Button.ToCall = this.LoadCharSelect;
+        this.Space.FindObjectByName("StartGame").Button.ToCall = this.LoadFool;
         this.Space.FindObjectByName("Credits").Button.ToCall = this.LoadCredits;
     }
     
@@ -42,12 +38,6 @@ class MenuController : ZilchComponent
         this.Space.FindObjectByName("Back").Button.ToCall = this.ToggleOptions;
     }
     
-    function CharacterSelect()
-    {
-        this.Space.FindObjectByName("Menu").Button.ToCall = this.LoadMenu;
-        this.Space.FindObjectByName("Swords").Button.ToCall = this.LoadSwords;
-    }
-    
     function Resume()
     {
         this.Space.FindObjectByName("PauseOverlay").OverlayToggle.Toggle();
@@ -62,9 +52,9 @@ class MenuController : ZilchComponent
         this.Space.FindObjectByName("OptionsOverlay").OverlayToggle.Toggle();
     }
     
-    function LoadCharSelect()
+    function LoadFool()
     {
-        this.Space.LoadLevel(Level.Find("CharacterSelect"));
+        this.Space.LoadLevel(Level.Find("Fool"));
     }
     
     function LoadCredits()
@@ -81,10 +71,5 @@ class MenuController : ZilchComponent
     {
         this.Space.LoadLevel(Level.Find("MainMenu"));
         this.Space.TimeSpace.TimeScale = 1;
-    }
-    
-    function LoadSwords()
-    {
-        this.Space.LoadLevel(Level.Find("Fool"));
     }
 }

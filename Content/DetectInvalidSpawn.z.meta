@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "DetectInvalidSpawn",
-		uint64 ResourceId = 5a070c8d14b89149,
-	},
-},

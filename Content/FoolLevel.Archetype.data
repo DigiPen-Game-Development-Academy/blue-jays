@@ -660,7 +660,7 @@ Cog =
 			Transform = 
 			{
 				Vec3 Translation = [0, 0, -1],
-				Vec3 Scale = [1.66637838, 1.66637838, 0.333275676],
+				Vec3 Scale = [2.21499991, 2.21499991, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -673,7 +673,7 @@ Cog =
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5af554c10f644933:FoolBg_update_0",
+				string SpriteSource = "5a019c4472b93c3e:FoolBg",
 				bool RenderMask = false,
 				bool FlipX = false,
 				bool FlipY = false,

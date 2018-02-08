@@ -62,9 +62,10 @@ Cog =
 		Vec3 Velocity = [0, 0, 0],
 		Vec3 AngularVelocity = [0, 0, 0],
 	},
-	DamageOnColide = 
+	Shoot = 
 	{
-		float Damage = 100000,
+		float TimeBetweenShots = 0.100000001,
+		float ShootSpeed = 1,
 	},
 	DeathsAttack = 
 	{

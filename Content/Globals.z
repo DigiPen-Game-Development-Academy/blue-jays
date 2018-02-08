@@ -4,13 +4,13 @@
 class Globals : ZilchComponent
 {
     var KnightOfSwords : Turret = Turret(TurretType.KNIGHT, Archetype.KnightOfSwords,
-        "Knight of Swords", SpriteSource.Knight_swords, 10);
+        "Knight of Swords", SpriteSource.Find("knight_swords"), 10);
     
     var TheTower : Turret = Turret(TurretType.STATIONARY, Archetype.TheTower,
-        "The Tower", SpriteSource.Towers, 20);
+        "The Tower", SpriteSource.Find("Towers"), 20);
         
     var TheChariot : Turret = Turret(TurretType.UNIQUE, Archetype.TheChariot,
-        "The Chariot", SpriteSource.Chariot, 25);
+        "The Chariot", SpriteSource.Find("chariot"), 25);
     
     var SwordsList : Array[Turret] = new Array[Turret]();
     

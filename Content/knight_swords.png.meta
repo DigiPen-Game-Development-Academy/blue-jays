@@ -2,7 +2,7 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "Knight_swords",
+		string Name = "knight_swords",
 		uint64 ResourceId = 5a915c4345914878,
 		uint64 AtlasId = 5274cf95e4a661fd,
 		uint FrameSizeX = 603,

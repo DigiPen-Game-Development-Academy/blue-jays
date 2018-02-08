@@ -22,34 +22,8 @@ class PlayerController : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
         var vel = 0;
-        if(Zero.Keyboard.KeyIsDown(Keys.D))
-        {
-            vel += 1;
-            if(this.Owner.Sprite.SpriteSource != SpriteSource.KingOS_Run)
-            {
-                this.Owner.Sprite.SpriteSource = SpriteSource.KingOS_Run;
-            }
-            if(this.Owner.Transform.EulerAngles.Y == 0)
-            {
-                this.Owner.Transform.SetEulerAnglesXYZ(0,Math.Pi,0);
-            }
-        }
-        if(Zero.Keyboard.KeyIsDown(Keys.A))
-        {
-            vel -= 1;
-            if(this.Owner.Sprite.SpriteSource != SpriteSource.KingOS_Run)
-            {
-                this.Owner.Sprite.SpriteSource = SpriteSource.KingOS_Run;
-            }
-            if(this.Owner.Transform.EulerAngles.Y != 0)
-            {
-                this.Owner.Transform.SetEulerAnglesXYZ(0,0,0);
-            }
-        }
-        if(!(Zero.Keyboard.KeyIsDown(Keys.A) || Zero.Keyboard.KeyIsDown(Keys.D)))
-        {
-            this.Owner.Sprite.SpriteSource = SpriteSource.Swords;
-        }
+        if(Zero.Keyboard.KeyIsDown(Keys.D)) vel += 1;
+        if(Zero.Keyboard.KeyIsDown(Keys.A)) vel -= 1;
         var target = Real3(vel * this.Speed * 1, this.RigidBody.Velocity.Y, 0);
         if(this.Stunned)
         {
