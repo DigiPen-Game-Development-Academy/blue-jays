@@ -23,7 +23,7 @@ class ChargeText : ZilchComponent
         var charge : Real = 0;
         if(this.Type == Boss.FOOL)
         {
-            charge = Math.Floor(100*this.Boss.FoolAttack.SpecialAttackCounter/this.Boss.FoolAttack.SpecialCooldown);
+            charge = Math.Floor(100*this.Boss.FoolAttack.StunCounter/this.Boss.FoolAttack.StunCooldown);
         }
         else
         {

@@ -6,16 +6,11 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Mute",
+		string Name = "Swords",
 	},
 	Archetyped = 
 	{
-		string Name = "5a019b8a397689ba:MuteButton",
-	},
-	EditorFlags = 
-	{
-		bool Locked = false,
-		bool Hidden = true,
+		string Name = "5a073f4fb2c260de:SwordsButton",
 	},
 	Transform = 
 	{
@@ -43,7 +38,7 @@ Cog =
 	},
 	Area = 
 	{
-		Vec2 Size = [5, 1],
+		Vec2 Size = [5, 7],
 		Location Origin = Center,
 	},
 	Button = 
@@ -60,16 +55,49 @@ Cog =
 			},
 			Named = 
 			{
-				string Name = "SpriteText",
-			},
-			EditorFlags = 
-			{
-				bool Locked = false,
-				bool Hidden = true,
+				string Name = "Sprite",
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, 0.5, 0],
+				Vec3 Translation = [0, 0, 0],
+				Vec3 Scale = [2, 2, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5a916408338446d3:Swords",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			Hierarchy = 
+			{
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 3,
+			},
+			Named = 
+			{
+				string Name = "SpriteText",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, 3, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -85,7 +113,7 @@ Cog =
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 				string FontName = "4e7bac697bec55c5:Verdana",
 				uint FontSize = 48,
-				string Text = "Toggle Mute",
+				string Text = "Swords",
 				TextAlign Align = Center,
 				float PixelsPerUnit = 64,
 				bool Smoothing = true,
