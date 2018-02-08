@@ -1,0 +1,33 @@
+//Christian Yan
+//Homing Missle
+class HomingMissles : ZilchComponent
+{
+    [Property] var BetweenShots : Real = 1;
+    [Property] var ShootSpeed : Real = 1;
+    var TimeTillShoot : Real;
+    
+        function OnLogicUpdate(event : UpdateEvent)
+    {
+        //counting down timer
+        this.TimeTillShoot -= event.Dt;
+        //check when we can shoot
+        if (this.TimeTillShoot <= 0)
+        {
+            var vel = (this.Space.FindObjectByName("Player").Transform.Translation - this.Owner.Transform.Translation) * this.ShootSpeed;
+            //Create the bullet
+            var missile = this.Space.CreateAtPosition(Archetype.Missile, this.Owner.Transform.WorldTranslation + vel / 100);
+            //Shoot the missile
+            missile.RigidBody.Velocity = vel;
+            //Make the timer reset
+            this.TimeTillShoot = this.BetweenShots;
+        
+        }
+    }
+        
+    function Initialize(init : CogInitializer)
+    {
+        this.TimeTillShoot = this.BetweenShots;
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+    
+}

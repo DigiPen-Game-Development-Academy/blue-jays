@@ -62,6 +62,11 @@ Cog =
 		Vec3 Velocity = [0, 0, 0],
 		Vec3 AngularVelocity = [0, 0, 0],
 	},
+	Shoot = 
+	{
+		float TimeBetweenShots = 0.100000001,
+		float ShootSpeed = 1,
+	},
 	Hierarchy = 
 	{
 		Cog = 
