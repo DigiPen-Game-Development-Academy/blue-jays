@@ -123,7 +123,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 10.9478931,
+			float Size = 24.6597309,
 		},
 		EditorCameraController = 
 		{
@@ -859,7 +859,7 @@ Level =
 				Transform = 
 				{
 					Vec3 Translation = [0, 0, -1],
-					Vec3 Scale = [5, 5, 1],
+					Vec3 Scale = [1.66637838, 1.66637838, 0.333275676],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				Sprite = 
@@ -872,7 +872,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5a01b7b97a89ea59:FoolBg_update",
+					string SpriteSource = "5af554c10f644933:FoolBg_update_0",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -994,7 +994,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 11,
+							uint Id = 23,
 						},
 						Named = 
 						{
@@ -1032,7 +1032,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 12,
+							uint Id = 24,
 						},
 						Named = 
 						{
@@ -1072,7 +1072,7 @@ Level =
 							{
 								LinkId = 
 								{
-									uint Id = 13,
+									uint Id = 25,
 								},
 								Named = 
 								{
@@ -1109,7 +1109,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 14,
+							uint Id = 26,
 						},
 						Named = 
 						{
@@ -1145,7 +1145,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 15,
+					uint Id = 27,
 				},
 				Named = 
 				{
@@ -1194,7 +1194,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 16,
+							uint Id = 28,
 						},
 						Named = 
 						{
