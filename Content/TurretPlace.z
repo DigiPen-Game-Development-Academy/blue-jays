@@ -8,11 +8,10 @@ class TurretPlace : ZilchComponent
     var TurretList : Array[Turret];
     var TurretNum : Integer = 0;
     var CurrentTurret : Turret;
-    var Fate : Real;
+    var Fate : Real = 0;
     
     function Initialize(init : CogInitializer)
     {
-        this.Fate = this.MaxFate;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Space, Events.MouseScroll, this.OnScroll);
         this.TurretList = this.Space.Globals.SwordsList;
