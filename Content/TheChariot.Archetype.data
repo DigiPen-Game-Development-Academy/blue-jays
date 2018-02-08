@@ -47,7 +47,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -60,17 +60,12 @@ Cog =
 		bool Seamless = true,
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "5a916d23d1622478:Turret",
-		Vec3 Offset = [0, -0.800000012, 0],
-		Vec3 Size = [4, 2, 0.5],
+		Vec3 Offset = [0, -0.400000006, 0],
+		Vec3 Size = [2.5, 1.5, 0.5],
 	},
 	DamageOnColide = 
 	{
 		float Damage = 100,
-	},
-	ChariotCoolDown = 
-	{
-		string WhatToSpawn = "5a8be71044b57a71:TheChariot",
-		float SpawnTime = 5,
 	},
 	Hierarchy = 
 	{
@@ -96,7 +91,7 @@ Cog =
 				bool Asleep = false,
 				bool Kinematic = false,
 				bool RotationLocked = true,
-				bool Mode2D = true,
+				bool Mode2D = false,
 				bool AllowSleep = true,
 				bool Inherit2DMode = true,
 				Vec3 Velocity = [0, 0, 0],
@@ -109,8 +104,8 @@ Cog =
 				bool Seamless = true,
 				string MaterialName = "5a8bf27c76932016:VeryHeavy",
 				string SerializedGroupName = "5a08f02201e5b825:StationaryTurret",
-				Vec3 Offset = [0, -0.75, 0],
-				Vec3 Size = [3, 1.5, 0.5],
+				Vec3 Offset = [0, -0.5, 0],
+				Vec3 Size = [2.25, 1.20000005, 0.5],
 			},
 			DetectInvalidSpawn = 
 			{

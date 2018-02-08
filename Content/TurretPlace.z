@@ -4,34 +4,52 @@ class TurretPlace : ZilchComponent
     
     [Property] var FateRate : Real = 1;
     [Property] var MaxFate : Real = 1;
+    [Property] var ChariotCooldownTime : Real = 10;
     
     var TurretList : Array[Turret];
     var TurretNum : Integer = 0;
     var CurrentTurret : Turret;
     var Fate : Real;
+    var ChariotCooldown : Real = 0;
     
     function Initialize(init : CogInitializer)
     {
-        this.Fate = this.MaxFate;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Space, Events.MouseScroll, this.OnScroll);
         this.TurretList = this.Space.Globals.SwordsList;
         this.CurrentTurret = this.TurretList[0];
         this.LevelSettings.DrawIcons.Draw(this.TurretList);
     }
-    var ChariotCoolDown : Boolean;
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        if(Zero.Keyboard.KeyIsDown(Keys.F))
+        {
+            this.Fate = 1000000000;
+        }
+        this.ChariotCooldown -= event.Dt;
         if (this.Space.TimeSpace.TimeScale == 1)
         {
             if(Zero.Keyboard.KeyIsPressed(Keys.Space))
             {
                 if(this.Fate >= this.CurrentTurret.Fate)
                 {
-                    var turret = this.Space.CreateAtPosition(this.CurrentTurret.Archetype, this.Transform.Translation);
-                    turret.Transform.Translation += Real3(0,turret.BoxCollider.Size.Y / 2,0);
-                    this.Fate -= this.CurrentTurret.Fate;
+                    if(this.CurrentTurret.Name == "The Chariot")
+                    {
+                        if(this.ChariotCooldown <= 0)
+                        {
+                            this.ChariotCooldown = this.ChariotCooldownTime;
+                            var turret = this.Space.CreateAtPosition(this.CurrentTurret.Archetype, this.Transform.Translation);
+                            turret.Transform.Translation += Real3(0,turret.BoxCollider.Size.Y / 2,0);
+                            this.Fate -= this.CurrentTurret.Fate;
+                        }
+                    }
+                    else
+                    {
+                        var turret = this.Space.CreateAtPosition(this.CurrentTurret.Archetype, this.Transform.Translation);
+                        turret.Transform.Translation += Real3(0,turret.BoxCollider.Size.Y / 2,0);
+                        this.Fate -= this.CurrentTurret.Fate;
+                    }
                 }
             }
         
