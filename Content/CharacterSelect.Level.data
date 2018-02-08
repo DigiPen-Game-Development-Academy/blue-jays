@@ -15,7 +15,7 @@ Level =
 			bool Active = true,
 			bool WakeUpOnChange = false,
 			bool LocalSpaceDirection = true,
-			float Strength = 18,
+			float Strength = 10,
 			Vec3 Direction = [0, -1, 0],
 		},
 		DragEffect = 
@@ -91,12 +91,9 @@ Level =
 			int HilightInterval = 10,
 			bool FollowEditorCamera = false,
 		},
-		DrawIcons = 
-		{
-		},
 		MenuController = 
 		{
-			Enum Menu = LEVEL,
+			Enum Menu = CHAR_SELECT,
 		},
 	},
 	Cog = 
@@ -111,7 +108,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 49.7490005],
+			Vec3 Translation = [0, 0, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -123,7 +120,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 24.6597309,
+			float Size = 20,
 		},
 		EditorCameraController = 
 		{
@@ -131,7 +128,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0, 0, -0.251000047],
+			Vec3 LookTarget = [0, 0, 0],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -163,46 +160,33 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5a08fb786d4f3f80:Player",
+		string Name = "5a02651333da9589:MenuButton",
 		LinkId = 
 		{
 			uint Id = 4,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -0.5, 0],
+			Vec3 Translation = [0, -4.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
+		Area = 
+		{
+			Vec2 Size = [5, 1],
+			Location Origin = Center,
+		},
 		Named = 
 		{
-			string Name = "Player",
+			string Name = "Menu",
 		},
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5a08f65eab18b886:UI",
+		string Name = "5a073f4fb2c260de:SwordsButton",
 		LinkId = 
 		{
 			uint Id = 5,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, 0.5],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "UI",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a08f665abdaab0d:FoolLevel",
-		LinkId = 
-		{
-			uint Id = 6,
 		},
 		Transform = 
 		{
@@ -210,63 +194,14 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		Area = 
 		{
-			string Name = "Level",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a916c8c1094a85b:Fool",
-		LinkId = 
-		{
-			uint Id = 7,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, -9.25, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
+			Vec2 Size = [5, 7],
+			Location Origin = Center,
 		},
 		Named = 
 		{
-			string Name = "Boss",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a026066ef8b66c0:PauseOverlay",
-		LinkId = 
-		{
-			uint Id = 8,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "PauseOverlay",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a019c947ab2b196:OptionsOverlay",
-		LinkId = 
-		{
-			uint Id = 9,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0.5, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "OptionsOverlay",
+			string Name = "Swords",
 		},
 	},
 },

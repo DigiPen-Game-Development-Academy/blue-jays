@@ -32,7 +32,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-11, -6, 0],
+				Vec3 Translation = [-11.5, -5.5, 0],
 				Vec3 Scale = [2, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -260,7 +260,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-9, -1.5, 0],
+				Vec3 Translation = [-9.5, -1.5, 0],
 				Vec3 Scale = [2, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -317,7 +317,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [9, -1.5, 0],
+				Vec3 Translation = [9.5, -1.5, 0],
 				Vec3 Scale = [2, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -374,7 +374,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [11, -6, 0],
+				Vec3 Translation = [11.5, -5.5, 0],
 				Vec3 Scale = [2, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -431,7 +431,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-6, 1.5, 0],
+				Vec3 Translation = [-7, 2, 0],
 				Vec3 Scale = [2, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -488,7 +488,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [6, 1.5, 0],
+				Vec3 Translation = [7, 2, 0],
 				Vec3 Scale = [2, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -702,6 +702,24 @@ Cog =
 				bool Inherit2DMode = true,
 				Vec3 Velocity = [0, 0, 0],
 				Vec3 AngularVelocity = [0, 0, 0],
+			},
+		},
+		ArchetypeInstance = 
+		{
+			string Name = "5a0707f2c1c9ca3e:RisingWall",
+			LinkId = 
+			{
+				uint Id = 14,
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, -15, 0],
+				Vec3 Scale = [40, 9, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Named = 
+			{
+				string Name = "RisingWall",
 			},
 		},
 	},

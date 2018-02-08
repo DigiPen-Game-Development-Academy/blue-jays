@@ -6,9 +6,8 @@ class Knight : ZilchComponent
     [Dependency] var RigidBody : RigidBody;
     
     [Property] var Speed : Real = 1;
+    [Property] var Acceleration : Real = 5;
     
-    //var Timer : Real = 1;
-    //var Random : Random = Random();
     var Target : Cog;
     var Vel : Real = 0;
     
@@ -21,7 +20,8 @@ class Knight : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.RigidBody.Velocity = Real3(this.Vel, this.RigidBody.Velocity.Y, 0);
+        var target = Real3(this.Vel, this.RigidBody.Velocity.Y, 0);
+        this.RigidBody.Velocity = Math.Lerp(this.RigidBody.Velocity,target,this.Acceleration * event.Dt);
     }
     
     function OnCollide(event : CollisionEvent)

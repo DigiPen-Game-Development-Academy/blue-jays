@@ -21,7 +21,7 @@ class ChargeBar : ZilchComponent
         var charge : Real = 0;
         if(this.Type == Boss.FOOL)
         {
-            charge = this.Boss.FoolAttack.SpecialAttackCounter/this.Boss.FoolAttack.SpecialCooldown;
+            charge = this.Boss.FoolAttack.StunCounter/this.Boss.FoolAttack.StunCooldown;
         }
         else
         {
