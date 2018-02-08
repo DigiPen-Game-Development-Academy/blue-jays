@@ -66,6 +66,10 @@ Cog =
 	{
 		float Damage = 100000,
 	},
+	DeathsAttack = 
+	{
+		float DestroyRandomTowerCooldown = 5,
+	},
 	Hierarchy = 
 	{
 		Cog = 
