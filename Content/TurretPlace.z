@@ -29,9 +29,9 @@ class TurretPlace : ZilchComponent
             {
                 if(this.Fate >= this.CurrentTurret.Fate)
                 {
-                    this.Space.CreateAtPosition(this.CurrentTurret.Archetype, this.Transform.Translation);
+                    var turret = this.Space.CreateAtPosition(this.CurrentTurret.Archetype, this.Transform.Translation);
+                    turret.Transform.Translation += Real3(0,turret.BoxCollider.Size.Y / 2,0);
                     this.Fate -= this.CurrentTurret.Fate;
-                    
                 }
             }
         
