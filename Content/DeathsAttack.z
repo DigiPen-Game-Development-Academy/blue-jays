@@ -19,9 +19,10 @@ var Objectexsits : Boolean = true;
     {
         this.DestroyRandomTowerCounter += event.Dt;
         
-        if (this.DestroyRandomTowerCounter >= this.DestroyRandomTowerCooldown&& this.Space.FindObjectByName("Turret")!= null)
+        if (this.DestroyRandomTowerCounter >= this.DestroyRandomTowerCooldown && this.Space.FindObjectByName("Turret")!= null)
         {
-            this.Space.FindObjectByName("Turret").Destroy;
+            Console.WriteLine("HI");
+            this.Space.FindObjectByName("Turret").Destroy();
             this.DestroyRandomTowerCounter = 0;
         }
     }
