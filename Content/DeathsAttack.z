@@ -1,29 +1,30 @@
 //Hunter Fosler
 //Purpose: Deaths Attack
 
-
-
 class DeathsAttack : ZilchComponent
 {
-
-[Property] var DestroyRandomTowerCooldown : Real = 10;
-var DestroyRandomTowerCounter : Real = 0;
-var Objectexsits : Boolean = true;
-
+    [Property] var DestroyCooldown : Real = 10;
+    
+    var DestroyCounter : Real = 0;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
-
+    
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.DestroyRandomTowerCounter += event.Dt;
+        this.DestroyCounter += event.Dt;
         
-        if (this.DestroyRandomTowerCounter >= this.DestroyRandomTowerCooldown && this.Space.FindObjectByName("Turret")!= null)
+        if (this.DestroyCounter >= this.DestroyCooldown)
         {
-            Console.WriteLine("HI");
-            this.Space.FindObjectByName("Turret").Destroy();
-            this.DestroyRandomTowerCounter = 0;
+            var turret = this.Space.FindObjectByName("Turret");
+            if(turret != null)
+            {
+                this.Space.CreateAtPosition(Archetype.Explosion, turret.Transform.Translation);
+                turret.Destroy();
+            }
+            this.DestroyCounter = 0;
         }
     }
 }
