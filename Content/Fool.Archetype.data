@@ -78,7 +78,7 @@ Cog =
 		float BasicCooldown = 2,
 		float SpecialCooldown = 15,
 		float StunCooldown = 16,
-		float StunDuration = 5,
+		float StunDuration = 2,
 	},
 	Hierarchy = 
 	{

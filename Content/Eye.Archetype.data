@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-2.01133609, 0, -0.251000047],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [8.37208366, 8.37208366, 8.37208366],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -32,7 +32,7 @@ Cog =
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
-		bool AnimationActive = true,
+		bool AnimationActive = false,
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
 	},

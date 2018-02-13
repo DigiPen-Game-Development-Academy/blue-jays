@@ -304,4 +304,22 @@ Level =
 			uint StartFrame = 0,
 		},
 	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a62821ef1c80783:Eye",
+		LinkId = 
+		{
+			uint Id = 11,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-0.603596926, 1.35919952, -0.259372711],
+			Vec3 Scale = [8.37208366, 8.37208366, 8.37208366],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "EyeOverlay",
+		},
+	},
 },
