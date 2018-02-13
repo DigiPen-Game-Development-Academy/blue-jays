@@ -10,11 +10,11 @@ Cog =
 	},
 	Archetyped = 
 	{
-		string Name = "5a9d6ca0b3e86b2a:Missile",
+		string Name = "5a62948056ad2651:missile",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [-1.89730227, 17.0257931, -6.98389329e-08],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -36,18 +36,6 @@ Cog =
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
 	},
-	RigidBody = 
-	{
-		bool Static = false,
-		bool Asleep = false,
-		bool Kinematic = false,
-		bool RotationLocked = false,
-		bool Mode2D = false,
-		bool AllowSleep = true,
-		bool Inherit2DMode = true,
-		Vec3 Velocity = [0, 0, 0],
-		Vec3 AngularVelocity = [0, 0, 0],
-	},
 	BoxCollider = 
 	{
 		bool Ghost = false,
@@ -58,12 +46,12 @@ Cog =
 		Vec3 Offset = [0, 0, 0],
 		Vec3 Size = [0.5, 0.5, 0.5],
 	},
-	DamageOnColide = 
-	{
-		float Damage = 10,
-	},
 	DestroyOnCollide = 
 	{
 		string Replacement = "",
+	},
+	DamageOnColide = 
+	{
+		float Damage = 10,
 	},
 },

@@ -111,7 +111,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 49.7490005],
+			Vec3 Translation = [-2.01133585, 0, 49.7406273],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -131,7 +131,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0, 0, -0.251000047],
+			Vec3 LookTarget = [-2.01133585, 0, -0.259372145],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -267,6 +267,24 @@ Level =
 		Named = 
 		{
 			string Name = "OptionsOverlay",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a62821ef1c80783:Eye",
+		LinkId = 
+		{
+			uint Id = 11,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-1.47485733, -0.590128601, -0.251000047],
+			Vec3 Scale = [7.49789095, 7.49789095, 7.49789095],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "EyeOverlay",
 		},
 	},
 },
