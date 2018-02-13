@@ -1,0 +1,11 @@
+DataContent = 
+{
+	DataBuilder = 
+	{
+		string Name = "Floor",
+		uint64 ResourceId = 5a62f228704cdda5,
+		string LoaderType = "CollisionGroup",
+		uint Version = 0,
+		bool ShowInEditor = true,
+	},
+},

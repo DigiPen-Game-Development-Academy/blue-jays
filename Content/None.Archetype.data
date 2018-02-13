@@ -1,0 +1,22 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "none",
+	},
+	Archetyped = 
+	{
+		string Name = "5a62c1f58016b610:None",
+	},
+	DestroyTimer = 
+	{
+		float Timer = 0,
+	},
+	Hierarchy = 
+	{
+	},
+},

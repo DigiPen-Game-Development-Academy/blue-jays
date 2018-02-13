@@ -1,0 +1,22 @@
+class StarSpawn : ZilchComponent
+{
+    [Property] var StarNum : Real = 10;
+    [Property] var SpawnTime : Real = 0.2;
+    
+    var Timer : Real = 0;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.Timer -= event.Dt;
+        if(this.Timer <= 0)
+        {
+            this.Timer += this.SpawnTime;
+            this.Space.CreateAtPosition(Archetype.Star, Real3(0,9,0));
+        }
+    }
+}

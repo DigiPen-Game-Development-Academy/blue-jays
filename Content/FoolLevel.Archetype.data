@@ -462,7 +462,7 @@ Cog =
 			},
 			Named = 
 			{
-				string Name = "Wall",
+				string Name = "Floor",
 			},
 			Transform = 
 			{
@@ -494,7 +494,7 @@ Cog =
 				bool SendsMessages = true,
 				bool Seamless = true,
 				string MaterialName = "5a1cee2c4a245b06:NoBounce",
-				string SerializedGroupName = "5a916d34df3b1676:Wall",
+				string SerializedGroupName = "5a62f228704cdda5:Floor",
 				Vec3 Offset = [0, 0, 0],
 				Vec3 Size = [0.5, 0.5, 0.5],
 			},

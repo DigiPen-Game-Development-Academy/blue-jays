@@ -1,0 +1,19 @@
+DataContent = 
+{
+	DataBuilder = 
+	{
+		string Name = "None",
+		uint64 ResourceId = 5a62c1f58016b610,
+		string LoaderType = "Cog",
+		uint Version = 0,
+		bool ShowInEditor = true,
+	},
+	ContentTags = 
+	{
+		Array Tags = 
+		[
+			"Archetype",
+			"Cog",
+		],
+	},
+},
