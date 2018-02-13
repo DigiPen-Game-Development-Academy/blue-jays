@@ -281,8 +281,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-12.34268, 10.466835, -0.259372145],
-			Vec3 Scale = [1.43964183, 1.43983066, 1.37395644],
+			Vec3 Translation = [-13, 10.5, -0.5],
+			Vec3 Scale = [2, 2, 1],
 			Quat Rotation = [0, 0, 0.383339584, 0.923607588],
 		},
 		Sprite = 

@@ -89,7 +89,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-2, 0, 0],
+				Vec3 Translation = [-1.5, 0, 0],
 				Vec3 Scale = [0.200000003, 4, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -125,7 +125,7 @@ Cog =
 			Transform = 
 			{
 				Vec3 Translation = [0, 2, 0],
-				Vec3 Scale = [4, 0.200000003, 1],
+				Vec3 Scale = [3, 0.200000003, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -160,7 +160,7 @@ Cog =
 			Transform = 
 			{
 				Vec3 Translation = [0, -2, 0],
-				Vec3 Scale = [4, 0.200000003, 1],
+				Vec3 Scale = [3, 0.200000003, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -194,7 +194,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [2, 0, 0],
+				Vec3 Translation = [1.5, 0, 0],
 				Vec3 Scale = [0.200000003, 4, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -229,7 +229,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, -1, 0],
+				Vec3 Translation = [0, -1.29999995, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -250,6 +250,11 @@ Cog =
 				float PixelsPerUnit = 128,
 				bool Smoothing = false,
 			},
+			Area = 
+			{
+				Vec2 Size = [2.5999999, 1.20000005],
+				Location Origin = Center,
+			},
 		},
 		Cog = 
 		{
@@ -263,7 +268,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-1.5, 1.5, 0],
+				Vec3 Translation = [-1.29999995, 2, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -297,7 +302,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [1.5, 1.5, 0],
+				Vec3 Translation = [1.5, 2, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
