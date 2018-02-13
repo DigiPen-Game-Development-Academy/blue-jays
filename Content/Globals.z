@@ -1,8 +1,11 @@
 // Author: Eli Miller
 // Purpose: Easily accessible global variables that stay the same between levels.
+enum Suit {SWORDS, WANDS, COINS, CUPS}
 
 class Globals : ZilchComponent
 {
+    var Suit : Suit = Suit.SWORDS;
+    
     var KnightOfSwords : Turret = Turret(TurretType.KNIGHT, Archetype.KnightOfSwords,
         "Knight of Swords", SpriteSource.Knight_swords, 10);
     
@@ -14,10 +17,49 @@ class Globals : ZilchComponent
     
     var SwordsList : Array[Turret] = new Array[Turret]();
     
+    var KnightOfWands : Turret = Turret(TurretType.KNIGHT, Archetype.KnightOfWands,
+        "Knight of Wands", SpriteSource.Knight_swords, 10);
+    
+    var TheMagician : Turret = Turret(TurretType.STATIONARY, Archetype.TheMagician,
+        "The Magician", SpriteSource.Towers, 20);
+        
+    var TheStar : Turret = Turret(TurretType.UNIQUE, Archetype.TheStar,
+        "The Star", SpriteSource.Chariot, 25);
+    
+    var WandsList : Array[Turret] = new Array[Turret]();
+    
     function Initialize(init : CogInitializer)
     {
         this.SwordsList.Add(this.KnightOfSwords);
         this.SwordsList.Add(this.TheTower);
         this.SwordsList.Add(this.TheChariot);
+        
+        this.WandsList.Add(this.KnightOfWands);
+        this.WandsList.Add(this.TheMagician);
+        this.WandsList.Add(this.TheStar);
+    }
+    
+    function GetTurrets() : Array[Turret]
+    {
+        if(this.Suit == Suit.SWORDS)
+        {
+            return this.SwordsList;
+        }
+        else if(this.Suit == Suit.WANDS)
+        {
+            return this.WandsList;
+        }
+        else if(this.Suit == Suit.COINS)
+        {
+            return this.SwordsList;
+        }
+        else if(this.Suit == Suit.CUPS)
+        {
+            return this.SwordsList;
+        }
+        else
+        {
+            return Array[Turret]();
+        }
     }
 }

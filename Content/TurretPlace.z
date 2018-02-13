@@ -16,7 +16,7 @@ class TurretPlace : ZilchComponent
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Space, Events.MouseScroll, this.OnScroll);
-        this.TurretList = this.Space.Globals.SwordsList;
+        this.TurretList = this.Space.Globals.GetTurrets();
         this.CurrentTurret = this.TurretList[0];
         this.LevelSettings.DrawIcons.Draw(this.TurretList);
     }

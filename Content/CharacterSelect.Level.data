@@ -120,7 +120,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 16.3746147,
+			float Size = 19.9999962,
 		},
 		EditorCameraController = 
 		{
@@ -190,7 +190,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 0],
+			Vec3 Translation = [-3, 0, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -202,6 +202,29 @@ Level =
 		Named = 
 		{
 			string Name = "Swords",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a62837816976e91:WandsButton",
+		LinkId = 
+		{
+			uint Id = 6,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [3, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Area = 
+		{
+			Vec2 Size = [5, 7],
+			Location Origin = Center,
+		},
+		Named = 
+		{
+			string Name = "Wands",
 		},
 	},
 },

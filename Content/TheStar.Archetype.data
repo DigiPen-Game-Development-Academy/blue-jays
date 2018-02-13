@@ -10,7 +10,7 @@ Cog =
 	},
 	Archetyped = 
 	{
-		string Name = "5a1c1664de0b4de6:KnightOfSwords",
+		string Name = "5a629b8a6968a71f:TheStar",
 	},
 	Transform = 
 	{
@@ -24,11 +24,11 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [1, 1, 1, 1],
+		Vec4 Color = [0, 1, 1, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5a915c4345914878:Knight_swords",
+		string SpriteSource = "5a9164083384bcca:Chariot",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -55,16 +55,16 @@ Cog =
 		bool Seamless = true,
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "5a916d23d1622478:Turret",
-		Vec3 Offset = [0.200000003, -0.200000003, 0],
-		Vec3 Size = [1.35000002, 1.5, 0.5],
+		Vec3 Offset = [0, -0.400000006, 0],
+		Vec3 Size = [2.5, 1.5, 0.5],
 	},
 	DamageOnColide = 
 	{
-		float Damage = 25,
+		float Damage = 100,
 	},
 	KnightOfSwords = 
 	{
-		float Speed = 10,
+		float Speed = 25,
 		float Acceleration = 5,
 	},
 	Hierarchy = 
@@ -104,8 +104,8 @@ Cog =
 				bool Seamless = true,
 				string MaterialName = "5a8bf27c76932016:VeryHeavy",
 				string SerializedGroupName = "5a08f02201e5b825:StationaryTurret",
-				Vec3 Offset = [0.200000003, -0.100000001, 0],
-				Vec3 Size = [1, 1.25, 0.5],
+				Vec3 Offset = [0, -0.5, 0],
+				Vec3 Size = [2.25, 1.20000005, 0.5],
 			},
 			DetectInvalidSpawn = 
 			{

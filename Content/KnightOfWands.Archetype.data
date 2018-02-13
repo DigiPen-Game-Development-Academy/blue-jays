@@ -10,7 +10,7 @@ Cog =
 	},
 	Archetyped = 
 	{
-		string Name = "5a1c1664de0b4de6:KnightOfSwords",
+		string Name = "5a62978cf7800f5b:KnightOfWands",
 	},
 	Transform = 
 	{
@@ -24,7 +24,7 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [1, 1, 1, 1],
+		Vec4 Color = [0, 1, 1, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -58,14 +58,12 @@ Cog =
 		Vec3 Offset = [0.200000003, -0.200000003, 0],
 		Vec3 Size = [1.35000002, 1.5, 0.5],
 	},
-	DamageOnColide = 
-	{
-		float Damage = 25,
-	},
-	KnightOfSwords = 
+	KnightOfWands = 
 	{
 		float Speed = 10,
 		float Acceleration = 5,
+		float MinDist = 3,
+		float SpellSpeed = 50,
 	},
 	Hierarchy = 
 	{

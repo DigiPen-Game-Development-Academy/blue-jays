@@ -2,8 +2,8 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "KingRun",
-		uint64 ResourceId = 5af54fafcdbd555c,
+		string Name = "Spell",
+		uint64 ResourceId = 5a629094647b23a0,
 		string LoaderType = "Cog",
 		uint Version = 0,
 		bool ShowInEditor = true,

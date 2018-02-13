@@ -36,11 +36,6 @@ Cog =
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
 	},
-	Knight = 
-	{
-		float Speed = 15,
-		float Acceleration = 5,
-	},
 	RigidBody = 
 	{
 		bool Static = false,
@@ -66,6 +61,11 @@ Cog =
 	DamageOnColide = 
 	{
 		float Damage = 100,
+	},
+	KnightOfSwords = 
+	{
+		float Speed = 25,
+		float Acceleration = 5,
 	},
 	Hierarchy = 
 	{

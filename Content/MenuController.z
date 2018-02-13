@@ -36,7 +36,7 @@ class MenuController : ZilchComponent
     
     function Level()
     {
-        this.Space.FindObjectByName("Menu").Button.ToCall = this.LoadMenuWithUnpause;
+        this.Space.FindObjectByName("Menu").Button.ToCall = this.LoadMenu;
         this.Space.FindObjectByName("Resume").Button.ToCall = this.Resume;
         this.Space.FindObjectByName("Options").Button.ToCall = this.ToggleOptions;
         this.Space.FindObjectByName("Back").Button.ToCall = this.ToggleOptions;
@@ -46,6 +46,7 @@ class MenuController : ZilchComponent
     {
         this.Space.FindObjectByName("Menu").Button.ToCall = this.LoadMenu;
         this.Space.FindObjectByName("Swords").Button.ToCall = this.LoadSwords;
+        this.Space.FindObjectByName("Wands").Button.ToCall = this.LoadWands;
     }
     
     function Resume()
@@ -75,16 +76,18 @@ class MenuController : ZilchComponent
     function LoadMenu()
     {
         this.Space.LoadLevel(Level.Find("MainMenu"));
-    }
-    
-    function LoadMenuWithUnpause()
-    {
-        this.Space.LoadLevel(Level.Find("MainMenu"));
         this.Space.TimeSpace.TimeScale = 1;
     }
     
     function LoadSwords()
     {
         this.Space.LoadLevel(Level.Find("Fool"));
+        this.Space.Globals.Suit = Suit.SWORDS;
+    }
+    
+    function LoadWands()
+    {
+        this.Space.LoadLevel(Level.Find("Fool"));
+        this.Space.Globals.Suit = Suit.WANDS;
     }
 }

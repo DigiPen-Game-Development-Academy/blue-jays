@@ -1,7 +1,7 @@
 // Author: Eli Miller
 // Purpose: AI for the "Knight" turrets.
 
-class Knight : ZilchComponent
+class KnightOfSwords : ZilchComponent
 {
     [Dependency] var RigidBody : RigidBody;
     

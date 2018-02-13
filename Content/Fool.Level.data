@@ -99,29 +99,11 @@ Level =
 			Enum Menu = LEVEL,
 		},
 	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a9173e075a148fa:Bomb",
-		LinkId = 
-		{
-			uint Id = 3,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [0.5, 0.5, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Arrow",
-		},
-	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 4,
+			uint Id = 3,
 		},
 		Named = 
 		{
@@ -141,7 +123,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 22.3130493,
+			float Size = 30.1194572,
 		},
 		EditorCameraController = 
 		{
@@ -184,7 +166,7 @@ Level =
 		string Name = "5a08fb786d4f3f80:Player",
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 4,
 		},
 		Transform = 
 		{
@@ -202,7 +184,7 @@ Level =
 		string Name = "5a08f65eab18b886:UI",
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 5,
 		},
 		Transform = 
 		{
@@ -220,7 +202,7 @@ Level =
 		string Name = "5a08f665abdaab0d:FoolLevel",
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 6,
 		},
 		Transform = 
 		{
@@ -238,7 +220,7 @@ Level =
 		string Name = "5a916c8c1094a85b:Fool",
 		LinkId = 
 		{
-			uint Id = 8,
+			uint Id = 7,
 		},
 		Transform = 
 		{
@@ -256,7 +238,7 @@ Level =
 		string Name = "5a026066ef8b66c0:PauseOverlay",
 		LinkId = 
 		{
-			uint Id = 9,
+			uint Id = 8,
 		},
 		Transform = 
 		{
@@ -274,7 +256,7 @@ Level =
 		string Name = "5a019c947ab2b196:OptionsOverlay",
 		LinkId = 
 		{
-			uint Id = 10,
+			uint Id = 9,
 		},
 		Transform = 
 		{

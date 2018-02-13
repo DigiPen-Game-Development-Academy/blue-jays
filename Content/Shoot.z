@@ -5,6 +5,7 @@ class Shoot : ZilchComponent
 {
     [Property] var TimeBetweenShots : Real = 1;
     [Property] var ShootSpeed : Real = 1;
+    [Property] var Projectile : Archetype = Archetype.Arrow;
     var TimeTillShoot : Real;
     
     function Initialize(init : CogInitializer)
@@ -22,7 +23,7 @@ class Shoot : ZilchComponent
         {
             var vel = (this.Space.FindObjectByName("Boss").Transform.Translation - this.Owner.Transform.Translation) * this.ShootSpeed;
             //Create the bullet
-            var arrow = this.Space.CreateAtPosition(Archetype.Arrow, this.Owner.Transform.WorldTranslation + vel / 100);
+            var arrow = this.Space.CreateAtPosition(this.Projectile, this.Owner.Transform.WorldTranslation + vel / 100);
             //Launch the bullet
             arrow.RigidBody.Velocity = vel;
             //Reset our time
