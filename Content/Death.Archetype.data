@@ -68,7 +68,12 @@ Cog =
 	},
 	DeathsAttack = 
 	{
-		float DestroyRandomTowerCooldown = 5,
+		float DestroyCooldown = 25,
+	},
+	HomingMissles = 
+	{
+		float BetweenShots = 5,
+		float ShootSpeed = 8,
 	},
 	Hierarchy = 
 	{
