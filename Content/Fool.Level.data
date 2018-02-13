@@ -123,7 +123,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 30.1194572,
+			float Size = 24.6597309,
 		},
 		EditorCameraController = 
 		{
@@ -267,6 +267,41 @@ Level =
 		Named = 
 		{
 			string Name = "OptionsOverlay",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 10,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-12.34268, 10.466835, -0.259372145],
+			Vec3 Scale = [1.43964183, 1.43983066, 1.37395644],
+			Quat Rotation = [0, 0, 0.383339584, 0.923607588],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a62eba188657bbf:TabelclothEdited",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
 		},
 	},
 },
