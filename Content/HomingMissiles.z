@@ -27,6 +27,8 @@
     {
          this.TimeTillShoot = this.BetweenShots;
          Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+         
     }
+   
      
  }
