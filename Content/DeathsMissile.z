@@ -1,8 +1,9 @@
 
- class HomingMissles : ZilchComponent
+ class Deathsmissiles : ZilchComponent
  {
      [Property] var BetweenShots : Real = 1;
      [Property] var ShootSpeed : Real = 1;
+     [Property] var Direction: Real3 = Real3();
      var TimeTillShoot : Real;
      
         function OnLogicUpdate(event : UpdateEvent)
@@ -13,7 +14,7 @@
             if (this.TimeTillShoot <= 0)
          {
              var vel = (this.Space.FindObjectByName("Player").Transform.Translation - this.Owner.Transform.Translation) * this.ShootSpeed;
-             //Create the bullet
+             //Create the missile
              var missile = this.Space.CreateAtPosition(Archetype.Missile, this.Owner.Transform.WorldTranslation + vel / 100);
              //Shoot the missile
              missile.RigidBody.Velocity = vel;
@@ -28,5 +29,4 @@
          this.TimeTillShoot = this.BetweenShots;
          Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
-     
  }
