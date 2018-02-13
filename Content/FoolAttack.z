@@ -5,6 +5,8 @@ class FoolAttack : ZilchComponent
     [Property] var SpecialCooldown : Real = 10;
     [Property] var StunCooldown : Real = 16;
     [Property] var StunDuration : Real = 2;
+     var Eye2 : Archetype = null;
+     var Eye3 : Archetype = null;
     
     var BasicAttackCounter : Real = 0;
     var SpecialAttackCounter : Real = 0;
@@ -46,6 +48,9 @@ class FoolAttack : ZilchComponent
             this.StunCounter = 0;
             this.StunReverseCounter = 0;
             this.Space.FindObjectByName("EyeOverlay").Sprite.AnimationActive = true;
+    
+            
+            
             
         }
         if(this.StunReverseCounter >= this.StunDuration)

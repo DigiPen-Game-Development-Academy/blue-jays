@@ -6,16 +6,16 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "EyeOverlay",
+		string Name = "EyeOverlay2",
 	},
 	Archetyped = 
 	{
-		string Name = "5a62821ef1c80783:Eye",
+		string Name = "5a62cae8e23d6f9e:Eye2",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-0.569763184, 0, -0.259372145],
-		Vec3 Scale = [8, 8, 8],
+		Vec3 Translation = [-27.3399811, 0.393154144, -0.267372131],
+		Vec3 Scale = [8, 8, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5a628236f7d7c1a2:EyeStart",
+		string SpriteSource = "5a629c11446d1ae7:EyeContinue",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
