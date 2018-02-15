@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, -0.274723053, 0],
+		Vec3 Translation = [0, -0.668423653, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -1454,11 +1454,11 @@ Cog =
 			},
 			Named = 
 			{
-				string Name = "Floor",
+				string Name = "SpecialFloor",
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, -29.5686817, 0],
+				Vec3 Translation = [0, -29.7655315, 0],
 				Vec3 Scale = [40, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -1486,7 +1486,7 @@ Cog =
 				bool SendsMessages = true,
 				bool Seamless = true,
 				string MaterialName = "5a1cee2c4a245b06:NoBounce",
-				string SerializedGroupName = "5a62f228704cdda5:Floor",
+				string SerializedGroupName = "5afe63a9ae54c7cf:SpecialFloor",
 				Vec3 Offset = [0, 0, 0],
 				Vec3 Size = [0.5, 0.5, 0.5],
 			},
@@ -1505,6 +1505,11 @@ Cog =
 			LoadtoMainLevel = 
 			{
 			},
+			Area = 
+			{
+				Vec2 Size = [1, 1],
+				Location Origin = Center,
+			},
 		},
 		Cog = 
 		{
@@ -1518,8 +1523,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [19.5, 38.7362633, 0],
-				Vec3 Scale = [1, 135.5, 1],
+				Vec3 Translation = [19.5, 9.99610519, 0],
+				Vec3 Scale = [1, 80, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -1575,8 +1580,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-19.5, 38.7362595, 0],
-				Vec3 Scale = [1, 135.5, 1],
+				Vec3 Translation = [-19.5, 9.99609947, 0],
+				Vec3 Scale = [1, 80, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 

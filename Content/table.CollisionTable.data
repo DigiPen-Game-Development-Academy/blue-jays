@@ -8,6 +8,7 @@ CollisionTable =
 		"5a911294c1ded749:Player",
 		"5a62f3c17e0f8aa8:Star",
 		"5a644b61ea399122:MissleCollisionCopy1",
+		"5afe63a9ae54c7cf:SpecialFloor",
 		"4e740859314e5515:DefaultGroup",
 		"5a916d15d23e3210:TurretProjectile",
 		"5a08f02201e5b825:StationaryTurret",
