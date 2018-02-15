@@ -8,7 +8,6 @@ class DamageOnColide : ZilchComponent
 
     function OnCollide(event : CollisionEvent)
     {
-        if(this.Owner.Name == "Boss") Console.WriteLine("`event.OtherObject.Name`");
         if (event.OtherObject.HP != null)
         {
             event.OtherObject.HP.Damage(this.Damage);
