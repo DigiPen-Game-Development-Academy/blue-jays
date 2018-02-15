@@ -5,9 +5,10 @@ class FoolAttack : ZilchComponent
     [Property] var SpecialCooldown : Real = 10;
     [Property] var StunCooldown : Real = 16;
     [Property] var StunDuration : Real = 2;
-     var Eye2 : Archetype = null;
-     var Eye3 : Archetype = null;
+    [Property] var EyeTelegraphTime : Real = 1.2;
+    [Property] var EyeReverseTelegraphTime : Real = 1.2;
     
+    var Eye : Cog;
     var BasicAttackCounter : Real = 0;
     var SpecialAttackCounter : Real = 0;
     var StunCounter : Real = 0;
@@ -16,6 +17,7 @@ class FoolAttack : ZilchComponent
     
     function Initialize(init : CogInitializer)
     {
+        this.Eye = this.Space.FindObjectByName("EyeOverlay");
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         this.SpecialAttackLocations.Add(Real3(-12,5.25,0));
         this.SpecialAttackLocations.Add(Real3(12,5.25,0));
@@ -47,18 +49,25 @@ class FoolAttack : ZilchComponent
             this.Space.FindObjectByName("Player").PlayerController.Stunned = true;
             this.StunCounter = 0;
             this.StunReverseCounter = 0;
-            this.Space.FindObjectByName("EyeOverlay").Sprite.AnimationActive = true;
-    
-            
-            
-            
+            this.Eye.Sprite.SpriteSource = SpriteSource.EyeContinue;
         }
-        if(this.StunReverseCounter >= this.StunDuration)
+        else if(this.StunCounter >= this.StunCooldown - this.EyeTelegraphTime &&
+            !this.Eye.Sprite.Visible)
+        {
+            this.Eye.Sprite.Visible = true;
+            this.Eye.Sprite.SpriteSource = SpriteSource.EyeStart;
+        }
+        if(this.StunReverseCounter >= this.StunDuration + this.EyeReverseTelegraphTime &&
+            this.Eye.Sprite.Visible)
+        {
+            this.Eye.Sprite.Visible = false;
+            this.StunReverseCounter = -1000;
+        }
+        else if(this.StunReverseCounter >= this.StunDuration &&
+            this.Space.FindObjectByName("Player").PlayerController.Stunned)
         {
             this.Space.FindObjectByName("Player").PlayerController.Stunned = false;
-            this.Space.FindObjectByName("EyeOverlay").Sprite.CurrentFrame = 0;
-            this.Space.FindObjectByName("EyeOverlay").Sprite.AnimationActive = false;
-            
+            this.Eye.Sprite.SpriteSource = SpriteSource.EyeEnd;
         }
         var emit = (this.SpecialAttackCounter/this.SpecialCooldown) * (this.SpecialAttackCounter/this.SpecialCooldown) * 1000;
         this.Owner.FindChildByName("Sparks").SphericalParticleEmitter.EmitRate = emit;
@@ -80,4 +89,3 @@ class FoolAttack : ZilchComponent
         }
     }
 }
- 
