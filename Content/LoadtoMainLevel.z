@@ -1,22 +1,18 @@
 class LoadtoMainLevel : ZilchComponent
 {
      function Initialize(init : CogInitializer)
-    {
-        Zero.Connect(this.Owner,Events.CollisionStarted, this.OnCollide);
-    }
+  {
+      Zero.Connect(this.Owner, Events.CollisionStarted,     this.OnCollisionStarted);
+  }
 
-    function OnLogicUpdate(event : UpdateEvent)
+    function OnCollisionStarted(event : CollisionEvent)
     {
-          // Get the object we collided with:
-    var otherObject = event.OtherObject;
+ var otherObject = event.OtherObject;
 
     // If we collided with the block,
     if (otherObject.Name == "SpecialFloor")
     {
-         this.Owner.Collider.SendsEvents = true;
-        this.Space.LoadLevel(Level.MainMenu);
-        
-        Console.WriteLine("Hi");
+        this.Space.LoadLevel (Level.Fool);
     }
-  }
+}
 }
