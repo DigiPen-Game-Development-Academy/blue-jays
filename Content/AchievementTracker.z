@@ -1,0 +1,145 @@
+enum AchEvent {DEATH, BEAT_FOOL, WIN, SPAWN}
+enum AchRequire {DEATHS, WINS, HEALTH, KNIGHT_SPAWNS, STAT_SPAWNS, UNIQUE_SPAWNS, TIME, TOTAL_RUNS, FOOL_BEATEN}
+
+class Requirement
+{
+    var Type : AchRequire = AchRequire.TIME;
+    var Min : Real = 0;
+    var Max : Real = 0;
+    var AchTrack : AchievementTracker;
+    constructor(req : AchRequire, min : Real, max : Real, ach : AchievementTracker)
+    {
+        this.Type = req;
+        this.Min = min;
+        this.Max = max;
+        this.AchTrack = ach;
+    }
+    function Check() : Boolean
+    {
+        var stats = this.AchTrack.Space.SavedStats;
+        var num = 0.0;
+        if(this.Type == AchRequire.DEATHS)
+        {
+            num = stats.Deaths;
+        }
+        else if(this.Type == AchRequire.WINS)
+        {
+            num = stats.Wins;
+        }
+        else if(this.Type == AchRequire.HEALTH)
+        {
+            num = stats.Space.FindObjectByName("Player").HP.Health;
+        }
+        else if(this.Type == AchRequire.KNIGHT_SPAWNS)
+        {
+            num = stats.KnightSpawns;
+        }
+        else if(this.Type == AchRequire.STAT_SPAWNS)
+        {
+            num = stats.StationarySpawns;
+        }
+        else if(this.Type == AchRequire.UNIQUE_SPAWNS)
+        {
+            num = stats.UniqueSpawns;
+        }
+        else if(this.Type == AchRequire.TIME)
+        {
+            num = stats.Wins;
+        }
+        else if(this.Type == AchRequire.TOTAL_RUNS)
+        {
+            num = stats.TotalRuns;
+        }
+        else if(this.Type == AchRequire.FOOL_BEATEN)
+        {
+            num = stats.FoolsBeaten;
+        }
+        return num <= this.Max && num >= this.Min;
+    }
+}
+
+class Achievement
+{
+    var Name : String = "Unnamed";
+    var Requirements : Array[Requirement];
+    var Unlocked : Boolean = false;
+    var Sprite : SpriteSource;
+    constructor(name : String, req : Array[Requirement], e : AchEvent, s : SpriteSource)
+    {
+        this.Name = name;
+        this.Requirements = req;
+        this.Sprite = s;
+        if(e==AchEvent.DEATH)
+        {
+            req[0].AchTrack.DeathAcheivements.Add(this);
+        }
+        else if(e==AchEvent.BEAT_FOOL)
+        {
+            req[0].AchTrack.FoolAcheivements.Add(this);
+        }
+        else if(e==AchEvent.WIN)
+        {
+            req[0].AchTrack.WinAcheivements.Add(this);
+        }
+        else if(e==AchEvent.SPAWN)
+        {
+            req[0].AchTrack.SpawnAcheivements.Add(this);
+        }
+    }
+    function Check()
+    {
+        var result = true;
+        foreach(var req in this.Requirements)
+        {
+            if(!req.Check())
+            {
+                result = false;
+            }
+        }
+        this.Unlocked = result;
+    }
+}
+
+class AchievementTracker : ZilchComponent
+{
+    var DeathAcheivements : Array[Achievement] = Array[Achievement]();
+    var FoolAcheivements : Array[Achievement] = Array[Achievement]();
+    var WinAcheivements : Array[Achievement] = Array[Achievement]();
+    var SpawnAcheivements : Array[Achievement] = Array[Achievement]();
+    var AllAcheivements : Array[Achievement] = Array[Achievement]();
+    function Initialize(init : CogInitializer)
+    {
+        var reqs = Array[Requirement]();
+        reqs.Add(Requirement(AchRequire.DEATHS, -100, 100, this));
+        this.AllAcheivements.Add(Achievement("Test", reqs, AchEvent.DEATH, SpriteSource.Bomb));
+        Zero.Connect(this.Space, Events.LevelStarted, this.OnLevelStart);
+    }
+
+    function OnLevelStart(event : GameEvent)
+    {
+        var achievements : Array[Achievement] = null;
+        if(event.LevelName == "Credits")
+        {
+            achievements = this.WinAcheivements;
+        }
+        else if(event.LevelName == "MainMenu")
+        {
+            achievements = this.DeathAcheivements;
+        }
+        else if(event.LevelName == "Death")
+        {
+            achievements = this.FoolAcheivements;
+        }
+        else if(event.LevelName == "Achievements")
+        {
+            this.LevelSettings.DrawAchievements.Draw(this.AllAcheivements);
+        }
+        if(achievements != null)
+        {
+            foreach(var achievement in achievements)
+            {
+                achievement.Check();
+            }
+        }
+    }
+}

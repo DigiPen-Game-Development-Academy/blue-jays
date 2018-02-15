@@ -6,15 +6,15 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Back",
+		string Name = "Achievements",
 	},
 	Archetyped = 
 	{
-		string Name = "5a019c7b87e28758:ExitOptionsButton",
+		string Name = "5afe65edb6f14c56:AchievementsButton",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, -3, 0],
+		Vec3 Translation = [0, 0.5, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -59,7 +59,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, 0.5, 0],
+				Vec3 Translation = [0, 0.375, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -74,8 +74,8 @@ Cog =
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 				string FontName = "4e7bac697bec55c5:Verdana",
-				uint FontSize = 48,
-				string Text = "Back",
+				uint FontSize = 40,
+				string Text = "Achievements",
 				TextAlign Align = Center,
 				float PixelsPerUnit = 64,
 				bool Smoothing = true,

@@ -6,7 +6,7 @@ Space =
 	},
 	Named = 
 	{
-		string Name = "PauseGame",
+		string Name = "Space",
 	},
 	Archetyped = 
 	{
@@ -17,7 +17,7 @@ Space =
 		float MaxDt = 0.300000012,
 		float MinDt = 9.99999997e-07,
 		float TimeScale = 1,
-		uint TimeMode = 0,
+		uint TimeMode = 1,
 		uint StepCount = 1,
 	},
 	GraphicsSpace = 
@@ -48,6 +48,12 @@ Space =
 	{
 	},
 	Globals = 
+	{
+	},
+	AchievementTracker = 
+	{
+	},
+	SavedStats = 
 	{
 	},
 },

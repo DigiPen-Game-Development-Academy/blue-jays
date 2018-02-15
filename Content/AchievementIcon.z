@@ -1,0 +1,13 @@
+class AchievementIcon : ZilchComponent
+{
+    var Achievement : Achievement;
+    function Init(ach : Achievement)
+    {
+        this.Achievement = ach;
+        this.Owner.Sprite.SpriteSource = ach.Sprite;
+        if(!ach.Unlocked)
+        {
+            this.Owner.Sprite.Color = Real4(0,0,0,1);
+        }
+    }
+}

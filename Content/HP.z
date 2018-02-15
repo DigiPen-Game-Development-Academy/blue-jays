@@ -19,9 +19,13 @@ class HP : ZilchComponent
             {
                 this.Space.LoadLevel(Level.MainMenu);
             }
-            else if(this.Owner.Name == "Boss")
+            else if(this.Owner.ArchetypeName == "Fool")
             {
                 this.Space.LoadLevel(Level.Death);
+            }
+            else if(this.Owner.ArchetypeName == "Death")
+            {
+                this.Space.LoadLevel(Level.Credits);
             }
             else
             {

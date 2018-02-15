@@ -1,4 +1,4 @@
-enum Menu {MAIN, CREDITS, LEVEL, CHAR_SELECT}
+enum Menu {MAIN, CREDITS, LEVEL, CHAR_SELECT, ACHIEVEMENTS}
 
 class ParticleToggleEvent : ZilchEvent
 {
@@ -27,11 +27,16 @@ class MenuController : ZilchComponent
         {
             this.CharacterSelect();
         }
+        else if(this.Menu == Menu.ACHIEVEMENTS)
+        {
+            this.Achievements();
+        }
     }
     
     function MainMenu()
     {
         this.Space.FindObjectByName("StartGame").Button.ToCall = this.LoadCharSelect;
+        this.Space.FindObjectByName("Achievements").Button.ToCall = this.LoadAchievements;
         this.Space.FindObjectByName("Credits").Button.ToCall = this.LoadCredits;
     }
     
@@ -54,6 +59,11 @@ class MenuController : ZilchComponent
         this.Space.FindObjectByName("Menu").Button.ToCall = this.LoadMenu;
         this.Space.FindObjectByName("Swords").Button.ToCall = this.LoadSwords;
         this.Space.FindObjectByName("Wands").Button.ToCall = this.LoadWands;
+    }
+    
+    function Achievements()
+    {
+        this.Space.FindObjectByName("Menu").Button.ToCall = this.LoadMenu;
     }
     
     function Resume()
@@ -103,5 +113,10 @@ class MenuController : ZilchComponent
     {
         this.Space.LoadLevel(Level.Find("Fool"));
         this.Space.Globals.Suit = Suit.WANDS;
+    }
+    
+    function LoadAchievements()
+    {
+        this.Space.LoadLevel(Level.Find("Achievements"));
     }
 }

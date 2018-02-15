@@ -93,7 +93,10 @@ Level =
 		},
 		MenuController = 
 		{
-			Enum Menu = MAIN,
+			Enum Menu = ACHIEVEMENTS,
+		},
+		DrawAchievements = 
+		{
 		},
 	},
 	Cog = 
@@ -145,7 +148,7 @@ Level =
 		string Name = "5a08fb6c68225264:LevelCamera",
 		LinkId = 
 		{
-			uint Id = 2,
+			uint Id = 4,
 		},
 		Transform = 
 		{
@@ -160,37 +163,14 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5a026539282b70ed:StartButton",
-		LinkId = 
-		{
-			uint Id = 4,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 3, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Area = 
-		{
-			Vec2 Size = [5, 1],
-			Location Origin = Center,
-		},
-		Named = 
-		{
-			string Name = "StartGame",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5afe65edb6f14c56:AchievementsButton",
+		string Name = "5a02651333da9589:MenuButton",
 		LinkId = 
 		{
 			uint Id = 5,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0.5, 0],
+			Vec3 Translation = [-10.5, -8.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -201,30 +181,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Achievements",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a02652e364fba53:CreditsButton",
-		LinkId = 
-		{
-			uint Id = 6,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, -2, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Area = 
-		{
-			Vec2 Size = [5, 1],
-			Location Origin = Center,
-		},
-		Named = 
-		{
-			string Name = "Credits",
+			string Name = "Menu",
 		},
 	},
 },

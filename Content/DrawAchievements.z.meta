@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "DrawAchievements",
+		uint64 ResourceId = 5afe665d3c6488a1,
+	},
+},
