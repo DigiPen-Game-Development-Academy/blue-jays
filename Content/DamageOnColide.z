@@ -8,12 +8,9 @@ class DamageOnColide : ZilchComponent
 
     function OnCollide(event : CollisionEvent)
     {
-        var otherObject = event.OtherObject;
-
-    // If we collided with the block,
-    if (otherObject.Name == "Floor")
-    {
-       this.Space.LoadLevel(Level.MainMenu);
-    }
+        if (event.OtherObject.HP != null)
+        {
+            event.OtherObject.HP.Damage(this.Damage);
+        }
     }
 }
