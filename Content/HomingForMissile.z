@@ -1,0 +1,25 @@
+class HomingForMissile : ZilchComponent
+{
+    var MissilePosition : Real3;
+    var GoalPosition : Real3;
+    var Velocity : Real3;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+  
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        //direction = missile position - goal position
+        //mulitply direction * speed for velocity
+        this.GoalPosition = this.Space.FindObjectByName("Player").Transform.Translation;
+        this.MissilePosition = this.Owner.Transform.Translation;
+        
+        this.Velocity = -Real3(this.MissilePosition.X - this.GoalPosition.X, this.MissilePosition.Y - this.GoalPosition.Y, 0);
+        this.Velocity *= Real3(2,2,2);
+        this.Owner.RigidBody.Velocity = this.Velocity;
+        
+        Console.WriteLine(this.Owner.RigidBody.Velocity);
+    }
+}
