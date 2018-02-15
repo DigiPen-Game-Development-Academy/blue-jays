@@ -4,6 +4,8 @@ enum Suit {SWORDS, WANDS, COINS, CUPS}
 
 class Globals : ZilchComponent
 {
+    var Particles : Boolean = true;
+    
     var Suit : Suit = Suit.SWORDS;
     
     var KnightOfSwords : Turret = Turret(TurretType.KNIGHT, Archetype.KnightOfSwords,

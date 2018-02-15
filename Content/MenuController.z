@@ -1,7 +1,13 @@
 enum Menu {MAIN, CREDITS, LEVEL, CHAR_SELECT}
 
+class ParticleToggleEvent : ZilchEvent
+{
+    var Name : String = "ParticleToggle";
+}
+
 class MenuController : ZilchComponent
 {
+    sends ParticleToggleEvent : ParticleToggleEvent;
     [Property] var Menu : Menu;
     function Initialize(init : CogInitializer)
     {
@@ -40,6 +46,7 @@ class MenuController : ZilchComponent
         this.Space.FindObjectByName("Resume").Button.ToCall = this.Resume;
         this.Space.FindObjectByName("Options").Button.ToCall = this.ToggleOptions;
         this.Space.FindObjectByName("Back").Button.ToCall = this.ToggleOptions;
+        this.Space.FindObjectByName("DisableParticles").Button.ToCall = this.ToggleParticles;
     }
     
     function CharacterSelect()
@@ -61,6 +68,13 @@ class MenuController : ZilchComponent
     {
         this.Space.FindObjectByName("PauseOverlay").OverlayToggle.Toggle();
         this.Space.FindObjectByName("OptionsOverlay").OverlayToggle.Toggle();
+    }
+    
+    function ToggleParticles()
+    {
+        var e = new ParticleToggleEvent();
+        this.Space.DispatchEvent(Events.ParticleToggleEvent, e);
+        this.Space.Globals.Particles = !this.Space.Globals.Particles;
     }
     
     function LoadCharSelect()

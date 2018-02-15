@@ -4,6 +4,8 @@ class StarSpawn : ZilchComponent
     [Property] var SpawnTime : Real = 0.2;
     
     var Timer : Real = 0;
+    var Random : Random = Random();
+    var SpawnNum : Real = 0;
     
     function Initialize(init : CogInitializer)
     {
@@ -15,8 +17,13 @@ class StarSpawn : ZilchComponent
         this.Timer -= event.Dt;
         if(this.Timer <= 0)
         {
+            this.SpawnNum += 1;
             this.Timer += this.SpawnTime;
-            this.Space.CreateAtPosition(Archetype.Star, Real3(0,9,0));
+            this.Space.CreateAtPosition(Archetype.Star, Real3(this.Random.Range(-15,15),9,0));
+            if(this.SpawnNum == this.StarNum)
+            {
+                this.Owner.Destroy();
+            }
         }
     }
 }

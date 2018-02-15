@@ -1,0 +1,29 @@
+class ParticleRemove : ZilchComponent
+{
+    var Enabled : Boolean;
+    var DefaultEmitRate : Real;
+    function Initialize(init : CogInitializer)
+    {
+        this.Enabled = this.Space.Globals.Particles;
+        this.DefaultEmitRate = this.Owner.SphericalParticleEmitter.EmitRate;
+        if(!this.Enabled)
+        {
+            this.Owner.SphericalParticleEmitter.EmitRate = 0;
+        }
+        Zero.Connect(this.Space, Events.ParticleToggleEvent, this.OnParticleToggle);
+    }
+
+    function OnParticleToggle(event : Event)
+    {
+        if(this.Enabled)
+        {
+            this.Enabled = false;
+            this.Owner.SphericalParticleEmitter.EmitRate = 0;
+        }
+        else
+        {
+            this.Enabled = true;
+            this.Owner.SphericalParticleEmitter.EmitRate = this.DefaultEmitRate;
+        }
+    }
+}

@@ -6,7 +6,7 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Arrow",
+		string Name = "Bomb",
 	},
 	Archetyped = 
 	{
@@ -60,6 +60,6 @@ Cog =
 	},
 	DestroyOnCollide = 
 	{
-		string Replacement = "5a9147de59b0eaac:Explosion",
+		string Replacement = "5afe4177eea13380:BossExplosion",
 	},
 },

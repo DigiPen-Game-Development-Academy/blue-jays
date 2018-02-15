@@ -2,8 +2,8 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "Eye3",
-		uint64 ResourceId = 5a62c5bacffb9f8d,
+		string Name = "DisableParticlesButton",
+		uint64 ResourceId = 5afe401cb9596565,
 		string LoaderType = "Cog",
 		uint Version = 0,
 		bool ShowInEditor = true,

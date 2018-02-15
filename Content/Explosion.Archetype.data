@@ -36,44 +36,6 @@ Cog =
 			},
 			Named = 
 			{
-				string Name = "Damage",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [0, 0, 0],
-				Vec3 Scale = [1, 1, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			SphereCollider = 
-			{
-				bool Ghost = false,
-				bool SendsMessages = true,
-				bool Seamless = true,
-				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-				string SerializedGroupName = "5a91414d85c27d2d:Explosion",
-				Vec3 Offset = [0, 0, 0],
-				float Radius = 0.5,
-			},
-			DamageOnColide = 
-			{
-				float Damage = 10,
-			},
-			DestroyTimer = 
-			{
-				float Timer = 0.200000003,
-			},
-			Hierarchy = 
-			{
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 3,
-			},
-			Named = 
-			{
 				string Name = "BallisticSmokeTrails",
 			},
 			Transform = 
@@ -135,12 +97,15 @@ Cog =
 				float Dampening = 0.5,
 				Vec3 Twist = [0, 0, 0],
 			},
+			ParticleRemove = 
+			{
+			},
 		},
 		Cog = 
 		{
 			LinkId = 
 			{
-				uint Id = 4,
+				uint Id = 3,
 			},
 			Named = 
 			{
@@ -211,12 +176,15 @@ Cog =
 				Vec4 Color3 = [1, 1, 1, 1],
 				Vec4 Color4 = [1, 1, 1, 0],
 			},
+			ParticleRemove = 
+			{
+			},
 		},
 		Cog = 
 		{
 			LinkId = 
 			{
-				uint Id = 5,
+				uint Id = 4,
 			},
 			Named = 
 			{
@@ -287,12 +255,15 @@ Cog =
 				Vec4 Color3 = [1, 1, 1, 1],
 				Vec4 Color4 = [1, 1, 1, 0],
 			},
+			ParticleRemove = 
+			{
+			},
 		},
 		Cog = 
 		{
 			LinkId = 
 			{
-				uint Id = 6,
+				uint Id = 5,
 			},
 			Named = 
 			{
@@ -363,12 +334,15 @@ Cog =
 				Vec4 Color3 = [1, 1, 1, 1],
 				Vec4 Color4 = [1, 1, 1, 0],
 			},
+			ParticleRemove = 
+			{
+			},
 		},
 		Cog = 
 		{
 			LinkId = 
 			{
-				uint Id = 7,
+				uint Id = 6,
 			},
 			Named = 
 			{
@@ -439,12 +413,15 @@ Cog =
 				Vec4 Color3 = [1, 1, 1, 0.25],
 				Vec4 Color4 = [1, 1, 1, 0],
 			},
+			ParticleRemove = 
+			{
+			},
 		},
 		Cog = 
 		{
 			LinkId = 
 			{
-				uint Id = 8,
+				uint Id = 7,
 			},
 			Named = 
 			{
@@ -515,12 +492,15 @@ Cog =
 				Vec4 Color3 = [1, 1, 1, 0.400000006],
 				Vec4 Color4 = [1, 1, 1, 0.200000003],
 			},
+			ParticleRemove = 
+			{
+			},
 		},
 		Cog = 
 		{
 			LinkId = 
 			{
-				uint Id = 9,
+				uint Id = 8,
 			},
 			Named = 
 			{
@@ -591,12 +571,15 @@ Cog =
 				Vec4 Color3 = [1, 1, 1, 0.25],
 				Vec4 Color4 = [1, 1, 1, 0],
 			},
+			ParticleRemove = 
+			{
+			},
 		},
 		Cog = 
 		{
 			LinkId = 
 			{
-				uint Id = 10,
+				uint Id = 9,
 			},
 			Named = 
 			{
@@ -666,6 +649,9 @@ Cog =
 				Vec4 Color2 = [1, 1, 1, 1],
 				Vec4 Color3 = [1, 1, 1, 1],
 				Vec4 Color4 = [1, 1, 1, 0],
+			},
+			ParticleRemove = 
+			{
 			},
 		},
 	},

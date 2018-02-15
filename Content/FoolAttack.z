@@ -17,7 +17,7 @@ class FoolAttack : ZilchComponent
     
     function Initialize(init : CogInitializer)
     {
-        this.Eye = this.Space.FindObjectByName("EyeOverlay");
+        this.Eye = this.Space.FindObjectByName("Eye");
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         this.SpecialAttackLocations.Add(Real3(-12,5.25,0));
         this.SpecialAttackLocations.Add(Real3(12,5.25,0));
@@ -70,7 +70,10 @@ class FoolAttack : ZilchComponent
             this.Eye.Sprite.SpriteSource = SpriteSource.EyeEnd;
         }
         var emit = (this.SpecialAttackCounter/this.SpecialCooldown) * (this.SpecialAttackCounter/this.SpecialCooldown) * 1000;
-        this.Owner.FindChildByName("Sparks").SphericalParticleEmitter.EmitRate = emit;
+        if(this.Owner.FindChildByName("Sparks").ParticleRemove.Enabled)
+        {
+            this.Owner.FindChildByName("Sparks").SphericalParticleEmitter.EmitRate = emit;
+        }
     }
     
     function Shoot()

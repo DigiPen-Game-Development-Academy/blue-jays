@@ -66,4 +66,7 @@ Cog =
 	{
 		string Replacement = "",
 	},
+	ArrowAutoRotate = 
+	{
+	},
 },

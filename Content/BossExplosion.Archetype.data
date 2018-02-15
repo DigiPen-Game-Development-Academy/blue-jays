@@ -8,10 +8,6 @@ Cog =
 	{
 		string Name = "Root",
 	},
-	Archetyped = 
-	{
-		string Name = "5a6290c5700adac7:SpellExplosion",
-	},
 	Transform = 
 	{
 		Vec3 Translation = [0, 0, 0],
@@ -20,11 +16,29 @@ Cog =
 	},
 	Hierarchy = 
 	{
+		ArchetypeInstance = 
+		{
+			string Name = "5a9147de59b0eaac:Explosion",
+			LinkId = 
+			{
+				uint Id = 2,
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, 0, 0],
+				Vec3 Scale = [2, 2, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Named = 
+			{
+				string Name = "Explosion",
+			},
+		},
 		Cog = 
 		{
 			LinkId = 
 			{
-				uint Id = 2,
+				uint Id = 3,
 			},
 			Named = 
 			{
@@ -42,13 +56,13 @@ Cog =
 				bool SendsMessages = true,
 				bool Seamless = true,
 				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-				string SerializedGroupName = "5a916d15d23e3210:TurretProjectile",
+				string SerializedGroupName = "5a91414d85c27d2d:Explosion",
 				Vec3 Offset = [0, 0, 0],
 				float Radius = 0.5,
 			},
 			DamageOnColide = 
 			{
-				float Damage = 25,
+				float Damage = 10,
 			},
 			DestroyTimer = 
 			{
@@ -56,24 +70,6 @@ Cog =
 			},
 			Hierarchy = 
 			{
-			},
-		},
-		ArchetypeInstance = 
-		{
-			string Name = "5a9147de59b0eaac:Explosion",
-			LinkId = 
-			{
-				uint Id = 3,
-			},
-			Transform = 
-			{
-				Vec3 Translation = [0, 0, 0],
-				Vec3 Scale = [2, 2, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Named = 
-			{
-				string Name = "Explosion",
 			},
 		},
 	},

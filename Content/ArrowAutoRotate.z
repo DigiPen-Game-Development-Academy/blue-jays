@@ -1,0 +1,13 @@
+class ArrowAutoRotate : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.Owner.Transform.SetEulerAnglesXYZ(0,0,Math.ATan2(
+            this.Owner.RigidBody.Velocity.Y, this.Owner.RigidBody.Velocity.X)+Math.Pi/2);
+    }
+}
