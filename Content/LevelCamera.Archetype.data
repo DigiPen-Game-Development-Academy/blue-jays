@@ -8,9 +8,13 @@ Cog =
 	{
 		string Name = "Camera",
 	},
+	Archetyped = 
+	{
+		string Name = "5a08fb6c68225264:LevelCamera",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 40],
+		Vec3 Translation = [0, 37.5, 40],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -28,5 +32,8 @@ Cog =
 	{
 		bool Active = true,
 		float Volume = 1,
+	},
+	CameraLogic = 
+	{
 	},
 },

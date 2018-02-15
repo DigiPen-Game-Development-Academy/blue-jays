@@ -1,19 +1,19 @@
-class DamageOnColide : ZilchComponent
+class LoadtoMainLevel : ZilchComponent
 {
-    [Property] var Damage : Real;
-    function Initialize(init : CogInitializer)
+     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Owner,Events.CollisionStarted, this.OnCollide);
     }
 
     function OnCollide(event : CollisionEvent)
     {
-        var otherObject = event.OtherObject;
+          // Get the object we collided with:
+    var otherObject = event.OtherObject;
 
     // If we collided with the block,
     if (otherObject.Name == "Floor")
     {
-       this.Space.LoadLevel(Level.MainMenu);
+        this.Space.LoadLevel(Level.MainMenu);
     }
     }
 }
