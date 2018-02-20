@@ -1,13 +1,13 @@
 class DrawAchievements : ZilchComponent
 {
-    var Columns : Integer = 10;
-    var Width : Real = 1.5;
+    [Property] var Columns : Integer = 10;
+    [Property] var Width : Real = 1.5;
     function Draw(achievements : Array[Achievement])
     {
         for (var i = 0; i < achievements.Count; i += 1)
         {
             var icon = this.Space.CreateAtPosition(Archetype.AchievementIcon,
-                Real3(((i%this.Columns)-this.Columns/2)*this.Width,8-(i%this.Columns)*this.Width,0));
+                Real3(((i%this.Columns)-this.Columns/2)*this.Width,8-(i/this.Columns)*this.Width,0));
             icon.AchievementIcon.Init(achievements[i]);
         }
     }

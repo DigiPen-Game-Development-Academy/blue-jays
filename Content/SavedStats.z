@@ -8,4 +8,5 @@ class SavedStats : ZilchComponent
     var StationarySpawns : Real = 0;
     var UniqueSpawns : Real = 0;
     var BestTime : Real = 1000000;
+    var PrevHealth : Real = 0;
 }

@@ -1,0 +1,60 @@
+class HoverTextBox : ZilchComponent
+{
+    [Dependency] var Transform : Transform;
+    
+    var Selected : Boolean = false;
+    var Max : Real2;
+    var Min : Real2;
+    var TextBox : Cog;
+    
+    var Icon : SpriteSource;
+    var Title : String;
+    var Objective : String;
+    var Flavor : String;
+    var Unlocked : Boolean;
+    
+    function Init(ach : Achievement)
+    {
+        Zero.Connect(this.Space, Events.MouseUpdate, this.OnMouseUpdate);
+        this.Max = this.Transform.Translation.XY + Real2(1,1);
+        this.Min = this.Transform.Translation.XY - Real2(1,1);
+        this.Icon = ach.Sprite;
+        this.Title = ach.Name;
+        this.Objective = ach.Objective;
+        this.Flavor = ach.Flavor;
+        this.Unlocked = ach.Unlocked;
+        if(!ach.Unlocked)
+        {
+            this.Title = "Locked";
+            this.Flavor = "???";
+        }
+    }
+    
+    function OnMouseUpdate(event : ViewportMouseEvent)
+    {
+        var mousepos = event.ToWorldZPlane(0);
+        if(mousepos.X < this.Max.X && mousepos.Y < this.Max.Y && mousepos.X > this.Min.X && mousepos.Y > this.Min.Y)
+        {
+            if(!this.Selected)
+            {
+                this.Selected = true;
+                var textBox = this.Space.CreateAtPosition(Archetype.AchievementTextBox, Real3());
+                textBox.FindChildByName("AchievementIcon").Sprite.SpriteSource = this.Icon;
+                textBox.FindChildByName("TitleText").SpriteText.Text = this.Title;
+                textBox.FindChildByName("ObjectiveText").SpriteText.Text = this.Objective;
+                textBox.FindChildByName("FlavorText").SpriteText.Text = this.Flavor;
+                if(!this.Unlocked)
+                {
+                    textBox.FindChildByName("AchievementIcon").Sprite.Color = Real4(0,0,0,1);
+                }
+                this.TextBox = textBox;
+                
+            }
+        }
+        else if(this.Selected)
+        {
+            this.Selected = false;
+            this.TextBox.Destroy();
+        }
+    }
+}
