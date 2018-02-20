@@ -8,9 +8,13 @@ Cog =
 	{
 		string Name = "Player",
 	},
+	Archetyped = 
+	{
+		string Name = "5a08fb786d4f3f80:Player",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [0, -0.5, 0],
+		Vec3 Translation = [1.59866571, 46.6032524, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -24,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5a916408338446d3:swords",
+		string SpriteSource = "5a916408338446d3:Swords",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -64,6 +68,7 @@ Cog =
 	{
 		float FateRate = 2,
 		float MaxFate = 100,
+		float ChariotCooldownTime = 10,
 	},
 	Contact = 
 	{

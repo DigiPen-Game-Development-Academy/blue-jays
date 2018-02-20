@@ -97,6 +97,8 @@ Level =
 		},
 		DrawAchievements = 
 		{
+			int Columns = 10,
+			float Width = 2.5,
 		},
 	},
 	Cog = 
@@ -123,7 +125,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 22.1034164,
+			float Size = 7.33859539,
 		},
 		EditorCameraController = 
 		{
@@ -148,7 +150,7 @@ Level =
 		string Name = "5a08fb6c68225264:LevelCamera",
 		LinkId = 
 		{
-			uint Id = 4,
+			uint Id = 2,
 		},
 		Transform = 
 		{
@@ -166,7 +168,7 @@ Level =
 		string Name = "5a02651333da9589:MenuButton",
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 4,
 		},
 		Transform = 
 		{

@@ -9,5 +9,6 @@ class AchievementIcon : ZilchComponent
         {
             this.Owner.Sprite.Color = Real4(0,0,0,1);
         }
+        this.Owner.HoverTextBox.Init(ach);
     }
 }
