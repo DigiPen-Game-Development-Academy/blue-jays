@@ -16,13 +16,14 @@ class FollowJoint : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-       
         var a = this.Link.WorldPointA;
-          var b = this.Link.WorldPointB;
-          var center = ( a + b ) / 2;
-          this.Rope.Transform.WorldTranslation = center;
-          
-          var radians = Math.Angle2D ( b - a );
-          this.Rope.Transform.WorldTranslation = Real3(1,2,1);
+        var b = this.Link.WorldPointB;
+        var center = ( a + b ) / 2;
+        this.Rope.Transform.WorldTranslation = center;
+
+        var radians = Math.Angle2D ( b - a );
+        this.Rope.Transform.SetEulerAnglesXYZ(0,0,radians);
+        
+        this.Rope.Transform.Scale=Real3(this.Link.Length,1,1);
     }
 }
