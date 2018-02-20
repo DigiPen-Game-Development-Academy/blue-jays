@@ -5,6 +5,7 @@ CollisionTable =
 		"5a916d34df3b1676:Wall",
 		"5a916d3ed1b57688:Boss",
 		"5a62f228704cdda5:Floor",
+		"5af7c2726c5d5798:Spike",
 		"5a911294c1ded749:Player",
 		"5a62f3c17e0f8aa8:Star",
 		"5a644b61ea399122:MissleCollisionCopy1",
