@@ -1,0 +1,28 @@
+class FollowJoint : ZilchComponent
+{
+    [Dependency] var Link : StickJoint;
+    
+    var Rope:Cog;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        
+          var a=this.Link.WorldPointA;
+          var b=this.Link.WorldPointB;
+          var center = (a + b) / 2;
+          this.Rope = this.Space.CreateAtPosition(Archetype.Sprite, center);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+       
+        var a = this.Link.WorldPointA;
+          var b = this.Link.WorldPointB;
+          var center = ( a + b ) / 2;
+          this.Rope.Transform.WorldTranslation = center;
+          
+          var radians = Math.Angle2D ( b - a );
+          this.Rope.Transform.WorldTranslation = Real3(1,2,1);
+    }
+}
