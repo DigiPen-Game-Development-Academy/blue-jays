@@ -1,12 +1,13 @@
 class SavedStats : ZilchComponent
 {
-    var TotalRuns : Real = 0;
-    var Deaths : Real = 0;
-    var Wins : Real = 0;
-    var FoolsBeaten : Real = 0;
-    var KnightSpawns : Real = 0;
-    var StationarySpawns : Real = 0;
-    var UniqueSpawns : Real = 0;
-    var BestTime : Real = 1000000;
+    [Serialized] var TotalRuns : Real = 0;
+    [Serialized] var Deaths : Real = 0;
+    [Serialized] var Wins : Real = 0;
+    [Serialized] var FoolsBeaten : Real = 0;
+    [Serialized] var KnightSpawns : Real = 0;
+    [Serialized] var StationarySpawns : Real = 0;
+    [Serialized] var UniqueSpawns : Real = 0;
+    [Serialized] var BestTime : Real = 1000000;
     var PrevHealth : Real = 0;
+    
 }

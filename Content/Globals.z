@@ -8,6 +8,8 @@ class Globals : ZilchComponent
     
     var Suit : Suit = Suit.SWORDS;
     
+    var SavedStats : Cog;
+    
     var KnightOfSwords : Turret = Turret(TurretType.KNIGHT, Archetype.KnightOfSwords,
         "Knight of Swords", SpriteSource.Knight_swords, 10);
     
@@ -32,6 +34,10 @@ class Globals : ZilchComponent
     
     function Initialize(init : CogInitializer)
     {
+        Zero.Connect(this.GameSession, Events.GameRequestQuit, this.OnGameRequestQuit);
+        Zero.Connect(this.Space, Events.LevelStarted, this.OnLevelStart);
+        this.SavedStats = Zero.ObjectStore.RestoreOrArchetype("Stats", Archetype.SavedStats, this.Space);
+        Console.WriteLine(this.SavedStats);
         this.SwordsList.Add(this.KnightOfSwords);
         this.SwordsList.Add(this.TheTower);
         this.SwordsList.Add(this.TheChariot);
@@ -39,6 +45,21 @@ class Globals : ZilchComponent
         this.WandsList.Add(this.KnightOfWands);
         this.WandsList.Add(this.TheMagician);
         this.WandsList.Add(this.TheStar);
+    }
+    
+    function OnLevelStart(event : GameEvent)
+    {
+        this.SavedStats = Zero.ObjectStore.RestoreOrArchetype("Stats", Archetype.SavedStats, this.Space);
+    }
+    
+    function StoreStats()
+    {
+        Zero.ObjectStore.Store("Stats", this.SavedStats);
+    }
+
+    function OnGameRequestQuit(event : GameEvent)
+    {
+        event.Handled = true;
     }
     
     function GetTurrets() : Array[Turret]

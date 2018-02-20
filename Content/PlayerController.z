@@ -66,7 +66,7 @@ class PlayerController : ZilchComponent
         this.JumpReady = false;
         if(this.Space.TimeSpace.Paused == false)
         {
-            if (Zero.Keyboard.KeyIsPressed(Keys.P))
+            if (Zero.Keyboard.KeyIsPressed(Keys.Escape))
             {
                 this.Space.FindObjectByName("PauseOverlay").OverlayToggle.Toggle();
                 //We need all the zeros!

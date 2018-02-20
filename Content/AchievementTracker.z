@@ -16,7 +16,7 @@ class Requirement
     }
     function Check() : Boolean
     {
-        var stats = this.AchTrack.Space.SavedStats;
+        var stats = this.AchTrack.Space.Globals.SavedStats.SavedStats;
         var num = 0.0;
         if(this.Type == AchRequire.DEATHS)
         {
@@ -142,6 +142,10 @@ class AchievementTracker : ZilchComponent
     function Initialize(init : CogInitializer)
     {
         this.AddAchievements();
+        foreach(var achievement in this.AllAcheivements)
+        {
+            achievement.Check();
+        }
         Zero.Connect(this.Space, Events.LevelStarted, this.OnLevelStart);
     }
 

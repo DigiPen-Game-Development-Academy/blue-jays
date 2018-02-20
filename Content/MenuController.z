@@ -38,6 +38,7 @@ class MenuController : ZilchComponent
         this.Space.FindObjectByName("StartGame").Button.ToCall = this.LoadCharSelect;
         this.Space.FindObjectByName("Achievements").Button.ToCall = this.LoadAchievements;
         this.Space.FindObjectByName("Credits").Button.ToCall = this.LoadCredits;
+        this.Space.FindObjectByName("Quit").Button.ToCall = this.GameSession.Quit;
     }
     
     function Credits()

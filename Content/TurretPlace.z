@@ -50,16 +50,17 @@ class TurretPlace : ZilchComponent
                         turret.Transform.Translation += Real3(0,turret.BoxCollider.Size.Y / 2,0);
                         if(this.CurrentTurret.Type == TurretType.KNIGHT)
                         {
-                            this.Space.SavedStats.KnightSpawns += 1;
+                            this.Space.Globals.SavedStats.SavedStats.KnightSpawns += 1;
                         }
                         else if(this.CurrentTurret.Type == TurretType.STATIONARY)
                         {
-                            this.Space.SavedStats.StationarySpawns += 1;
+                            this.Space.Globals.SavedStats.SavedStats.StationarySpawns += 1;
                         }
                         else if(this.CurrentTurret.Type == TurretType.UNIQUE)
                         {
-                            this.Space.SavedStats.UniqueSpawns += 1;
+                            this.Space.Globals.SavedStats.SavedStats.UniqueSpawns += 1;
                         }
+                        this.Space.Globals.StoreStats();
                         this.Space.AchievementTracker.OnSpawn();
                         this.Fate -= this.CurrentTurret.Fate;
                     }

@@ -120,7 +120,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 22.1034164,
+			float Size = 24.428051,
 		},
 		EditorCameraController = 
 		{
@@ -167,7 +167,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 3, 0],
+			Vec3 Translation = [0, 3.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -190,7 +190,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0.5, 0],
+			Vec3 Translation = [0, 1, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -213,7 +213,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -2, 0],
+			Vec3 Translation = [0, -1.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -225,6 +225,29 @@ Level =
 		Named = 
 		{
 			string Name = "Credits",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a6d2a99255638bb:QuitButton",
+		LinkId = 
+		{
+			uint Id = 7,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -4, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Area = 
+		{
+			Vec2 Size = [5, 1],
+			Location Origin = Center,
+		},
+		Named = 
+		{
+			string Name = "Quit",
 		},
 	},
 },

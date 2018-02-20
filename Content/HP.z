@@ -17,26 +17,27 @@ class HP : ZilchComponent
         {
             if(this.Owner.Name == "Player")
             {
-                this.Space.SavedStats.Deaths += 1;
-                this.Space.SavedStats.TotalRuns += 1;
-                this.Space.SavedStats.PrevHealth = this.Health;
+                this.Space.Globals.SavedStats.SavedStats.Deaths += 1;
+                this.Space.Globals.SavedStats.SavedStats.TotalRuns += 1;
+                this.Space.Globals.SavedStats.SavedStats.PrevHealth = this.Health;
                 this.Space.LoadLevel(Level.MainMenu);
             }
             else if(this.Owner.ArchetypeName == "Fool")
             {
-                this.Space.SavedStats.FoolsBeaten += 1;
+                this.Space.Globals.SavedStats.SavedStats.FoolsBeaten += 1;
                 this.Space.LoadLevel(Level.Death);
             }
             else if(this.Owner.ArchetypeName == "Death")
             {
-                this.Space.SavedStats.Wins += 1;
-                this.Space.SavedStats.TotalRuns += 1;
+                this.Space.Globals.SavedStats.SavedStats.Wins += 1;
+                this.Space.Globals.SavedStats.SavedStats.TotalRuns += 1;
                 this.Space.LoadLevel(Level.Credits);
             }
             else
             {
                 this.Owner.Destroy();
             }
+            this.Space.Globals.StoreStats();
         }
     }
 }
