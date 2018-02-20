@@ -57,7 +57,7 @@ class MenuController : ZilchComponent
     function CharacterSelect()
     {
         this.Space.FindObjectByName("Menu").Button.ToCall = this.LoadMenu;
-        this.Space.FindObjectByName("Swords").Button.ToCall = this.LoadSwords;
+        this.Space.FindObjectByName("Swords").Button.ToCall = this.LoadSwords; 
         this.Space.FindObjectByName("Wands").Button.ToCall = this.LoadWands;
     }
     
