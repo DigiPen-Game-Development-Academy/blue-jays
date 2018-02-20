@@ -10,9 +10,10 @@ class LoadtoMainLevel : ZilchComponent
  var otherObject = event.OtherObject;
 
     // If we collided with the block,
-    if (otherObject.Name == "SpecialFloor")
+    if (otherObject.Name == "Player")
     {
         this.Space.LoadLevel (Level.Fool);
+        
     }
 }
 }

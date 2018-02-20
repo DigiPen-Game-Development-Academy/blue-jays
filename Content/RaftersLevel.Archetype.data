@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, -0.668423653, 0],
+		Vec3 Translation = [-0.590544701, -0.668423653, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -32,7 +32,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-8.84065819, -12.8076973, 0],
+				Vec3 Translation = [10.7120075, 9.93132496, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -94,7 +94,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-0.186807156, -15.82967, 0],
+				Vec3 Translation = [-11.7735691, -0.115121841, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -156,7 +156,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [7.23077011, -2.23077035, 0],
+				Vec3 Translation = [5.72791433, -13.4032841, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -218,7 +218,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [8, 23.3956051, 0],
+				Vec3 Translation = [-15.5547543, -8.97389793, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -248,7 +248,7 @@ Cog =
 				string MaterialName = "5a1cee2c4a245b06:NoBounce",
 				string SerializedGroupName = "5a9112c3dd86ef8b:Platform",
 				Vec3 Offset = [0, 0, 0],
-				Vec3 Size = [3, 0.5, 0.5],
+				Vec3 Size = [1, 0.5, 0.5],
 			},
 			RigidBody = 
 			{
@@ -264,7 +264,7 @@ Cog =
 			},
 			Area = 
 			{
-				Vec2 Size = [6, 1],
+				Vec2 Size = [2, 1],
 				Location Origin = Center,
 			},
 		},
@@ -280,7 +280,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-7.24724674, 23.3956051, 0],
+				Vec3 Translation = [-9.91389084, -20.4167957, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -310,7 +310,7 @@ Cog =
 				string MaterialName = "5a1cee2c4a245b06:NoBounce",
 				string SerializedGroupName = "5a9112c3dd86ef8b:Platform",
 				Vec3 Offset = [0, 0, 0],
-				Vec3 Size = [3, 0.5, 0.5],
+				Vec3 Size = [1, 0.5, 0.5],
 			},
 			RigidBody = 
 			{
@@ -326,7 +326,7 @@ Cog =
 			},
 			Area = 
 			{
-				Vec2 Size = [6, 1],
+				Vec2 Size = [2, 1],
 				Location Origin = Center,
 			},
 		},
@@ -342,7 +342,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [12.3956099, 3.89010906, 0],
+				Vec3 Translation = [11.1990509, -22.1896381, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -372,7 +372,7 @@ Cog =
 				string MaterialName = "5a1cee2c4a245b06:NoBounce",
 				string SerializedGroupName = "5a9112c3dd86ef8b:Platform",
 				Vec3 Offset = [0, 0, 0],
-				Vec3 Size = [3, 0.5, 0.5],
+				Vec3 Size = [1, 0.5, 0.5],
 			},
 			RigidBody = 
 			{
@@ -388,7 +388,7 @@ Cog =
 			},
 			Area = 
 			{
-				Vec2 Size = [6, 1],
+				Vec2 Size = [2, 1],
 				Location Origin = Center,
 			},
 		},
@@ -404,7 +404,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-0.104400635, -1.60439968, 0],
+				Vec3 Translation = [2.97951317, -20.4167957, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -434,7 +434,7 @@ Cog =
 				string MaterialName = "5a1cee2c4a245b06:NoBounce",
 				string SerializedGroupName = "5a9112c3dd86ef8b:Platform",
 				Vec3 Offset = [0, 0, 0],
-				Vec3 Size = [3, 0.5, 0.5],
+				Vec3 Size = [1, 0.5, 0.5],
 			},
 			RigidBody = 
 			{
@@ -450,7 +450,7 @@ Cog =
 			},
 			Area = 
 			{
-				Vec2 Size = [6, 1],
+				Vec2 Size = [2, 1],
 				Location Origin = Center,
 			},
 		},
@@ -466,7 +466,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-13.7033024, -7.51099682, 0],
+				Vec3 Translation = [-9.69836807, 11.745615, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -496,7 +496,7 @@ Cog =
 				string MaterialName = "5a1cee2c4a245b06:NoBounce",
 				string SerializedGroupName = "5a9112c3dd86ef8b:Platform",
 				Vec3 Offset = [0, 0, 0],
-				Vec3 Size = [3, 0.5, 0.5],
+				Vec3 Size = [1, 0.5, 0.5],
 			},
 			RigidBody = 
 			{
@@ -512,7 +512,7 @@ Cog =
 			},
 			Area = 
 			{
-				Vec2 Size = [6, 1],
+				Vec2 Size = [2, 1],
 				Location Origin = Center,
 			},
 		},
@@ -528,7 +528,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [10.1978016, -19.5989075, 0],
+				Vec3 Translation = [5.9031744, 31.1931839, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -590,7 +590,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-15.9011021, -18.9121017, 0],
+				Vec3 Translation = [-7.24724674, 22.124815, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -652,7 +652,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-10.4725342, 36.71978, 0],
+				Vec3 Translation = [3.49994898, 20.077282, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -714,7 +714,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [6.83516884, -7.92307281, 0],
+				Vec3 Translation = [1.86411428, 11.7814283, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -776,7 +776,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [6.83516884, -7.92307281, 0],
+				Vec3 Translation = [2.83212852, 6.07168102, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -838,7 +838,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [13.7032948, -12.593401, 0],
+				Vec3 Translation = [12.8986492, -8.7955246, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -900,7 +900,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [6.21429253, 28.3241749, 0],
+				Vec3 Translation = [-5.89924383, -13.2249107, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -930,7 +930,7 @@ Cog =
 				string MaterialName = "5a1cee2c4a245b06:NoBounce",
 				string SerializedGroupName = "5a9112c3dd86ef8b:Platform",
 				Vec3 Offset = [0, 0, 0],
-				Vec3 Size = [1, 0.5, 0.5],
+				Vec3 Size = [3, 0.5, 0.5],
 			},
 			RigidBody = 
 			{
@@ -946,7 +946,7 @@ Cog =
 			},
 			Area = 
 			{
-				Vec2 Size = [2, 1],
+				Vec2 Size = [6, 1],
 				Location Origin = Center,
 			},
 		},
@@ -962,7 +962,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [2.23077488, 18.8461494, 0],
+				Vec3 Translation = [-1.0642128, -16.2870922, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -992,7 +992,7 @@ Cog =
 				string MaterialName = "5a1cee2c4a245b06:NoBounce",
 				string SerializedGroupName = "5a9112c3dd86ef8b:Platform",
 				Vec3 Offset = [0, 0, 0],
-				Vec3 Size = [1, 0.5, 0.5],
+				Vec3 Size = [3, 0.5, 0.5],
 			},
 			RigidBody = 
 			{
@@ -1008,7 +1008,7 @@ Cog =
 			},
 			Area = 
 			{
-				Vec2 Size = [2, 1],
+				Vec2 Size = [6, 1],
 				Location Origin = Center,
 			},
 		},
@@ -1024,7 +1024,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-0.653842211, 11.5659275, 0],
+				Vec3 Translation = [-5.89923382, -23.5396347, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -1054,7 +1054,7 @@ Cog =
 				string MaterialName = "5a1cee2c4a245b06:NoBounce",
 				string SerializedGroupName = "5a9112c3dd86ef8b:Platform",
 				Vec3 Offset = [0, 0, 0],
-				Vec3 Size = [1, 0.5, 0.5],
+				Vec3 Size = [3, 0.5, 0.5],
 			},
 			RigidBody = 
 			{
@@ -1070,7 +1070,7 @@ Cog =
 			},
 			Area = 
 			{
-				Vec2 Size = [2, 1],
+				Vec2 Size = [6, 1],
 				Location Origin = Center,
 			},
 		},
@@ -1086,7 +1086,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [5.93955898, 11.5659275, 0],
+				Vec3 Translation = [3.60964584, -25.3124771, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -1116,7 +1116,7 @@ Cog =
 				string MaterialName = "5a1cee2c4a245b06:NoBounce",
 				string SerializedGroupName = "5a9112c3dd86ef8b:Platform",
 				Vec3 Offset = [0, 0, 0],
-				Vec3 Size = [1, 0.5, 0.5],
+				Vec3 Size = [3, 0.5, 0.5],
 			},
 			RigidBody = 
 			{
@@ -1132,7 +1132,7 @@ Cog =
 			},
 			Area = 
 			{
-				Vec2 Size = [2, 1],
+				Vec2 Size = [6, 1],
 				Location Origin = Center,
 			},
 		},
@@ -1148,7 +1148,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-9.30769634, 11.5659275, 0],
+				Vec3 Translation = [-13.957612, -17.254097, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -1178,7 +1178,7 @@ Cog =
 				string MaterialName = "5a1cee2c4a245b06:NoBounce",
 				string SerializedGroupName = "5a9112c3dd86ef8b:Platform",
 				Vec3 Offset = [0, 0, 0],
-				Vec3 Size = [1, 0.5, 0.5],
+				Vec3 Size = [3, 0.5, 0.5],
 			},
 			RigidBody = 
 			{
@@ -1194,7 +1194,7 @@ Cog =
 			},
 			Area = 
 			{
-				Vec2 Size = [2, 1],
+				Vec2 Size = [6, 1],
 				Location Origin = Center,
 			},
 		},
@@ -1210,7 +1210,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-11.9175892, 3.59889412, 0],
+				Vec3 Translation = [1.55509472, -5.98664284, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -1240,7 +1240,7 @@ Cog =
 				string MaterialName = "5a1cee2c4a245b06:NoBounce",
 				string SerializedGroupName = "5a9112c3dd86ef8b:Platform",
 				Vec3 Offset = [0, 0, 0],
-				Vec3 Size = [1, 0.5, 0.5],
+				Vec3 Size = [3, 0.5, 0.5],
 			},
 			RigidBody = 
 			{
@@ -1256,7 +1256,7 @@ Cog =
 			},
 			Area = 
 			{
-				Vec2 Size = [2, 1],
+				Vec2 Size = [6, 1],
 				Location Origin = Center,
 			},
 		},
@@ -1272,7 +1272,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-15.2472553, 27.9450531, 0],
+				Vec3 Translation = [-7.69052696, -4.32753181, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -1334,7 +1334,255 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [7.19230652, 35.4065933, 0],
+				Vec3 Translation = [-9.1313343, 39.0266495, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5a0751d1714cca72:Wood",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			BoxCollider = 
+			{
+				bool Ghost = false,
+				bool SendsMessages = true,
+				bool Seamless = true,
+				string MaterialName = "5a1cee2c4a245b06:NoBounce",
+				string SerializedGroupName = "5a9112c3dd86ef8b:Platform",
+				Vec3 Offset = [0, 0, 0],
+				Vec3 Size = [3, 0.5, 0.5],
+			},
+			RigidBody = 
+			{
+				bool Static = true,
+				bool Asleep = false,
+				bool Kinematic = false,
+				bool RotationLocked = false,
+				bool Mode2D = true,
+				bool AllowSleep = true,
+				bool Inherit2DMode = true,
+				Vec3 Velocity = [0, 0, 0],
+				Vec3 AngularVelocity = [0, 0, 0],
+			},
+			Area = 
+			{
+				Vec2 Size = [6, 1],
+				Location Origin = Center,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 24,
+			},
+			Named = 
+			{
+				string Name = "Platform",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-6.55065823, 4.28165054, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5a0751d1714cca72:Wood",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			BoxCollider = 
+			{
+				bool Ghost = false,
+				bool SendsMessages = true,
+				bool Seamless = true,
+				string MaterialName = "5a1cee2c4a245b06:NoBounce",
+				string SerializedGroupName = "5a9112c3dd86ef8b:Platform",
+				Vec3 Offset = [0, 0, 0],
+				Vec3 Size = [3, 0.5, 0.5],
+			},
+			RigidBody = 
+			{
+				bool Static = true,
+				bool Asleep = false,
+				bool Kinematic = false,
+				bool RotationLocked = false,
+				bool Mode2D = true,
+				bool AllowSleep = true,
+				bool Inherit2DMode = true,
+				Vec3 Velocity = [0, 0, 0],
+				Vec3 AngularVelocity = [0, 0, 0],
+			},
+			Area = 
+			{
+				Vec2 Size = [6, 1],
+				Location Origin = Center,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 25,
+			},
+			Named = 
+			{
+				string Name = "Platform",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-15.408926, 7.23440742, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5a0751d1714cca72:Wood",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			BoxCollider = 
+			{
+				bool Ghost = false,
+				bool SendsMessages = true,
+				bool Seamless = true,
+				string MaterialName = "5a1cee2c4a245b06:NoBounce",
+				string SerializedGroupName = "5a9112c3dd86ef8b:Platform",
+				Vec3 Offset = [0, 0, 0],
+				Vec3 Size = [3, 0.5, 0.5],
+			},
+			RigidBody = 
+			{
+				bool Static = true,
+				bool Asleep = false,
+				bool Kinematic = false,
+				bool RotationLocked = false,
+				bool Mode2D = true,
+				bool AllowSleep = true,
+				bool Inherit2DMode = true,
+				Vec3 Velocity = [0, 0, 0],
+				Vec3 AngularVelocity = [0, 0, 0],
+			},
+			Area = 
+			{
+				Vec2 Size = [6, 1],
+				Location Origin = Center,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 26,
+			},
+			Named = 
+			{
+				string Name = "Platform",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [10.6897182, 0.792423248, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5a0751d1714cca72:Wood",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			BoxCollider = 
+			{
+				bool Ghost = false,
+				bool SendsMessages = true,
+				bool Seamless = true,
+				string MaterialName = "5a1cee2c4a245b06:NoBounce",
+				string SerializedGroupName = "5a9112c3dd86ef8b:Platform",
+				Vec3 Offset = [0, 0, 0],
+				Vec3 Size = [3, 0.5, 0.5],
+			},
+			RigidBody = 
+			{
+				bool Static = true,
+				bool Asleep = false,
+				bool Kinematic = false,
+				bool RotationLocked = false,
+				bool Mode2D = true,
+				bool AllowSleep = true,
+				bool Inherit2DMode = true,
+				Vec3 Velocity = [0, 0, 0],
+				Vec3 AngularVelocity = [0, 0, 0],
+			},
+			Area = 
+			{
+				Vec2 Size = [6, 1],
+				Location Origin = Center,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 27,
+			},
+			Named = 
+			{
+				string Name = "Platform",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-0.338292122, 33.3696671, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -1388,7 +1636,441 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 24,
+				uint Id = 28,
+			},
+			Named = 
+			{
+				string Name = "Platform",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-13.7896652, 25.9821243, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5a0751d1714cca72:Wood",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			BoxCollider = 
+			{
+				bool Ghost = false,
+				bool SendsMessages = true,
+				bool Seamless = true,
+				string MaterialName = "5a1cee2c4a245b06:NoBounce",
+				string SerializedGroupName = "5a9112c3dd86ef8b:Platform",
+				Vec3 Offset = [0, 0, 0],
+				Vec3 Size = [1, 0.5, 0.5],
+			},
+			RigidBody = 
+			{
+				bool Static = true,
+				bool Asleep = false,
+				bool Kinematic = false,
+				bool RotationLocked = false,
+				bool Mode2D = true,
+				bool AllowSleep = true,
+				bool Inherit2DMode = true,
+				Vec3 Velocity = [0, 0, 0],
+				Vec3 AngularVelocity = [0, 0, 0],
+			},
+			Area = 
+			{
+				Vec2 Size = [2, 1],
+				Location Origin = Center,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 29,
+			},
+			Named = 
+			{
+				string Name = "Platform",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-2.40380549, 15.065855, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5a0751d1714cca72:Wood",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			BoxCollider = 
+			{
+				bool Ghost = false,
+				bool SendsMessages = true,
+				bool Seamless = true,
+				string MaterialName = "5a1cee2c4a245b06:NoBounce",
+				string SerializedGroupName = "5a9112c3dd86ef8b:Platform",
+				Vec3 Offset = [0, 0, 0],
+				Vec3 Size = [1, 0.5, 0.5],
+			},
+			RigidBody = 
+			{
+				bool Static = true,
+				bool Asleep = false,
+				bool Kinematic = false,
+				bool RotationLocked = false,
+				bool Mode2D = true,
+				bool AllowSleep = true,
+				bool Inherit2DMode = true,
+				Vec3 Velocity = [0, 0, 0],
+				Vec3 AngularVelocity = [0, 0, 0],
+			},
+			Area = 
+			{
+				Vec2 Size = [2, 1],
+				Location Origin = Center,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 30,
+			},
+			Named = 
+			{
+				string Name = "Platform",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [1.56465149, 25.2739811, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5a0751d1714cca72:Wood",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			BoxCollider = 
+			{
+				bool Ghost = false,
+				bool SendsMessages = true,
+				bool Seamless = true,
+				string MaterialName = "5a1cee2c4a245b06:NoBounce",
+				string SerializedGroupName = "5a9112c3dd86ef8b:Platform",
+				Vec3 Offset = [0, 0, 0],
+				Vec3 Size = [1, 0.5, 0.5],
+			},
+			RigidBody = 
+			{
+				bool Static = true,
+				bool Asleep = false,
+				bool Kinematic = false,
+				bool RotationLocked = false,
+				bool Mode2D = true,
+				bool AllowSleep = true,
+				bool Inherit2DMode = true,
+				Vec3 Velocity = [0, 0, 0],
+				Vec3 AngularVelocity = [0, 0, 0],
+			},
+			Area = 
+			{
+				Vec2 Size = [2, 1],
+				Location Origin = Center,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 31,
+			},
+			Named = 
+			{
+				string Name = "Platform",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-12.6617966, 15.5033474, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5a0751d1714cca72:Wood",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			BoxCollider = 
+			{
+				bool Ghost = false,
+				bool SendsMessages = true,
+				bool Seamless = true,
+				string MaterialName = "5a1cee2c4a245b06:NoBounce",
+				string SerializedGroupName = "5a9112c3dd86ef8b:Platform",
+				Vec3 Offset = [0, 0, 0],
+				Vec3 Size = [1, 0.5, 0.5],
+			},
+			RigidBody = 
+			{
+				bool Static = true,
+				bool Asleep = false,
+				bool Kinematic = false,
+				bool RotationLocked = false,
+				bool Mode2D = true,
+				bool AllowSleep = true,
+				bool Inherit2DMode = true,
+				Vec3 Velocity = [0, 0, 0],
+				Vec3 AngularVelocity = [0, 0, 0],
+			},
+			Area = 
+			{
+				Vec2 Size = [2, 1],
+				Location Origin = Center,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 32,
+			},
+			Named = 
+			{
+				string Name = "Platform",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [9.95696354, 17.7444477, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5a0751d1714cca72:Wood",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			BoxCollider = 
+			{
+				bool Ghost = false,
+				bool SendsMessages = true,
+				bool Seamless = true,
+				string MaterialName = "5a1cee2c4a245b06:NoBounce",
+				string SerializedGroupName = "5a9112c3dd86ef8b:Platform",
+				Vec3 Offset = [0, 0, 0],
+				Vec3 Size = [1, 0.5, 0.5],
+			},
+			RigidBody = 
+			{
+				bool Static = true,
+				bool Asleep = false,
+				bool Kinematic = false,
+				bool RotationLocked = false,
+				bool Mode2D = true,
+				bool AllowSleep = true,
+				bool Inherit2DMode = true,
+				Vec3 Velocity = [0, 0, 0],
+				Vec3 AngularVelocity = [0, 0, 0],
+			},
+			Area = 
+			{
+				Vec2 Size = [2, 1],
+				Location Origin = Center,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 33,
+			},
+			Named = 
+			{
+				string Name = "Platform",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-7.25309896, 31.2213459, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5a0751d1714cca72:Wood",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			BoxCollider = 
+			{
+				bool Ghost = false,
+				bool SendsMessages = true,
+				bool Seamless = true,
+				string MaterialName = "5a1cee2c4a245b06:NoBounce",
+				string SerializedGroupName = "5a9112c3dd86ef8b:Platform",
+				Vec3 Offset = [0, 0, 0],
+				Vec3 Size = [3, 0.5, 0.5],
+			},
+			RigidBody = 
+			{
+				bool Static = true,
+				bool Asleep = false,
+				bool Kinematic = false,
+				bool RotationLocked = false,
+				bool Mode2D = true,
+				bool AllowSleep = true,
+				bool Inherit2DMode = true,
+				Vec3 Velocity = [0, 0, 0],
+				Vec3 AngularVelocity = [0, 0, 0],
+			},
+			Area = 
+			{
+				Vec2 Size = [6, 1],
+				Location Origin = Center,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 34,
+			},
+			Named = 
+			{
+				string Name = "Platform",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [7.19230652, 38.6254768, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5a0751d1714cca72:Wood",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			BoxCollider = 
+			{
+				bool Ghost = false,
+				bool SendsMessages = true,
+				bool Seamless = true,
+				string MaterialName = "5a1cee2c4a245b06:NoBounce",
+				string SerializedGroupName = "5a9112c3dd86ef8b:Platform",
+				Vec3 Offset = [0, 0, 0],
+				Vec3 Size = [1, 0.5, 0.5],
+			},
+			RigidBody = 
+			{
+				bool Static = true,
+				bool Asleep = false,
+				bool Kinematic = false,
+				bool RotationLocked = false,
+				bool Mode2D = true,
+				bool AllowSleep = true,
+				bool Inherit2DMode = true,
+				Vec3 Velocity = [0, 0, 0],
+				Vec3 AngularVelocity = [0, 0, 0],
+			},
+			Area = 
+			{
+				Vec2 Size = [2, 1],
+				Location Origin = Center,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 35,
 			},
 			Named = 
 			{
@@ -1450,7 +2132,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 25,
+				uint Id = 36,
 			},
 			Named = 
 			{
@@ -1515,7 +2197,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 26,
+				uint Id = 37,
 			},
 			Named = 
 			{
@@ -1572,7 +2254,681 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 27,
+				uint Id = 38,
+			},
+			Named = 
+			{
+				string Name = "Spike",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [4.01844406, 7.04459667, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5af7c00da9c5070d:Spikes",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			RigidBody = 
+			{
+				bool Static = false,
+				bool Asleep = false,
+				bool Kinematic = false,
+				bool RotationLocked = false,
+				bool Mode2D = true,
+				bool AllowSleep = true,
+				bool Inherit2DMode = true,
+				Vec3 Velocity = [0, 0, 0],
+				Vec3 AngularVelocity = [0, 0, 0],
+			},
+			BoxCollider = 
+			{
+				bool Ghost = false,
+				bool SendsMessages = true,
+				bool Seamless = true,
+				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+				string SerializedGroupName = "5af7c2726c5d5798:Spike",
+				Vec3 Offset = [0, 0, 0],
+				Vec3 Size = [0.349999994, 0.474999994, 0.5],
+			},
+			DamageOnColide = 
+			{
+				float Damage = 100,
+			},
+			Hierarchy = 
+			{
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 39,
+			},
+			Named = 
+			{
+				string Name = "Spike",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [12.7522612, 1.76793778, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5af7c00da9c5070d:Spikes",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			RigidBody = 
+			{
+				bool Static = false,
+				bool Asleep = false,
+				bool Kinematic = false,
+				bool RotationLocked = false,
+				bool Mode2D = true,
+				bool AllowSleep = true,
+				bool Inherit2DMode = true,
+				Vec3 Velocity = [0, 0, 0],
+				Vec3 AngularVelocity = [0, 0, 0],
+			},
+			BoxCollider = 
+			{
+				bool Ghost = false,
+				bool SendsMessages = true,
+				bool Seamless = true,
+				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+				string SerializedGroupName = "5af7c2726c5d5798:Spike",
+				Vec3 Offset = [0, 0, 0],
+				Vec3 Size = [0.349999994, 0.474999994, 0.5],
+			},
+			DamageOnColide = 
+			{
+				float Damage = 100,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 40,
+			},
+			Named = 
+			{
+				string Name = "Spike",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-15.3770132, -7.95993328, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5af7c00da9c5070d:Spikes",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			RigidBody = 
+			{
+				bool Static = false,
+				bool Asleep = false,
+				bool Kinematic = false,
+				bool RotationLocked = false,
+				bool Mode2D = true,
+				bool AllowSleep = true,
+				bool Inherit2DMode = true,
+				Vec3 Velocity = [0, 0, 0],
+				Vec3 AngularVelocity = [0, 0, 0],
+			},
+			BoxCollider = 
+			{
+				bool Ghost = false,
+				bool SendsMessages = true,
+				bool Seamless = true,
+				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+				string SerializedGroupName = "5af7c2726c5d5798:Spike",
+				Vec3 Offset = [0, 0, 0],
+				Vec3 Size = [0.349999994, 0.474999994, 0.5],
+			},
+			DamageOnColide = 
+			{
+				float Damage = 100,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 41,
+			},
+			Named = 
+			{
+				string Name = "Spike",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-9.25213432, 23.1040688, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5af7c00da9c5070d:Spikes",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			RigidBody = 
+			{
+				bool Static = false,
+				bool Asleep = false,
+				bool Kinematic = false,
+				bool RotationLocked = false,
+				bool Mode2D = true,
+				bool AllowSleep = true,
+				bool Inherit2DMode = true,
+				Vec3 Velocity = [0, 0, 0],
+				Vec3 AngularVelocity = [0, 0, 0],
+			},
+			BoxCollider = 
+			{
+				bool Ghost = false,
+				bool SendsMessages = true,
+				bool Seamless = true,
+				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+				string SerializedGroupName = "5af7c2726c5d5798:Spike",
+				Vec3 Offset = [0, 0, 0],
+				Vec3 Size = [0.349999994, 0.474999994, 0.5],
+			},
+			DamageOnColide = 
+			{
+				float Damage = 100,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 42,
+			},
+			Named = 
+			{
+				string Name = "Spike",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [10.4349804, 18.7324905, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5af7c00da9c5070d:Spikes",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			RigidBody = 
+			{
+				bool Static = false,
+				bool Asleep = false,
+				bool Kinematic = false,
+				bool RotationLocked = false,
+				bool Mode2D = true,
+				bool AllowSleep = true,
+				bool Inherit2DMode = true,
+				Vec3 Velocity = [0, 0, 0],
+				Vec3 AngularVelocity = [0, 0, 0],
+			},
+			BoxCollider = 
+			{
+				bool Ghost = false,
+				bool SendsMessages = true,
+				bool Seamless = true,
+				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+				string SerializedGroupName = "5af7c2726c5d5798:Spike",
+				Vec3 Offset = [0, 0, 0],
+				Vec3 Size = [0.349999994, 0.474999994, 0.5],
+			},
+			DamageOnColide = 
+			{
+				float Damage = 100,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 43,
+			},
+			Named = 
+			{
+				string Name = "Spike",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-16.5436592, 8.21123886, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5af7c00da9c5070d:Spikes",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			RigidBody = 
+			{
+				bool Static = false,
+				bool Asleep = false,
+				bool Kinematic = false,
+				bool RotationLocked = false,
+				bool Mode2D = true,
+				bool AllowSleep = true,
+				bool Inherit2DMode = true,
+				Vec3 Velocity = [0, 0, 0],
+				Vec3 AngularVelocity = [0, 0, 0],
+			},
+			BoxCollider = 
+			{
+				bool Ghost = false,
+				bool SendsMessages = true,
+				bool Seamless = true,
+				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+				string SerializedGroupName = "5af7c2726c5d5798:Spike",
+				Vec3 Offset = [0, 0, 0],
+				Vec3 Size = [0.349999994, 0.474999994, 0.5],
+			},
+			DamageOnColide = 
+			{
+				float Damage = 100,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 44,
+			},
+			Named = 
+			{
+				string Name = "Spike",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-9.98128605, -3.33612728, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5af7c00da9c5070d:Spikes",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			RigidBody = 
+			{
+				bool Static = false,
+				bool Asleep = false,
+				bool Kinematic = false,
+				bool RotationLocked = false,
+				bool Mode2D = true,
+				bool AllowSleep = true,
+				bool Inherit2DMode = true,
+				Vec3 Velocity = [0, 0, 0],
+				Vec3 AngularVelocity = [0, 0, 0],
+			},
+			BoxCollider = 
+			{
+				bool Ghost = false,
+				bool SendsMessages = true,
+				bool Seamless = true,
+				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+				string SerializedGroupName = "5af7c2726c5d5798:Spike",
+				Vec3 Offset = [0, 0, 0],
+				Vec3 Size = [0.349999994, 0.474999994, 0.5],
+			},
+			DamageOnColide = 
+			{
+				float Damage = 100,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 45,
+			},
+			Named = 
+			{
+				string Name = "Spike",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-9.93667221, 32.1506996, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5af7c00da9c5070d:Spikes",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			RigidBody = 
+			{
+				bool Static = false,
+				bool Asleep = false,
+				bool Kinematic = false,
+				bool RotationLocked = false,
+				bool Mode2D = true,
+				bool AllowSleep = true,
+				bool Inherit2DMode = true,
+				Vec3 Velocity = [0, 0, 0],
+				Vec3 AngularVelocity = [0, 0, 0],
+			},
+			BoxCollider = 
+			{
+				bool Ghost = false,
+				bool SendsMessages = true,
+				bool Seamless = true,
+				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+				string SerializedGroupName = "5af7c2726c5d5798:Spike",
+				Vec3 Offset = [0, 0, 0],
+				Vec3 Size = [0.349999994, 0.474999994, 0.5],
+			},
+			DamageOnColide = 
+			{
+				float Damage = 100,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 46,
+			},
+			Named = 
+			{
+				string Name = "Spike",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-13.160224, 26.9823608, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5af7c00da9c5070d:Spikes",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			RigidBody = 
+			{
+				bool Static = false,
+				bool Asleep = false,
+				bool Kinematic = false,
+				bool RotationLocked = false,
+				bool Mode2D = true,
+				bool AllowSleep = true,
+				bool Inherit2DMode = true,
+				Vec3 Velocity = [0, 0, 0],
+				Vec3 AngularVelocity = [0, 0, 0],
+			},
+			BoxCollider = 
+			{
+				bool Ghost = false,
+				bool SendsMessages = true,
+				bool Seamless = true,
+				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+				string SerializedGroupName = "5af7c2726c5d5798:Spike",
+				Vec3 Offset = [0, 0, 0],
+				Vec3 Size = [0.349999994, 0.474999994, 0.5],
+			},
+			DamageOnColide = 
+			{
+				float Damage = 100,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 47,
+			},
+			Named = 
+			{
+				string Name = "Spike",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [10.4349804, -7.80984783, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5af7c00da9c5070d:Spikes",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			RigidBody = 
+			{
+				bool Static = false,
+				bool Asleep = false,
+				bool Kinematic = false,
+				bool RotationLocked = false,
+				bool Mode2D = true,
+				bool AllowSleep = true,
+				bool Inherit2DMode = true,
+				Vec3 Velocity = [0, 0, 0],
+				Vec3 AngularVelocity = [0, 0, 0],
+			},
+			BoxCollider = 
+			{
+				bool Ghost = false,
+				bool SendsMessages = true,
+				bool Seamless = true,
+				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+				string SerializedGroupName = "5af7c2726c5d5798:Spike",
+				Vec3 Offset = [0, 0, 0],
+				Vec3 Size = [0.349999994, 0.474999994, 0.5],
+			},
+			DamageOnColide = 
+			{
+				float Damage = 100,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 48,
+			},
+			Named = 
+			{
+				string Name = "Spike",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [8.55212688, 32.1506996, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5af7c00da9c5070d:Spikes",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			RigidBody = 
+			{
+				bool Static = false,
+				bool Asleep = false,
+				bool Kinematic = false,
+				bool RotationLocked = false,
+				bool Mode2D = true,
+				bool AllowSleep = true,
+				bool Inherit2DMode = true,
+				Vec3 Velocity = [0, 0, 0],
+				Vec3 AngularVelocity = [0, 0, 0],
+			},
+			BoxCollider = 
+			{
+				bool Ghost = false,
+				bool SendsMessages = true,
+				bool Seamless = true,
+				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+				string SerializedGroupName = "5af7c2726c5d5798:Spike",
+				Vec3 Offset = [0, 0, 0],
+				Vec3 Size = [0.349999994, 0.474999994, 0.5],
+			},
+			DamageOnColide = 
+			{
+				float Damage = 100,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 49,
 			},
 			Named = 
 			{
@@ -1624,40 +2980,8 @@ Cog =
 				Vec3 Velocity = [0, 0, 0],
 				Vec3 AngularVelocity = [0, 0, 0],
 			},
-		},
-		Cog = 
-		{
-			LinkId = 
+			Hierarchy = 
 			{
-				uint Id = 28,
-			},
-			Named = 
-			{
-				string Name = "Background",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [0, 38.5988998, -1],
-				Vec3 Scale = [1.66637838, 1.66637838, 0.333275676],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5af554c10f644933:FoolBg_update_0",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
 			},
 		},
 	},

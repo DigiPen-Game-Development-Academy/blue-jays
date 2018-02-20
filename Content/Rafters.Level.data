@@ -111,7 +111,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-2.89241481, 41.14645, 50],
+			Vec3 Translation = [-2.89241481, -23.7908878, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -123,7 +123,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 14.9568863,
+			float Size = 30.1194572,
 		},
 		EditorCameraController = 
 		{
@@ -131,7 +131,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-2.89241481, 41.14645, 0],
+			Vec3 LookTarget = [-2.89241481, -23.7908878, 0],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -2411,7 +2411,7 @@ Level =
 					bool SendsMessages = true,
 					bool Seamless = true,
 					string MaterialName = "5a1cee2c4a245b06:NoBounce",
-					string SerializedGroupName = "5afe63a9ae54c7cf:SpecialFloor",
+					string SerializedGroupName = "5a916d34df3b1676:Wall",
 					Vec3 Offset = [0, 0, 0],
 					Vec3 Size = [0.5, 0.5, 0.5],
 				},
