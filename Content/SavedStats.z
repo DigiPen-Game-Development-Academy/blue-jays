@@ -4,6 +4,8 @@ class SavedStats : ZilchComponent
     [Serialized] var Deaths : Real = 0;
     [Serialized] var Wins : Real = 0;
     [Serialized] var FoolsBeaten : Real = 0;
+    [Serialized] var LoversBeaten : Real = 0;
+    [Serialized] var Spawns : Real = 0;
     [Serialized] var KnightSpawns : Real = 0;
     [Serialized] var StationarySpawns : Real = 0;
     [Serialized] var UniqueSpawns : Real = 0;

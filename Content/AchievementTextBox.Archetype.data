@@ -38,7 +38,7 @@ Cog =
 	},
 	FollowMouse = 
 	{
-		Vec3 Offset = [6, -3, 1],
+		Vec3 Offset = [4.5, -3, 1],
 	},
 	Hierarchy = 
 	{
@@ -409,8 +409,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-0.300000042, 0.300000012, 0],
-				Vec3 Scale = [0.199999988, 0.300000012, 0.99999994],
+				Vec3 Translation = [-0.300000012, 0.300000012, 0],
+				Vec3 Scale = [0.150000006, 0.224999994, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			SpriteText = 
@@ -432,8 +432,11 @@ Cog =
 			},
 			Area = 
 			{
-				Vec2 Size = [3.79999995, 0.600000024],
+				Vec2 Size = [5, 1.20000005],
 				Location Origin = CenterLeft,
+			},
+			Hierarchy = 
+			{
 			},
 		},
 		Cog = 
