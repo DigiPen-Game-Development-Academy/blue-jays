@@ -624,10 +624,7 @@ Level =
 	{
 		LinkId = 
 		{
-<<<<<<< HEAD
 			uint Id = 16,
-=======
-			uint Id = 6,
 		},
 		Named = 
 		{
@@ -636,7 +633,6 @@ Level =
 		Archetyped = 
 		{
 			string Name = "5a08f665abdaab0d:FoolLevel",
->>>>>>> 711690d625a995fa4a6a190934291496baae49f0
 		},
 		Transform = 
 		{
