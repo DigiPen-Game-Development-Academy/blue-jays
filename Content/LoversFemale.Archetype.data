@@ -62,4 +62,8 @@ Cog =
 	{
 		float MaxHealth = 100,
 	},
+	DamageOnColide = 
+	{
+		float Damage = 10,
+	},
 },

@@ -6,7 +6,7 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Male",
+		string Name = "Boss",
 	},
 	Archetyped = 
 	{
@@ -61,5 +61,9 @@ Cog =
 	HP = 
 	{
 		float MaxHealth = 100,
+	},
+	DamageOnColide = 
+	{
+		float Damage = 10,
 	},
 },
