@@ -10,11 +10,11 @@ Cog =
 	},
 	Archetyped = 
 	{
-		string Name = "5a08fb6c68225264:LevelCamera",
+		string Name = "5a6df7d6e02085d5:FollowingCamera",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 37.5, 40],
+		Vec3 Translation = [0, 0, 40],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -35,5 +35,123 @@ Cog =
 	},
 	CameraLogic = 
 	{
+	},
+	Hierarchy = 
+	{
+		ArchetypeInstance = 
+		{
+			string Name = "5a019c947ab2b196:OptionsOverlay",
+			LinkId = 
+			{
+				uint Id = 2,
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, 37.8626404, -39],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Named = 
+			{
+				string Name = "OptionsOverlay",
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 3,
+			},
+			Named = 
+			{
+				string Name = "PauseOverlay",
+			},
+			Archetyped = 
+			{
+				string Name = "5a026066ef8b66c0:PauseOverlay",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, 37.0879135, -39],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			OverlayToggle = 
+			{
+				Vec2 ButtonSize = [5, 1],
+			},
+			Hierarchy = 
+			{
+				ArchetypeInstance = 
+				{
+					string Name = "5a02651333da9589:MenuButton",
+					LinkId = 
+					{
+						uint Id = 4,
+					},
+					Transform = 
+					{
+						Vec3 Translation = [0, -3, 0],
+						Vec3 Scale = [1, 1, 1],
+						Quat Rotation = [0, 0, 0, 1],
+					},
+					Area = 
+					{
+						Vec2 Size = [5, 1],
+						Location Origin = Center,
+					},
+					Named = 
+					{
+						string Name = "Menu",
+					},
+				},
+				ArchetypeInstance = 
+				{
+					string Name = "5a02608ee5a149c3:OptionsButton",
+					LinkId = 
+					{
+						uint Id = 5,
+					},
+					Transform = 
+					{
+						Vec3 Translation = [0, 0, 0],
+						Vec3 Scale = [1, 1, 1],
+						Quat Rotation = [0, 0, 0, 1],
+					},
+					Area = 
+					{
+						Vec2 Size = [5, 1],
+						Location Origin = Center,
+					},
+					Named = 
+					{
+						string Name = "Options",
+					},
+				},
+				ArchetypeInstance = 
+				{
+					string Name = "5a0260b9da6b9ca3:ResumeButton",
+					LinkId = 
+					{
+						uint Id = 6,
+					},
+					Transform = 
+					{
+						Vec3 Translation = [0, 3, 0],
+						Vec3 Scale = [1, 1, 1],
+						Quat Rotation = [0, 0, 0, 1],
+					},
+					Area = 
+					{
+						Vec2 Size = [5, 1],
+						Location Origin = Center,
+					},
+					Named = 
+					{
+						string Name = "Resume",
+					},
+				},
+			},
+		},
 	},
 },

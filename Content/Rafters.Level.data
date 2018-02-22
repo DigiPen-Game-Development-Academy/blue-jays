@@ -111,7 +111,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.57318854, 10.9246864, 50],
+			Vec3 Translation = [-1.02146375, 35.0104904, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -123,7 +123,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 100,
+			float Size = 81.8730927,
 		},
 		EditorCameraController = 
 		{
@@ -131,7 +131,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-1.57318854, 10.9246864, -9.29228406e-07],
+			Vec3 LookTarget = [-1.02146375, 35.0104904, -9.05111335e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -145,28 +145,10 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5a08fb6c68225264:LevelCamera",
-		LinkId = 
-		{
-			uint Id = 4,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 36.8077774, 40],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Camera",
-		},
-	},
-	ArchetypeInstance = 
-	{
 		string Name = "5afe76de417f83a2:RaftersLevel",
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 4,
 		},
 		Transform = 
 		{
@@ -183,122 +165,85 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 5,
 		},
 		Named = 
 		{
-			string Name = "PauseOverlay",
+			string Name = "Camera",
 		},
 		Archetyped = 
 		{
-			string Name = "5a026066ef8b66c0:PauseOverlay",
+			string Name = "5a6df7d6e02085d5:FollowingCamera",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 37.0879135, 1],
+			Vec3 Translation = [0, 0, 40],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		OverlayToggle = 
+		Camera = 
 		{
-			Vec2 ButtonSize = [5, 1],
+			ProjectionMode ProjectionMode = Orthographic,
+			Facing Facing = NegativeZ,
+			CameraTransparentSort TransparentSort = InheritFromSpace,
+			float FieldOfView = 45,
+			float NearPlane = 0.5,
+			float FarPlane = 200,
+			float Size = 22.5,
+		},
+		SoundListener = 
+		{
+			bool Active = true,
+			float Volume = 1,
+		},
+		CameraLogic = 
+		{
 		},
 		Hierarchy = 
 		{
 			ArchetypeInstance = 
 			{
-				string Name = "5a02651333da9589:MenuButton",
+				string Name = "5a019c947ab2b196:OptionsOverlay",
+				LinkId = 
+				{
+					uint Id = 6,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, -39],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "OptionsOverlay",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "5a026066ef8b66c0:PauseOverlay",
 				LinkId = 
 				{
 					uint Id = 7,
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, -3, 0],
+					Vec3 Translation = [0, 0, -39],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
-				Area = 
-				{
-					Vec2 Size = [5, 1],
-					Location Origin = Center,
-				},
 				Named = 
 				{
-					string Name = "Menu",
+					string Name = "PauseOverlay",
 				},
 			},
-			ArchetypeInstance = 
-			{
-				string Name = "5a02608ee5a149c3:OptionsButton",
-				LinkId = 
-				{
-					uint Id = 8,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 0, 0],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Area = 
-				{
-					Vec2 Size = [5, 1],
-					Location Origin = Center,
-				},
-				Named = 
-				{
-					string Name = "Options",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "5a0260b9da6b9ca3:ResumeButton",
-				LinkId = 
-				{
-					uint Id = 9,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 3, 0],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Area = 
-				{
-					Vec2 Size = [5, 1],
-					Location Origin = Center,
-				},
-				Named = 
-				{
-					string Name = "Resume",
-				},
-			},
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a019c947ab2b196:OptionsOverlay",
-		LinkId = 
-		{
-			uint Id = 10,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 37.8626404, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "OptionsOverlay",
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 11,
+			uint Id = 8,
 		},
 		Named = 
 		{
@@ -332,7 +277,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 12,
+			uint Id = 9,
 		},
 		Named = 
 		{
@@ -366,7 +311,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 13,
+			uint Id = 10,
 		},
 		Named = 
 		{
@@ -400,7 +345,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 14,
+			uint Id = 11,
 		},
 		Named = 
 		{
@@ -435,7 +380,7 @@ Level =
 		string Name = "5a6ea1f2412a5c3b:Pigeon",
 		LinkId = 
 		{
-			uint Id = 15,
+			uint Id = 12,
 		},
 		Transform = 
 		{
@@ -453,7 +398,7 @@ Level =
 		string Name = "5a6ea1f2412a5c3b:Pigeon",
 		LinkId = 
 		{
-			uint Id = 16,
+			uint Id = 13,
 		},
 		Transform = 
 		{
@@ -471,7 +416,7 @@ Level =
 		string Name = "5a6ea1f2412a5c3b:Pigeon",
 		LinkId = 
 		{
-			uint Id = 17,
+			uint Id = 14,
 		},
 		Transform = 
 		{
@@ -489,7 +434,7 @@ Level =
 		string Name = "5a6ea1f2412a5c3b:Pigeon",
 		LinkId = 
 		{
-			uint Id = 18,
+			uint Id = 15,
 		},
 		Transform = 
 		{
@@ -507,7 +452,7 @@ Level =
 		string Name = "5a6ea1f2412a5c3b:Pigeon",
 		LinkId = 
 		{
-			uint Id = 19,
+			uint Id = 16,
 		},
 		Transform = 
 		{
@@ -525,7 +470,7 @@ Level =
 		string Name = "5a6ea1f2412a5c3b:Pigeon",
 		LinkId = 
 		{
-			uint Id = 20,
+			uint Id = 17,
 		},
 		Transform = 
 		{
@@ -543,7 +488,7 @@ Level =
 		string Name = "5a6ea1f2412a5c3b:Pigeon",
 		LinkId = 
 		{
-			uint Id = 21,
+			uint Id = 18,
 		},
 		Transform = 
 		{
@@ -561,7 +506,7 @@ Level =
 		string Name = "5a6ea1f2412a5c3b:Pigeon",
 		LinkId = 
 		{
-			uint Id = 22,
+			uint Id = 19,
 		},
 		Transform = 
 		{
@@ -579,7 +524,7 @@ Level =
 		string Name = "5a6ea1f2412a5c3b:Pigeon",
 		LinkId = 
 		{
-			uint Id = 23,
+			uint Id = 20,
 		},
 		Transform = 
 		{
@@ -597,7 +542,7 @@ Level =
 		string Name = "5a6ea1f2412a5c3b:Pigeon",
 		LinkId = 
 		{
-			uint Id = 24,
+			uint Id = 21,
 		},
 		Transform = 
 		{
@@ -615,7 +560,7 @@ Level =
 		string Name = "5a6ea1f2412a5c3b:Pigeon",
 		LinkId = 
 		{
-			uint Id = 25,
+			uint Id = 22,
 		},
 		Transform = 
 		{
@@ -632,7 +577,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 26,
+			uint Id = 23,
 		},
 		Named = 
 		{
