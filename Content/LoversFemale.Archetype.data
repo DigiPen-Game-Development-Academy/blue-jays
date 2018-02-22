@@ -6,7 +6,7 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Sprite",
+		string Name = "Female",
 	},
 	Archetyped = 
 	{
@@ -14,8 +14,8 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [12, -0.400000006, -0.00100002112],
-		Vec3 Scale = [1, 1, 1],
+		Vec3 Translation = [12, -3.5, 0],
+		Vec3 Scale = [2, 2, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -35,12 +35,6 @@ Cog =
 		bool AnimationActive = true,
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
-	},
-	FoolMovement = 
-	{
-		float PaceSpeed = 5,
-		float MaxMoveDistance = 10,
-		Vec3 PaceDirection = [1, 0, 0],
 	},
 	RigidBody = 
 	{
@@ -63,5 +57,9 @@ Cog =
 		string SerializedGroupName = "5a916d3ed1b57688:Boss",
 		Vec3 Offset = [0, 0, 0],
 		Vec3 Size = [0.5, 0.5, 0.5],
+	},
+	HP = 
+	{
+		float MaxHealth = 100,
 	},
 },

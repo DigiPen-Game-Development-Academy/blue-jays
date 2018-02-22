@@ -1,3 +1,6 @@
+
+
+
 class HP : ZilchComponent
 {
     [Property] var MaxHealth : Real = 100;
@@ -23,6 +26,11 @@ class HP : ZilchComponent
                 this.Space.LoadLevel(Level.MainMenu);
             }
             else if(this.Owner.ArchetypeName == "Fool")
+            {
+                this.Space.Globals.SavedStats.SavedStats.FoolsBeaten += 1;
+                this.Space.LoadLevel(Level.Lovers);
+            }
+            else if(this.Owner.ArchetypeName == "LoversMale")
             {
                 this.Space.Globals.SavedStats.SavedStats.FoolsBeaten += 1;
                 this.Space.LoadLevel(Level.Death);
