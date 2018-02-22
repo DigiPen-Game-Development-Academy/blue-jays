@@ -7,7 +7,6 @@ class SavedStats : ZilchComponent
     [Serialized] var KnightSpawns : Real = 0;
     [Serialized] var StationarySpawns : Real = 0;
     [Serialized] var UniqueSpawns : Real = 0;
-    [Serialized] var BestTime : Real = 1000000;
+    [Serialized] var AchUnlocks : String = "";
     var PrevHealth : Real = 0;
-    
 }

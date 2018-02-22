@@ -54,6 +54,19 @@ class Globals : ZilchComponent
     
     function StoreStats()
     {
+        var au = "";
+        foreach (var ach in this.Space.AchievementTracker.AllAcheivements)
+        {
+            if(ach.Unlocked)
+            {
+                au = "`au`y";
+            }
+            else
+            {
+                au = "`au`n";
+            }
+        }
+        this.SavedStats.SavedStats.AchUnlocks = au;
         Zero.ObjectStore.Store("Stats", this.SavedStats);
     }
 
