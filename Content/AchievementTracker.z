@@ -1,5 +1,6 @@
-enum AchEvent {DEATH, BEAT_FOOL, WIN, SPAWN}
-enum AchRequire {DEATHS, WINS, HEALTH, KNIGHT_SPAWNS, STAT_SPAWNS, UNIQUE_SPAWNS, TIME, TOTAL_RUNS, FOOL_BEATEN}
+enum AchEvent {DEATH, BEAT_FOOL, BEAT_LOVERS, WIN, CHECK}
+enum AchRequire {DEATHS, HEALTH, KNIGHT_SPAWNS, STAT_SPAWNS, UNIQUE_SPAWNS,
+    TIME, LEVEL_TIME, TOTAL_RUNS, FOOL_BEATEN, LOVERS_BEATEN, WINS}
 
 class Requirement
 {
@@ -42,10 +43,6 @@ class Requirement
         {
             num = stats.UniqueSpawns;
         }
-        else if(this.Type == AchRequire.TIME)
-        {
-            num = stats.Wins;
-        }
         else if(this.Type == AchRequire.TOTAL_RUNS)
         {
             num = stats.TotalRuns;
@@ -56,7 +53,7 @@ class Requirement
         }
         else if(this.Type == AchRequire.TIME)
         {
-            num = this.AchTrack.Space.Timer.Time;
+            num = this.AchTrack.Space.Timer.TimeSinceFoolLoad;
         }
         return num <= this.Max && num >= this.Min;
     }
@@ -86,13 +83,17 @@ class Achievement
         {
             req.AchTrack.FoolAcheivements.Add(this);
         }
+        else if(e==AchEvent.BEAT_LOVERS)
+        {
+            req.AchTrack.LoversAcheivements.Add(this);
+        }
         else if(e==AchEvent.WIN)
         {
             req.AchTrack.WinAcheivements.Add(this);
         }
-        else if(e==AchEvent.SPAWN)
+        else
         {
-            req.AchTrack.SpawnAcheivements.Add(this);
+            req.AchTrack.CheckAcheivements.Add(this);
         }
         req.AchTrack.AllAcheivements.Add(this);
     }
@@ -113,10 +114,6 @@ class Achievement
         {
             req[0].AchTrack.WinAcheivements.Add(this);
         }
-        else if(e==AchEvent.SPAWN)
-        {
-            req[0].AchTrack.SpawnAcheivements.Add(this);
-        }
     }
     function Check()
     {
@@ -136,15 +133,17 @@ class AchievementTracker : ZilchComponent
 {
     var DeathAcheivements : Array[Achievement] = Array[Achievement]();
     var FoolAcheivements : Array[Achievement] = Array[Achievement]();
+    var LoversAcheivements : Array[Achievement] = Array[Achievement]();
     var WinAcheivements : Array[Achievement] = Array[Achievement]();
-    var SpawnAcheivements : Array[Achievement] = Array[Achievement]();
+    var CheckAcheivements : Array[Achievement] = Array[Achievement]();
     var AllAcheivements : Array[Achievement] = Array[Achievement]();
     function Initialize(init : CogInitializer)
     {
         this.AddAchievements();
-        foreach(var achievement in this.AllAcheivements)
+        for(var i = 0; i < this.Space.Globals.SavedStats.SavedStats.AchUnlocks.Count; i += 1)
         {
-            achievement.Check();
+            var b = this.Space.Globals.SavedStats.SavedStats.AchUnlocks[i];
+            this.AllAcheivements[i].Unlocked = b == "y"[0];
         }
         Zero.Connect(this.Space, Events.LevelStarted, this.OnLevelStart);
     }
@@ -152,21 +151,25 @@ class AchievementTracker : ZilchComponent
     function OnLevelStart(event : GameEvent)
     {
         var achievements : Array[Achievement] = null;
-        if(event.LevelName == "Credits")
+        if(event.LevelName == "Win")
         {
             achievements = this.WinAcheivements;
         }
-        else if(event.LevelName == "MainMenu")
+        else if(event.LevelName == "Lose")
         {
             achievements = this.DeathAcheivements;
         }
-        else if(event.LevelName == "Death")
+        else if(event.LevelName == "Lovers")
         {
             achievements = this.FoolAcheivements;
         }
+        else if(event.LevelName == "Death")
+        {
+            achievements = this.LoversAcheivements;
+        }
         else if(event.LevelName == "Achievements")
         {
-            this.LevelSettings.DrawAchievements.Draw(this.AllAcheivements);
+            achievements = this.CheckAcheivements;
         }
         if(achievements != null)
         {
@@ -174,50 +177,67 @@ class AchievementTracker : ZilchComponent
             {
                 achievement.Check();
             }
+            this.Space.Globals.StoreStats();
         }
-    }
-    
-    function OnSpawn()
-    {
-        foreach(var achievement in this.SpawnAcheivements)
+        if(event.LevelName == "Achievements")
         {
-            achievement.Check();
+            this.LevelSettings.DrawAchievements.Draw(this.AllAcheivements);
         }
     }
     
     function AddAchievements()
     {
         Achievement("First Death", "Die 1 time.", "When's the funeral?",
-            Requirement(AchRequire.DEATHS, 1, 100000, this), AchEvent.DEATH, SpriteSource.Bomb);
+            Requirement(AchRequire.DEATHS, 1, 100000, this), AchEvent.CHECK, SpriteSource.Bomb);
+        Achievement("RIP", "Die 5 times.", "Do your worst.",
+            Requirement(AchRequire.DEATHS, 5, 100000, this), AchEvent.CHECK, SpriteSource.Bomb);
+        Achievement("Graveyard", "Die 20 times.", "Having some trouble?",
+            Requirement(AchRequire.DEATHS, 20, 100000, this), AchEvent.CHECK, SpriteSource.Bomb);
+        Achievement("Determined", "Die 50 times.", "LET THE BODIES HIT THE FLOOR",
+            Requirement(AchRequire.DEATHS, 5, 100000, this), AchEvent.CHECK, SpriteSource.Bomb);
         Achievement("Knight Spawner", "Spawn 10 knights.", "Not quite an army...",
-            Requirement(AchRequire.KNIGHT_SPAWNS, 10, 100000, this), AchEvent.SPAWN, SpriteSource.Knight_swords);
+            Requirement(AchRequire.KNIGHT_SPAWNS, 10, 100000, this), AchEvent.CHECK, SpriteSource.Knight_swords);
+        Achievement("Knight Master", "Spawn 50 knights.", "Good enough.",
+            Requirement(AchRequire.KNIGHT_SPAWNS, 50, 100000, this), AchEvent.CHECK, SpriteSource.Knight_swords);
         Achievement("Stationary Spawner", "Spawn 5 stationary turrets.", "Someday you might land a hit...",
-            Requirement(AchRequire.STAT_SPAWNS, 5, 100000, this), AchEvent.SPAWN, SpriteSource.Towers);
+            Requirement(AchRequire.STAT_SPAWNS, 5, 100000, this), AchEvent.CHECK, SpriteSource.Towers);
+        Achievement("Stationary Master", "Spawn 25 stationary turrets.", "Did that 500 fate pay off?",
+            Requirement(AchRequire.STAT_SPAWNS, 25, 100000, this), AchEvent.CHECK, SpriteSource.Towers);
         Achievement("Unique Spawner", "Spawn 5 unique turrets.", "Look at it go!",
-            Requirement(AchRequire.UNIQUE_SPAWNS, 1, 100000, this), AchEvent.SPAWN, SpriteSource.Chariot);
+            Requirement(AchRequire.UNIQUE_SPAWNS, 5, 100000, this), AchEvent.CHECK, SpriteSource.Chariot);
+        Achievement("Unique Master", "Spawn 25 unique turrets.", "Never stops being satisfying.",
+            Requirement(AchRequire.UNIQUE_SPAWNS, 25, 100000, this), AchEvent.CHECK, SpriteSource.Chariot);
         Achievement("Fool Beaten", "Beat the Fool.", "Hope you enjoyed the show!",
-            Requirement(AchRequire.FOOL_BEATEN, 1, 100000, this), AchEvent.BEAT_FOOL, SpriteSource.Fool);
+            Requirement(AchRequire.FOOL_BEATEN, 1, 100000, this), AchEvent.CHECK, SpriteSource.Fool);
         Achievement("Encore!", "Beat the Fool 5 times.", "I'll take that as a yes.",
-            Requirement(AchRequire.FOOL_BEATEN, 5, 100000, this), AchEvent.BEAT_FOOL, SpriteSource.Fool);
+            Requirement(AchRequire.FOOL_BEATEN, 5, 100000, this), AchEvent.CHECK, SpriteSource.Fool);
         Achievement("Perfect Fool Run", "Beat the Fool without taking damage.", "What a fool!",
             Requirement(AchRequire.HEALTH, 100, 100, this), AchEvent.BEAT_FOOL, SpriteSource.Fool);
         Achievement("Quick Show", "Beat the Fool in a minute.", "Hope you enjoyed the sh-",
             Requirement(AchRequire.TIME, 0, 60, this), AchEvent.BEAT_FOOL, SpriteSource.Fool);
+        Achievement("Not Fooling Around", "Beat the Fool in 30 seconds.", "Hope y-",
+            Requirement(AchRequire.TIME, 0, 30, this), AchEvent.BEAT_FOOL, SpriteSource.Fool);
         Achievement("Winner, Winner", "Beat Death.", "They said it was impossible.",
-            Requirement(AchRequire.WINS, 1, 100000, this), AchEvent.WIN, SpriteSource.Bomb);
+            Requirement(AchRequire.WINS, 1, 100000, this), AchEvent.CHECK, SpriteSource.Bomb);
+        Achievement("Winner, Winner, Winner, Winner...", "Beat Death 5 times.", "They said it was possible.",
+            Requirement(AchRequire.WINS, 5, 100000, this), AchEvent.CHECK, SpriteSource.Bomb);
         Achievement("Perfect Death Run", "Beat Death without taking damage.", "Definitely not dying now.",
             Requirement(AchRequire.HEALTH, 100, 100, this), AchEvent.WIN, SpriteSource.Bomb);
-        Achievement("A Quick Death", "Beat the game in 2 minutes.", "Let's just get it over with.",
+        Achievement("A Quick Death", "Beat Death in a minute.", "Death: Wow ur a dum hacker",
+            Requirement(AchRequire.TIME, 0, 60, this), AchEvent.WIN, SpriteSource.Fool);
+        Achievement("Speedrun", "Beat the game in 2 minutes.", "Let's just get it over with.",
             Requirement(AchRequire.TIME, 0, 120, this), AchEvent.WIN, SpriteSource.Bomb);
         Achievement("Minute To Win It", "Beat the game in a minute.", "That's fast.",
             Requirement(AchRequire.TIME, 0, 60, this), AchEvent.WIN, SpriteSource.Bomb);
         Achievement("First Run", "Play the game 1 time.", "That was dumb.",
-            Requirement(AchRequire.TOTAL_RUNS, 1, 100000, this), AchEvent.WIN, SpriteSource.Bomb);
+            Requirement(AchRequire.TOTAL_RUNS, 1, 100000, this), AchEvent.CHECK, SpriteSource.Bomb);
         Achievement("Novice Player", "Play the game 5 times.", "This is boring.",
-            Requirement(AchRequire.TOTAL_RUNS, 5, 100000, this), AchEvent.WIN, SpriteSource.Bomb);
+            Requirement(AchRequire.TOTAL_RUNS, 5, 100000, this), AchEvent.CHECK, SpriteSource.Bomb);
         Achievement("Experienced Player", "Play the game 20 times.", "This game sucks.",
-            Requirement(AchRequire.TOTAL_RUNS, 20, 100000, this), AchEvent.WIN, SpriteSource.Bomb);
+            Requirement(AchRequire.TOTAL_RUNS, 20, 100000, this), AchEvent.CHECK, SpriteSource.Bomb);
         Achievement("Expert Player", "Play the game 50 times.", "I hate this game.",
-            Requirement(AchRequire.TOTAL_RUNS, 50, 100000, this), AchEvent.WIN, SpriteSource.Bomb);
+            Requirement(AchRequire.TOTAL_RUNS, 50, 100000, this), AchEvent.CHECK, SpriteSource.Bomb);
+        Achievement("Hacker", "???", "That was mean.",
+            Requirement(AchRequire.TOTAL_RUNS, -1, -1, this), AchEvent.CHECK, SpriteSource.Bomb);
     }
 }

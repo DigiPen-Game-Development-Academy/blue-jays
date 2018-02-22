@@ -6,15 +6,15 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Menu",
+		string Name = "Reset",
 	},
 	Archetyped = 
 	{
-		string Name = "5a02651333da9589:MenuButton",
+		string Name = "5a6ea47013426dbe:ResetButton",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, -1.5, 0],
+		Vec3 Translation = [10.5, -8.5, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -69,13 +69,13 @@ Cog =
 				bool VisibilityCulling = true,
 				bool VisibilityEvents = true,
 				bool CastShadows = false,
-				Vec4 Color = [0, 0, 0, 1],
+				Vec4 Color = [1, 0, 0, 1],
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 				string FontName = "4e7bac697bec55c5:Verdana",
 				uint FontSize = 48,
-				string Text = "Main Menu",
+				string Text = "Reset",
 				TextAlign Align = Center,
 				float PixelsPerUnit = 64,
 				bool Smoothing = true,

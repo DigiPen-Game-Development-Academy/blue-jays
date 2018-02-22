@@ -93,12 +93,7 @@ Level =
 		},
 		MenuController = 
 		{
-			Enum Menu = ACHIEVEMENTS,
-		},
-		DrawAchievements = 
-		{
-			int Columns = 10,
-			float Width = 2.5,
+			Enum Menu = CREDITS,
 		},
 	},
 	Cog = 
@@ -125,7 +120,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 22.0463448,
+			float Size = 16.3746185,
 		},
 		EditorCameraController = 
 		{
@@ -163,16 +158,50 @@ Level =
 			string Name = "Camera",
 		},
 	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 4,
+		},
+		Named = 
+		{
+			string Name = "Win",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 2.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "4e7bac697bec55c5:Verdana",
+			uint FontSize = 48,
+			string Text = "Woo! You won.",
+			TextAlign Align = Center,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
+		},
+	},
 	ArchetypeInstance = 
 	{
 		string Name = "5a02651333da9589:MenuButton",
 		LinkId = 
 		{
-			uint Id = 4,
+			uint Id = 5,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-10.5, -8.5, 0],
+			Vec3 Translation = [0, -1.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -184,29 +213,6 @@ Level =
 		Named = 
 		{
 			string Name = "Menu",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a6ea47013426dbe:ResetButton",
-		LinkId = 
-		{
-			uint Id = 5,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [10.5, -8.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Area = 
-		{
-			Vec2 Size = [5, 1],
-			Location Origin = Center,
-		},
-		Named = 
-		{
-			string Name = "Reset",
 		},
 	},
 },

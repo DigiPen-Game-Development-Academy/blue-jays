@@ -61,7 +61,6 @@ class TurretPlace : ZilchComponent
                             this.Space.Globals.SavedStats.SavedStats.UniqueSpawns += 1;
                         }
                         this.Space.Globals.StoreStats();
-                        this.Space.AchievementTracker.OnSpawn();
                         this.Fate -= this.CurrentTurret.Fate;
                     }
                 }

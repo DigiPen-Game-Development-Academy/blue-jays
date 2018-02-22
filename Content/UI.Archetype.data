@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [0, 0, 0.5],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -65,6 +65,43 @@ Cog =
 			},
 			Named = 
 			{
+				string Name = "FateText",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [20, 11.25, 0],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			SpriteText = 
+			{
+				bool Visible = false,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [0, 0, 0, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string FontName = "4e7bac697bec55c5:Verdana",
+				uint FontSize = 100,
+				string Text = "Timer",
+				TextAlign Align = Right,
+				float PixelsPerUnit = 128,
+				bool Smoothing = false,
+			},
+			TimerText = 
+			{
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 4,
+			},
+			Named = 
+			{
 				string Name = "FateBar",
 			},
 			Transform = 
@@ -104,7 +141,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 4,
+				uint Id = 5,
 			},
 			Named = 
 			{
@@ -145,7 +182,7 @@ Cog =
 					bool UpdatePathOnCogChange = true,
 					bool UpdateCogOnInitialize = true,
 					bool ResolvedNullErrorOccurred = false,
-					uint ResolvedCog = 5,
+					uint ResolvedCog = 6,
 					CogPathPreference PathPreference0 = CogRelative,
 					CogPathPreference PathPreference1 = SpaceRelative,
 					CogPathPreference PathPreference2 = Absolute,
@@ -156,7 +193,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 6,
+				uint Id = 7,
 			},
 			Named = 
 			{
@@ -203,7 +240,7 @@ Cog =
 					bool UpdatePathOnCogChange = true,
 					bool UpdateCogOnInitialize = true,
 					bool ResolvedNullErrorOccurred = false,
-					uint ResolvedCog = 5,
+					uint ResolvedCog = 6,
 					CogPathPreference PathPreference0 = CogRelative,
 					CogPathPreference PathPreference1 = SpaceRelative,
 					CogPathPreference PathPreference2 = Absolute,
@@ -214,7 +251,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 7,
+				uint Id = 8,
 			},
 			Named = 
 			{
@@ -255,7 +292,7 @@ Cog =
 					bool UpdatePathOnCogChange = true,
 					bool UpdateCogOnInitialize = true,
 					bool ResolvedNullErrorOccurred = false,
-					uint ResolvedCog = 8,
+					uint ResolvedCog = 9,
 					CogPathPreference PathPreference0 = CogRelative,
 					CogPathPreference PathPreference1 = SpaceRelative,
 					CogPathPreference PathPreference2 = Absolute,
@@ -266,7 +303,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 9,
+				uint Id = 10,
 			},
 			Named = 
 			{
@@ -313,7 +350,7 @@ Cog =
 					bool UpdatePathOnCogChange = true,
 					bool UpdateCogOnInitialize = true,
 					bool ResolvedNullErrorOccurred = false,
-					uint ResolvedCog = 8,
+					uint ResolvedCog = 9,
 					CogPathPreference PathPreference0 = CogRelative,
 					CogPathPreference PathPreference1 = SpaceRelative,
 					CogPathPreference PathPreference2 = Absolute,
@@ -324,7 +361,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 10,
+				uint Id = 11,
 			},
 			Named = 
 			{
@@ -361,7 +398,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 11,
+				uint Id = 12,
 			},
 			Named = 
 			{
