@@ -13,6 +13,7 @@ class KnightOfSwords : ZilchComponent
     
     function Initialize(init : CogInitializer)
     {
+        this.Target = this.Space.FindObjectByName("Pigeon");
         this.Target = this.Space.FindObjectByName("Boss");
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner,Events.CollisionStarted, this.OnCollide);
@@ -33,6 +34,10 @@ class KnightOfSwords : ZilchComponent
         }
         this.Vel = this.Speed * mod;
         if(event.OtherObject.Name == "Boss")
+        {
+            this.Owner.Destroy();
+        }
+        if (event.OtherObject.Name =="Pigeon")
         {
             this.Owner.Destroy();
         }

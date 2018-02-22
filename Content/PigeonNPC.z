@@ -1,0 +1,43 @@
+class PigeonNPC : ZilchComponent
+{
+  [Property] var PaceSpeed: Real = 5.0;
+  [Property] var MaxMoveDistance: Real = 10.0;
+  [Property] var PaceDirection: Real3 = Real3(4.0, 1.0, 0.0);
+   var StartPosition: Real3 = Real3();
+
+    [Dependency]
+    var Transform: Transform = null;
+    
+    function Initialize(init : CogInitializer)
+    {
+        // We need to update the enemy's behavior every logic update
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+          this.StartPosition = this.Owner.Transform.Translation;
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        // Logic for pacing back and forth
+        this.PaceBackAndForth(event);
+        
+    }
+
+    function PaceBackAndForth(event: UpdateEvent)
+    {
+         var displacement = this.Owner.Transform.Translation - this.StartPosition;
+         var distanceFromStart = Math.Length(displacement);
+
+        // If we have travelled past our max distance
+        if (distanceFromStart >= this.MaxMoveDistance)
+        {
+            // Change direction to go back the way we came
+            this.PaceDirection = Real3(Random().UnitReal2(),0);
+            this.Owner.Transform.Translation += Math.Normalize( -displacement) * event.Dt * this.PaceSpeed;
+        }
+        else
+        {
+            // Apply movement
+            this.Owner.Transform.Translation += this.PaceDirection * event.Dt * this.PaceSpeed;
+        }
+    }
+}

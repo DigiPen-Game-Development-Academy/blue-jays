@@ -111,7 +111,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.590545654, 9.19790459, 50],
+			Vec3 Translation = [-1.57318854, 32.1326447, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -123,7 +123,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 74.0818481,
+			float Size = 40.6570053,
 		},
 		EditorCameraController = 
 		{
@@ -131,7 +131,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.590545654, 9.19790459, 0],
+			Vec3 LookTarget = [-1.57318854, 32.1326447, -9.29228406e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -371,7 +371,7 @@ Level =
 				},
 				RigidBody = 
 				{
-					bool Static = true,
+					bool Static = false,
 					bool Asleep = false,
 					bool Kinematic = false,
 					bool RotationLocked = false,
@@ -991,7 +991,7 @@ Level =
 				},
 				RigidBody = 
 				{
-					bool Static = true,
+					bool Static = false,
 					bool Asleep = false,
 					bool Kinematic = false,
 					bool RotationLocked = false,
@@ -1053,7 +1053,7 @@ Level =
 				},
 				RigidBody = 
 				{
-					bool Static = true,
+					bool Static = false,
 					bool Asleep = false,
 					bool Kinematic = false,
 					bool RotationLocked = false,
@@ -1177,7 +1177,7 @@ Level =
 				},
 				RigidBody = 
 				{
-					bool Static = true,
+					bool Static = false,
 					bool Asleep = false,
 					bool Kinematic = false,
 					bool RotationLocked = false,
@@ -1363,7 +1363,7 @@ Level =
 				},
 				RigidBody = 
 				{
-					bool Static = true,
+					bool Static = false,
 					bool Asleep = false,
 					bool Kinematic = false,
 					bool RotationLocked = false,
@@ -1549,7 +1549,7 @@ Level =
 				},
 				RigidBody = 
 				{
-					bool Static = true,
+					bool Static = false,
 					bool Asleep = false,
 					bool Kinematic = false,
 					bool RotationLocked = false,
@@ -1577,7 +1577,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-7.69052696, -4.32753181, 0],
+					Vec3 Translation = [-9.85588074, -4.32753181, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1914,7 +1914,7 @@ Level =
 					bool Ghost = false,
 					bool SendsMessages = true,
 					bool Seamless = true,
-					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string MaterialName = "5a1cee2c4a245b06:NoBounce",
 					string SerializedGroupName = "5a9112c3dd86ef8b:Platform",
 					Vec3 Offset = [0, 0, 0],
 					Vec3 Size = [1, 0.5, 0.5],
@@ -1976,7 +1976,7 @@ Level =
 					bool Ghost = false,
 					bool SendsMessages = true,
 					bool Seamless = true,
-					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string MaterialName = "5a1cee2c4a245b06:NoBounce",
 					string SerializedGroupName = "5a9112c3dd86ef8b:Platform",
 					Vec3 Offset = [0, 0, 0],
 					Vec3 Size = [1, 0.5, 0.5],
@@ -2259,7 +2259,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-17.9840794, 15.5033474, 0],
+					Vec3 Translation = [-17.9840794, 15.6227436, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2293,7 +2293,7 @@ Level =
 				},
 				RigidBody = 
 				{
-					bool Static = true,
+					bool Static = false,
 					bool Asleep = false,
 					bool Kinematic = false,
 					bool RotationLocked = false,
@@ -3921,13 +3921,573 @@ Level =
 				{
 				},
 			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 67,
+				},
+				ObjectLink = 
+				{
+					CogPath ObjectA = 
+					{
+						string Path = ":/Level/Platform",
+						bool ErrorOnResolveToNull = false,
+						bool ErrorOnPathCantCompute = false,
+						bool ErrorOnDirectLinkFail = false,
+						bool UpdateCogOnPathChange = true,
+						bool UpdatePathOnCogChange = true,
+						bool UpdateCogOnInitialize = true,
+						bool ResolvedNullErrorOccurred = false,
+						uint ResolvedCog = 39,
+						CogPathPreference PathPreference0 = CogRelative,
+						CogPathPreference PathPreference1 = SpaceRelative,
+						CogPathPreference PathPreference2 = Absolute,
+					},
+					CogPath ObjectB = 
+					{
+						string Path = ":/Level/Platform",
+						bool ErrorOnResolveToNull = false,
+						bool ErrorOnPathCantCompute = false,
+						bool ErrorOnDirectLinkFail = false,
+						bool UpdateCogOnPathChange = true,
+						bool UpdatePathOnCogChange = true,
+						bool UpdateCogOnInitialize = true,
+						bool ResolvedNullErrorOccurred = false,
+						uint ResolvedCog = 17,
+						CogPathPreference PathPreference0 = CogRelative,
+						CogPathPreference PathPreference1 = SpaceRelative,
+						CogPathPreference PathPreference2 = Absolute,
+					},
+					Vec3 BodyPointA = [0.045671463, 0.205424309, 0.5],
+					Vec3 BodyPointB = [-0.180896759, -0.0133647919, 0.5],
+				},
+				StickJoint = 
+				{
+					bool Active = true,
+					bool SendsEvents = false,
+					bool AutoSnaps = false,
+					bool CollideConnected = true,
+					float MaxForce = 0,
+					float Length = 6.40267754,
+					Vec3 BodyPointA = [0.045671463, 0.205424309, 0.5],
+					Vec3 BodyPointB = [-0.180896759, -0.0133647919, 0.5],
+				},
+				FollowJoint = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 68,
+				},
+				ObjectLink = 
+				{
+					CogPath ObjectA = 
+					{
+						string Path = ":/Level/Platform",
+						bool ErrorOnResolveToNull = false,
+						bool ErrorOnPathCantCompute = false,
+						bool ErrorOnDirectLinkFail = false,
+						bool UpdateCogOnPathChange = true,
+						bool UpdatePathOnCogChange = true,
+						bool UpdateCogOnInitialize = true,
+						bool ResolvedNullErrorOccurred = false,
+						uint ResolvedCog = 8,
+						CogPathPreference PathPreference0 = CogRelative,
+						CogPathPreference PathPreference1 = SpaceRelative,
+						CogPathPreference PathPreference2 = Absolute,
+					},
+					CogPath ObjectB = 
+					{
+						string Path = ":/Level/Platform",
+						bool ErrorOnResolveToNull = false,
+						bool ErrorOnPathCantCompute = false,
+						bool ErrorOnDirectLinkFail = false,
+						bool UpdateCogOnPathChange = true,
+						bool UpdatePathOnCogChange = true,
+						bool UpdateCogOnInitialize = true,
+						bool ResolvedNullErrorOccurred = false,
+						uint ResolvedCog = 21,
+						CogPathPreference PathPreference0 = CogRelative,
+						CogPathPreference PathPreference1 = SpaceRelative,
+						CogPathPreference PathPreference2 = Absolute,
+					},
+					Vec3 BodyPointA = [0.129751205, -0.221704483, 0.5],
+					Vec3 BodyPointB = [-0.430415154, 0.137616158, 0.5],
+				},
+				StickJoint = 
+				{
+					bool Active = true,
+					bool SendsEvents = false,
+					bool AutoSnaps = false,
+					bool CollideConnected = true,
+					float MaxForce = 0,
+					float Length = 10.2522163,
+					Vec3 BodyPointA = [0.129751205, -0.221704483, 0.5],
+					Vec3 BodyPointB = [-0.430415154, 0.137616158, 0.5],
+				},
+				FollowJoint = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 69,
+				},
+				ObjectLink = 
+				{
+					CogPath ObjectA = 
+					{
+						string Path = ":/Level/Platform",
+						bool ErrorOnResolveToNull = false,
+						bool ErrorOnPathCantCompute = false,
+						bool ErrorOnDirectLinkFail = false,
+						bool UpdateCogOnPathChange = true,
+						bool UpdatePathOnCogChange = true,
+						bool UpdateCogOnInitialize = true,
+						bool ResolvedNullErrorOccurred = false,
+						uint ResolvedCog = 19,
+						CogPathPreference PathPreference0 = CogRelative,
+						CogPathPreference PathPreference1 = SpaceRelative,
+						CogPathPreference PathPreference2 = Absolute,
+					},
+					CogPath ObjectB = 
+					{
+						string Path = ":/Level/Platform",
+						bool ErrorOnResolveToNull = false,
+						bool ErrorOnPathCantCompute = false,
+						bool ErrorOnDirectLinkFail = false,
+						bool UpdateCogOnPathChange = true,
+						bool UpdatePathOnCogChange = true,
+						bool UpdateCogOnInitialize = true,
+						bool ResolvedNullErrorOccurred = false,
+						uint ResolvedCog = 18,
+						CogPathPreference PathPreference0 = CogRelative,
+						CogPathPreference PathPreference1 = SpaceRelative,
+						CogPathPreference PathPreference2 = Absolute,
+					},
+					Vec3 BodyPointA = [-2.22230148, 0.210289001, 0.5],
+					Vec3 BodyPointB = [-2.13980818, 0.152748108, 0.5],
+				},
+				StickJoint = 
+				{
+					bool Active = true,
+					bool SendsEvents = false,
+					bool AutoSnaps = false,
+					bool CollideConnected = true,
+					float MaxForce = 0,
+					float Length = 8.64693069,
+					Vec3 BodyPointA = [-2.22230148, 0.210289001, 0.5],
+					Vec3 BodyPointB = [-2.13980818, 0.152748108, 0.5],
+				},
+				FollowJoint = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 70,
+				},
+				ObjectLink = 
+				{
+					CogPath ObjectA = 
+					{
+						string Path = ":/Level/Platform",
+						bool ErrorOnResolveToNull = false,
+						bool ErrorOnPathCantCompute = false,
+						bool ErrorOnDirectLinkFail = false,
+						bool UpdateCogOnPathChange = true,
+						bool UpdatePathOnCogChange = true,
+						bool UpdateCogOnInitialize = true,
+						bool ResolvedNullErrorOccurred = false,
+						uint ResolvedCog = 19,
+						CogPathPreference PathPreference0 = CogRelative,
+						CogPathPreference PathPreference1 = SpaceRelative,
+						CogPathPreference PathPreference2 = Absolute,
+					},
+					CogPath ObjectB = 
+					{
+						string Path = ":/Level/Platform",
+						bool ErrorOnResolveToNull = false,
+						bool ErrorOnPathCantCompute = false,
+						bool ErrorOnDirectLinkFail = false,
+						bool UpdateCogOnPathChange = true,
+						bool UpdatePathOnCogChange = true,
+						bool UpdateCogOnInitialize = true,
+						bool ResolvedNullErrorOccurred = false,
+						uint ResolvedCog = 18,
+						CogPathPreference PathPreference0 = CogRelative,
+						CogPathPreference PathPreference1 = SpaceRelative,
+						CogPathPreference PathPreference2 = Absolute,
+					},
+					Vec3 BodyPointA = [2.5535326, -0.028503418, 0.5],
+					Vec3 BodyPointB = [2.39723825, -0.0860443115, 0.5],
+				},
+				StickJoint = 
+				{
+					bool Active = true,
+					bool SendsEvents = false,
+					bool AutoSnaps = false,
+					bool CollideConnected = true,
+					float MaxForce = 0,
+					float Length = 8.72243595,
+					Vec3 BodyPointA = [2.5535326, -0.028503418, 0.5],
+					Vec3 BodyPointB = [2.39723825, -0.0860443115, 0.5],
+				},
+				FollowJoint = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 71,
+				},
+				ObjectLink = 
+				{
+					CogPath ObjectA = 
+					{
+						string Path = ":/Level/Platform",
+						bool ErrorOnResolveToNull = false,
+						bool ErrorOnPathCantCompute = false,
+						bool ErrorOnDirectLinkFail = false,
+						bool UpdateCogOnPathChange = true,
+						bool UpdatePathOnCogChange = true,
+						bool UpdateCogOnInitialize = true,
+						bool ResolvedNullErrorOccurred = false,
+						uint ResolvedCog = 27,
+						CogPathPreference PathPreference0 = CogRelative,
+						CogPathPreference PathPreference1 = SpaceRelative,
+						CogPathPreference PathPreference2 = Absolute,
+					},
+					CogPath ObjectB = 
+					{
+						string Path = ":/Level/Platform",
+						bool ErrorOnResolveToNull = false,
+						bool ErrorOnPathCantCompute = false,
+						bool ErrorOnDirectLinkFail = false,
+						bool UpdateCogOnPathChange = true,
+						bool UpdatePathOnCogChange = true,
+						bool UpdateCogOnInitialize = true,
+						bool ResolvedNullErrorOccurred = false,
+						uint ResolvedCog = 20,
+						CogPathPreference PathPreference0 = CogRelative,
+						CogPathPreference PathPreference1 = SpaceRelative,
+						CogPathPreference PathPreference2 = Absolute,
+					},
+					Vec3 BodyPointA = [-2.20329714, 0.220945358, 0.5],
+					Vec3 BodyPointB = [-2.39999342, 0.0463457108, 0.5],
+				},
+				StickJoint = 
+				{
+					bool Active = true,
+					bool SendsEvents = false,
+					bool AutoSnaps = false,
+					bool CollideConnected = true,
+					float MaxForce = 0,
+					float Length = 11.9327297,
+					Vec3 BodyPointA = [-2.20329714, 0.220945358, 0.5],
+					Vec3 BodyPointB = [-2.39999342, 0.0463457108, 0.5],
+				},
+				FollowJoint = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 72,
+				},
+				ObjectLink = 
+				{
+					CogPath ObjectA = 
+					{
+						string Path = ":/Level/Platform",
+						bool ErrorOnResolveToNull = false,
+						bool ErrorOnPathCantCompute = false,
+						bool ErrorOnDirectLinkFail = false,
+						bool UpdateCogOnPathChange = true,
+						bool UpdatePathOnCogChange = true,
+						bool UpdateCogOnInitialize = true,
+						bool ResolvedNullErrorOccurred = false,
+						uint ResolvedCog = 27,
+						CogPathPreference PathPreference0 = CogRelative,
+						CogPathPreference PathPreference1 = SpaceRelative,
+						CogPathPreference PathPreference2 = Absolute,
+					},
+					CogPath ObjectB = 
+					{
+						string Path = ":/Level/Platform",
+						bool ErrorOnResolveToNull = false,
+						bool ErrorOnPathCantCompute = false,
+						bool ErrorOnDirectLinkFail = false,
+						bool UpdateCogOnPathChange = true,
+						bool UpdatePathOnCogChange = true,
+						bool UpdateCogOnInitialize = true,
+						bool ResolvedNullErrorOccurred = false,
+						uint ResolvedCog = 20,
+						CogPathPreference PathPreference0 = CogRelative,
+						CogPathPreference PathPreference1 = SpaceRelative,
+						CogPathPreference PathPreference2 = Absolute,
+					},
+					Vec3 BodyPointA = [2.55019474, 0.00487709045, 0.5],
+					Vec3 BodyPointB = [2.35349846, 0.0463457108, 0.5],
+				},
+				StickJoint = 
+				{
+					bool Active = true,
+					bool SendsEvents = false,
+					bool AutoSnaps = false,
+					bool CollideConnected = true,
+					float MaxForce = 0,
+					float Length = 12.1479263,
+					Vec3 BodyPointA = [2.55019474, 0.00487709045, 0.5],
+					Vec3 BodyPointB = [2.35349846, 0.0463457108, 0.5],
+				},
+				FollowJoint = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 73,
+				},
+				ObjectLink = 
+				{
+					CogPath ObjectA = 
+					{
+						string Path = ":/Level/Platform",
+						bool ErrorOnResolveToNull = false,
+						bool ErrorOnPathCantCompute = false,
+						bool ErrorOnDirectLinkFail = false,
+						bool UpdateCogOnPathChange = true,
+						bool UpdatePathOnCogChange = true,
+						bool UpdateCogOnInitialize = true,
+						bool ResolvedNullErrorOccurred = false,
+						uint ResolvedCog = 21,
+						CogPathPreference PathPreference0 = CogRelative,
+						CogPathPreference PathPreference1 = SpaceRelative,
+						CogPathPreference PathPreference2 = Absolute,
+					},
+					CogPath ObjectB = 
+					{
+						string Path = ":/Level/Platform",
+						bool ErrorOnResolveToNull = false,
+						bool ErrorOnPathCantCompute = false,
+						bool ErrorOnDirectLinkFail = false,
+						bool UpdateCogOnPathChange = true,
+						bool UpdatePathOnCogChange = true,
+						bool UpdateCogOnInitialize = true,
+						bool ResolvedNullErrorOccurred = false,
+						uint ResolvedCog = 32,
+						CogPathPreference PathPreference0 = CogRelative,
+						CogPathPreference PathPreference1 = SpaceRelative,
+						CogPathPreference PathPreference2 = Absolute,
+					},
+					Vec3 BodyPointA = [-2.10042, 0.0683364868, 0.5],
+					Vec3 BodyPointB = [-1.98667049, -0.0107269287, 0.5],
+				},
+				StickJoint = 
+				{
+					bool Active = true,
+					bool SendsEvents = false,
+					bool AutoSnaps = false,
+					bool CollideConnected = true,
+					float MaxForce = 0,
+					float Length = 9.73697472,
+					Vec3 BodyPointA = [-2.10042, 0.0683364868, 0.5],
+					Vec3 BodyPointB = [-1.98667049, -0.0107269287, 0.5],
+				},
+				FollowJoint = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 74,
+				},
+				ObjectLink = 
+				{
+					CogPath ObjectA = 
+					{
+						string Path = ":/Level/Platform",
+						bool ErrorOnResolveToNull = false,
+						bool ErrorOnPathCantCompute = false,
+						bool ErrorOnDirectLinkFail = false,
+						bool UpdateCogOnPathChange = true,
+						bool UpdatePathOnCogChange = true,
+						bool UpdateCogOnInitialize = true,
+						bool ResolvedNullErrorOccurred = false,
+						uint ResolvedCog = 21,
+						CogPathPreference PathPreference0 = CogRelative,
+						CogPathPreference PathPreference1 = SpaceRelative,
+						CogPathPreference PathPreference2 = Absolute,
+					},
+					CogPath ObjectB = 
+					{
+						string Path = ":/Level/Platform",
+						bool ErrorOnResolveToNull = false,
+						bool ErrorOnPathCantCompute = false,
+						bool ErrorOnDirectLinkFail = false,
+						bool UpdateCogOnPathChange = true,
+						bool UpdatePathOnCogChange = true,
+						bool UpdateCogOnInitialize = true,
+						bool ResolvedNullErrorOccurred = false,
+						uint ResolvedCog = 32,
+						CogPathPreference PathPreference0 = CogRelative,
+						CogPathPreference PathPreference1 = SpaceRelative,
+						CogPathPreference PathPreference2 = Absolute,
+					},
+					Vec3 BodyPointA = [2.25109386, 0.0683364868, 0.5],
+					Vec3 BodyPointB = [2.04251862, -0.171895027, 0.5],
+				},
+				StickJoint = 
+				{
+					bool Active = true,
+					bool SendsEvents = false,
+					bool AutoSnaps = false,
+					bool CollideConnected = true,
+					float MaxForce = 0,
+					float Length = 9.65526485,
+					Vec3 BodyPointA = [2.25109386, 0.0683364868, 0.5],
+					Vec3 BodyPointB = [2.04251862, -0.171895027, 0.5],
+				},
+				FollowJoint = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 75,
+				},
+				ObjectLink = 
+				{
+					CogPath ObjectA = 
+					{
+						string Path = ":/Level/Platform",
+						bool ErrorOnResolveToNull = false,
+						bool ErrorOnPathCantCompute = false,
+						bool ErrorOnDirectLinkFail = false,
+						bool UpdateCogOnPathChange = true,
+						bool UpdatePathOnCogChange = true,
+						bool UpdateCogOnInitialize = true,
+						bool ResolvedNullErrorOccurred = false,
+						uint ResolvedCog = 24,
+						CogPathPreference PathPreference0 = CogRelative,
+						CogPathPreference PathPreference1 = SpaceRelative,
+						CogPathPreference PathPreference2 = Absolute,
+					},
+					CogPath ObjectB = 
+					{
+						string Path = ":/Level/Platform",
+						bool ErrorOnResolveToNull = false,
+						bool ErrorOnPathCantCompute = false,
+						bool ErrorOnDirectLinkFail = false,
+						bool UpdateCogOnPathChange = true,
+						bool UpdatePathOnCogChange = true,
+						bool UpdateCogOnInitialize = true,
+						bool ResolvedNullErrorOccurred = false,
+						uint ResolvedCog = 22,
+						CogPathPreference PathPreference0 = CogRelative,
+						CogPathPreference PathPreference1 = SpaceRelative,
+						CogPathPreference PathPreference2 = Absolute,
+					},
+					Vec3 BodyPointA = [-2.31929398, 0.156585693, 0.5],
+					Vec3 BodyPointB = [-2.31928396, 0.105075836, 0.5],
+				},
+				StickJoint = 
+				{
+					bool Active = true,
+					bool SendsEvents = false,
+					bool AutoSnaps = false,
+					bool CollideConnected = true,
+					float MaxForce = 0,
+					float Length = 12.1580095,
+					Vec3 BodyPointA = [-2.31929398, 0.156585693, 0.5],
+					Vec3 BodyPointB = [-2.31928396, 0.105075836, 0.5],
+				},
+				FollowJoint = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 76,
+				},
+				ObjectLink = 
+				{
+					CogPath ObjectA = 
+					{
+						string Path = ":/Level/Platform",
+						bool ErrorOnResolveToNull = false,
+						bool ErrorOnPathCantCompute = false,
+						bool ErrorOnDirectLinkFail = false,
+						bool UpdateCogOnPathChange = true,
+						bool UpdatePathOnCogChange = true,
+						bool UpdateCogOnInitialize = true,
+						bool ResolvedNullErrorOccurred = false,
+						uint ResolvedCog = 24,
+						CogPathPreference PathPreference0 = CogRelative,
+						CogPathPreference PathPreference1 = SpaceRelative,
+						CogPathPreference PathPreference2 = Absolute,
+					},
+					CogPath ObjectB = 
+					{
+						string Path = ":/Level/Platform",
+						bool ErrorOnResolveToNull = false,
+						bool ErrorOnPathCantCompute = false,
+						bool ErrorOnDirectLinkFail = false,
+						bool UpdateCogOnPathChange = true,
+						bool UpdatePathOnCogChange = true,
+						bool UpdateCogOnInitialize = true,
+						bool ResolvedNullErrorOccurred = false,
+						uint ResolvedCog = 22,
+						CogPathPreference PathPreference0 = CogRelative,
+						CogPathPreference PathPreference1 = SpaceRelative,
+						CogPathPreference PathPreference2 = Absolute,
+					},
+					Vec3 BodyPointA = [2.5422287, 0.0485515594, 0.5],
+					Vec3 BodyPointB = [2.32617235, 0.105075836, 0.5],
+				},
+				StickJoint = 
+				{
+					bool Active = true,
+					bool SendsEvents = false,
+					bool AutoSnaps = false,
+					bool CollideConnected = true,
+					float MaxForce = 0,
+					float Length = 12.2883463,
+					Vec3 BodyPointA = [2.5422287, 0.0485515594, 0.5],
+					Vec3 BodyPointB = [2.32617235, 0.105075836, 0.5],
+				},
+				FollowJoint = 
+				{
+				},
+			},
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 67,
+			uint Id = 77,
 		},
 		Named = 
 		{
@@ -3954,7 +4514,7 @@ Level =
 				string Name = "5a02651333da9589:MenuButton",
 				LinkId = 
 				{
-					uint Id = 68,
+					uint Id = 78,
 				},
 				Transform = 
 				{
@@ -3977,7 +4537,7 @@ Level =
 				string Name = "5a02608ee5a149c3:OptionsButton",
 				LinkId = 
 				{
-					uint Id = 69,
+					uint Id = 79,
 				},
 				Transform = 
 				{
@@ -4000,7 +4560,7 @@ Level =
 				string Name = "5a0260b9da6b9ca3:ResumeButton",
 				LinkId = 
 				{
-					uint Id = 70,
+					uint Id = 80,
 				},
 				Transform = 
 				{
@@ -4025,7 +4585,7 @@ Level =
 		string Name = "5a019c947ab2b196:OptionsOverlay",
 		LinkId = 
 		{
-			uint Id = 71,
+			uint Id = 81,
 		},
 		Transform = 
 		{
@@ -4042,7 +4602,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 72,
+			uint Id = 82,
 		},
 		Named = 
 		{
@@ -4076,7 +4636,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 73,
+			uint Id = 83,
 		},
 		Named = 
 		{
@@ -4110,7 +4670,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 74,
+			uint Id = 84,
 		},
 		Named = 
 		{
@@ -4144,7 +4704,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 75,
+			uint Id = 85,
 		},
 		Named = 
 		{
@@ -4172,6 +4732,204 @@ Level =
 			TextAlign Align = Left,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a6ea1f2412a5c3b:Pigeon",
+		LinkId = 
+		{
+			uint Id = 86,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-9.02081299, 25.4379616, -9.29228406e-07],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Pigeon",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a6ea1f2412a5c3b:Pigeon",
+		LinkId = 
+		{
+			uint Id = 87,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [10.6613188, 11.5597677, -9.29228406e-07],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Pigeon",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a6ea1f2412a5c3b:Pigeon",
+		LinkId = 
+		{
+			uint Id = 88,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [10.2865591, 40.1033058, -9.29228406e-07],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Pigeon",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a6ea1f2412a5c3b:Pigeon",
+		LinkId = 
+		{
+			uint Id = 89,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-8.01903915, 39.9045868, -9.29228406e-07],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Pigeon",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a6ea1f2412a5c3b:Pigeon",
+		LinkId = 
+		{
+			uint Id = 90,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-13.6626129, 14.4786472, -9.29228406e-07],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Pigeon",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a6ea1f2412a5c3b:Pigeon",
+		LinkId = 
+		{
+			uint Id = 91,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-13.6626129, 2.5696888, -9.29228406e-07],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Pigeon",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a6ea1f2412a5c3b:Pigeon",
+		LinkId = 
+		{
+			uint Id = 92,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [9.38434219, 2.5696888, -9.29228406e-07],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Pigeon",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a6ea1f2412a5c3b:Pigeon",
+		LinkId = 
+		{
+			uint Id = 93,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-10.3006992, -10.6781712, -9.29228406e-07],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Pigeon",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a6ea1f2412a5c3b:Pigeon",
+		LinkId = 
+		{
+			uint Id = 94,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [6.43158531, -10.6781712, -9.29228406e-07],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Pigeon",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a6ea1f2412a5c3b:Pigeon",
+		LinkId = 
+		{
+			uint Id = 95,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [9.71295452, -22.7632236, -9.29228406e-07],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Pigeon",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a6ea1f2412a5c3b:Pigeon",
+		LinkId = 
+		{
+			uint Id = 96,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-10.6955824, -20.0420876, -9.29228406e-07],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Pigeon",
 		},
 	},
 },

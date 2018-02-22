@@ -6,15 +6,15 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Missile",
+		string Name = "Pigeon",
 	},
 	Archetyped = 
 	{
-		string Name = "5a9d6ca0b3e86b2a:Missile",
+		string Name = "5a6ea1f2412a5c3b:Pigeon",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [9.71295452, -22.7632236, -9.29228406e-07],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -38,7 +38,7 @@ Cog =
 	},
 	RigidBody = 
 	{
-		bool Static = false,
+		bool Static = true,
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
@@ -58,15 +58,14 @@ Cog =
 		Vec3 Offset = [0, 0, 0],
 		Vec3 Size = [0.5, 0.5, 0.5],
 	},
-	DamageOnColide = 
-	{
-		float Damage = 10,
-	},
 	DestroyOnCollide = 
 	{
 		string Replacement = "",
 	},
-	HomingForMissile = 
+	PigeonNPC = 
 	{
+		float PaceSpeed = 5,
+		float MaxMoveDistance = 10,
+		Vec3 PaceDirection = [1, 1, 0],
 	},
 },
