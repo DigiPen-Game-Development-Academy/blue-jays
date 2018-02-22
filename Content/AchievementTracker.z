@@ -200,13 +200,13 @@ class AchievementTracker : ZilchComponent
     function AddAchievements()
     {
         Achievement("First Death", "Die 1 time.", "When's the funeral?",
-            Requirement(AchRequire.DEATHS, 1, 100000, this), AchEvent.CHECK, SpriteSource.Bomb);
+            Requirement(AchRequire.DEATHS, 1, 100000, this), AchEvent.CHECK, SpriteSource.Tombstone);
         Achievement("RIP", "Die 5 times.", "Do your worst.",
-            Requirement(AchRequire.DEATHS, 5, 100000, this), AchEvent.CHECK, SpriteSource.Bomb);
+            Requirement(AchRequire.DEATHS, 5, 100000, this), AchEvent.CHECK, SpriteSource.Tombstone);
         Achievement("Graveyard", "Die 20 times.", "Having some trouble?",
-            Requirement(AchRequire.DEATHS, 20, 100000, this), AchEvent.CHECK, SpriteSource.Bomb);
+            Requirement(AchRequire.DEATHS, 20, 100000, this), AchEvent.CHECK, SpriteSource.Tombstone);
         Achievement("Determined", "Die 50 times.", "LET THE BODIES HIT THE FLOOR",
-            Requirement(AchRequire.DEATHS, 5, 100000, this), AchEvent.CHECK, SpriteSource.Bomb);
+            Requirement(AchRequire.DEATHS, 5, 100000, this), AchEvent.CHECK, SpriteSource.Tombstone);
         Achievement("Fool Beaten", "Beat the Fool.", "Hope you enjoyed the show!",
             Requirement(AchRequire.FOOL_BEATEN, 1, 100000, this), AchEvent.CHECK, SpriteSource.Fool);
         Achievement("Encore!", "Beat the Fool 5 times.", "I'll take that as a yes.",
