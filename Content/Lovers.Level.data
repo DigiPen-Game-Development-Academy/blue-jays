@@ -111,7 +111,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.997476339, -0.919839501, 50],
+			Vec3 Translation = [1.52558851, -0.431026191, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -123,7 +123,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 36.348259,
+			float Size = 32.8892593,
 		},
 		EditorCameraController = 
 		{
@@ -131,7 +131,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.997476339, -0.919839501, -4.36007852e-08],
+			Vec3 LookTarget = [1.52558851, -0.431026191, 6.66858284e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -245,125 +245,11 @@ Level =
 				},
 				Named = 
 				{
-					string Name = "Wall",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 13.25, 0],
-					Vec3 Scale = [40, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-				BoxCollider = 
-				{
-					bool Ghost = false,
-					bool SendsMessages = true,
-					bool Seamless = true,
-					string MaterialName = "5a1cee2c4a245b06:NoBounce",
-					string SerializedGroupName = "5a916d34df3b1676:Wall",
-					Vec3 Offset = [0, 0, 0],
-					Vec3 Size = [0.5, 0.5, 0.5],
-				},
-				RigidBody = 
-				{
-					bool Static = true,
-					bool Asleep = false,
-					bool Kinematic = false,
-					bool RotationLocked = false,
-					bool Mode2D = true,
-					bool AllowSleep = true,
-					bool Inherit2DMode = true,
-					Vec3 Velocity = [0, 0, 0],
-					Vec3 AngularVelocity = [0, 0, 0],
-				},
-			},
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 9,
-				},
-				Named = 
-				{
 					string Name = "Pillar",
 				},
 				Transform = 
 				{
-					Vec3 Translation = [12, -5, 0],
-					Vec3 Scale = [2, 6, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-				RigidBody = 
-				{
-					bool Static = true,
-					bool Asleep = false,
-					bool Kinematic = false,
-					bool RotationLocked = false,
-					bool Mode2D = true,
-					bool AllowSleep = true,
-					bool Inherit2DMode = true,
-					Vec3 Velocity = [0, 0, 0],
-					Vec3 AngularVelocity = [0, 0, 0],
-				},
-				BoxCollider = 
-				{
-					bool Ghost = false,
-					bool SendsMessages = true,
-					bool Seamless = true,
-					string MaterialName = "5a1cee2c4a245b06:NoBounce",
-					string SerializedGroupName = "5a916d34df3b1676:Wall",
-					Vec3 Offset = [0, 0, 0],
-					Vec3 Size = [0.5, 0.5, 0.5],
-				},
-			},
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 10,
-				},
-				Named = 
-				{
-					string Name = "Platform",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [14, 3, 0],
+					Vec3 Translation = [-12, -5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -377,23 +263,13 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5a6e92432bad3fbf:Pillar",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
 					bool AnimationActive = true,
 					float AnimationSpeed = 1,
 					uint StartFrame = 0,
-				},
-				BoxCollider = 
-				{
-					bool Ghost = false,
-					bool SendsMessages = true,
-					bool Seamless = true,
-					string MaterialName = "5a1cee2c4a245b06:NoBounce",
-					string SerializedGroupName = "5a916d34df3b1676:Wall",
-					Vec3 Offset = [0, 0, 0],
-					Vec3 Size = [3, 0.5, 0.5],
 				},
 				RigidBody = 
 				{
@@ -407,9 +283,19 @@ Level =
 					Vec3 Velocity = [0, 0, 0],
 					Vec3 AngularVelocity = [0, 0, 0],
 				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "5a1cee2c4a245b06:NoBounce",
+					string SerializedGroupName = "5a916d34df3b1676:Wall",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [1, 3, 0.5],
+				},
 				Area = 
 				{
-					Vec2 Size = [6, 1],
+					Vec2 Size = [2, 6],
 					Location Origin = Center,
 				},
 			},
@@ -417,16 +303,16 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 11,
+					uint Id = 9,
 				},
 				Named = 
 				{
-					string Name = "Pillar",
+					string Name = "PillarEdge",
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-12, -5, 0],
-					Vec3 Scale = [2, 6, 1],
+					Vec3 Translation = [-10.5, -7.5, 0],
+					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				Sprite = 
@@ -439,7 +325,7 @@ Level =
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5275aa4d802dd6dc:Square",
+					string SpriteSource = "5a6e92432ba2d3ea:PillarRight",
 					bool RenderMask = false,
 					bool FlipX = false,
 					bool FlipY = false,
@@ -459,15 +345,138 @@ Level =
 					Vec3 Velocity = [0, 0, 0],
 					Vec3 AngularVelocity = [0, 0, 0],
 				},
-				BoxCollider = 
+				MeshCollider = 
 				{
 					bool Ghost = false,
 					bool SendsMessages = true,
 					bool Seamless = true,
-					string MaterialName = "5a1cee2c4a245b06:NoBounce",
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 					string SerializedGroupName = "5a916d34df3b1676:Wall",
 					Vec3 Offset = [0, 0, 0],
-					Vec3 Size = [0.5, 0.5, 0.5],
+					string PhysicsMeshName = "5198bea43a4694d2:SlopeRight",
+					bool DrawEdges = true,
+					bool DrawFaces = false,
+					bool DrawFaceNormals = false,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 10,
+				},
+				Named = 
+				{
+					string Name = "PillarEdge",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-10.5, -2.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [1, 0, -0, -4.37113883e-08],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a6e92432ba2d3ea:PillarRight",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				RigidBody = 
+				{
+					bool Static = true,
+					bool Asleep = false,
+					bool Kinematic = false,
+					bool RotationLocked = false,
+					bool Mode2D = true,
+					bool AllowSleep = true,
+					bool Inherit2DMode = true,
+					Vec3 Velocity = [0, 0, 0],
+					Vec3 AngularVelocity = [0, 0, 0],
+				},
+				MeshCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "5a916d34df3b1676:Wall",
+					Vec3 Offset = [0, 0, 0],
+					string PhysicsMeshName = "5198bea43a4694d2:SlopeRight",
+					bool DrawEdges = true,
+					bool DrawFaces = false,
+					bool DrawFaceNormals = false,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 11,
+				},
+				Named = 
+				{
+					string Name = "PillarEdge",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-13.5, -7.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a6e92432ba24cc5:PillarLeft",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				RigidBody = 
+				{
+					bool Static = true,
+					bool Asleep = false,
+					bool Kinematic = false,
+					bool RotationLocked = false,
+					bool Mode2D = true,
+					bool AllowSleep = true,
+					bool Inherit2DMode = true,
+					Vec3 Velocity = [0, 0, 0],
+					Vec3 AngularVelocity = [0, 0, 0],
+				},
+				MeshCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "5a916d34df3b1676:Wall",
+					Vec3 Offset = [0, 0, 0],
+					string PhysicsMeshName = "5198bea43a47cbd7:SlopeLeft",
+					bool DrawEdges = true,
+					bool DrawFaces = false,
+					bool DrawFaceNormals = false,
 				},
 			},
 			Cog = 
@@ -475,6 +484,66 @@ Level =
 				LinkId = 
 				{
 					uint Id = 12,
+				},
+				Named = 
+				{
+					string Name = "PillarEdge",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-13.5, -2.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [1, 0, -0, -4.37113883e-08],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a6e92432ba24cc5:PillarLeft",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				RigidBody = 
+				{
+					bool Static = true,
+					bool Asleep = false,
+					bool Kinematic = false,
+					bool RotationLocked = false,
+					bool Mode2D = true,
+					bool AllowSleep = true,
+					bool Inherit2DMode = true,
+					Vec3 Velocity = [0, 0, 0],
+					Vec3 AngularVelocity = [0, 0, 0],
+				},
+				MeshCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "5a916d34df3b1676:Wall",
+					Vec3 Offset = [0, 0, 0],
+					string PhysicsMeshName = "5198bea43a47cbd7:SlopeLeft",
+					bool DrawEdges = true,
+					bool DrawFaces = false,
+					bool DrawFaceNormals = false,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 13,
 				},
 				Named = 
 				{
@@ -536,7 +605,69 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 13,
+					uint Id = 14,
+				},
+				Named = 
+				{
+					string Name = "Platform",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [14, 3, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "5a1cee2c4a245b06:NoBounce",
+					string SerializedGroupName = "5a916d34df3b1676:Wall",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [3, 0.5, 0.5],
+				},
+				RigidBody = 
+				{
+					bool Static = true,
+					bool Asleep = false,
+					bool Kinematic = false,
+					bool RotationLocked = false,
+					bool Mode2D = true,
+					bool AllowSleep = true,
+					bool Inherit2DMode = true,
+					Vec3 Velocity = [0, 0, 0],
+					Vec3 AngularVelocity = [0, 0, 0],
+				},
+				Area = 
+				{
+					Vec2 Size = [6, 1],
+					Location Origin = Center,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 15,
 				},
 				Named = 
 				{
@@ -598,17 +729,17 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 14,
+					uint Id = 16,
 				},
 				Named = 
 				{
-					string Name = "Wall",
+					string Name = "Platform",
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-19.5, 2.45427608, 0],
-					Vec3 Scale = [1, 22.5, 1],
-					Quat Rotation = [0, 0.1305262, 0, 0.991444886],
+					Vec3 Translation = [6, 6, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
 				},
 				Sprite = 
 				{
@@ -636,7 +767,7 @@ Level =
 					string MaterialName = "5a1cee2c4a245b06:NoBounce",
 					string SerializedGroupName = "5a916d34df3b1676:Wall",
 					Vec3 Offset = [0, 0, 0],
-					Vec3 Size = [0.5, 0.5, 0.5],
+					Vec3 Size = [1, 0.5, 0.5],
 				},
 				RigidBody = 
 				{
@@ -650,12 +781,17 @@ Level =
 					Vec3 Velocity = [0, 0, 0],
 					Vec3 AngularVelocity = [0, 0, 0],
 				},
+				Area = 
+				{
+					Vec2 Size = [2, 1],
+					Location Origin = Center,
+				},
 			},
 			Cog = 
 			{
 				LinkId = 
 				{
-					uint Id = 15,
+					uint Id = 17,
 				},
 				Named = 
 				{
@@ -717,7 +853,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 16,
+					uint Id = 18,
 				},
 				Named = 
 				{
@@ -774,7 +910,64 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 17,
+					uint Id = 19,
+				},
+				Named = 
+				{
+					string Name = "Wall",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 13.25, 0],
+					Vec3 Scale = [40, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "5a1cee2c4a245b06:NoBounce",
+					string SerializedGroupName = "5a916d34df3b1676:Wall",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+				RigidBody = 
+				{
+					bool Static = true,
+					bool Asleep = false,
+					bool Kinematic = false,
+					bool RotationLocked = false,
+					bool Mode2D = true,
+					bool AllowSleep = true,
+					bool Inherit2DMode = true,
+					Vec3 Velocity = [0, 0, 0],
+					Vec3 AngularVelocity = [0, 0, 0],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 20,
 				},
 				Named = 
 				{
@@ -826,22 +1019,25 @@ Level =
 					Vec3 Velocity = [0, 0, 0],
 					Vec3 AngularVelocity = [0, 0, 0],
 				},
+				Hierarchy = 
+				{
+				},
 			},
 			Cog = 
 			{
 				LinkId = 
 				{
-					uint Id = 18,
+					uint Id = 21,
 				},
 				Named = 
 				{
-					string Name = "Platform",
+					string Name = "Wall",
 				},
 				Transform = 
 				{
-					Vec3 Translation = [6, 6, 0],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
+					Vec3 Translation = [-19.5000038, 2.45427608, -9.53674316e-07],
+					Vec3 Scale = [1, 22.5, 1],
+					Quat Rotation = [0, 0.1305262, 0, 0.991444886],
 				},
 				Sprite = 
 				{
@@ -869,7 +1065,7 @@ Level =
 					string MaterialName = "5a1cee2c4a245b06:NoBounce",
 					string SerializedGroupName = "5a916d34df3b1676:Wall",
 					Vec3 Offset = [0, 0, 0],
-					Vec3 Size = [1, 0.5, 0.5],
+					Vec3 Size = [0.5, 0.5, 0.5],
 				},
 				RigidBody = 
 				{
@@ -883,10 +1079,307 @@ Level =
 					Vec3 Velocity = [0, 0, 0],
 					Vec3 AngularVelocity = [0, 0, 0],
 				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 22,
+				},
+				Named = 
+				{
+					string Name = "Pillar",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [12, -5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a6e92432bad3fbf:Pillar",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				RigidBody = 
+				{
+					bool Static = true,
+					bool Asleep = false,
+					bool Kinematic = false,
+					bool RotationLocked = false,
+					bool Mode2D = true,
+					bool AllowSleep = true,
+					bool Inherit2DMode = true,
+					Vec3 Velocity = [0, 0, 0],
+					Vec3 AngularVelocity = [0, 0, 0],
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "5a1cee2c4a245b06:NoBounce",
+					string SerializedGroupName = "5a916d34df3b1676:Wall",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [1, 3, 0.5],
+				},
 				Area = 
 				{
-					Vec2 Size = [2, 1],
+					Vec2 Size = [2, 6],
 					Location Origin = Center,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 23,
+				},
+				Named = 
+				{
+					string Name = "PillarEdge",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [10.5, -2.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [1, 0, -0, -4.37113883e-08],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a6e92432ba24cc5:PillarLeft",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				RigidBody = 
+				{
+					bool Static = true,
+					bool Asleep = false,
+					bool Kinematic = false,
+					bool RotationLocked = false,
+					bool Mode2D = true,
+					bool AllowSleep = true,
+					bool Inherit2DMode = true,
+					Vec3 Velocity = [0, 0, 0],
+					Vec3 AngularVelocity = [0, 0, 0],
+				},
+				MeshCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "5a916d34df3b1676:Wall",
+					Vec3 Offset = [0, 0, 0],
+					string PhysicsMeshName = "5198bea43a47cbd7:SlopeLeft",
+					bool DrawEdges = true,
+					bool DrawFaces = false,
+					bool DrawFaceNormals = false,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 24,
+				},
+				Named = 
+				{
+					string Name = "PillarEdge",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [13.5, -2.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [1, 0, -0, -4.37113883e-08],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a6e92432ba2d3ea:PillarRight",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				RigidBody = 
+				{
+					bool Static = true,
+					bool Asleep = false,
+					bool Kinematic = false,
+					bool RotationLocked = false,
+					bool Mode2D = true,
+					bool AllowSleep = true,
+					bool Inherit2DMode = true,
+					Vec3 Velocity = [0, 0, 0],
+					Vec3 AngularVelocity = [0, 0, 0],
+				},
+				MeshCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "5a916d34df3b1676:Wall",
+					Vec3 Offset = [0, 0, 0],
+					string PhysicsMeshName = "5198bea43a4694d2:SlopeRight",
+					bool DrawEdges = true,
+					bool DrawFaces = false,
+					bool DrawFaceNormals = false,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 25,
+				},
+				Named = 
+				{
+					string Name = "PillarEdge",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [10.5, -7.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a6e92432ba24cc5:PillarLeft",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				RigidBody = 
+				{
+					bool Static = true,
+					bool Asleep = false,
+					bool Kinematic = false,
+					bool RotationLocked = false,
+					bool Mode2D = true,
+					bool AllowSleep = true,
+					bool Inherit2DMode = true,
+					Vec3 Velocity = [0, 0, 0],
+					Vec3 AngularVelocity = [0, 0, 0],
+				},
+				MeshCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "5a916d34df3b1676:Wall",
+					Vec3 Offset = [0, 0, 0],
+					string PhysicsMeshName = "5198bea43a47cbd7:SlopeLeft",
+					bool DrawEdges = true,
+					bool DrawFaces = false,
+					bool DrawFaceNormals = false,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 26,
+				},
+				Named = 
+				{
+					string Name = "PillarEdge",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [13.5, -7.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a6e92432ba2d3ea:PillarRight",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				RigidBody = 
+				{
+					bool Static = true,
+					bool Asleep = false,
+					bool Kinematic = false,
+					bool RotationLocked = false,
+					bool Mode2D = true,
+					bool AllowSleep = true,
+					bool Inherit2DMode = true,
+					Vec3 Velocity = [0, 0, 0],
+					Vec3 AngularVelocity = [0, 0, 0],
+				},
+				MeshCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "5a916d34df3b1676:Wall",
+					Vec3 Offset = [0, 0, 0],
+					string PhysicsMeshName = "5198bea43a4694d2:SlopeRight",
+					bool DrawEdges = true,
+					bool DrawFaces = false,
+					bool DrawFaceNormals = false,
 				},
 			},
 		},
@@ -896,7 +1389,7 @@ Level =
 		string Name = "5a08f65eab18b886:UI",
 		LinkId = 
 		{
-			uint Id = 19,
+			uint Id = 27,
 		},
 		Transform = 
 		{
@@ -914,7 +1407,7 @@ Level =
 		string Name = "5a019c947ab2b196:OptionsOverlay",
 		LinkId = 
 		{
-			uint Id = 20,
+			uint Id = 28,
 		},
 		Transform = 
 		{
@@ -932,7 +1425,7 @@ Level =
 		string Name = "5a026066ef8b66c0:PauseOverlay",
 		LinkId = 
 		{
-			uint Id = 21,
+			uint Id = 29,
 		},
 		Transform = 
 		{

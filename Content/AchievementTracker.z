@@ -85,25 +85,25 @@ class Achievement
         this.Sprite = s;
         if(e==AchEvent.DEATH)
         {
-            req.AchTrack.DeathAcheivements.Add(this);
+            req.AchTrack.DeathAchievements.Add(this);
         }
         else if(e==AchEvent.BEAT_FOOL)
         {
-            req.AchTrack.FoolAcheivements.Add(this);
+            req.AchTrack.FoolAchievements.Add(this);
         }
         else if(e==AchEvent.BEAT_LOVERS)
         {
-            req.AchTrack.LoversAcheivements.Add(this);
+            req.AchTrack.LoversAchievements.Add(this);
         }
         else if(e==AchEvent.WIN)
         {
-            req.AchTrack.WinAcheivements.Add(this);
+            req.AchTrack.WinAchievements.Add(this);
         }
         else
         {
-            req.AchTrack.CheckAcheivements.Add(this);
+            req.AchTrack.CheckAchievements.Add(this);
         }
-        req.AchTrack.AllAcheivements.Add(this);
+        req.AchTrack.AllAchievements.Add(this);
     }
     constructor(name : String, req : Array[Requirement], e : AchEvent, s : SpriteSource)
     {
@@ -112,15 +112,15 @@ class Achievement
         this.Sprite = s;
         if(e==AchEvent.DEATH)
         {
-            req[0].AchTrack.DeathAcheivements.Add(this);
+            req[0].AchTrack.DeathAchievements.Add(this);
         }
         else if(e==AchEvent.BEAT_FOOL)
         {
-            req[0].AchTrack.FoolAcheivements.Add(this);
+            req[0].AchTrack.FoolAchievements.Add(this);
         }
         else if(e==AchEvent.WIN)
         {
-            req[0].AchTrack.WinAcheivements.Add(this);
+            req[0].AchTrack.WinAchievements.Add(this);
         }
     }
     function Check()
@@ -143,19 +143,19 @@ class Achievement
 
 class AchievementTracker : ZilchComponent
 {
-    var DeathAcheivements : Array[Achievement] = Array[Achievement]();
-    var FoolAcheivements : Array[Achievement] = Array[Achievement]();
-    var LoversAcheivements : Array[Achievement] = Array[Achievement]();
-    var WinAcheivements : Array[Achievement] = Array[Achievement]();
-    var CheckAcheivements : Array[Achievement] = Array[Achievement]();
-    var AllAcheivements : Array[Achievement] = Array[Achievement]();
+    var DeathAchievements : Array[Achievement] = Array[Achievement]();
+    var FoolAchievements : Array[Achievement] = Array[Achievement]();
+    var LoversAchievements : Array[Achievement] = Array[Achievement]();
+    var WinAchievements : Array[Achievement] = Array[Achievement]();
+    var CheckAchievements : Array[Achievement] = Array[Achievement]();
+    var AllAchievements : Array[Achievement] = Array[Achievement]();
     function Initialize(init : CogInitializer)
     {
         this.AddAchievements();
         for(var i = 0; i < this.Space.Globals.SavedStats.SavedStats.AchUnlocks.Count; i += 1)
         {
             var b = this.Space.Globals.SavedStats.SavedStats.AchUnlocks[i];
-            this.AllAcheivements[i].Unlocked = b == "y"[0];
+            this.AllAchievements[i].Unlocked = b == "y"[0];
         }
         Zero.Connect(this.Space, Events.LevelStarted, this.OnLevelStart);
     }
@@ -165,23 +165,23 @@ class AchievementTracker : ZilchComponent
         var achievements : Array[Achievement] = null;
         if(event.LevelName == "Win")
         {
-            achievements = this.WinAcheivements;
+            achievements = this.WinAchievements;
         }
         else if(event.LevelName == "Lose")
         {
-            achievements = this.DeathAcheivements;
+            achievements = this.DeathAchievements;
         }
         else if(event.LevelName == "Lovers")
         {
-            achievements = this.FoolAcheivements;
+            achievements = this.FoolAchievements;
         }
         else if(event.LevelName == "Death")
         {
-            achievements = this.LoversAcheivements;
+            achievements = this.LoversAchievements;
         }
         else if(event.LevelName == "Achievements")
         {
-            achievements = this.CheckAcheivements;
+            achievements = this.CheckAchievements;
         }
         if(achievements != null)
         {
@@ -193,7 +193,7 @@ class AchievementTracker : ZilchComponent
         }
         if(event.LevelName == "Achievements")
         {
-            this.LevelSettings.DrawAchievements.Draw(this.AllAcheivements);
+            this.LevelSettings.DrawAchievements.Draw(this.AllAchievements);
         }
     }
     

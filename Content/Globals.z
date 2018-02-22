@@ -55,7 +55,7 @@ class Globals : ZilchComponent
     function StoreStats()
     {
         var au = "";
-        foreach (var ach in this.Space.AchievementTracker.AllAcheivements)
+        foreach (var ach in this.Space.AchievementTracker.AllAchievements)
         {
             if(ach.Unlocked)
             {
