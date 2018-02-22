@@ -11,6 +11,7 @@ class HoverTextBox : ZilchComponent
     var Title : String;
     var Objective : String;
     var Flavor : String;
+    var Progress : String;
     var Unlocked : Boolean;
     
     function Init(ach : Achievement)
@@ -22,6 +23,7 @@ class HoverTextBox : ZilchComponent
         this.Title = ach.Name;
         this.Objective = ach.Objective;
         this.Flavor = ach.Flavor;
+        this.Progress = ach.GetProgressText();
         this.Unlocked = ach.Unlocked;
         if(!ach.Unlocked)
         {
@@ -42,6 +44,7 @@ class HoverTextBox : ZilchComponent
                 textBox.FindChildByName("AchievementIcon").Sprite.SpriteSource = this.Icon;
                 textBox.FindChildByName("TitleText").SpriteText.Text = this.Title;
                 textBox.FindChildByName("ObjectiveText").SpriteText.Text = this.Objective;
+                textBox.FindChildByName("ProgressText").SpriteText.Text = this.Progress;
                 textBox.FindChildByName("FlavorText").SpriteText.Text = this.Flavor;
                 if(!this.Unlocked)
                 {

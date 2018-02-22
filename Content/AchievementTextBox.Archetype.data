@@ -15,7 +15,7 @@ Cog =
 	Transform = 
 	{
 		Vec3 Translation = [0, 0, 0],
-		Vec3 Scale = [9, 6, 1],
+		Vec3 Scale = [9, 9, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -54,8 +54,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-0.408333361, 0.300000012, 0.0900000036],
-				Vec3 Scale = [0.100000001, 0.150000006, 1],
+				Vec3 Translation = [-0.379999995, 0.360000014, 0.0900000036],
+				Vec3 Scale = [0.100000001, 0.100000001, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -94,8 +94,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-0.408333361, -0.0166666675, 0.0900000036],
-				Vec3 Scale = [0.100000001, 0.150000006, 1],
+				Vec3 Translation = [-0.379999995, 0.119999997, 0.0900000036],
+				Vec3 Scale = [0.100000001, 0.100000001, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -125,12 +125,12 @@ Cog =
 			},
 			Named = 
 			{
-				string Name = "FlavorIcon",
+				string Name = "ProgressIcon",
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-0.408333361, -0.316666663, 0.0900000036],
-				Vec3 Scale = [0.100000001, 0.150000006, 1],
+				Vec3 Translation = [-0.379999995, -0.119999997, 0.0900000036],
+				Vec3 Scale = [0.100000001, 0.100000001, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -157,6 +157,41 @@ Cog =
 			LinkId = 
 			{
 				uint Id = 5,
+			},
+			Named = 
+			{
+				string Name = "FlavorIcon",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-0.379999995, -0.360000014, 0.0900000036],
+				Vec3 Scale = [0.100000001, 0.100000001, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5275aa4d802dd6dc:Square",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 6,
 			},
 			Named = 
 			{
@@ -191,41 +226,6 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 6,
-			},
-			Named = 
-			{
-				string Name = "Border",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [0, 0.13333334, -0.00999999978],
-				Vec3 Scale = [1, 0.0500000007, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5275aa4d802dd6dc:Square",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
 				uint Id = 7,
 			},
 			Named = 
@@ -234,7 +234,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, -0.166666672, -0.00999999978],
+				Vec3 Translation = [0, 0.25, -0.00999999978],
 				Vec3 Scale = [1, 0.0500000007, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -269,7 +269,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, -0.474999994, -0.00999999978],
+				Vec3 Translation = [0, 0, -0.00999999978],
 				Vec3 Scale = [1, 0.0500000007, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -304,8 +304,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-0.483333349, 0, -0.00999999978],
-				Vec3 Scale = [0.0333333351, 1, 1],
+				Vec3 Translation = [0, -0.25, -0.00999999978],
+				Vec3 Scale = [1, 0.0500000007, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -339,8 +339,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-0.333333343, 0, -0.00999999978],
-				Vec3 Scale = [0.0333333351, 1, 1],
+				Vec3 Translation = [0, -0.474999994, -0.00999999978],
+				Vec3 Scale = [1, 0.0500000007, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -374,8 +374,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0.483333349, 0, -0.00999999978],
-				Vec3 Scale = [0.0333333351, 1, 1],
+				Vec3 Translation = [-0.474999994, 0, -0.00999999978],
+				Vec3 Scale = [0.0500000007, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -405,12 +405,82 @@ Cog =
 			},
 			Named = 
 			{
+				string Name = "Border",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-0.289999992, 0, -0.00999999978],
+				Vec3 Scale = [0.0500000007, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5275aa4d802dd6dc:Square",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 13,
+			},
+			Named = 
+			{
+				string Name = "Border",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0.474999994, 0, -0.00999999978],
+				Vec3 Scale = [0.0500000007, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5275aa4d802dd6dc:Square",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 14,
+			},
+			Named = 
+			{
 				string Name = "TitleText",
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-0.300000012, 0.300000012, 0],
-				Vec3 Scale = [0.150000006, 0.224999994, 1],
+				Vec3 Translation = [-0.25, 0.360000014, 0],
+				Vec3 Scale = [0.150000006, 0.150000006, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			SpriteText = 
@@ -432,7 +502,7 @@ Cog =
 			},
 			Area = 
 			{
-				Vec2 Size = [5, 1.20000005],
+				Vec2 Size = [4.5, 1.20000005],
 				Location Origin = CenterLeft,
 			},
 			Hierarchy = 
@@ -443,7 +513,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 13,
+				uint Id = 15,
 			},
 			Named = 
 			{
@@ -451,8 +521,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-0.300000012, -0.0199999996, 0],
-				Vec3 Scale = [0.150000006, 0.224999994, 1],
+				Vec3 Translation = [-0.25, 0.119999997, 0],
+				Vec3 Scale = [0.150000006, 0.150000006, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			SpriteText = 
@@ -474,7 +544,7 @@ Cog =
 			},
 			Area = 
 			{
-				Vec2 Size = [5, 1.20000005],
+				Vec2 Size = [4.5, 1.20000005],
 				Location Origin = CenterLeft,
 			},
 			Hierarchy = 
@@ -485,7 +555,46 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 14,
+				uint Id = 16,
+			},
+			Named = 
+			{
+				string Name = "ProgressText",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-0.25, -0.119999997, 0],
+				Vec3 Scale = [0.150000006, 0.150000006, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			SpriteText = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string FontName = "4e7bac697bec55c5:Verdana",
+				uint FontSize = 30,
+				string Text = "Progress",
+				TextAlign Align = Left,
+				float PixelsPerUnit = 64,
+				bool Smoothing = true,
+			},
+			Area = 
+			{
+				Vec2 Size = [4.5, 1.20000005],
+				Location Origin = CenterLeft,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 17,
 			},
 			Named = 
 			{
@@ -493,8 +602,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-0.300000012, -0.319999993, 0],
-				Vec3 Scale = [0.150000006, 0.224999994, 1],
+				Vec3 Translation = [-0.25, -0.360000014, 0],
+				Vec3 Scale = [0.150000006, 0.150000006, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			SpriteText = 
@@ -516,7 +625,7 @@ Cog =
 			},
 			Area = 
 			{
-				Vec2 Size = [5, 1.20000005],
+				Vec2 Size = [4.5, 1.20000005],
 				Location Origin = CenterLeft,
 			},
 		},
