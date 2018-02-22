@@ -69,4 +69,8 @@ Cog =
 	HomingForMissile = 
 	{
 	},
+	DestroyTimer = 
+	{
+		float Timer = 3,
+	},
 },
