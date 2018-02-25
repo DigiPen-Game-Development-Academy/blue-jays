@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-0.590544701, -0.668423653, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -29,7 +29,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [2.18921041, 47.2716751, 0],
+				Vec3 Translation = [2.18921041, 46.9324226, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -2524,683 +2524,6 @@ Cog =
 			},
 			Named = 
 			{
-				string Name = "Spike",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [4.01844406, 7.04459667, 0],
-				Vec3 Scale = [1, 1, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5af7c00da9c5070d:Spikes",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-			},
-			RigidBody = 
-			{
-				bool Static = false,
-				bool Asleep = false,
-				bool Kinematic = false,
-				bool RotationLocked = false,
-				bool Mode2D = true,
-				bool AllowSleep = true,
-				bool Inherit2DMode = true,
-				Vec3 Velocity = [0, 0, 0],
-				Vec3 AngularVelocity = [0, 0, 0],
-			},
-			BoxCollider = 
-			{
-				bool Ghost = false,
-				bool SendsMessages = true,
-				bool Seamless = true,
-				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-				string SerializedGroupName = "5af7c2726c5d5798:Spike",
-				Vec3 Offset = [0, 0, 0],
-				Vec3 Size = [0.349999994, 0.474999994, 0.5],
-			},
-			DamageOnColide = 
-			{
-				float Damage = 100,
-			},
-			Hierarchy = 
-			{
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 44,
-			},
-			Named = 
-			{
-				string Name = "Spike",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [12.7522612, 1.76793778, 0],
-				Vec3 Scale = [1, 1, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5af7c00da9c5070d:Spikes",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-			},
-			RigidBody = 
-			{
-				bool Static = false,
-				bool Asleep = false,
-				bool Kinematic = false,
-				bool RotationLocked = false,
-				bool Mode2D = true,
-				bool AllowSleep = true,
-				bool Inherit2DMode = true,
-				Vec3 Velocity = [0, 0, 0],
-				Vec3 AngularVelocity = [0, 0, 0],
-			},
-			BoxCollider = 
-			{
-				bool Ghost = false,
-				bool SendsMessages = true,
-				bool Seamless = true,
-				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-				string SerializedGroupName = "5af7c2726c5d5798:Spike",
-				Vec3 Offset = [0, 0, 0],
-				Vec3 Size = [0.349999994, 0.474999994, 0.5],
-			},
-			DamageOnColide = 
-			{
-				float Damage = 100,
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 45,
-			},
-			Named = 
-			{
-				string Name = "Spike",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [-17.6170998, -7.95993328, 0],
-				Vec3 Scale = [1, 1, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5af7c00da9c5070d:Spikes",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-			},
-			RigidBody = 
-			{
-				bool Static = false,
-				bool Asleep = false,
-				bool Kinematic = false,
-				bool RotationLocked = false,
-				bool Mode2D = true,
-				bool AllowSleep = true,
-				bool Inherit2DMode = true,
-				Vec3 Velocity = [0, 0, 0],
-				Vec3 AngularVelocity = [0, 0, 0],
-			},
-			BoxCollider = 
-			{
-				bool Ghost = false,
-				bool SendsMessages = true,
-				bool Seamless = true,
-				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-				string SerializedGroupName = "5af7c2726c5d5798:Spike",
-				Vec3 Offset = [0, 0, 0],
-				Vec3 Size = [0.349999994, 0.474999994, 0.5],
-			},
-			DamageOnColide = 
-			{
-				float Damage = 100,
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 46,
-			},
-			Named = 
-			{
-				string Name = "Spike",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [-16.4084511, 23.1040688, 0],
-				Vec3 Scale = [1, 1, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5af7c00da9c5070d:Spikes",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-			},
-			RigidBody = 
-			{
-				bool Static = false,
-				bool Asleep = false,
-				bool Kinematic = false,
-				bool RotationLocked = false,
-				bool Mode2D = true,
-				bool AllowSleep = true,
-				bool Inherit2DMode = true,
-				Vec3 Velocity = [0, 0, 0],
-				Vec3 AngularVelocity = [0, 0, 0],
-			},
-			BoxCollider = 
-			{
-				bool Ghost = false,
-				bool SendsMessages = true,
-				bool Seamless = true,
-				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-				string SerializedGroupName = "5af7c2726c5d5798:Spike",
-				Vec3 Offset = [0, 0, 0],
-				Vec3 Size = [0.349999994, 0.474999994, 0.5],
-			},
-			DamageOnColide = 
-			{
-				float Damage = 100,
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 47,
-			},
-			Named = 
-			{
-				string Name = "Spike",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [10.4349804, 18.7324905, 0],
-				Vec3 Scale = [1, 1, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5af7c00da9c5070d:Spikes",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-			},
-			RigidBody = 
-			{
-				bool Static = false,
-				bool Asleep = false,
-				bool Kinematic = false,
-				bool RotationLocked = false,
-				bool Mode2D = true,
-				bool AllowSleep = true,
-				bool Inherit2DMode = true,
-				Vec3 Velocity = [0, 0, 0],
-				Vec3 AngularVelocity = [0, 0, 0],
-			},
-			BoxCollider = 
-			{
-				bool Ghost = false,
-				bool SendsMessages = true,
-				bool Seamless = true,
-				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-				string SerializedGroupName = "5af7c2726c5d5798:Spike",
-				Vec3 Offset = [0, 0, 0],
-				Vec3 Size = [0.349999994, 0.474999994, 0.5],
-			},
-			DamageOnColide = 
-			{
-				float Damage = 100,
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 48,
-			},
-			Named = 
-			{
-				string Name = "Spike",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [-16.5436592, 8.21123886, 0],
-				Vec3 Scale = [1, 1, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5af7c00da9c5070d:Spikes",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-			},
-			RigidBody = 
-			{
-				bool Static = false,
-				bool Asleep = false,
-				bool Kinematic = false,
-				bool RotationLocked = false,
-				bool Mode2D = true,
-				bool AllowSleep = true,
-				bool Inherit2DMode = true,
-				Vec3 Velocity = [0, 0, 0],
-				Vec3 AngularVelocity = [0, 0, 0],
-			},
-			BoxCollider = 
-			{
-				bool Ghost = false,
-				bool SendsMessages = true,
-				bool Seamless = true,
-				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-				string SerializedGroupName = "5af7c2726c5d5798:Spike",
-				Vec3 Offset = [0, 0, 0],
-				Vec3 Size = [0.349999994, 0.474999994, 0.5],
-			},
-			DamageOnColide = 
-			{
-				float Damage = 100,
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 49,
-			},
-			Named = 
-			{
-				string Name = "Spike",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [-9.98128605, -3.33612728, 0],
-				Vec3 Scale = [1, 1, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5af7c00da9c5070d:Spikes",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-			},
-			RigidBody = 
-			{
-				bool Static = false,
-				bool Asleep = false,
-				bool Kinematic = false,
-				bool RotationLocked = false,
-				bool Mode2D = true,
-				bool AllowSleep = true,
-				bool Inherit2DMode = true,
-				Vec3 Velocity = [0, 0, 0],
-				Vec3 AngularVelocity = [0, 0, 0],
-			},
-			BoxCollider = 
-			{
-				bool Ghost = false,
-				bool SendsMessages = true,
-				bool Seamless = true,
-				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-				string SerializedGroupName = "5af7c2726c5d5798:Spike",
-				Vec3 Offset = [0, 0, 0],
-				Vec3 Size = [0.349999994, 0.474999994, 0.5],
-			},
-			DamageOnColide = 
-			{
-				float Damage = 100,
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 50,
-			},
-			Named = 
-			{
-				string Name = "Spike",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [-15.2442684, 32.1506996, 0],
-				Vec3 Scale = [1, 1, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5af7c00da9c5070d:Spikes",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-			},
-			RigidBody = 
-			{
-				bool Static = false,
-				bool Asleep = false,
-				bool Kinematic = false,
-				bool RotationLocked = false,
-				bool Mode2D = true,
-				bool AllowSleep = true,
-				bool Inherit2DMode = true,
-				Vec3 Velocity = [0, 0, 0],
-				Vec3 AngularVelocity = [0, 0, 0],
-			},
-			BoxCollider = 
-			{
-				bool Ghost = false,
-				bool SendsMessages = true,
-				bool Seamless = true,
-				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-				string SerializedGroupName = "5af7c2726c5d5798:Spike",
-				Vec3 Offset = [0, 0, 0],
-				Vec3 Size = [0.349999994, 0.474999994, 0.5],
-			},
-			DamageOnColide = 
-			{
-				float Damage = 100,
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 51,
-			},
-			Named = 
-			{
-				string Name = "Spike",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [-7.04678869, 24.8966007, 0],
-				Vec3 Scale = [1, 1, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5af7c00da9c5070d:Spikes",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-			},
-			RigidBody = 
-			{
-				bool Static = false,
-				bool Asleep = false,
-				bool Kinematic = false,
-				bool RotationLocked = false,
-				bool Mode2D = true,
-				bool AllowSleep = true,
-				bool Inherit2DMode = true,
-				Vec3 Velocity = [0, 0, 0],
-				Vec3 AngularVelocity = [0, 0, 0],
-			},
-			BoxCollider = 
-			{
-				bool Ghost = false,
-				bool SendsMessages = true,
-				bool Seamless = true,
-				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-				string SerializedGroupName = "5af7c2726c5d5798:Spike",
-				Vec3 Offset = [0, 0, 0],
-				Vec3 Size = [0.349999994, 0.474999994, 0.5],
-			},
-			DamageOnColide = 
-			{
-				float Damage = 100,
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 52,
-			},
-			Named = 
-			{
-				string Name = "Spike",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [10.4349804, -7.80984783, 0],
-				Vec3 Scale = [1, 1, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5af7c00da9c5070d:Spikes",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-			},
-			RigidBody = 
-			{
-				bool Static = false,
-				bool Asleep = false,
-				bool Kinematic = false,
-				bool RotationLocked = false,
-				bool Mode2D = true,
-				bool AllowSleep = true,
-				bool Inherit2DMode = true,
-				Vec3 Velocity = [0, 0, 0],
-				Vec3 AngularVelocity = [0, 0, 0],
-			},
-			BoxCollider = 
-			{
-				bool Ghost = false,
-				bool SendsMessages = true,
-				bool Seamless = true,
-				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-				string SerializedGroupName = "5af7c2726c5d5798:Spike",
-				Vec3 Offset = [0, 0, 0],
-				Vec3 Size = [0.349999994, 0.474999994, 0.5],
-			},
-			DamageOnColide = 
-			{
-				float Damage = 100,
-			},
-			Hierarchy = 
-			{
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 53,
-			},
-			Named = 
-			{
-				string Name = "Spike",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [16.030571, 32.1506996, 0],
-				Vec3 Scale = [1, 1, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5af7c00da9c5070d:Spikes",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-			},
-			RigidBody = 
-			{
-				bool Static = false,
-				bool Asleep = false,
-				bool Kinematic = false,
-				bool RotationLocked = false,
-				bool Mode2D = true,
-				bool AllowSleep = true,
-				bool Inherit2DMode = true,
-				Vec3 Velocity = [0, 0, 0],
-				Vec3 AngularVelocity = [0, 0, 0],
-			},
-			BoxCollider = 
-			{
-				bool Ghost = false,
-				bool SendsMessages = true,
-				bool Seamless = true,
-				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-				string SerializedGroupName = "5af7c2726c5d5798:Spike",
-				Vec3 Offset = [0, 0, 0],
-				Vec3 Size = [0.349999994, 0.474999994, 0.5],
-			},
-			DamageOnColide = 
-			{
-				float Damage = 100,
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 54,
-			},
-			Named = 
-			{
 				string Name = "Wall",
 			},
 			Transform = 
@@ -3257,7 +2580,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 55,
+				uint Id = 44,
 			},
 			Named = 
 			{
@@ -3314,7 +2637,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 56,
+				uint Id = 45,
 			},
 			ObjectLink = 
 			{
@@ -3343,7 +2666,7 @@ Cog =
 					bool UpdatePathOnCogChange = true,
 					bool UpdateCogOnInitialize = true,
 					bool ResolvedNullErrorOccurred = false,
-					uint ResolvedCog = 55,
+					uint ResolvedCog = 44,
 					CogPathPreference PathPreference0 = CogRelative,
 					CogPathPreference PathPreference1 = SpaceRelative,
 					CogPathPreference PathPreference2 = Absolute,
@@ -3370,7 +2693,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 57,
+				uint Id = 46,
 			},
 			ObjectLink = 
 			{
@@ -3399,7 +2722,7 @@ Cog =
 					bool UpdatePathOnCogChange = true,
 					bool UpdateCogOnInitialize = true,
 					bool ResolvedNullErrorOccurred = false,
-					uint ResolvedCog = 55,
+					uint ResolvedCog = 44,
 					CogPathPreference PathPreference0 = CogRelative,
 					CogPathPreference PathPreference1 = SpaceRelative,
 					CogPathPreference PathPreference2 = Absolute,
@@ -3426,7 +2749,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 58,
+				uint Id = 47,
 			},
 			ObjectLink = 
 			{
@@ -3482,7 +2805,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 59,
+				uint Id = 48,
 			},
 			ObjectLink = 
 			{
@@ -3538,7 +2861,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 60,
+				uint Id = 49,
 			},
 			ObjectLink = 
 			{
@@ -3567,7 +2890,7 @@ Cog =
 					bool UpdatePathOnCogChange = true,
 					bool UpdateCogOnInitialize = true,
 					bool ResolvedNullErrorOccurred = false,
-					uint ResolvedCog = 55,
+					uint ResolvedCog = 44,
 					CogPathPreference PathPreference0 = CogRelative,
 					CogPathPreference PathPreference1 = SpaceRelative,
 					CogPathPreference PathPreference2 = Absolute,
@@ -3594,7 +2917,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 61,
+				uint Id = 50,
 			},
 			ObjectLink = 
 			{
@@ -3623,7 +2946,7 @@ Cog =
 					bool UpdatePathOnCogChange = true,
 					bool UpdateCogOnInitialize = true,
 					bool ResolvedNullErrorOccurred = false,
-					uint ResolvedCog = 55,
+					uint ResolvedCog = 44,
 					CogPathPreference PathPreference0 = CogRelative,
 					CogPathPreference PathPreference1 = SpaceRelative,
 					CogPathPreference PathPreference2 = Absolute,
@@ -3650,7 +2973,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 62,
+				uint Id = 51,
 			},
 			ObjectLink = 
 			{
@@ -3706,7 +3029,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 63,
+				uint Id = 52,
 			},
 			ObjectLink = 
 			{
@@ -3762,7 +3085,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 64,
+				uint Id = 53,
 			},
 			ObjectLink = 
 			{
@@ -3818,7 +3141,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 65,
+				uint Id = 54,
 			},
 			ObjectLink = 
 			{
@@ -3874,7 +3197,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 66,
+				uint Id = 55,
 			},
 			ObjectLink = 
 			{
@@ -3930,7 +3253,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 67,
+				uint Id = 56,
 			},
 			ObjectLink = 
 			{
@@ -3986,7 +3309,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 68,
+				uint Id = 57,
 			},
 			ObjectLink = 
 			{
@@ -4042,7 +3365,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 69,
+				uint Id = 58,
 			},
 			ObjectLink = 
 			{
@@ -4098,7 +3421,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 70,
+				uint Id = 59,
 			},
 			ObjectLink = 
 			{
@@ -4154,7 +3477,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 71,
+				uint Id = 60,
 			},
 			ObjectLink = 
 			{
@@ -4210,7 +3533,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 72,
+				uint Id = 61,
 			},
 			ObjectLink = 
 			{
@@ -4266,7 +3589,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 73,
+				uint Id = 62,
 			},
 			ObjectLink = 
 			{
