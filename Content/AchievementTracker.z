@@ -231,7 +231,7 @@ class AchievementTracker : ZilchComponent
         Achievement("Graveyard", "Die 20 times.", "Having some trouble?",
             AchRequire.DEATHS, 20, 100000, this, AchEvent.CHECK, SpriteSource.Tombstone);
         Achievement("Determined", "Die 50 times.", "LET THE BODIES HIT THE FLOOR",
-            AchRequire.DEATHS, 5, 100000, this, AchEvent.CHECK, SpriteSource.Tombstone);
+            AchRequire.DEATHS, 50, 100000, this, AchEvent.CHECK, SpriteSource.Tombstone);
         Achievement("Fool Beaten", "Beat the Fool.", "Hope you enjoyed the show!",
             AchRequire.FOOL_BEATEN, 1, 100000, this, AchEvent.CHECK, SpriteSource.BeatTheFool);
         Achievement("Encore!", "Beat the Fool 5 times.", "I'll take that as a yes.",
@@ -239,9 +239,9 @@ class AchievementTracker : ZilchComponent
         Achievement("Perfect Fool Run", "Beat the Fool without taking damage.", "What a fool!",
             AchRequire.HEALTH, 100, 100, this, AchEvent.BEAT_FOOL, SpriteSource.BeatTheFool);
         Achievement("Quick Show", "Beat the Fool in a minute.", "Hope you enjoyed the sh-",
-            AchRequire.TIME, 0, 60, this, AchEvent.BEAT_FOOL, SpriteSource.Fool);
+            AchRequire.TIME, 0, 60, this, AchEvent.BEAT_FOOL, SpriteSource.Fool60);
         Achievement("Not Fooling Around", "Beat the Fool in 30 seconds.", "Hope y-",
-            AchRequire.TIME, 0, 30, this, AchEvent.BEAT_FOOL, SpriteSource.Fool);
+            AchRequire.TIME, 0, 30, this, AchEvent.BEAT_FOOL, SpriteSource.Fool30);
         Achievement("Stationary Spawner", "Spawn 5 stationary turrets.", "Someday you might land a hit...",
             AchRequire.STAT_SPAWNS, 5, 100000, this, AchEvent.CHECK, SpriteSource.Towers);
         Achievement("Stationary Master", "Spawn 25 stationary turrets.", "Did that 500 fate pay off?",
@@ -279,18 +279,18 @@ class AchievementTracker : ZilchComponent
         Achievement("Anticlimactic", "Beat Death in 30 seconds.", "Death: stupid spawnkiller",
             AchRequire.TIME, 0, 30, this, AchEvent.WIN, SpriteSource.Bomb);
         Achievement("Speedrun", "Beat the game in 2 minutes.", "Let's just get it over with.",
-            AchRequire.TIME, 0, 120, this, AchEvent.WIN, SpriteSource.Bomb);
+            AchRequire.TIME, 0, 120, this, AchEvent.WIN, SpriteSource.YouWin);
         Achievement("Minute To Win It", "Beat the game in a minute.", "That's fast.",
-            AchRequire.TIME, 0, 60, this, AchEvent.WIN, SpriteSource.Bomb);
+            AchRequire.TIME, 0, 60, this, AchEvent.WIN, SpriteSource.YouWin1);
         Achievement("First Run", "Play the game 1 time.", "That was dumb.",
-            AchRequire.TOTAL_RUNS, 1, 100000, this, AchEvent.CHECK, SpriteSource.Bomb);
-        Achievement("Novice Player", "Play the game 5 times.", "This is boring.",
-            AchRequire.TOTAL_RUNS, 5, 100000, this, AchEvent.CHECK, SpriteSource.Bomb);
+            AchRequire.TOTAL_RUNS, 1, 100000, this, AchEvent.CHECK, SpriteSource.One);
+    Achievement("Novice Player", "Play the game 5 times.", "This is boring.",
+            AchRequire.TOTAL_RUNS, 5, 100000, this, AchEvent.CHECK, SpriteSource.Five);
         Achievement("Experienced Player", "Play the game 20 times.", "This game sucks.",
-            AchRequire.TOTAL_RUNS, 20, 100000, this, AchEvent.CHECK, SpriteSource.Bomb);
+            AchRequire.TOTAL_RUNS, 20, 100000, this, AchEvent.CHECK, SpriteSource.Twenty);
         Achievement("Expert Player", "Play the game 50 times.", "I hate this game.",
-            AchRequire.TOTAL_RUNS, 50, 100000, this, AchEvent.CHECK, SpriteSource.Bomb);
+            AchRequire.TOTAL_RUNS, 50, 100000, this, AchEvent.CHECK, SpriteSource.Fiftey);
         Achievement("Hacker", "???", "That was mean.",
-            AchRequire.TOTAL_RUNS, -1, -1, this, AchEvent.CHECK, SpriteSource.Bomb);
+            AchRequire.TOTAL_RUNS, -1, -1, this, AchEvent.CHECK, SpriteSource.Hacker);
     }
 }
