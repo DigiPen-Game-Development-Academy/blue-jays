@@ -2450,13 +2450,13 @@ Cog =
 				Vec3 Velocity = [0, 0, 0],
 				Vec3 AngularVelocity = [0, 0, 0],
 			},
-			LoadtoMainLevel = 
-			{
-			},
 			Area = 
 			{
 				Vec2 Size = [1, 1],
 				Location Origin = Center,
+			},
+			LoadtoMainLevel = 
+			{
 			},
 		},
 		Cog = 

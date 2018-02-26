@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [1.59866571, 46.6032524, 0],
+		Vec3 Translation = [-48.8662262, 4.37385559, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -76,5 +76,8 @@ Cog =
 	HP = 
 	{
 		float MaxHealth = 100,
+	},
+	Hierarchy = 
+	{
 	},
 },

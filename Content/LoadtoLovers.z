@@ -1,4 +1,4 @@
-class LoadtoMainLevel : ZilchComponent
+class LoadtoLovers : ZilchComponent
 {
      function Initialize(init : CogInitializer)
   {
@@ -12,8 +12,9 @@ class LoadtoMainLevel : ZilchComponent
     // If we collided with the block,
     if (otherObject.Name == "Player")
     {
-        this.Space.LoadLevel (Level.Fool);
+        this.Space.LoadLevel (Level.Lovers);
         
     }
+   
 }
 }

@@ -10,6 +10,7 @@ class TurretPlace : ZilchComponent
     var TurretNum : Integer = 0;
     var CurrentTurret : Turret;
     var Fate : Real;
+    var Health : Real;
     var ChariotCooldown : Real = 0;
     
     function Initialize(init : CogInitializer)
@@ -18,7 +19,7 @@ class TurretPlace : ZilchComponent
         Zero.Connect(this.Space, Events.MouseScroll, this.OnScroll);
         this.TurretList = this.Space.Globals.GetTurrets();
         this.CurrentTurret = this.TurretList[0];
-        this.LevelSettings.DrawIcons.Draw(this.TurretList);
+        //this.LevelSettings.DrawIcons.Draw(this.TurretList);
     }
 
     function OnLogicUpdate(event : UpdateEvent)
@@ -27,10 +28,14 @@ class TurretPlace : ZilchComponent
         {
             this.Fate = 1000000000;
         }
+        if (Zero.Keyboard.KeyIsDown(Keys.H))
+        {
+            this.Health = 100000000;
+        }
         this.ChariotCooldown -= event.Dt;
         if (this.Space.TimeSpace.TimeScale == 1)
         {
-            if(Zero.Keyboard.KeyIsPressed(Keys.Space))
+            if(Zero.Keyboard.KeyIsPressed(Keys.Z))
             {
                 if(this.Fate >= this.CurrentTurret.Fate)
                 {
