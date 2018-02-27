@@ -1,0 +1,17 @@
+class RandomSprite : ZilchComponent
+{
+    [Property] var Name : String = "RoseP";
+    [Property] var Num : Integer = 1;
+    [Property] var Start : Integer = 1;
+    function Initialize(init : CogInitializer)
+    {
+        var arr = Array[SpriteSource]();
+        for(var i = this.Start; i < this.Num + this.Start; i += 1) 
+        {
+            arr.Add(SpriteSource.Find("`this.Name``i`"));
+        }
+        var rand = Random();
+        this.Owner.Sprite.SpriteSource = arr[rand.DieRoll(arr.Count)-1];
+        this.Owner.RemoveComponentByName("RandomSprite");
+    }
+}

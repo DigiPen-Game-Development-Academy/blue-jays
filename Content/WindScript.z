@@ -1,0 +1,17 @@
+class WindScript : ZilchComponent
+{
+    [Property] var WindEffect : Real3 = Real3();
+    [Property] var BaseVelocity : Real3 = Real3();
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        Console.WriteLine(this.BaseVelocity + this.LevelSettings.WindController.Wind * this.WindEffect);
+        this.Owner.Transform.Translation += (this.BaseVelocity + this.LevelSettings.WindController.Wind * this.WindEffect);
+        Console.WriteLine(this.Owner.Transform.Translation);
+    }
+}

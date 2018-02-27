@@ -1,0 +1,18 @@
+class WindController : ZilchComponent
+{
+    [Property] var WindChange : Real = 0.05;
+    var Wind : Real3 = Real3(0);
+    var Random : Random = Random();
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+    
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.Wind = Real3(this.Random.BellCurve(this.Wind.X, 1, this.WindChange),
+                          this.Random.BellCurve(this.Wind.Y, 1, this.WindChange),
+                          this.Random.BellCurve(this.Wind.Z, 1, this.WindChange));
+    }
+}

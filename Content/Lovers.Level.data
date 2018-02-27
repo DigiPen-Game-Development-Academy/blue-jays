@@ -98,6 +98,10 @@ Level =
 		{
 			Enum Menu = LEVEL,
 		},
+		WindController = 
+		{
+			float WindChange = 0.0500000007,
+		},
 	},
 	Cog = 
 	{
@@ -123,7 +127,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 32.8892593,
+			float Size = 29.7594357,
 		},
 		EditorCameraController = 
 		{
@@ -285,6 +289,79 @@ Level =
 		Named = 
 		{
 			string Name = "PauseOverlay",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 11,
+		},
+		Named = 
+		{
+			string Name = "PetalEmitter",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 10, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		ObjectSystem = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			SystemChildMode ChildMode = Independent,
+			SystemSpace SystemSpace = WorldSpace,
+			uint DrawOrder = 0,
+			Vec4 Tint = [1, 1, 1, 1],
+			float WarmUpTime = 0,
+			Vec3 StartRotation = [0, 0, 0],
+			Vec3 RandomRotation = [0, 0, 0],
+			Vec3 StartTorque = [0, 0, 0],
+			Vec3 RandomTorque = [0, 0, 0],
+			bool FaceVelocity = false,
+			bool EffectsTranslation = true,
+			bool EffectsScale = false,
+			bool EffectsColor = false,
+			bool ControlsLifetime = true,
+			string SpawnArchetype = "5aee47d0e1db4d32:RoseP",
+			Vec3 SystemSize = [20, 20, 0],
+		},
+		SphericalParticleEmitter = 
+		{
+			bool Active = true,
+			uint EmitCount = 0,
+			float EmitRate = 5,
+			float EmitVariance = 2,
+			float Size = 1,
+			float SizeVariance = 0.5,
+			float Lifetime = 7,
+			float LifetimeVariance = 0,
+			float Spin = 0,
+			float SpinVariance = 50,
+			bool RandomSpin = true,
+			float Fill = 1,
+			float EmitterVelocityPercent = 0,
+			Vec3 StartVelocity = [0, 0, 0],
+			Vec3 RandomVelocity = [0, 0, 0],
+			Vec3 TangentVelocity = [0, 0, 0],
+			Vec3 EmitterSize = [20, 0, 0],
+			bool FastMovingEmitter = false,
+		},
+		LinearParticleAnimator = 
+		{
+			Vec3 Force = [0, 0, 0],
+			Vec3 RandomForce = [0, 0, 0],
+			float Torque = 0,
+			float Growth = 0,
+			float Dampening = 0.5,
+			Vec3 Twist = [0, 0, 0],
+		},
+		ParticleRemove = 
+		{
 		},
 	},
 },
