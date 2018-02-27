@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-12, -3.5, 0],
+		Vec3 Translation = [-12, -3.45007038, 0],
 		Vec3 Scale = [2, 2, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -54,16 +54,22 @@ Cog =
 		bool SendsMessages = true,
 		bool Seamless = true,
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-		string SerializedGroupName = "5a916d3ed1b57688:Boss",
+		string SerializedGroupName = "5aee7fe84c13015d:ArrowBoss",
 		Vec3 Offset = [0, 0, 0],
 		Vec3 Size = [0.5, 0.5, 0.5],
 	},
 	HP = 
 	{
-		float MaxHealth = 100,
+		float MaxHealth = 1000,
 	},
 	DamageOnColide = 
 	{
 		float Damage = 10,
+	},
+	BossShoot = 
+	{
+		float TimeBetweenShots = 1,
+		float ShootSpeed = 1,
+		string Projectile = "5a11aeda3a97088d:Arrow",
 	},
 },
