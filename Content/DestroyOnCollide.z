@@ -12,6 +12,10 @@ class DestroyOnCollide : ZilchComponent
         {
             this.Space.CreateAtPosition(this.Replacement, this.Owner.Transform.Translation);
         }
+        if (event.OtherObject!=this.Space.FindObjectByName("Boss") || event.OtherObject!=this.Space.FindObjectByName("Female"))
+        {
+            
         this.Owner.Destroy();
+        }
     }
 }

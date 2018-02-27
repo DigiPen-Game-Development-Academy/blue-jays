@@ -1,0 +1,35 @@
+class BossShoot : ZilchComponent
+{
+     [Property] var TimeBetweenShots : Real = 1;
+    [Property] var ShootSpeed : Real = 1;
+    [Property] var Projectile : Archetype = Archetype.Arrow;
+    var TimeTillShoot : Real;
+    
+    function Initialize(init : CogInitializer)
+    {
+        this.TimeTillShoot = this.TimeBetweenShots;
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        //couting down timer
+        this.TimeTillShoot -= event.Dt;
+        //check if we can shoot
+        if (this.TimeTillShoot <= 0)
+        {
+            var vel = (this.Space.FindObjectByName("Player").Transform.Translation - this.Owner.Transform.Translation) * this.ShootSpeed;
+           
+            //Create the bullet
+            var arrow = this.Space.CreateAtPosition(this.Projectile, this.Owner.Transform.WorldTranslation + vel / 100);
+            
+            //Launch the bullet
+            arrow.RigidBody.Velocity = vel;
+            
+            //Reset our time
+            this.TimeTillShoot = this.TimeBetweenShots;
+        
+        }
+        
+}
+}
