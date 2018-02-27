@@ -37,7 +37,6 @@ class Globals : ZilchComponent
         Zero.Connect(this.GameSession, Events.GameRequestQuit, this.OnGameRequestQuit);
         Zero.Connect(this.Space, Events.LevelStarted, this.OnLevelStart);
         this.SavedStats = Zero.ObjectStore.RestoreOrArchetype("Stats", Archetype.SavedStats, this.Space);
-        Console.WriteLine(this.SavedStats);
         this.SwordsList.Add(this.KnightOfSwords);
         this.SwordsList.Add(this.TheTower);
         this.SwordsList.Add(this.TheChariot);

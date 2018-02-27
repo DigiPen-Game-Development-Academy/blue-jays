@@ -56,7 +56,7 @@ class PlayerController : ZilchComponent
             target = Real3(-target.X,target.Y,0);
         }
         this.RigidBody.Velocity = Math.Lerp(this.RigidBody.Velocity,target,this.Acceleration * event.Dt);
-        if(Zero.Keyboard.KeyIsDown(Keys.W))
+        if(Zero.Keyboard.KeyIsDown(Keys.Space))
         {
             if(this.JumpReady)
             {
@@ -84,7 +84,7 @@ class PlayerController : ZilchComponent
     
     function EnableJump(event : AnyCollisionEvent)
     {
-        if(Math.Abs(Math.ATan2(event.ContactNormal.X, event.ContactNormal.Y) + Math.Pi) < Math.Pi/4)
+        if(Math.Abs(Math.Pi - Math.Abs(Math.ATan2(event.ContactNormal.X, event.ContactNormal.Y))) < Math.Pi / 4)
         {
             this.JumpReady = true;
         }
