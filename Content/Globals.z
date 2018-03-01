@@ -103,11 +103,11 @@ class Globals : ZilchComponent
         var l = this.Space.CurrentLevel.Name;
         if(l == "Fool" || l == "Death")
         {
-            return this.Space.Globals.GetTarget(this.Owner.Transform.Translation);
+            return this.Space.FindObjectByName("Boss");
         }
         else if(l == "Lovers")
         {
-            return this.Space.FindObjectByName("Male");
+            return this.LevelSettings.LoversManager.GetLover(pos);
         }
         else
         {

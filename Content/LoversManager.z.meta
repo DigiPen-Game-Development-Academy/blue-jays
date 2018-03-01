@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "LoversManager",
+		uint64 ResourceId = 5a79fed6b6e90b4c,
+	},
+},

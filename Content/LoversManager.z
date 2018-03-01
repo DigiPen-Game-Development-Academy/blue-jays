@@ -1,0 +1,73 @@
+enum LoversState {ALIVE, MALE, FEMALE}
+
+class LoversManager : ZilchComponent
+{
+    var Male : Cog;
+    var Female : Cog;
+    var State : LoversState = LoversState.ALIVE;
+    
+    function Initialize(init : CogInitializer)
+    {
+        this.Male = this.Space.FindObjectByName("Male");
+        this.Female = this.Space.FindObjectByName("Female");
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.State == LoversState.ALIVE)
+        {
+            if(this.Male == null)
+            {
+                this.State = LoversState.FEMALE;
+                this.Female.BossShoot.TimeBetweenShots = 1;
+            }
+            if(this.Female == null)
+            {
+                this.State = LoversState.MALE;
+                this.Male.BossShoot.ShootSpeed = 40;
+            }
+        }
+        else if(this.State == LoversState.FEMALE)
+        {
+            if(this.Female == null)
+            {
+                this.Space.Globals.SavedStats.SavedStats.LoversBeaten += 1;
+                this.Space.LoadLevel(Level.Death);
+            }
+        }
+        else if(this.State == LoversState.MALE)
+        {
+            if(this.Male == null)
+            {
+                this.Space.Globals.SavedStats.SavedStats.LoversBeaten += 1;
+                this.Space.LoadLevel(Level.Death);
+            }
+        }
+    }
+    
+    function GetLover(pos : Real3) : Cog
+    {
+        if(this.State == LoversState.ALIVE)
+        {
+            var femDist = Math.Distance(pos, this.Female.Transform.Translation);
+            var mDist = Math.Distance(pos, this.Male.Transform.Translation);
+            if(femDist > mDist)
+            {
+                return this.Male;
+            }
+            else
+            {
+                return this.Female;
+            }
+        }
+        else if(this.State == LoversState.FEMALE)
+        {
+            return this.Female;
+        }
+        else
+        {
+            return this.Male;
+        }
+    }
+}
