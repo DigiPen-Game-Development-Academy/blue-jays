@@ -68,8 +68,8 @@ Cog =
 	},
 	BossShoot = 
 	{
-		float TimeBetweenShots = 2,
-		float ShootSpeed = 20,
+		float TimeBetweenShots = 1,
+		float ShootSpeed = 2,
 		string Projectile = "5a9173e075a148fa:Bomb",
 	},
 },
