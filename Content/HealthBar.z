@@ -17,6 +17,9 @@ class HealthBar : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.Owner.Area.Size = Real2((this.HP.Health/this.HP.MaxHealth),1);
+        if(this.HP != null)
+        {
+            this.Owner.Area.Size = Real2((this.HP.Health/this.HP.MaxHealth),1);
+        }
     }
 }

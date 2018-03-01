@@ -13,9 +13,7 @@ class KnightOfSwords : ZilchComponent
     
     function Initialize(init : CogInitializer)
     {
-        this.Target = this.Space.FindObjectByName("Pigeon");
         this.Target = this.Space.Globals.GetTarget(this.Owner.Transform.Translation);
-        this.Target = this.Space.FindObjectByName("Female");
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner,Events.CollisionStarted, this.OnCollide);
     }
@@ -28,23 +26,30 @@ class KnightOfSwords : ZilchComponent
     
     function OnCollide(event : CollisionEvent)
     {
+        Console.WriteLine(event.OtherObject.Name);
+        if(this.Target == null)
+        {
+            this.Target = this.Space.Globals.GetTarget(this.Owner.Transform.Translation);
+        }
         var mod = -1;
         if (this.Owner.Transform.Translation.X < this.Target.Transform.Translation.X)
         {
             mod = 1;
         }
-      
-        
         this.Vel = this.Speed * mod;
         if(event.OtherObject.Name == "Boss")
         {
             this.Owner.Destroy();
         }
-        if (event.OtherObject.Name =="Pigeon")
+        if (event.OtherObject.Name == "Pigeon")
         {
             this.Owner.Destroy();
         }
-        if (event.OtherObject.Name =="Female")
+        if (event.OtherObject.Name == "Female")
+        {
+            this.Owner.Destroy();
+        }
+        if (event.OtherObject.Name == "Male")
         {
             this.Owner.Destroy();
         }
