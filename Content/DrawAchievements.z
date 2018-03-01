@@ -6,9 +6,17 @@ class DrawAchievements : ZilchComponent
     {
         for (var i = 0; i < achievements.Count; i += 1)
         {
-            var icon = this.Space.CreateAtPosition(Archetype.AchievementIcon,
-                Real3(((i%this.Columns)-this.Columns/2)*this.Width,8-(i/this.Columns)*this.Width,0));
+            var pos = Real3(((i%this.Columns)-this.Columns/2)*this.Width,7-(i/this.Columns)*this.Width,0);
+            var icon = this.Space.CreateAtPosition(Archetype.AchievementIcon, pos);
             icon.AchievementIcon.Init(achievements[i]);
+            var border = this.Space.CreateAtPosition(Archetype.Sprite, pos - Real3(0,0,0.1));
+            border.Transform.Scale = Real3(2.5,2.5,1);
+            border.Sprite.SpriteSource = this.GetBorderSprite(achievements[i].AchEvent);
         }
+    }
+    
+    function GetBorderSprite(ae : AchEvent) : SpriteSource
+    {
+        return SpriteSource.LoversAchievement;
     }
 }

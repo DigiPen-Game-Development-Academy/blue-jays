@@ -14,7 +14,7 @@ class WindScript : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.SelfEffect += this.Rand.Real3(-this.SelfEffectStrength,this.SelfEffectStrength);
+        this.SelfEffect += this.Rand.Real3(-this.SelfEffectStrength,this.SelfEffectStrength) * this.WindEffect;
         var vel = this.BaseVelocity + this.LevelSettings.WindController.Wind * this.WindEffect + this.SelfEffect;
         this.Owner.Transform.WorldTranslation += vel * event.Dt;
     }

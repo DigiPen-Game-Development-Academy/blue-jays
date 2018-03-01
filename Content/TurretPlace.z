@@ -27,10 +27,14 @@ class TurretPlace : ZilchComponent
         if(Zero.Keyboard.KeyIsDown(Keys.F))
         {
             this.Fate = 1000000000;
+            this.Space.AchievementTracker.CheatAchievement.Unlocked = true;
+            this.Space.Globals.StoreStats();
         }
         if (Zero.Keyboard.KeyIsDown(Keys.H))
         {
-            this.Owner.HP.Health = 100000000;
+            this.Owner.HP.Health = 1000000000;
+            this.Space.AchievementTracker.CheatAchievement.Unlocked = true;
+            this.Space.Globals.StoreStats();
         }
         this.ChariotCooldown -= event.Dt;
         if(Zero.Keyboard.KeyIsPressed(Keys.One))

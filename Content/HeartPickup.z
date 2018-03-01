@@ -1,0 +1,23 @@
+class HeartPickup : ZilchComponent
+{
+    [Property] var Health : Real;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Owner,Events.CollisionStarted, this.OnCollide);
+    }
+
+    function OnCollide(event : CollisionEvent)
+    {
+        if (event.OtherObject.Name == "Player")
+        {
+            var hp = event.OtherObject.HP;
+            var maxheal = hp.MaxHealth - hp.Health;
+            if(this.Health > maxheal)
+            {
+                this.Health = maxheal;
+            }
+            hp.Damage(-this.Health);
+            this.Owner.Destroy();
+        }
+    }
+}

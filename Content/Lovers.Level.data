@@ -15,7 +15,7 @@ Level =
 			bool Active = true,
 			bool WakeUpOnChange = false,
 			bool LocalSpaceDirection = true,
-			float Strength = 10,
+			float Strength = 18,
 			Vec3 Direction = [0, -1, 0],
 		},
 		DragEffect = 
@@ -109,6 +109,10 @@ Level =
 		LoversManager = 
 		{
 		},
+		HeartSpawn = 
+		{
+			float Delay = 13,
+		},
 	},
 	Cog = 
 	{
@@ -163,7 +167,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-12, -3.25, 0],
+			Vec3 Translation = [-12, -4.25, 0],
 			Vec3 Scale = [2, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -181,7 +185,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [12, -3.25, 0],
+			Vec3 Translation = [12, -4.25, 0],
 			Vec3 Scale = [2, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -217,7 +221,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -2, 0],
+			Vec3 Translation = [0, -9.25, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -260,8 +264,8 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-14, 3, 0],
-					Vec3 Scale = [1, 1, 1],
+					Vec3 Translation = [-13, 3, 0],
+					Vec3 Scale = [0.5, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				Sprite = 
@@ -322,8 +326,8 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [14, 3, 0],
-					Vec3 Scale = [1, 1, 1],
+					Vec3 Translation = [13, 3, 0],
+					Vec3 Scale = [0.5, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				Sprite = 
@@ -384,7 +388,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-6, 6, 0],
+					Vec3 Translation = [-6, 5.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -446,7 +450,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [6, 6, 0],
+					Vec3 Translation = [6, 5.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -508,7 +512,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, -1, 0],
+					Vec3 Translation = [0, 0.75, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -816,6 +820,42 @@ Level =
 				},
 				Transform = 
 				{
+					Vec3 Translation = [6, -4.75, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Pillar",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "5a79e5dc5181ba27:Pillar",
+				LinkId = 
+				{
+					uint Id = 19,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-6, -4.75, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Pillar",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "5a79e5dc5181ba27:Pillar",
+				LinkId = 
+				{
+					uint Id = 20,
+				},
+				Transform = 
+				{
 					Vec3 Translation = [12, -4.75, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
@@ -832,7 +872,7 @@ Level =
 		string Name = "5a08f65eab18b886:UI",
 		LinkId = 
 		{
-			uint Id = 19,
+			uint Id = 21,
 		},
 		Transform = 
 		{
@@ -850,7 +890,7 @@ Level =
 		string Name = "5a019c947ab2b196:OptionsOverlay",
 		LinkId = 
 		{
-			uint Id = 20,
+			uint Id = 22,
 		},
 		Transform = 
 		{
@@ -868,7 +908,7 @@ Level =
 		string Name = "5a026066ef8b66c0:PauseOverlay",
 		LinkId = 
 		{
-			uint Id = 21,
+			uint Id = 23,
 		},
 		Transform = 
 		{

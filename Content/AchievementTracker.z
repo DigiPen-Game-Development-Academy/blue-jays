@@ -13,6 +13,7 @@ class Achievement
     var Min : Real = 0;
     var Max : Real = 0;
     var AchTrack : AchievementTracker;
+    var AchEvent : AchEvent;
     constructor(name : String, objective : String, flavor : String, req : AchRequire,
         min : Real, max : Real, ach : AchievementTracker, e : AchEvent, s : SpriteSource)
     {
@@ -24,6 +25,7 @@ class Achievement
         this.Min = min;
         this.Max = max;
         this.AchTrack = ach;
+        this.AchEvent = e;
         if(e==AchEvent.DEATH)
         {
             ach.DeathAchievements.Add(this);
@@ -55,10 +57,15 @@ class Achievement
         }
         var num = this.AchTrack.GetAchRequire(this.Type);
         this.Unlocked = num <= this.Max && num >= this.Min;
+        
     }
     
     function GetProgressText() : String
     {
+        if(this.Unlocked)
+        {
+            return "Complete";
+        }
         var str = "";
         str = "`this.AchTrack.GetAchRequire(this.Type)`";
         str = "`str`/";
@@ -124,6 +131,8 @@ class AchievementTracker : ZilchComponent
     var WinAchievements : Array[Achievement] = Array[Achievement]();
     var CheckAchievements : Array[Achievement] = Array[Achievement]();
     var AllAchievements : Array[Achievement] = Array[Achievement]();
+    var CreditsAchievement : Achievement;
+    var CheatAchievement : Achievement;
     function Initialize(init : CogInitializer)
     {
         this.AddAchievements();
@@ -208,6 +217,11 @@ class AchievementTracker : ZilchComponent
         {
             achievements = this.CheckAchievements;
         }
+        else if(event.LevelName == "Credits")
+        {
+            this.CreditsAchievement.Unlocked = true;
+            this.Space.Globals.StoreStats();
+        }
         if(achievements != null)
         {
             foreach(var achievement in achievements)
@@ -264,9 +278,9 @@ class AchievementTracker : ZilchComponent
             AchRequire.KNIGHT_SPAWNS, 10, 100000, this, AchEvent.CHECK, SpriteSource.Knight_swords);
         Achievement("Knight Master", "Spawn 50 knights.", "Good enough.",
             AchRequire.KNIGHT_SPAWNS, 50, 100000, this, AchEvent.CHECK, SpriteSource.Knight_swords);
-        Achievement("Novice Spawner", "Spawn 15 turrets.", "Not quite an army...",
+        Achievement("Novice Spawner", "Spawn 15 turrets.", "Congrats! You clicked!",
             AchRequire.SPAWNS, 15, 100000, this, AchEvent.CHECK, SpriteSource.Bomb);
-        Achievement("Master Spawner", "Spawn 75 turrets.", "Good enough.",
+        Achievement("Master Spawner", "Spawn 75 turrets.", "Carpal tunnel awaits.",
             AchRequire.SPAWNS, 75, 100000, this, AchEvent.CHECK, SpriteSource.Bomb);
         Achievement("Winner, Winner", "Beat Death.", "They said it was impossible.",
             AchRequire.WINS, 1, 100000, this, AchEvent.CHECK, SpriteSource.Bomb);
@@ -278,19 +292,23 @@ class AchievementTracker : ZilchComponent
             AchRequire.TIME, 0, 60, this, AchEvent.WIN, SpriteSource.Bomb);
         Achievement("Anticlimactic", "Beat Death in 30 seconds.", "Death: stupid spawnkiller",
             AchRequire.TIME, 0, 30, this, AchEvent.WIN, SpriteSource.Bomb);
-        Achievement("Speedrun", "Beat the game in 2 minutes.", "Let's just get it over with.",
-            AchRequire.TIME, 0, 120, this, AchEvent.WIN, SpriteSource.YouWin);
-        Achievement("Minute To Win It", "Beat the game in a minute.", "That's fast.",
-            AchRequire.TIME, 0, 60, this, AchEvent.WIN, SpriteSource.YouWin1);
         Achievement("First Run", "Play the game 1 time.", "That was dumb.",
             AchRequire.TOTAL_RUNS, 1, 100000, this, AchEvent.CHECK, SpriteSource.One);
-    Achievement("Novice Player", "Play the game 5 times.", "This is boring.",
+        Achievement("Novice Player", "Play the game 5 times.", "This is boring.",
             AchRequire.TOTAL_RUNS, 5, 100000, this, AchEvent.CHECK, SpriteSource.Five);
         Achievement("Experienced Player", "Play the game 20 times.", "This game sucks.",
             AchRequire.TOTAL_RUNS, 20, 100000, this, AchEvent.CHECK, SpriteSource.Twenty);
         Achievement("Expert Player", "Play the game 50 times.", "I hate this game.",
             AchRequire.TOTAL_RUNS, 50, 100000, this, AchEvent.CHECK, SpriteSource.Fiftey);
-        Achievement("Hacker", "???", "That was mean.",
-            AchRequire.TOTAL_RUNS, -1, -1, this, AchEvent.CHECK, SpriteSource.Hacker);
+        Achievement("Speedrun", "Beat the game in 2 minutes.", "Let's just get it over with.",
+            AchRequire.TIME, 0, 120, this, AchEvent.WIN, SpriteSource.YouWin);
+        Achievement("Minute To Win It", "Beat the game in a minute.", "That's fast.",
+            AchRequire.TIME, 0, 60, this, AchEvent.WIN, SpriteSource.YouWin1);
+        this.CreditsAchievement = Achievement("Thanks!", "Look at the credits.", "Eli is the only important one.\\s",
+            AchRequire.TIME, -1, -1, this, AchEvent.CHECK, SpriteSource.Hacker);
+        this.CheatAchievement = Achievement("Cheater", "Use a cheat.", "Now beat it the hard way.",
+            AchRequire.TIME, -1, -1, this, AchEvent.CHECK, SpriteSource.Hacker);
+        Achievement("Hacker", "Hack the game.", "That was mean.",
+            AchRequire.TIME, -1, -1, this, AchEvent.CHECK, SpriteSource.Hacker);
     }
 }

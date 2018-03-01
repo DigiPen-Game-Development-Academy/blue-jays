@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "HeartSpawn",
+		uint64 ResourceId = 5a79c1e9ccf5a869,
+	},
+},

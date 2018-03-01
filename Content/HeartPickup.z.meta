@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "HeartPickup",
+		uint64 ResourceId = 5a79d8bb9d23e71e,
+	},
+},
