@@ -97,4 +97,21 @@ class Globals : ZilchComponent
             return Array[Turret]();
         }
     }
+    
+    function GetTarget(pos : Real3) : Cog
+    {
+        var l = this.Space.CurrentLevel.Name;
+        if(l == "Fool" || l == "Death")
+        {
+            return this.Space.Globals.GetTarget(this.Owner.Transform.Translation);
+        }
+        else if(l == "Lovers")
+        {
+            return this.Space.FindObjectByName("Male");
+        }
+        else
+        {
+            return null;
+        }
+    }
 }

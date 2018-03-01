@@ -44,12 +44,15 @@ Cog =
 	},
 	WindTest = 
 	{
-		Vec3 WindEffect = [5, 5, 0],
-		Vec3 BaseVelocity = [0, -5, 0],
 	},
 	WindScript = 
 	{
-		Vec3 WindEffect = [5, 5, 0],
-		Vec3 BaseVelocity = [0, -5, 0],
+		Vec3 WindEffect = [3, 1, 0],
+		Vec3 BaseVelocity = [0, -4, 0],
+		float SelfEffectStrength = 0.25,
+	},
+	DestroyTimer = 
+	{
+		float Timer = 5,
 	},
 },

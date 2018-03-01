@@ -6,7 +6,7 @@ class ChargeText : ZilchComponent
     var Type : Boss;
     function Initialize(init : CogInitializer)
     {
-        this.Boss = this.Space.FindObjectByName("Boss");
+        this.Boss = this.Space.Globals.GetTarget(this.Owner.Transform.Translation);
         if(this.Boss.FoolAttack != null)
         {
             this.Type = Boss.FOOL;

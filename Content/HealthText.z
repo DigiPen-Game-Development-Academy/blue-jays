@@ -1,10 +1,19 @@
+enum HealthType {PLAYER, BOSS}
+
 class HealthText : ZilchComponent
 {
-    [Property] var Target : CogPath;
     var HP : HP;
+    [Property] var Type : HealthType;
     function Initialize(init : CogInitializer)
     {
-        this.HP = this.Target.Cog.HP;
+        if(this.Type == HealthType.PLAYER)
+        {
+            this.HP = this.Space.FindObjectByName("Player").HP;
+        }
+        else
+        {
+            this.HP = this.Space.Globals.GetTarget(Real3(0,0,0)).HP;
+        }
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 

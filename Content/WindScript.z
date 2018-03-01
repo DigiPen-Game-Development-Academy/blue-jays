@@ -2,16 +2,20 @@ class WindScript : ZilchComponent
 {
     [Property] var WindEffect : Real3 = Real3();
     [Property] var BaseVelocity : Real3 = Real3();
+    [Property] var SelfEffectStrength : Real = 0.5;
+    var SelfEffect : Real3 = Real3();
+    var Rand : Random = Random();
     
     function Initialize(init : CogInitializer)
     {
+        this.WindEffect *= this.Rand.Range(0.5, 1.5);
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        Console.WriteLine(this.BaseVelocity + this.LevelSettings.WindController.Wind * this.WindEffect);
-        this.Owner.Transform.Translation += (this.BaseVelocity + this.LevelSettings.WindController.Wind * this.WindEffect);
-        Console.WriteLine(this.Owner.Transform.Translation);
+        this.SelfEffect += this.Rand.Real3(-this.SelfEffectStrength,this.SelfEffectStrength);
+        var vel = this.BaseVelocity + this.LevelSettings.WindController.Wind * this.WindEffect + this.SelfEffect;
+        this.Owner.Transform.WorldTranslation += vel * event.Dt;
     }
 }
