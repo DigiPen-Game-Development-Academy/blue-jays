@@ -17,10 +17,8 @@ class HomingForMissile : ZilchComponent
         this.MissilePosition = this.Owner.Transform.Translation;
         
         this.Velocity = -Real3(this.MissilePosition.X - this.GoalPosition.X, this.MissilePosition.Y - this.GoalPosition.Y, 0);
-        Math.Normalize(this.Velocity);
+        this.Velocity = Math.Normalize(this.Velocity);
         this.Velocity *= Real3(2,2,2);
         this.Owner.RigidBody.Velocity = this.Velocity;
-        
-        Console.WriteLine(this.Owner.RigidBody.Velocity);
     }
 }

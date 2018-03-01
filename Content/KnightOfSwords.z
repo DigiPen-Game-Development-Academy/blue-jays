@@ -14,7 +14,7 @@ class KnightOfSwords : ZilchComponent
     function Initialize(init : CogInitializer)
     {
         this.Target = this.Space.FindObjectByName("Pigeon");
-        this.Target = this.Space.FindObjectByName("Boss");
+        this.Target = this.Space.Globals.GetTarget(this.Owner.Transform.Translation);
         this.Target = this.Space.FindObjectByName("Female");
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner,Events.CollisionStarted, this.OnCollide);

@@ -1,6 +1,6 @@
 class BossShoot : ZilchComponent
 {
-     [Property] var TimeBetweenShots : Real = 1;
+    [Property] var TimeBetweenShots : Real = 1;
     [Property] var ShootSpeed : Real = 1;
     [Property] var Projectile : Archetype = Archetype.Arrow;
     var TimeTillShoot : Real;

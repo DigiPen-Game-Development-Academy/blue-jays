@@ -1,7 +1,7 @@
 class WindController : ZilchComponent
 {
     [Property] var WindChange : Real = 0.05;
-    var Wind : Real3 = Real3(0);
+    var Wind : Real3 = Real3();
     var Random : Random = Random();
     
     function Initialize(init : CogInitializer)

@@ -1,0 +1,26 @@
+class PetalSpawn : ZilchComponent
+{
+    [Property] var Delay : Real = 0.1;
+    var Timer : Real = 0;
+    var Rand : Random = Random();
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(!this.Space.Globals.Particles)
+        {
+            return;
+        }
+        this.Timer += event.Dt;
+        if(this.Timer >= this.Delay)
+        {
+            this.Timer -= this.Delay;
+            var pos = Real3(this.Rand.Range(-20, 20), 9, -0.1);
+            this.Space.CreateAtPosition(Archetype.RoseP, pos);
+        }
+    }
+}

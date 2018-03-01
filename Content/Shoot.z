@@ -21,7 +21,7 @@ class Shoot : ZilchComponent
         //check if we can shoot
         if (this.TimeTillShoot <= 0)
         {
-            var vel = (this.Space.FindObjectByName("Boss").Transform.Translation - this.Owner.Transform.Translation) * this.ShootSpeed;
+            var vel = (this.Space.Globals.GetTarget(this.Owner.Transform.Translation).Transform.Translation - this.Owner.Transform.Translation) * this.ShootSpeed;
            
             //Create the bullet
             var arrow = this.Space.CreateAtPosition(this.Projectile, this.Owner.Transform.WorldTranslation + vel / 100);
@@ -33,15 +33,5 @@ class Shoot : ZilchComponent
             this.TimeTillShoot = this.TimeBetweenShots;
         
         }
-        
-        /*if (this.Space.FindObjectByName("Boss")=null)
-        {
-            var vel2 = (this.Space.FindObjectByName("Pigeon").Transform.Translation - this.Owner.Transform.Translation) * this.ShootSpeed;
-             var arrow2 = this.Space.CreateAtPosition(this.Projectile, this.Owner.Transform.WorldTranslation + vel2 / 100);
-             arrow.RigidBody.Velocity = vel2;
-             this.TimeTillShoot = this.TimeBetweenShots;
-        }
-        */
-        
     }
 }
