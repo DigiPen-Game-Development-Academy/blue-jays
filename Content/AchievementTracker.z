@@ -233,15 +233,15 @@ class AchievementTracker : ZilchComponent
         Achievement("Determined", "Die 50 times.", "LET THE BODIES HIT THE FLOOR",
             AchRequire.DEATHS, 50, 100000, this, AchEvent.CHECK, SpriteSource.Tombstone);
         Achievement("Fool Beaten", "Beat the Fool.", "Hope you enjoyed the show!",
-            AchRequire.FOOL_BEATEN, 1, 100000, this, AchEvent.CHECK, SpriteSource.BeatTheFool);
+            AchRequire.FOOL_BEATEN, 1, 100000, this, AchEvent.CHECK, SpriteSource.BronzeFool);
         Achievement("Encore!", "Beat the Fool 5 times.", "I'll take that as a yes.",
-            AchRequire.FOOL_BEATEN, 5, 100000, this, AchEvent.CHECK, SpriteSource.BeatTheFool);
+            AchRequire.FOOL_BEATEN, 5, 100000, this, AchEvent.CHECK, SpriteSource.SilverFool);
         Achievement("Perfect Fool Run", "Beat the Fool without taking damage.", "What a fool!",
             AchRequire.HEALTH, 100, 100, this, AchEvent.BEAT_FOOL, SpriteSource.BeatTheFool);
         Achievement("Quick Show", "Beat the Fool in a minute.", "Hope you enjoyed the sh-",
-            AchRequire.TIME, 0, 60, this, AchEvent.BEAT_FOOL, SpriteSource.Fool60);
+            AchRequire.TIME, 0, 60, this, AchEvent.BEAT_FOOL, SpriteSource.Clock);
         Achievement("Not Fooling Around", "Beat the Fool in 30 seconds.", "Hope y-",
-            AchRequire.TIME, 0, 30, this, AchEvent.BEAT_FOOL, SpriteSource.Fool30);
+            AchRequire.TIME, 0, 30, this, AchEvent.BEAT_FOOL, SpriteSource.Clock);
         Achievement("Stationary Spawner", "Spawn 5 stationary turrets.", "Someday you might land a hit...",
             AchRequire.STAT_SPAWNS, 5, 100000, this, AchEvent.CHECK, SpriteSource.Towers);
         Achievement("Stationary Master", "Spawn 25 stationary turrets.", "Did that 500 fate pay off?",
@@ -257,9 +257,9 @@ class AchievementTracker : ZilchComponent
         Achievement("Perfect Lovers Run", "Beat the Lovers without taking damage.", "Love is blind...",
             AchRequire.HEALTH, 100, 100, this, AchEvent.BEAT_LOVERS, SpriteSource.Square);
         Achievement("One Minute In Heaven", "Beat the Lovers in a minute.", "It wasn't meant to last.",
-            AchRequire.TIME, 0, 60, this, AchEvent.BEAT_LOVERS, SpriteSource.Square);
+            AchRequire.TIME, 0, 60, this, AchEvent.BEAT_LOVERS, SpriteSource.Clock);
         Achievement("I Don't Wanna See That", "Beat the Lovers in 30 seconds.", "Eww, kissing!",
-            AchRequire.TIME, 0, 30, this, AchEvent.BEAT_LOVERS, SpriteSource.Square);
+            AchRequire.TIME, 0, 30, this, AchEvent.BEAT_LOVERS, SpriteSource.Clock);
         Achievement("Knight Spawner", "Spawn 10 knights.", "Not quite an army...",
             AchRequire.KNIGHT_SPAWNS, 10, 100000, this, AchEvent.CHECK, SpriteSource.Knight_swords);
         Achievement("Knight Master", "Spawn 50 knights.", "Good enough.",
