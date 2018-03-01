@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0.5],
+		Vec3 Translation = [0, 0, 1],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -172,28 +172,14 @@ Cog =
 			},
 			HealthText = 
 			{
-				CogPath Target = 
-				{
-					string Path = ":/Player",
-					bool ErrorOnResolveToNull = false,
-					bool ErrorOnPathCantCompute = false,
-					bool ErrorOnDirectLinkFail = false,
-					bool UpdateCogOnPathChange = true,
-					bool UpdatePathOnCogChange = true,
-					bool UpdateCogOnInitialize = true,
-					bool ResolvedNullErrorOccurred = false,
-					uint ResolvedCog = 6,
-					CogPathPreference PathPreference0 = CogRelative,
-					CogPathPreference PathPreference1 = SpaceRelative,
-					CogPathPreference PathPreference2 = Absolute,
-				},
+				Enum Type = PLAYER,
 			},
 		},
 		Cog = 
 		{
 			LinkId = 
 			{
-				uint Id = 7,
+				uint Id = 6,
 			},
 			Named = 
 			{
@@ -230,28 +216,14 @@ Cog =
 			},
 			HealthBar = 
 			{
-				CogPath Target = 
-				{
-					string Path = ":/Player",
-					bool ErrorOnResolveToNull = false,
-					bool ErrorOnPathCantCompute = false,
-					bool ErrorOnDirectLinkFail = false,
-					bool UpdateCogOnPathChange = true,
-					bool UpdatePathOnCogChange = true,
-					bool UpdateCogOnInitialize = true,
-					bool ResolvedNullErrorOccurred = false,
-					uint ResolvedCog = 6,
-					CogPathPreference PathPreference0 = CogRelative,
-					CogPathPreference PathPreference1 = SpaceRelative,
-					CogPathPreference PathPreference2 = Absolute,
-				},
+				Enum Type = PLAYER,
 			},
 		},
 		Cog = 
 		{
 			LinkId = 
 			{
-				uint Id = 8,
+				uint Id = 7,
 			},
 			Named = 
 			{
@@ -282,28 +254,14 @@ Cog =
 			},
 			HealthText = 
 			{
-				CogPath Target = 
-				{
-					string Path = ":/Boss",
-					bool ErrorOnResolveToNull = false,
-					bool ErrorOnPathCantCompute = false,
-					bool ErrorOnDirectLinkFail = false,
-					bool UpdateCogOnPathChange = true,
-					bool UpdatePathOnCogChange = true,
-					bool UpdateCogOnInitialize = true,
-					bool ResolvedNullErrorOccurred = false,
-					uint ResolvedCog = 9,
-					CogPathPreference PathPreference0 = CogRelative,
-					CogPathPreference PathPreference1 = SpaceRelative,
-					CogPathPreference PathPreference2 = Absolute,
-				},
+				Enum Type = BOSS,
 			},
 		},
 		Cog = 
 		{
 			LinkId = 
 			{
-				uint Id = 10,
+				uint Id = 8,
 			},
 			Named = 
 			{
@@ -340,28 +298,14 @@ Cog =
 			},
 			HealthBar = 
 			{
-				CogPath Target = 
-				{
-					string Path = ":/Boss",
-					bool ErrorOnResolveToNull = false,
-					bool ErrorOnPathCantCompute = false,
-					bool ErrorOnDirectLinkFail = false,
-					bool UpdateCogOnPathChange = true,
-					bool UpdatePathOnCogChange = true,
-					bool UpdateCogOnInitialize = true,
-					bool ResolvedNullErrorOccurred = false,
-					uint ResolvedCog = 9,
-					CogPathPreference PathPreference0 = CogRelative,
-					CogPathPreference PathPreference1 = SpaceRelative,
-					CogPathPreference PathPreference2 = Absolute,
-				},
+				Enum Type = BOSS,
 			},
 		},
 		Cog = 
 		{
 			LinkId = 
 			{
-				uint Id = 11,
+				uint Id = 9,
 			},
 			Named = 
 			{
@@ -398,7 +342,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 12,
+				uint Id = 10,
 			},
 			Named = 
 			{

@@ -18,8 +18,8 @@ class BossShoot : ZilchComponent
         //check if we can shoot
         if (this.TimeTillShoot <= 0)
         {
-            var vel = (this.Space.FindObjectByName("Player").Transform.Translation - this.Owner.Transform.Translation) * this.ShootSpeed;
-           
+            var vel = (this.Space.FindObjectByName("Player").Transform.Translation - this.Owner.Transform.Translation);
+            vel = Math.Normalize(vel) * this.ShootSpeed;
             //Create the bullet
             var arrow = this.Space.CreateAtPosition(this.Projectile, this.Owner.Transform.WorldTranslation + vel / 100);
             
