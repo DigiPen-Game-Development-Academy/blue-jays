@@ -145,7 +145,7 @@ Level =
 		string Name = "5a08fb6c68225264:LevelCamera",
 		LinkId = 
 		{
-			uint Id = 4,
+			uint Id = 2,
 		},
 		Transform = 
 		{
@@ -163,7 +163,7 @@ Level =
 		string Name = "5a026539282b70ed:StartButton",
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 4,
 		},
 		Transform = 
 		{
@@ -186,7 +186,7 @@ Level =
 		string Name = "5afe65edb6f14c56:AchievementsButton",
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 5,
 		},
 		Transform = 
 		{
@@ -209,7 +209,7 @@ Level =
 		string Name = "5a02652e364fba53:CreditsButton",
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 6,
 		},
 		Transform = 
 		{
@@ -232,7 +232,7 @@ Level =
 		string Name = "5a6d2a99255638bb:QuitButton",
 		LinkId = 
 		{
-			uint Id = 8,
+			uint Id = 7,
 		},
 		Transform = 
 		{
