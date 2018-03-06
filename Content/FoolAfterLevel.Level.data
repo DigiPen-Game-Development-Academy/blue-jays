@@ -58,7 +58,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
+				uint ResolvedCog = 4294967293,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -96,7 +96,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 3,
+			uint Id = 2,
 		},
 		Named = 
 		{
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 67.0320358,
+			float Size = 54.8811989,
 		},
 		EditorCameraController = 
 		{
@@ -136,47 +136,12 @@ Level =
 			bool Wireframe = false,
 		},
 	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 2,
-		},
-		Named = 
-		{
-			string Name = "Camera",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0.749866486, 0, 40],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Camera = 
-		{
-			ProjectionMode ProjectionMode = Orthographic,
-			Facing Facing = NegativeZ,
-			CameraTransparentSort TransparentSort = InheritFromSpace,
-			float FieldOfView = 45,
-			float NearPlane = 0.5,
-			float FarPlane = 200,
-			float Size = 20,
-		},
-		SoundListener = 
-		{
-			bool Active = true,
-			float Volume = 1,
-		},
-		Hierarchy = 
-		{
-		},
-	},
 	ArchetypeInstance = 
 	{
 		string Name = "5ade5ab6a83ff476:FoolAfterLevel",
 		LinkId = 
 		{
-			uint Id = 4,
+			uint Id = 3,
 		},
 		Transform = 
 		{
@@ -193,7 +158,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 4,
 		},
 		Named = 
 		{
@@ -253,7 +218,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 5,
 		},
 		Named = 
 		{
@@ -313,7 +278,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 6,
 		},
 		Named = 
 		{
@@ -375,7 +340,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 8,
+			uint Id = 7,
 		},
 		Named = 
 		{
@@ -435,7 +400,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 9,
+			uint Id = 8,
 		},
 		Named = 
 		{
@@ -495,7 +460,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 10,
+			uint Id = 9,
 		},
 		Named = 
 		{
@@ -555,7 +520,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 11,
+			uint Id = 10,
 		},
 		Named = 
 		{
@@ -615,7 +580,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 12,
+			uint Id = 11,
 		},
 		Named = 
 		{
@@ -677,7 +642,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 13,
+			uint Id = 12,
 		},
 		Named = 
 		{
@@ -728,6 +693,66 @@ Level =
 			string SerializedGroupName = "5a916d34df3b1676:Wall",
 			Vec3 Offset = [0, 0, 0],
 			string PhysicsMeshName = "5198bea43a47cbd7:SlopeLeft",
+			bool DrawEdges = true,
+			bool DrawFaces = false,
+			bool DrawFaceNormals = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 13,
+		},
+		Named = 
+		{
+			string Name = "PillarEdge",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [14.3332748, -7.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a6e92432ba2d3ea:PillarRight",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		RigidBody = 
+		{
+			bool Static = true,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		MeshCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "5a916d34df3b1676:Wall",
+			Vec3 Offset = [0, 0, 0],
+			string PhysicsMeshName = "5198bea43a4694d2:SlopeRight",
 			bool DrawEdges = true,
 			bool DrawFaces = false,
 			bool DrawFaceNormals = false,
@@ -745,66 +770,6 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [14.3332748, -7.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a6e92432ba2d3ea:PillarRight",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		RigidBody = 
-		{
-			bool Static = true,
-			bool Asleep = false,
-			bool Kinematic = false,
-			bool RotationLocked = false,
-			bool Mode2D = true,
-			bool AllowSleep = true,
-			bool Inherit2DMode = true,
-			Vec3 Velocity = [0, 0, 0],
-			Vec3 AngularVelocity = [0, 0, 0],
-		},
-		MeshCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "5a916d34df3b1676:Wall",
-			Vec3 Offset = [0, 0, 0],
-			string PhysicsMeshName = "5198bea43a4694d2:SlopeRight",
-			bool DrawEdges = true,
-			bool DrawFaces = false,
-			bool DrawFaceNormals = false,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 15,
-		},
-		Named = 
-		{
-			string Name = "PillarEdge",
-		},
-		Transform = 
-		{
 			Vec3 Translation = [11.3332748, -7.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
@@ -857,7 +822,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 16,
+			uint Id = 15,
 		},
 		Named = 
 		{
@@ -919,7 +884,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 17,
+			uint Id = 16,
 		},
 		Named = 
 		{
@@ -979,7 +944,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 18,
+			uint Id = 17,
 		},
 		Named = 
 		{
@@ -1039,7 +1004,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 19,
+			uint Id = 18,
 		},
 		Named = 
 		{
@@ -1099,7 +1064,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 20,
+			uint Id = 19,
 		},
 		Named = 
 		{
@@ -1161,7 +1126,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 21,
+			uint Id = 20,
 		},
 		Named = 
 		{
@@ -1221,7 +1186,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 22,
+			uint Id = 21,
 		},
 		Named = 
 		{
@@ -1281,7 +1246,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 23,
+			uint Id = 22,
 		},
 		Named = 
 		{
@@ -1341,7 +1306,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 24,
+			uint Id = 23,
 		},
 		Named = 
 		{

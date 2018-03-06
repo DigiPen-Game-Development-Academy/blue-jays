@@ -101,6 +101,11 @@ class Globals : ZilchComponent
     function GetTarget(pos : Real3) : Cog
     {
         var l = this.Space.CurrentLevel.Name;
+         if (l == "Rafters" || l == "FoolAfterLevel" || l == "LoversAfterLevel")
+        {
+            return this.Space.FindObjectByName("Pigeon");
+        }
+        
         if(l == "Fool" || l == "Death")
         {
             return this.Space.FindObjectByName("Boss");
@@ -113,5 +118,6 @@ class Globals : ZilchComponent
         {
             return null;
         }
+       
     }
 }

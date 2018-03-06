@@ -31,11 +31,20 @@ class KnightOfSwords : ZilchComponent
         {
             this.Target = this.Space.Globals.GetTarget(this.Owner.Transform.Translation);
         }
+        if(this.Target == null)
+        {
+            return;
+        }
         var mod = -1;
+        
+            
+        
         if (this.Owner.Transform.Translation.X < this.Target.Transform.Translation.X)
+        
         {
             mod = 1;
         }
+      
         this.Vel = this.Speed * mod;
         if(event.OtherObject.Name == "Boss")
         {
@@ -45,13 +54,6 @@ class KnightOfSwords : ZilchComponent
         {
             this.Owner.Destroy();
         }
-        if (event.OtherObject.Name == "Female")
-        {
-            this.Owner.Destroy();
-        }
-        if (event.OtherObject.Name == "Male")
-        {
-            this.Owner.Destroy();
-        }
+      
     }
 }
