@@ -2538,8 +2538,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-1.02829647, 13.2457256, 0],
-				Vec3 Scale = [100, 1, 1],
+				Vec3 Translation = [-26.8483887, 13.2457256, 0],
+				Vec3 Scale = [46.4398308, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -2548,7 +2548,7 @@ Cog =
 				bool VisibilityCulling = true,
 				bool VisibilityEvents = true,
 				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
+				Vec4 Color = [1, 0, 0, 1],
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -2582,12 +2582,86 @@ Cog =
 				Vec3 Velocity = [0, 0, 0],
 				Vec3 AngularVelocity = [0, 0, 0],
 			},
+			HealthBar = 
+			{
+				Enum Type = PLAYER,
+			},
+			Area = 
+			{
+				Vec2 Size = [1, 1],
+				Location Origin = Center,
+			},
 		},
 		Cog = 
 		{
 			LinkId = 
 			{
 				uint Id = 44,
+			},
+			Named = 
+			{
+				string Name = "Wall",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [22.3070202, 13.2457256, 0],
+				Vec3 Scale = [52.1163406, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [0, 0.309999943, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5275aa4d802dd6dc:Square",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
+			},
+			BoxCollider = 
+			{
+				bool Ghost = false,
+				bool SendsMessages = true,
+				bool Seamless = true,
+				string MaterialName = "5a1cee2c4a245b06:NoBounce",
+				string SerializedGroupName = "5a916d34df3b1676:Wall",
+				Vec3 Offset = [0, 0, 0],
+				Vec3 Size = [0.5, 0.5, 0.5],
+			},
+			RigidBody = 
+			{
+				bool Static = true,
+				bool Asleep = false,
+				bool Kinematic = false,
+				bool RotationLocked = false,
+				bool Mode2D = true,
+				bool AllowSleep = true,
+				bool Inherit2DMode = true,
+				Vec3 Velocity = [0, 0, 0],
+				Vec3 AngularVelocity = [0, 0, 0],
+			},
+			FateBar = 
+			{
+			},
+			Area = 
+			{
+				Vec2 Size = [1, 1],
+				Location Origin = Center,
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 45,
 			},
 			Named = 
 			{
@@ -2644,7 +2718,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 45,
+				uint Id = 46,
 			},
 			Named = 
 			{
@@ -2709,7 +2783,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 46,
+				uint Id = 47,
 			},
 			Named = 
 			{
