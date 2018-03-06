@@ -25,14 +25,14 @@ class Button : ZilchComponent
             {
                 this.Selected = true;
                 this.Transform.Scale *= this.ScaleFactor;
-                Zero.Mouse.Cursor = Cursor.Hand;
+                this.Space.Globals.ChangeCursor(CursorColor.BLUE);
             }
         }
         else if(this.Selected)
         {
             this.Selected = false;
             this.Transform.Scale /= this.ScaleFactor;
-            Zero.Mouse.Cursor = Cursor.Arrow;
+            this.Space.Globals.ChangeCursor(CursorColor.WHITE);
         }
     }
     

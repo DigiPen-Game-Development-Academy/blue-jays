@@ -2,6 +2,8 @@
 // Purpose: Easily accessible global variables that stay the same between levels.
 enum Suit {SWORDS, WANDS, COINS, CUPS}
 
+enum CursorColor {RED, WHITE, BLUE}
+
 class Globals : ZilchComponent
 {
     var Particles : Boolean = true;
@@ -48,7 +50,26 @@ class Globals : ZilchComponent
     
     function OnLevelStart(event : GameEvent)
     {
+        Zero.Mouse.Cursor = Cursor.Invisible;
+        this.Space.CreateAtPosition(Archetype.Cursor, Real3());
         this.SavedStats = Zero.ObjectStore.RestoreOrArchetype("Stats", Archetype.SavedStats, this.Space);
+    }
+    
+    function ChangeCursor(color : CursorColor)
+    {
+        var cursor = this.Space.FindObjectByName("Cursor");
+        if(color == CursorColor.WHITE)
+        {
+            cursor.Sprite.Color = Real4(1,1,1,1);
+        }
+        else if(color == CursorColor.RED)
+        {
+            cursor.Sprite.Color = Real4(1,0,0,1);
+        }
+        else if(color == CursorColor.BLUE)
+        {
+            cursor.Sprite.Color = Real4(0,0,1,1);
+        }
     }
     
     function StoreStats()
