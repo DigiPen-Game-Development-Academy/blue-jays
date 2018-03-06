@@ -1,3 +1,6 @@
+//Author: Eli Miller
+//Purpose: To be put on "Destroyer" objects. Detects whether an object is inside another object.
+
 class DetectInvalidSpawn : ZilchComponent
 {
     [Property] var Refund : Real = 0;

@@ -19,7 +19,3 @@ class Turret
         this.Fate = f;
     }
 }
-
-
-
-

@@ -1,3 +1,5 @@
+//Author: Eli Miller
+//Purpose: Initializes an achievement icon.
 class AchievementIcon : ZilchComponent
 {
     var Achievement : Achievement;
@@ -7,6 +9,7 @@ class AchievementIcon : ZilchComponent
         this.Owner.Sprite.SpriteSource = ach.Sprite;
         if(!ach.Unlocked)
         {
+            //Black out the icon to show it's locked.
             this.Owner.Sprite.Color = Real4(0,0,0,1);
         }
         this.Owner.HoverTextBox.Init(ach);

@@ -1,3 +1,6 @@
+//Author: Eli Miller
+//Purpose: Chooses a random sprite with a certain name to display.
+
 class RandomSprite : ZilchComponent
 {
     [Property] var Name : String = "RoseP";

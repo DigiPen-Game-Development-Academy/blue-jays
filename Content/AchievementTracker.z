@@ -1,7 +1,14 @@
+//Author: Eli Miller
+//Purpose: Tracks, controls, and unlocks achievements.
+
+//The event on which an achievement is unocked.
 enum AchEvent {DEATH, BEAT_FOOL, BEAT_LOVERS, WIN, CHECK}
+
+//The requirement needed for the achievement.
 enum AchRequire {DEATHS, HEALTH, KNIGHT_SPAWNS, STAT_SPAWNS, UNIQUE_SPAWNS, SPAWNS,
     TIME, LEVEL_TIME, TOTAL_RUNS, FOOL_BEATEN, LOVERS_BEATEN, WINS}
 
+//The class for each achievement.
 class Achievement
 {
     var Name : String = "Unnamed";
@@ -26,6 +33,8 @@ class Achievement
         this.Max = max;
         this.AchTrack = ach;
         this.AchEvent = e;
+        
+        //Add this achievement to the respective array.
         if(e==AchEvent.DEATH)
         {
             ach.DeathAchievements.Add(this);
@@ -49,6 +58,7 @@ class Achievement
         ach.AllAchievements.Add(this);
     }
     
+    //Checks to see if the achievement is complete, and updates it accordingly.
     function Check()
     {
         if (this.Unlocked)
@@ -57,9 +67,9 @@ class Achievement
         }
         var num = this.AchTrack.GetAchRequire(this.Type);
         this.Unlocked = num <= this.Max && num >= this.Min;
-        
     }
     
+    //Construct the text shown in the progress portion of the text box.
     function GetProgressText() : String
     {
         if(this.Unlocked)
@@ -125,17 +135,22 @@ class Achievement
 
 class AchievementTracker : ZilchComponent
 {
+    //We need these arrays for easier access to the achievements that need to be checked for each event.
     var DeathAchievements : Array[Achievement] = Array[Achievement]();
     var FoolAchievements : Array[Achievement] = Array[Achievement]();
     var LoversAchievements : Array[Achievement] = Array[Achievement]();
     var WinAchievements : Array[Achievement] = Array[Achievement]();
     var CheckAchievements : Array[Achievement] = Array[Achievement]();
     var AllAchievements : Array[Achievement] = Array[Achievement]();
+    
+    //These have requirements that aren't fufilled with an AchRequire.
     var CreditsAchievement : Achievement;
     var CheatAchievement : Achievement;
+    
     function Initialize(init : CogInitializer)
     {
         this.AddAchievements();
+        //Loads the unlocked achievements from the SavedStats.
         for(var i = 0; i < this.Space.Globals.SavedStats.SavedStats.AchUnlocks.Count; i += 1)
         {
             var b = this.Space.Globals.SavedStats.SavedStats.AchUnlocks[i];
@@ -144,6 +159,7 @@ class AchievementTracker : ZilchComponent
         Zero.Connect(this.Space, Events.LevelStarted, this.OnLevelStart);
     }
     
+    //Gets the number corresponding to an AchRequire.
     function GetAchRequire(ar : AchRequire) : Real
     {
         var stats = this.Space.Globals.SavedStats.SavedStats;
@@ -194,6 +210,7 @@ class AchievementTracker : ZilchComponent
         return 0;
     }
     
+    //Used to check achievements when necessary.
     function OnLevelStart(event : GameEvent)
     {
         var achievements : Array[Achievement] = null;
@@ -236,6 +253,7 @@ class AchievementTracker : ZilchComponent
         }
     }
     
+    //Creates all achievements.
     function AddAchievements()
     {
         Achievement("First Death", "Die 1 time.", "When's the funeral?",

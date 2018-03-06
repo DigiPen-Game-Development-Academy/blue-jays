@@ -1,3 +1,6 @@
+//Author: Eli Miller
+//Purpose: To be put on the root object of overlay menus. Toggles the visibility of the overlay.
+
 class OverlayToggle : ZilchComponent
 {
     [Property] var ButtonSize : Real2 = Real2(5,1);

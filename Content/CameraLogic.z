@@ -1,3 +1,6 @@
+//Author: Hunter Fosler
+//Purpose: Makes the camera follow the player.
+
 class CameraLogic : ZilchComponent
 {
     var TargetObject : Cog = null;

@@ -1,3 +1,6 @@
+//Author: Christian Yan
+//Purpose: Makes missiles head toward the player.
+
 class HomingForMissile : ZilchComponent
 {
     [Property] var Speed : Real = 1;

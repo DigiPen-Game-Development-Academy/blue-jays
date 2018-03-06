@@ -1,3 +1,6 @@
+//Author: Eli Miller
+//Purpose: Controls what the buttons do.
+
 enum Menu {MAIN, CREDITS, LEVEL, CHAR_SELECT, ACHIEVEMENTS}
 
 class ParticleToggleEvent : ZilchEvent

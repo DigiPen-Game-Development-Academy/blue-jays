@@ -1,3 +1,6 @@
+//Author: Christian Yan
+//Purpose: Death's homing missile shooting.
+
 class DeathsMissile : ZilchComponent
 {
     [Property] var BetweenShots : Real = 1;

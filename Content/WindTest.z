@@ -1,3 +1,6 @@
+//Author: Eli Miller
+//Purpose: Fixes a bug where WindScript does not initialize.
+
 class WindTest : ZilchComponent
 {
 }

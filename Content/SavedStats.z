@@ -1,3 +1,6 @@
+//Author: Eli Miller
+//Purpose: Serialized variables for savegames.
+
 class SavedStats : ZilchComponent
 {
     [Serialized] var TotalRuns : Real = 0;

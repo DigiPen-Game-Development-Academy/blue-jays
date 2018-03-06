@@ -1,3 +1,6 @@
+//Author: Eli Miller
+//Purpose: Death's "Rising Wall" attack.
+
 enum RisingState {RISING, LOWERING, UP_IDLE, DOWN_IDLE}
 
 class RisingWall : ZilchComponent

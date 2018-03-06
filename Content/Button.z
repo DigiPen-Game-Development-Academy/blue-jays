@@ -1,3 +1,6 @@
+//Author: Eli Miller
+//Purpose: General-purpose button script. When adding, also edit MenuController.
+
 class Button : ZilchComponent
 {
     [Dependency] var Area : Area;
@@ -5,6 +8,7 @@ class Button : ZilchComponent
     
     [Property] var ScaleFactor : Real = 1;
     
+    //ToCall is the function to call, specified in MenuController.
     var ToCall : delegate() = null;
     var Selected : Boolean = false;
     
@@ -19,8 +23,10 @@ class Button : ZilchComponent
         var mousepos = event.ToWorldZPlane(0);
         var max : Real2 = this.Transform.WorldTranslation.XY + this.Area.Size / 2;
         var min : Real2 = this.Transform.WorldTranslation.XY - this.Area.Size / 2;
+        //If the mouse is in the bounds of the button...
         if(mousepos.X < max.X && mousepos.Y < max.Y && mousepos.X > min.X && mousepos.Y > min.Y)
         {
+            //Only update if necessary.
             if(!this.Selected)
             {
                 this.Selected = true;
@@ -40,7 +46,7 @@ class Button : ZilchComponent
     {
         if(this.Selected && (this.ToCall != null))
         {
-            Zero.Mouse.Cursor = Cursor.Arrow;
+            this.Space.Globals.ChangeCursor(CursorColor.WHITE);
             this.ToCall();
         }
     }

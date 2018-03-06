@@ -1,3 +1,6 @@
+//Author: Eli Miller
+//Purpose: Keeps track of time for achievements.
+
 class Timer : ZilchComponent
 {
     var TimeSinceStart : Real = 0;

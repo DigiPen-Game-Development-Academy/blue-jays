@@ -1,3 +1,6 @@
+//Author: Eli Miller
+//Purpose: Damages an entity on collision.
+
 class DamageOnColide : ZilchComponent
 {
     [Property] var Damage : Real;

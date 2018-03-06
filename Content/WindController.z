@@ -1,3 +1,6 @@
+//Author: Eli Miller
+//Purpose: Controls the wind effect for rose petals.
+
 class WindEvent : ZilchEvent
 {
     var Name : String = "WindEvent";

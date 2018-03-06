@@ -1,5 +1,5 @@
-
-
+//Author: Eli Miller
+//Purpose: Gives an object health.
 
 class HP : ZilchComponent
 {

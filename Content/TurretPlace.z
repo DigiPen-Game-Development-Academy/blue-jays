@@ -1,3 +1,6 @@
+//Author: Eli Miller
+//Purpose: Logic for placing turrets.
+
 class TurretPlace : ZilchComponent
 {
     [Dependency] var Transform : Transform;

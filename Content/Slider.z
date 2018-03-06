@@ -1,3 +1,6 @@
+//Author: Eli Miller
+//Purpose: A slider for changing volume.
+
 class Slider : ZilchComponent
 {
     [Property] var MaxMove : Real;

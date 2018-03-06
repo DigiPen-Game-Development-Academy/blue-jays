@@ -1,3 +1,6 @@
+//Author: Eli Miller
+//Purpose: Draws turret icons to the screen.
+
 class DrawIcons : ZilchComponent
 {
     function Draw(turrets : Array[Turret])

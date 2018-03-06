@@ -1,3 +1,6 @@
+//Author: Eli Miller
+//Purpose: The attacks for the fool.
+
 class FoolAttack : ZilchComponent
 {
     [Property] var BombSpeed : Real = 10;

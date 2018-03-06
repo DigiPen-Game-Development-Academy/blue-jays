@@ -1,3 +1,6 @@
+//Author: Eli Miller
+//Purpose: Gives the player health when this object collides with it.
+
 class HeartPickup : ZilchComponent
 {
     [Property] var Health : Real;

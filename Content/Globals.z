@@ -51,7 +51,7 @@ class Globals : ZilchComponent
     function OnLevelStart(event : GameEvent)
     {
         Zero.Mouse.Cursor = Cursor.Invisible;
-        this.Space.CreateAtPosition(Archetype.Cursor, Real3());
+        this.Space.CreateAtPosition(Archetype.Cursor, Real3(100));
         this.SavedStats = Zero.ObjectStore.RestoreOrArchetype("Stats", Archetype.SavedStats, this.Space);
     }
     

@@ -1,3 +1,6 @@
+//Author: Eli Miller
+//Purpose: Spawns stars.
+
 class StarSpawn : ZilchComponent
 {
     [Property] var StarNum : Real = 10;

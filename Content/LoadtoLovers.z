@@ -1,20 +1,20 @@
+//Author: Hunter Fosler
+//Purpose: When the floor is hit, load the lovers level.
+
 class LoadtoLovers : ZilchComponent
 {
-     function Initialize(init : CogInitializer)
-  {
-      Zero.Connect(this.Owner, Events.CollisionStarted,     this.OnCollisionStarted);
-  }
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Owner, Events.CollisionStarted,     this.OnCollisionStarted);
+    }
 
     function OnCollisionStarted(event : CollisionEvent)
     {
- var otherObject = event.OtherObject;
-
-    // If we collided with the block,
-    if (otherObject.Name == "Player")
-    {
-        this.Space.LoadLevel (Level.Lovers);
-        
+        var otherObject = event.OtherObject;
+        // If we collided with the block,
+        if (otherObject.Name == "Player")
+        {
+            this.Space.LoadLevel (Level.Lovers);
+        }
     }
-   
-}
 }

@@ -1,3 +1,6 @@
+//Author: Eli Miller
+//Purpose: Displays the current fate as text.
+
 class FateText : ZilchComponent
 {
     var TP : TurretPlace;

@@ -1,3 +1,6 @@
+//Author: Eli Miller
+//Purpose: Spawns the rose petals in the lovers level.
+
 class PetalSpawn : ZilchComponent
 {
     [Property] var Delay : Real = 0.1;

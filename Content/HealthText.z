@@ -1,3 +1,6 @@
+//Author: Eli Miller
+//Purpose: Displays the health of an object as a bar.
+
 enum HealthType {PLAYER, BOSS}
 
 class HealthText : ZilchComponent
