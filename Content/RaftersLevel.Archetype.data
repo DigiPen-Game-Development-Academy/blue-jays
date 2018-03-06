@@ -29,7 +29,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [2.18921041, 46.9324226, 0],
+				Vec3 Translation = [-0.358073235, 47.0233841, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -535,7 +535,7 @@ Cog =
 			},
 			PigeonSpawner = 
 			{
-				string WhatToSpawn = "",
+				string WhatToSpawn = "5a6ea1f2412a5c3b:Pigeon",
 				float SpawnTime = 5,
 			},
 		},
@@ -737,7 +737,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-15.9858618, 22.124815, 0],
+				Vec3 Translation = [-15.9858618, 22.1248131, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -974,7 +974,7 @@ Cog =
 			},
 			PigeonSpawner = 
 			{
-				string WhatToSpawn = "",
+				string WhatToSpawn = "5a6ea1f2412a5c3b:Pigeon",
 				float SpawnTime = 5,
 			},
 		},
@@ -1103,7 +1103,7 @@ Cog =
 			},
 			PigeonSpawner = 
 			{
-				string WhatToSpawn = "",
+				string WhatToSpawn = "5a6ea1f2412a5c3b:Pigeon",
 				float SpawnTime = 5,
 			},
 		},
@@ -1553,7 +1553,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-6.55065823, 4.28165054, 0],
+				Vec3 Translation = [-6.31055784, 4.28165054, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -1663,11 +1663,6 @@ Cog =
 			{
 				Vec2 Size = [6, 1],
 				Location Origin = Center,
-			},
-			PigeonSpawner = 
-			{
-				string WhatToSpawn = "5a6ea1f2412a5c3b:Pigeon",
-				float SpawnTime = 5,
 			},
 		},
 		Cog = 

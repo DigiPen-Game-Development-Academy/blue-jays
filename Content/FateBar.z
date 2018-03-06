@@ -9,6 +9,7 @@ class FateBar : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.Owner.Area.Size = Real2((this.TP.Fate/this.TP.MaxFate),1);
+        this.Owner.Area.Size = Real2(1, (this.TP.Fate/this.TP.MaxFate));
+        
     }
 }

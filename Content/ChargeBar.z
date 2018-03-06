@@ -27,6 +27,6 @@ class ChargeBar : ZilchComponent
         {
             charge = 1;
         }
-        this.Owner.Area.Size = Real2(charge,1);
+        this.Owner.Area.Size = Real2(1,+charge);
     }
 }

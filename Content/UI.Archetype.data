@@ -106,8 +106,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, 10.75, 0],
-				Vec3 Scale = [20, 1, 1],
+				Vec3 Translation = [-16.3725853, 2.17931461, 0],
+				Vec3 Scale = [10, 20, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -116,11 +116,11 @@ Cog =
 				bool VisibilityCulling = true,
 				bool VisibilityEvents = true,
 				bool CastShadows = false,
-				Vec4 Color = [0, 0, 1, 1],
+				Vec4 Color = [1, 1, 1, 1],
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5275aa4d802dd6dc:Square",
+				string SpriteSource = "5ae3c467465ab7fb:FateBanner",
 				bool RenderMask = false,
 				bool FlipX = false,
 				bool FlipY = false,
@@ -131,7 +131,7 @@ Cog =
 			Area = 
 			{
 				Vec2 Size = [1, 1],
-				Location Origin = CenterLeft,
+				Location Origin = Center,
 			},
 			FateBar = 
 			{
@@ -149,7 +149,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, 11.25, 0],
+				Vec3 Translation = [-0.175696611, 11.2060766, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -187,8 +187,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, 10.75, 0],
-				Vec3 Scale = [20, 1, 1],
+				Vec3 Translation = [-18.6872025, 2.16048431, 0],
+				Vec3 Scale = [10, 20, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -197,11 +197,11 @@ Cog =
 				bool VisibilityCulling = true,
 				bool VisibilityEvents = true,
 				bool CastShadows = false,
-				Vec4 Color = [1, 0, 0, 1],
+				Vec4 Color = [1, 1, 1, 1],
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5275aa4d802dd6dc:Square",
+				string SpriteSource = "5ae3d0bf63012639:HealthBanner",
 				bool RenderMask = false,
 				bool FlipX = false,
 				bool FlipY = false,
@@ -212,7 +212,7 @@ Cog =
 			Area = 
 			{
 				Vec2 Size = [1, 1],
-				Location Origin = CenterRight,
+				Location Origin = Center,
 			},
 			HealthBar = 
 			{
@@ -269,8 +269,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, -10.75, 0],
-				Vec3 Scale = [20, 1, 1],
+				Vec3 Translation = [19.045042, 2.17787075, 0],
+				Vec3 Scale = [10, 20, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -279,11 +279,11 @@ Cog =
 				bool VisibilityCulling = true,
 				bool VisibilityEvents = true,
 				bool CastShadows = false,
-				Vec4 Color = [1, 0, 0, 1],
+				Vec4 Color = [1, 1, 1, 1],
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5275aa4d802dd6dc:Square",
+				string SpriteSource = "5ae3d0bf63012639:HealthBanner",
 				bool RenderMask = false,
 				bool FlipX = false,
 				bool FlipY = false,
@@ -294,7 +294,7 @@ Cog =
 			Area = 
 			{
 				Vec2 Size = [1, 1],
-				Location Origin = CenterRight,
+				Location Origin = Center,
 			},
 			HealthBar = 
 			{
@@ -350,8 +350,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, -10.75, 0],
-				Vec3 Scale = [20, 1, 1],
+				Vec3 Translation = [16.7415924, 2.21517754, 0],
+				Vec3 Scale = [10, 20, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -360,11 +360,11 @@ Cog =
 				bool VisibilityCulling = true,
 				bool VisibilityEvents = true,
 				bool CastShadows = false,
-				Vec4 Color = [0, 0, 1, 1],
+				Vec4 Color = [1, 1, 1, 1],
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5275aa4d802dd6dc:Square",
+				string SpriteSource = "5ae3c467465ab7fb:FateBanner",
 				bool RenderMask = false,
 				bool FlipX = false,
 				bool FlipY = false,
@@ -375,7 +375,7 @@ Cog =
 			Area = 
 			{
 				Vec2 Size = [1, 1],
-				Location Origin = CenterLeft,
+				Location Origin = Center,
 			},
 			ChargeBar = 
 			{
