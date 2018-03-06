@@ -1,3 +1,6 @@
+//Author: Eli Miller
+//Purpose: Draws the achievements to the screen.
+
 class DrawAchievements : ZilchComponent
 {
     [Property] var Columns : Integer = 10;

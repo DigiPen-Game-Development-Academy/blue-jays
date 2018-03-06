@@ -1,3 +1,6 @@
+//Author: Eli Miller
+//Purpose: Destroys this object in a given number of seconds.
+
 class DestroyTimer : ZilchComponent
 {
     [Property] var Timer : Real = 1;

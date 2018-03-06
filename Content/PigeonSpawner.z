@@ -1,6 +1,9 @@
+//Author: Hunter Fosler
+//Purpose: Spawns pigeons.
+
 class PigeonSpawner : ZilchComponent
 {
-      [Property]
+    [Property]
     var WhatToSpawn : Archetype;
 
     [Property]

@@ -1,3 +1,6 @@
+//Author: Hunter Fosler
+//Purpose: Shooting for the Lovers.
+
 class BossShoot : ZilchComponent
 {
     [Property] var TimeBetweenShots : Real = 1;
@@ -28,8 +31,6 @@ class BossShoot : ZilchComponent
             
             //Reset our time
             this.TimeTillShoot = this.TimeBetweenShots;
-        
         }
-        
-}
+    }
 }

@@ -1,10 +1,13 @@
+//Author: Eli Miller
+//Purpose: Shows the boss's "charge" (a telegraph).
+
 class ChargeBar : ZilchComponent
 {
     var Boss : Cog;
     var Type : Boss;
     function Initialize(init : CogInitializer)
     {
-        this.Boss = this.Space.Globals.GetTarget(this.Owner.Transform.Translation);
+        this.Boss = this.Space.Globals.GetTarget(Real3());
         if(this.Boss.FoolAttack != null)
         {
             this.Type = Boss.FOOL;

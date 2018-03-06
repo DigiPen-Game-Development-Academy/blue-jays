@@ -1,3 +1,6 @@
+//Author: Eli Miller
+//Purpose: To be put on root objects of particle effects. Removes them if particles are toggled off.
+
 class ParticleRemove : ZilchComponent
 {
     var Enabled : Boolean;

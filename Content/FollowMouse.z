@@ -1,3 +1,6 @@
+//Author: Eli Miller
+//Purpose: Makes an object follow the mouse cursor.
+
 class FollowMouse : ZilchComponent
 {
     [Property] var Offset : Real3;

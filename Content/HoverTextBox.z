@@ -1,3 +1,6 @@
+//Author: Eli Miller
+//Purpose: Spawns a text box when this object is hovered over.
+
 class HoverTextBox : ZilchComponent
 {
     [Dependency] var Transform : Transform;

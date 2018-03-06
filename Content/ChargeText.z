@@ -1,3 +1,6 @@
+//Author: Eli Miller
+//Purpose: Shows the boss's "charge" (a telegraph).
+
 enum Boss {FOOL, DEATH}
 
 class ChargeText : ZilchComponent

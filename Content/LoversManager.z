@@ -1,3 +1,6 @@
+//Author: Eli Miller
+//Purpose: Manages the state of the lovers.
+
 enum LoversState {ALIVE, MALE, FEMALE}
 
 class LoversManager : ZilchComponent

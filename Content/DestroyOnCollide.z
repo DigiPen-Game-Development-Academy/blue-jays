@@ -1,3 +1,6 @@
+//Author: Eli Miller
+//Purpose: Destroys this object on collision.
+
 class DestroyOnCollide : ZilchComponent
 {
     [Property] var Replacement : Archetype = null;
@@ -12,10 +15,9 @@ class DestroyOnCollide : ZilchComponent
         {
             this.Space.CreateAtPosition(this.Replacement, this.Owner.Transform.Translation);
         }
-        if (event.OtherObject!=this.Space.Globals.GetTarget(this.Owner.Transform.Translation) || event.OtherObject!=this.Space.FindObjectByName("Female"))
+        if (event.OtherObject != this.Space.Globals.GetTarget(this.Owner.Transform.Translation) || event.OtherObject != this.Space.FindObjectByName("Female"))
         {
-            
-        this.Owner.Destroy();
+            this.Owner.Destroy();
         }
     }
 }

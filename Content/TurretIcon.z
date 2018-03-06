@@ -1,3 +1,6 @@
+//Author: Eli Miller
+//Purpose: Initializes the turret icons.
+
 class TurretIcon : ZilchComponent
 {
     var Turret : Turret;

@@ -1,9 +1,12 @@
+//Author: Hunter Fosler
+//Purpose: AI for pigeons.
+
 class PigeonNPC : ZilchComponent
 {
-  [Property] var PaceSpeed: Real = 5.0;
-  [Property] var MaxMoveDistance: Real = 10.0;
-  [Property] var PaceDirection: Real3 = Real3(4.0, 1.0, 0.0);
-   var StartPosition: Real3 = Real3();
+    [Property] var PaceSpeed: Real = 5.0;
+    [Property] var MaxMoveDistance: Real = 10.0;
+    [Property] var PaceDirection: Real3 = Real3(4.0, 1.0, 0.0);
+    var StartPosition: Real3 = Real3();
 
     [Dependency]
     var Transform: Transform = null;
@@ -11,21 +14,14 @@ class PigeonNPC : ZilchComponent
     function Initialize(init : CogInitializer)
     {
         // We need to update the enemy's behavior every logic update
-        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-          this.StartPosition = this.Owner.Transform.Translation;
-    }
-
-    function OnLogicUpdate(event : UpdateEvent)
-    {
-        // Logic for pacing back and forth
-        this.PaceBackAndForth(event);
-        
+        Zero.Connect(this.Space, Events.LogicUpdate, this.PaceBackAndForth);
+        this.StartPosition = this.Owner.Transform.Translation;
     }
 
     function PaceBackAndForth(event: UpdateEvent)
     {
-         var displacement = this.Owner.Transform.Translation - this.StartPosition;
-         var distanceFromStart = Math.Length(displacement);
+        var displacement = this.Owner.Transform.Translation - this.StartPosition;
+        var distanceFromStart = Math.Length(displacement);
 
         // If we have travelled past our max distance
         if (distanceFromStart >= this.MaxMoveDistance)

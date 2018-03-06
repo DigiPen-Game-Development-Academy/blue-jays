@@ -1,4 +1,7 @@
-enum Menu {MAIN, CREDITS, LEVEL, CHAR_SELECT, ACHIEVEMENTS}
+//Author: Eli Miller
+//Purpose: Controls what the buttons do.
+
+enum Menu {MAIN, CREDITS, LEVEL, ACHIEVEMENTS}
 
 class ParticleToggleEvent : ZilchEvent
 {
@@ -23,10 +26,6 @@ class MenuController : ZilchComponent
         {
             this.Level();
         }
-        else if(this.Menu == Menu.CHAR_SELECT)
-        {
-            this.CharacterSelect();
-        }
         else if(this.Menu == Menu.ACHIEVEMENTS)
         {
             this.Achievements();
@@ -35,7 +34,7 @@ class MenuController : ZilchComponent
     
     function MainMenu()
     {
-        this.Space.FindObjectByName("StartGame").Button.ToCall = this.LoadSwords;
+        this.Space.FindObjectByName("StartGame").Button.ToCall = this.LoadFool;
         this.Space.FindObjectByName("Achievements").Button.ToCall = this.LoadAchievements;
         this.Space.FindObjectByName("Credits").Button.ToCall = this.LoadCredits;
         this.Space.FindObjectByName("Quit").Button.ToCall = this.GameSession.Quit;
@@ -53,13 +52,6 @@ class MenuController : ZilchComponent
         this.Space.FindObjectByName("Options").Button.ToCall = this.ToggleOptions;
         this.Space.FindObjectByName("Back").Button.ToCall = this.ToggleOptions;
         this.Space.FindObjectByName("DisableParticles").Button.ToCall = this.ToggleParticles;
-    }
-    
-    function CharacterSelect()
-    {
-        this.Space.FindObjectByName("Menu").Button.ToCall = this.LoadMenu;
-        this.Space.FindObjectByName("Swords").Button.ToCall = this.LoadSwords; 
-        this.Space.FindObjectByName("Wands").Button.ToCall = this.LoadWands;
     }
     
     function Achievements()
@@ -111,16 +103,9 @@ class MenuController : ZilchComponent
         this.Space.TimeSpace.TimeScale = 1;
     }
     
-    function LoadSwords()
+    function LoadFool()
     {
         this.Space.LoadLevel(Level.Find("Fool"));
-        this.Space.Globals.Suit = Suit.SWORDS;
-    }
-    
-    function LoadWands()
-    {
-        this.Space.LoadLevel(Level.Find("Fool"));
-        this.Space.Globals.Suit = Suit.WANDS;
     }
     
     function LoadAchievements()

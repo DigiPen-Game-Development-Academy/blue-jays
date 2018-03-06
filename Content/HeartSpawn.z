@@ -1,3 +1,6 @@
+//Author: Eli Miller
+//Purpose: Spawns heart pickups.
+
 class HeartSpawn : ZilchComponent
 {
     [Property] var Delay : Real = 5;

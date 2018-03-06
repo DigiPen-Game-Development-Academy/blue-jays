@@ -1,3 +1,6 @@
+//Author: Eli Miller
+//Purpose: Moves an object with the wind.
+
 class WindScript : ZilchComponent
 {
     [Property] var WindEffect : Real3 = Real3();
