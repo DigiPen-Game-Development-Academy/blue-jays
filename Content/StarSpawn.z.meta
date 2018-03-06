@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "StarSpawn",
-		uint64 ResourceId = 5a62cb9b94dd4e91,
-	},
-},
