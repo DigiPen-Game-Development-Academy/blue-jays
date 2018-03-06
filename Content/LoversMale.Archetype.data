@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-12, -3.25, 0],
+		Vec3 Translation = [-12, -4.25, 0],
 		Vec3 Scale = [2, 2, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -68,8 +68,8 @@ Cog =
 	},
 	BossShoot = 
 	{
-		float TimeBetweenShots = 1,
-		float ShootSpeed = 2,
+		float TimeBetweenShots = 2,
+		float ShootSpeed = 25,
 		string Projectile = "5a9173e075a148fa:Bomb",
 	},
 },
