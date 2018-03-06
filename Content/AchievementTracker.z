@@ -93,11 +93,11 @@ class Achievement
         }
         else if(ar == AchRequire.STAT_SPAWNS)
         {
-            str = "`str` Stationary Turrets Spawned";
+            str = "`str` Towers Spawned";
         }
         else if(ar == AchRequire.UNIQUE_SPAWNS)
         {
-            str = "`str` Unique Turrets Spawned";
+            str = "`str` Chariots Spawned";
         }
         else if(ar == AchRequire.TOTAL_RUNS)
         {
@@ -250,25 +250,25 @@ class AchievementTracker : ZilchComponent
             AchRequire.FOOL_BEATEN, 1, 100000, this, AchEvent.CHECK, SpriteSource.BronzeFool);
         Achievement("Encore!", "Beat the Fool 5 times.", "I'll take that as a yes.",
             AchRequire.FOOL_BEATEN, 5, 100000, this, AchEvent.CHECK, SpriteSource.SilverFool);
-        Achievement("Perfect Fool Run", "Beat the Fool without taking damage.", "What a fool!",
+        Achievement("Perfect Fool Run", "Beat the Fool with full health.", "What a fool!",
             AchRequire.HEALTH, 100, 100, this, AchEvent.BEAT_FOOL, SpriteSource.BeatTheFool);
         Achievement("Quick Show", "Beat the Fool in a minute.", "Hope you enjoyed the sh-",
             AchRequire.TIME, 0, 60, this, AchEvent.BEAT_FOOL, SpriteSource.Clock);
         Achievement("Not Fooling Around", "Beat the Fool in 30 seconds.", "Hope y-",
             AchRequire.TIME, 0, 30, this, AchEvent.BEAT_FOOL, SpriteSource.Clock);
-        Achievement("Stationary Spawner", "Spawn 5 stationary turrets.", "Someday you might land a hit...",
+        Achievement("Stationary Spawner", "Spawn 5 towers.", "Someday you might land a hit...",
             AchRequire.STAT_SPAWNS, 5, 100000, this, AchEvent.CHECK, SpriteSource.Towers);
-        Achievement("Stationary Master", "Spawn 25 stationary turrets.", "Did that 500 fate pay off?",
+        Achievement("Stationary Master", "Spawn 25 towers.", "Did that 500 fate pay off?",
             AchRequire.STAT_SPAWNS, 25, 100000, this, AchEvent.CHECK, SpriteSource.Towers);
-        Achievement("Unique Spawner", "Spawn 5 unique turrets.", "Look at it go!",
+        Achievement("Unique Spawner", "Spawn 5 chariots.", "Look at it go!",
             AchRequire.UNIQUE_SPAWNS, 5, 100000, this, AchEvent.CHECK, SpriteSource.Chariot);
-        Achievement("Unique Master", "Spawn 25 unique turrets.", "Never stops being satisfying.",
+        Achievement("Unique Master", "Spawn 25 chariots.", "Never stops being satisfying.",
             AchRequire.UNIQUE_SPAWNS, 25, 100000, this, AchEvent.CHECK, SpriteSource.Chariot);
         Achievement("Lovers Beaten", "Beat the Lovers.", "Don't you feel a bit guilty?",
             AchRequire.LOVERS_BEATEN, 1, 100000, this, AchEvent.CHECK, SpriteSource.Square);
         Achievement("All You Need Is Love", "Beat the Lovers 5 times.", "Ruthless.",
             AchRequire.LOVERS_BEATEN, 5, 100000, this, AchEvent.CHECK, SpriteSource.Square);
-        Achievement("Perfect Lovers Run", "Beat the Lovers without taking damage.", "Love is blind...",
+        Achievement("Perfect Lovers Run", "Beat the Lovers with full health.", "Love is blind...",
             AchRequire.HEALTH, 100, 100, this, AchEvent.BEAT_LOVERS, SpriteSource.Square);
         Achievement("One Minute In Heaven", "Beat the Lovers in a minute.", "It wasn't meant to last.",
             AchRequire.TIME, 0, 60, this, AchEvent.BEAT_LOVERS, SpriteSource.Clock);
