@@ -153,5 +153,23 @@ Cog =
 				},
 			},
 		},
+		ArchetypeInstance = 
+		{
+			string Name = "5ae54e4c56970a08:BetweenLevelUI",
+			LinkId = 
+			{
+				uint Id = 7,
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, 0, -39],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Named = 
+			{
+				string Name = "UI",
+			},
+		},
 	},
 },

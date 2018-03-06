@@ -2,16 +2,16 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "LoversAchievement",
-		uint64 ResourceId = 5a79c6770f653a25,
+		string Name = "FoolBorder",
+		uint64 ResourceId = 5ae545feff5c6fd2,
 		uint64 AtlasId = 5274cf95e4a661fd,
-		uint FrameSizeX = 61,
-		uint FrameSizeY = 61,
+		uint FrameSizeX = 164,
+		uint FrameSizeY = 164,
 		uint FrameCount = 1,
 		float FrameDelay = 0.0833333358,
-		float OriginX = 30,
-		float OriginY = 30,
-		float PixelsPerUnit = 64,
+		float OriginX = 82,
+		float OriginY = 82,
+		float PixelsPerUnit = 160,
 		bool Smoothing = false,
 		bool Looping = true,
 		Vec4 Slices = [0, 0, 0, 0],
