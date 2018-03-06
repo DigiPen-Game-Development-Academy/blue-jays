@@ -65,7 +65,13 @@ class MenuController : ZilchComponent
     function Achievements()
     {
         this.Space.FindObjectByName("Menu").Button.ToCall = this.LoadMenu;
-        this.Space.FindObjectByName("Reset").Button.ToCall = Zero.ObjectStore.ClearStore;
+        this.Space.FindObjectByName("Reset").Button.ToCall = this.ResetAchievements;
+    }
+    
+    function ResetAchievements()
+    {
+        Zero.ObjectStore.ClearStore();
+        this.Space.LoadLevel(Level.Achievements);
     }
     
     function Resume()

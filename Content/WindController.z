@@ -1,8 +1,17 @@
+class WindEvent : ZilchEvent
+{
+    var Name : String = "WindEvent";
+    var Wind : Real3 = Real3(0,0,0);
+}
+
 class WindController : ZilchComponent
 {
+    sends WindEvent : WindEvent;
     [Property] var WindChange : Real = 0.05;
     var Wind : Real3 = Real3();
     var Random : Random = Random();
+    var WindChangeTime : Real = 0.5;
+    var Timer : Real = 0;
     
     function Initialize(init : CogInitializer)
     {
@@ -11,8 +20,16 @@ class WindController : ZilchComponent
     
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.Wind = Real3(this.Random.BellCurve(this.Wind.X, 1, this.WindChange),
-                          this.Random.BellCurve(this.Wind.Y, 1, this.WindChange),
-                          this.Random.BellCurve(this.Wind.Z, 1, this.WindChange));
+        this.Timer += event.Dt;
+        if(this.Timer >= this.WindChangeTime)
+        {
+            this.Timer = 0;
+            var we = new WindEvent();
+            this.Wind = Real3(this.Random.BellCurve(this.Wind.X, 1, this.WindChange),
+                              this.Random.BellCurve(this.Wind.Y, 1, this.WindChange),
+                              this.Random.BellCurve(this.Wind.Z, 1, this.WindChange));
+            we.Wind = this.Wind;
+            this.Owner.DispatchEvent(Events.WindEvent, we);
+        }
     }
 }

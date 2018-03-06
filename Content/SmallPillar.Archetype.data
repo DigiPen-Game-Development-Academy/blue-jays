@@ -10,11 +10,11 @@ Cog =
 	},
 	Archetyped = 
 	{
-		string Name = "5a79e5dc5181ba27:Pillar",
+		string Name = "5ae5780d959d81ac:SmallPillar",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-12, -4.75, 0],
+		Vec3 Translation = [-6, -4.75, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -32,7 +32,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [1.5, 2.5, 0],
+				Vec3 Translation = [1.5, 0.5, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [1, 0, 0, -4.37113883e-08],
 			},
@@ -146,8 +146,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, 0, 0],
-				Vec3 Scale = [1, 1, 1],
+				Vec3 Translation = [0, -1, 0],
+				Vec3 Scale = [1, 0.666666687, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -265,7 +265,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-1.5, 2.5, 0],
+				Vec3 Translation = [-1.5, 0.5, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [1, 0, 0, -4.37113883e-08],
 			},

@@ -280,7 +280,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, 0.5, 0],
+				Vec3 Translation = [0, 1, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -581,7 +581,7 @@ Cog =
 		},
 		ArchetypeInstance = 
 		{
-			string Name = "5a79e5dc5181ba27:Pillar",
+			string Name = "5ae5780d959d81ac:SmallPillar",
 			LinkId = 
 			{
 				uint Id = 12,
@@ -599,7 +599,7 @@ Cog =
 		},
 		ArchetypeInstance = 
 		{
-			string Name = "5a79e5dc5181ba27:Pillar",
+			string Name = "5ae5780d959d81ac:SmallPillar",
 			LinkId = 
 			{
 				uint Id = 13,
