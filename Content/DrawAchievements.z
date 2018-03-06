@@ -17,6 +17,18 @@ class DrawAchievements : ZilchComponent
     
     function GetBorderSprite(ae : AchEvent) : SpriteSource
     {
-        return SpriteSource.LoversAchievement;
+        if(ae == AchEvent.BEAT_LOVERS)
+        {
+            return SpriteSource.LoversBorder;
+        }
+        else if(ae == AchEvent.WIN)
+        {
+            return SpriteSource.WinBorder;
+        }
+        else if(ae == AchEvent.BEAT_FOOL)
+        {
+            return SpriteSource.FoolBorder;
+        }
+        return SpriteSource.FoolBorder;
     }
 }

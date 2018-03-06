@@ -4,7 +4,7 @@ class DrawIcons : ZilchComponent
     {
         for (var i = 0; i < turrets.Count; i += 1)
         {
-            var icon = this.Space.CreateAtPosition(Archetype.TurretIcon,Real3(-16 + i * 3,8,-40));
+            var icon = this.Space.CreateAtPosition(Archetype.TurretIcon,Real3(-16 + i * 3,8,-39));
             icon.AttachTo(this.LevelSettings.CameraViewport.Camera);
             icon.TurretIcon.Init(turrets[i], i + 1);
         }
