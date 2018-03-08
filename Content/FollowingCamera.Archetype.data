@@ -33,7 +33,7 @@ Cog =
 		bool Active = true,
 		float Volume = 1,
 	},
-	CameraLogic = 
+	CameraForTutorial = 
 	{
 	},
 	Hierarchy = 

@@ -72,6 +72,6 @@ Cog =
 	},
 	DestroyTimer = 
 	{
-		float Timer = 10,
+		float Timer = 5,
 	},
 },
