@@ -12,7 +12,8 @@ class FateBar : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.Owner.Area.Size = Real2(1, (this.TP.Fate/this.TP.MaxFate));
-        
+        var tl = this.Owner.Transform.Translation;
+        tl.Y = 10 - this.TP.Fate/this.TP.MaxFate * this.Owner.Transform.Scale.Y;
+        this.Owner.Transform.Translation = tl;
     }
 }

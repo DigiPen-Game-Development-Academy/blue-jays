@@ -138,7 +138,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 24.3649769,
+			float Size = 22.0463448,
 		},
 		EditorCameraController = 
 		{
@@ -167,7 +167,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-12, -3.25, 0],
+			Vec3 Translation = [-12.1999998, -3.79999995, 0],
 			Vec3 Scale = [2, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -185,7 +185,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [12, -3.25, 0],
+			Vec3 Translation = [11.8000002, -3.79999995, 0],
 			Vec3 Scale = [2, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -864,7 +864,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-12, -4.75, 0],
+					Vec3 Translation = [-12, -5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -875,15 +875,15 @@ Level =
 			},
 			ArchetypeInstance = 
 			{
-				string Name = "5ae5780d959d81ac:SmallPillar",
+				string Name = "5a79e5dc5181ba27:Pillar",
 				LinkId = 
 				{
 					uint Id = 19,
 				},
 				Transform = 
 				{
-					Vec3 Translation = [6, -4.75, 0],
-					Vec3 Scale = [1, 1, 1],
+					Vec3 Translation = [6, -6.0999999, 0],
+					Vec3 Scale = [0.600000024, 0.600000024, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				Named = 
@@ -893,15 +893,15 @@ Level =
 			},
 			ArchetypeInstance = 
 			{
-				string Name = "5ae5780d959d81ac:SmallPillar",
+				string Name = "5a79e5dc5181ba27:Pillar",
 				LinkId = 
 				{
 					uint Id = 20,
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-6, -4.75, 0],
-					Vec3 Scale = [1, 1, 1],
+					Vec3 Translation = [-6, -6.0999999, 0],
+					Vec3 Scale = [0.600000024, 0.600000024, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				Named = 
@@ -918,7 +918,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [12, -4.75, 0],
+					Vec3 Translation = [12, -5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},

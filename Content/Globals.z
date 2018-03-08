@@ -1,14 +1,10 @@
 // Author: Eli Miller
 // Purpose: Easily accessible global variables that stay the same between levels.
-enum Suit {SWORDS, WANDS, COINS, CUPS}
-
 enum CursorColor {RED, WHITE, BLUE}
 
 class Globals : ZilchComponent
 {
     var Particles : Boolean = true;
-    
-    var Suit : Suit = Suit.SWORDS;
     
     var SavedStats : Cog;
     
@@ -23,17 +19,6 @@ class Globals : ZilchComponent
     
     var SwordsList : Array[Turret] = new Array[Turret]();
     
-    var KnightOfWands : Turret = Turret(TurretType.KNIGHT, Archetype.KnightOfWands,
-        "Knight of Wands", SpriteSource.Knight_swords, 10);
-    
-    var TheMagician : Turret = Turret(TurretType.STATIONARY, Archetype.TheMagician,
-        "The Magician", SpriteSource.Towers, 20);
-        
-    var TheStar : Turret = Turret(TurretType.UNIQUE, Archetype.TheStar,
-        "The Star", SpriteSource.Chariot, 25);
-    
-    var WandsList : Array[Turret] = new Array[Turret]();
-    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.GameSession, Events.GameRequestQuit, this.OnGameRequestQuit);
@@ -42,10 +27,6 @@ class Globals : ZilchComponent
         this.SwordsList.Add(this.KnightOfSwords);
         this.SwordsList.Add(this.TheTower);
         this.SwordsList.Add(this.TheChariot);
-        
-        this.WandsList.Add(this.KnightOfWands);
-        this.WandsList.Add(this.TheMagician);
-        this.WandsList.Add(this.TheStar);
     }
     
     function OnLevelStart(event : GameEvent)
@@ -97,26 +78,7 @@ class Globals : ZilchComponent
     
     function GetTurrets() : Array[Turret]
     {
-        if(this.Suit == Suit.SWORDS)
-        {
-            return this.SwordsList;
-        }
-        else if(this.Suit == Suit.WANDS)
-        {
-            return this.WandsList;
-        }
-        else if(this.Suit == Suit.COINS)
-        {
-            return this.SwordsList;
-        }
-        else if(this.Suit == Suit.CUPS)
-        {
-            return this.SwordsList;
-        }
-        else
-        {
-            return Array[Turret]();
-        }
+        return this.SwordsList;
     }
     
     function GetTarget(pos : Real3) : Cog

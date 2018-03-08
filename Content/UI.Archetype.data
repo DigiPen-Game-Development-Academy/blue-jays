@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 1],
+		Vec3 Translation = [0, 0, 0.5],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -51,7 +51,7 @@ Cog =
 				string Text = "Fate: 100/100",
 				TextAlign Align = Left,
 				float PixelsPerUnit = 128,
-				bool Smoothing = false,
+				bool Smoothing = true,
 			},
 			FateText = 
 			{
@@ -65,49 +65,12 @@ Cog =
 			},
 			Named = 
 			{
-				string Name = "FateText",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [20, 11.25, 0],
-				Vec3 Scale = [1, 1, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			SpriteText = 
-			{
-				bool Visible = false,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [0, 0, 0, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string FontName = "4e7bac697bec55c5:Verdana",
-				uint FontSize = 100,
-				string Text = "Timer",
-				TextAlign Align = Right,
-				float PixelsPerUnit = 128,
-				bool Smoothing = false,
-			},
-			TimerText = 
-			{
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 4,
-			},
-			Named = 
-			{
 				string Name = "FateBar",
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-16.3725853, 2.17931461, 0],
-				Vec3 Scale = [10, 20, 1],
+				Vec3 Translation = [-16.9102135, -14.4301729, 0],
+				Vec3 Scale = [10, 27, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -131,7 +94,7 @@ Cog =
 			Area = 
 			{
 				Vec2 Size = [1, 1],
-				Location Origin = Center,
+				Location Origin = BottomCenter,
 			},
 			FateBar = 
 			{
@@ -141,7 +104,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 5,
+				uint Id = 4,
 			},
 			Named = 
 			{
@@ -179,7 +142,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 6,
+				uint Id = 5,
 			},
 			Named = 
 			{
@@ -187,8 +150,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-18.6872025, 2.16048431, 0],
-				Vec3 Scale = [10, 20, 1],
+				Vec3 Translation = [-13.943984, 12.5964031, 0],
+				Vec3 Scale = [10, 27, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -212,7 +175,7 @@ Cog =
 			Area = 
 			{
 				Vec2 Size = [1, 1],
-				Location Origin = Center,
+				Location Origin = TopRight,
 			},
 			HealthBar = 
 			{
@@ -223,7 +186,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 7,
+				uint Id = 6,
 			},
 			Named = 
 			{
@@ -261,7 +224,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 8,
+				uint Id = 7,
 			},
 			Named = 
 			{
@@ -269,8 +232,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [19.045042, 2.17787075, 0],
-				Vec3 Scale = [10, 20, 1],
+				Vec3 Translation = [24.2032948, 12.5607338, 0],
+				Vec3 Scale = [10, 27, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -294,7 +257,7 @@ Cog =
 			Area = 
 			{
 				Vec2 Size = [1, 1],
-				Location Origin = Center,
+				Location Origin = TopRight,
 			},
 			HealthBar = 
 			{
@@ -305,7 +268,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 9,
+				uint Id = 8,
 			},
 			Named = 
 			{
@@ -332,7 +295,7 @@ Cog =
 				string Text = "Charge: 100%",
 				TextAlign Align = Left,
 				float PixelsPerUnit = 128,
-				bool Smoothing = false,
+				bool Smoothing = true,
 			},
 			ChargeText = 
 			{
@@ -342,7 +305,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 10,
+				uint Id = 9,
 			},
 			Named = 
 			{
@@ -350,8 +313,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [16.7415924, 2.21517754, 0],
-				Vec3 Scale = [10, 20, 1],
+				Vec3 Translation = [16.7415924, -14.4445562, 0],
+				Vec3 Scale = [10, 27, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -375,7 +338,7 @@ Cog =
 			Area = 
 			{
 				Vec2 Size = [1, 1],
-				Location Origin = Center,
+				Location Origin = BottomCenter,
 			},
 			ChargeBar = 
 			{
