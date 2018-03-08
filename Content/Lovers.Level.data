@@ -126,7 +126,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 50],
+			Vec3 Translation = [4.62479639, -5.49413538, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -138,7 +138,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 24.3649769,
+			float Size = 22.0463505,
 		},
 		EditorCameraController = 
 		{
@@ -146,7 +146,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0, 0, 0],
+			Vec3 LookTarget = [4.62479639, -5.49413538, 2.021564e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -158,40 +158,154 @@ Level =
 			bool Wireframe = false,
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "5a6dd50a3deebc98:LoversMale",
 		LinkId = 
 		{
 			uint Id = 4,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-12.1999998, -3.79999995, 0],
-			Vec3 Scale = [2, 2, 1],
-			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
 		{
 			string Name = "Male",
 		},
+		Archetyped = 
+		{
+			string Name = "5a6dd50a3deebc98:LoversMale",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-11.9470825, -3.8089354, 0.100000001],
+			Vec3 Scale = [0.764524341, 0.649116993, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a4004b5d168c742:MaleLover",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		RigidBody = 
+		{
+			bool Static = true,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "5a916d3ed1b57688:Boss",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		HP = 
+		{
+			float MaxHealth = 1000,
+		},
+		DamageOnColide = 
+		{
+			float Damage = 10,
+		},
+		BossShoot = 
+		{
+			float TimeBetweenShots = 3,
+			float ShootSpeed = 30,
+			string Projectile = "5a9173e075a148fa:Bomb",
+		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "5a6dd5773d1944a7:LoversFemale",
 		LinkId = 
 		{
 			uint Id = 5,
 		},
-		Transform = 
-		{
-			Vec3 Translation = [11.8000002, -3.79999995, 0],
-			Vec3 Scale = [2, 2, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
 		Named = 
 		{
 			string Name = "Female",
+		},
+		Archetyped = 
+		{
+			string Name = "5a6dd5773d1944a7:LoversFemale",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [11.6397276, -3.9467206, 0],
+			Vec3 Scale = [0.620631278, 0.632237494, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a400440d747c136:FemaleLover",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		RigidBody = 
+		{
+			bool Static = true,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "5a916d3ed1b57688:Boss",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		HP = 
+		{
+			float MaxHealth = 1000,
+		},
+		DamageOnColide = 
+		{
+			float Damage = 10,
+		},
+		BossShoot = 
+		{
+			float TimeBetweenShots = 2,
+			float ShootSpeed = 25,
+			string Projectile = "5a9173e075a148fa:Bomb",
 		},
 	},
 	ArchetypeInstance = 
