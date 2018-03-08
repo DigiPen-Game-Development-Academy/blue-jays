@@ -31,6 +31,8 @@ class Shoot : ZilchComponent
             
             //Reset our time
             this.TimeTillShoot = this.TimeBetweenShots;
+            
+            this.Space.SoundSpace.PlayCue(SoundCue.TowerShoot);
         
         }
     }

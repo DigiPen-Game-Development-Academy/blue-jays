@@ -37,20 +37,13 @@ class KnightOfSwords : ZilchComponent
         }
         var mod = -1;
         
-            
-        
         if (this.Owner.Transform.Translation.X < this.Target.Transform.Translation.X)
-        
         {
             mod = 1;
         }
       
         this.Vel = this.Speed * mod;
-        if(event.OtherObject.Name == "Boss")
-        {
-            this.Owner.Destroy();
-        }
-        if (event.OtherObject.Name == "Pigeon")
+        if(event.OtherObject == this.Target)
         {
             this.Owner.Destroy();
         }

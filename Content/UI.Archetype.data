@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0.5],
+		Vec3 Translation = [0, 0, 1],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -69,7 +69,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-16.9102135, -14.4301729, 0],
+				Vec3 Translation = [-17, -14.5, 0],
 				Vec3 Scale = [10, 27, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -112,7 +112,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-0.175696611, 11.2060766, 0],
+				Vec3 Translation = [0, 11.1999998, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -150,7 +150,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-13.943984, 12.5964031, 0],
+				Vec3 Translation = [-14, 12.5, 0],
 				Vec3 Scale = [10, 27, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -232,7 +232,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [24.2032948, 12.5607338, 0],
+				Vec3 Translation = [24, 12.5, 0],
 				Vec3 Scale = [10, 27, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -313,7 +313,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [16.7415924, -14.4445562, 0],
+				Vec3 Translation = [17, -14.5, 0],
 				Vec3 Scale = [10, 27, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},

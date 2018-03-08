@@ -15,6 +15,7 @@ class HP : ZilchComponent
     // Damages the entity
     function Damage(damage : Real)
     {
+        this.Space.SoundSpace.PlayCue(SoundCue.Damage);
         this.Health -= damage;
         if(this.Health <= 0)
         {

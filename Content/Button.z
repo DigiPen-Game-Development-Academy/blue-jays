@@ -32,6 +32,7 @@ class Button : ZilchComponent
                 this.Selected = true;
                 this.Transform.Scale *= this.ScaleFactor;
                 this.Space.Globals.ChangeCursor(CursorColor.BLUE);
+                this.Space.SoundSpace.PlayCue(SoundCue.Select);
             }
         }
         else if(this.Selected)

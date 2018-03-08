@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-12, -3.25, 0],
+		Vec3 Translation = [-12.1999998, -3.79999995, 0],
 		Vec3 Scale = [2, 2, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -38,7 +38,7 @@ Cog =
 	},
 	RigidBody = 
 	{
-		bool Static = false,
+		bool Static = true,
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,

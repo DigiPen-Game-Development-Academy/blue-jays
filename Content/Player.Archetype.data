@@ -62,7 +62,7 @@ Cog =
 	{
 		float Speed = 10,
 		float Acceleration = 5,
-		float JumpHeight = 400,
+		float JumpHeight = 1200,
 	},
 	TurretPlace = 
 	{

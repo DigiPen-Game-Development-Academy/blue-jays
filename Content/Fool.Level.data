@@ -165,12 +165,19 @@ Level =
 			string Name = "Camera",
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "5a08fb786d4f3f80:Player",
 		LinkId = 
 		{
 			uint Id = 4,
+		},
+		Named = 
+		{
+			string Name = "Player",
+		},
+		Archetyped = 
+		{
+			string Name = "5a08fb786d4f3f80:Player",
 		},
 		Transform = 
 		{
@@ -178,9 +185,68 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		Sprite = 
 		{
-			string Name = "Player",
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a916408338446d3:Swords",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "5a1cee2c4a245b06:NoBounce",
+			string SerializedGroupName = "5a911294c1ded749:Player",
+			Vec3 Offset = [0, -0.100000001, 0],
+			Vec3 Size = [0.375, 0.800000012, 0.5],
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = true,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		PlayerController = 
+		{
+			float Speed = 10,
+			float Acceleration = 5,
+			float JumpHeight = 1200,
+		},
+		TurretPlace = 
+		{
+			float FateRate = 2,
+			float MaxFate = 100,
+			float ChariotCooldownTime = 10,
+			float CursorUpdateTime = 1,
+		},
+		Contact = 
+		{
+		},
+		HP = 
+		{
+			float MaxHealth = 100,
+		},
+		Hierarchy = 
+		{
 		},
 	},
 	ArchetypeInstance = 

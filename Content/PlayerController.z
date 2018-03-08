@@ -12,6 +12,7 @@ class PlayerController : ZilchComponent
     var JumpReady : Boolean = false;
     var Stunned : Boolean = false;
     var ChariotCoolDown : Boolean = false;
+    var JumpTimer : Real = 0;
     
     function Initialize(init : CogInitializer)
     {
@@ -22,6 +23,7 @@ class PlayerController : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
         var vel = 0;
+        this.JumpTimer += event.Dt;
         if(Zero.Keyboard.KeyIsDown(Keys.D))
         {
             vel += 1;
@@ -58,8 +60,10 @@ class PlayerController : ZilchComponent
         this.RigidBody.Velocity = Math.Lerp(this.RigidBody.Velocity,target,this.Acceleration * event.Dt);
         if(Zero.Keyboard.KeyIsDown(Keys.Space))
         {
-            if(this.JumpReady)
+            if(this.JumpReady && this.JumpTimer >= 0.15)
             {
+                this.JumpTimer = 0;
+                this.Space.SoundSpace.PlayCue(SoundCue.Jump);
                 this.RigidBody.ApplyForce(Real3(0,1,0) * this.JumpHeight);
             }
         }
