@@ -99,6 +99,11 @@ Cog =
 				Vec2 Size = [2, 1],
 				Location Origin = Center,
 			},
+			PigeonSpawner = 
+			{
+				string WhatToSpawn = "5a6ea1f2412a5c3b:Pigeon",
+				float SpawnTime = 5,
+			},
 		},
 		Cog = 
 		{
@@ -472,11 +477,6 @@ Cog =
 				bool PointForce = false,
 				bool Buoyancy = false,
 				bool Custom = false,
-			},
-			PigeonSpawner = 
-			{
-				string WhatToSpawn = "5a6ea1f2412a5c3b:Pigeon",
-				float SpawnTime = 5,
 			},
 		},
 		Cog = 
