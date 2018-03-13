@@ -107,7 +107,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.6797688, -2.4617362, 50],
+			Vec3 Translation = [-12.1567564, 0.785813153, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -119,7 +119,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 74.0819168,
+			float Size = 33.2871437,
 		},
 		EditorCameraController = 
 		{
@@ -127,7 +127,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-3.6797688, -2.4617362, -6.51534435e-07],
+			Vec3 LookTarget = [-12.1567564, 0.785813153, -1.02207503e-06],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -144,7 +144,7 @@ Level =
 		string Name = "5ae5687481faf5cb:FollowingCamera2",
 		LinkId = 
 		{
-			uint Id = 4,
+			uint Id = 2,
 		},
 		Transform = 
 		{
@@ -162,7 +162,7 @@ Level =
 		string Name = "5a08fb786d4f3f80:Player",
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 4,
 		},
 		Transform = 
 		{
@@ -180,7 +180,7 @@ Level =
 		string Name = "5ae56d52432b46ba:LoversAfterLevel",
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 5,
 		},
 		Transform = 
 		{
@@ -191,6 +191,111 @@ Level =
 		Named = 
 		{
 			string Name = "Level",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 6,
+		},
+		Named = 
+		{
+			string Name = "LoverstoDeath1",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-32.2185249, 2.34020662, -0.100000001],
+			Vec3 Scale = [0.699999988, 0.629999995, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a498d541da783c6:LoverstoDeath1",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 7,
+		},
+		Named = 
+		{
+			string Name = "LovertoDeath2",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [3.14151001, 2.2341907, -0.100000001],
+			Vec3 Scale = [0.699999988, 0.629999995, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a498d5c1e5450e8:LovertoDeath2",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 8,
+		},
+		Named = 
+		{
+			string Name = "LovertoDeath3",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [34.2004738, 2.37175059, -0.100000001],
+			Vec3 Scale = [0.603839874, 0.629999995, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a498d4218efc0ba:LovertoDeath3",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
 		},
 	},
 },
