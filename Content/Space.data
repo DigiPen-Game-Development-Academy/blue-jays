@@ -56,11 +56,4 @@ Space =
 	Timer = 
 	{
 	},
-	PersistentSound = 
-	{
-		string BackgroundMenuMusic = "5a49a0e1c6a4504a:Song2",
-		string BackgroundGameMusic = "5a49a3dcfdeda9f9:Song5",
-		string BackgroundMusicSpaceArch = "",
-		string MusicLevel = "5a498b84873f1a89:MusicLevel",
-	},
 },
