@@ -19,25 +19,22 @@ class Shoot : ZilchComponent
         //couting down timer
         this.TimeTillShoot -= event.Dt;
         //check if we can shoot
-        
-        if(this.Space.Globals.GetTarget(this.Owner.Transform.Translation)  != null)
+        if (this.TimeTillShoot <= 0)
         {
-            if (this.TimeTillShoot <= 0)
-            {
-                var vel = (this.Space.Globals.GetTarget(this.Owner.Transform.Translation).Transform.Translation - this.Owner.Transform.Translation) * this.ShootSpeed;
-               
-                //Create the bullet
-                var arrow = this.Space.CreateAtPosition(this.Projectile, this.Owner.Transform.WorldTranslation + vel / 100);
-                
-                //Launch the bullet
-                arrow.RigidBody.Velocity = vel;
-                
-                //Reset our time
-                this.TimeTillShoot = this.TimeBetweenShots;
-                this.Space.SoundSpace.PlayCue(SoundCue.TowerShoot);
-                
+            var vel = (this.Space.Globals.GetTarget(this.Owner.Transform.Translation).Transform.Translation - this.Owner.Transform.Translation) * this.ShootSpeed;
+            
+           
+            //Create the bullet
+            var arrow = this.Space.CreateAtPosition(this.Projectile, this.Owner.Transform.WorldTranslation + vel / 100);
+            
+            //Launch the bullet
+            arrow.RigidBody.Velocity = vel;
+            
+            //Reset our time
+            this.TimeTillShoot = this.TimeBetweenShots;
+            
+            this.Space.SoundSpace.PlayCue(SoundCue.TowerShoot);
         
-            }
         }
     }
 }
