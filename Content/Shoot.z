@@ -22,6 +22,7 @@ class Shoot : ZilchComponent
         if (this.TimeTillShoot <= 0)
         {
             var vel = (this.Space.Globals.GetTarget(this.Owner.Transform.Translation).Transform.Translation - this.Owner.Transform.Translation) * this.ShootSpeed;
+            
            
             //Create the bullet
             var arrow = this.Space.CreateAtPosition(this.Projectile, this.Owner.Transform.WorldTranslation + vel / 100);
