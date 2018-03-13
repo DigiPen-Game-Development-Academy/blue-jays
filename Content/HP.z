@@ -29,7 +29,7 @@ class HP : ZilchComponent
             else if(this.Owner.ArchetypeName == "Fool")
             {
                 this.Space.Globals.SavedStats.SavedStats.FoolsBeaten += 1;
-                this.Space.LoadLevel(Level.Lovers);
+                this.Space.LoadLevel(Level.FoolAfterLevel);
             }
             else if(this.Owner.ArchetypeName == "Death")
             {
