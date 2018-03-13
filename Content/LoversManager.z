@@ -36,7 +36,7 @@ class LoversManager : ZilchComponent
             if(this.Female == null)
             {
                 this.Space.Globals.SavedStats.SavedStats.LoversBeaten += 1;
-                this.Space.LoadLevel(Level.Death);
+                this.Space.LoadLevel(Level.LoversAfterLevel);
             }
         }
         else if(this.State == LoversState.MALE)
