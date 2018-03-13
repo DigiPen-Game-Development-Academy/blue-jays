@@ -129,7 +129,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4.23837614, -3.12451077, 49.9990005],
+			Vec3 Translation = [-3.04001951, -1.09444213, 49.9990005],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -141,7 +141,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 44.9329758,
+			float Size = 20.1896992,
 		},
 		EditorCameraController = 
 		{
@@ -149,7 +149,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [4.23837614, -3.12451077, -0.000998910749],
+			Vec3 LookTarget = [-3.04001951, -1.09444213, -0.000999650918],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -893,11 +893,6 @@ Level =
 				{
 					Vec2 Size = [2, 1],
 					Location Origin = Center,
-				},
-				PigeonSpawner = 
-				{
-					string WhatToSpawn = "5a6ea1f2412a5c3b:Pigeon",
-					float SpawnTime = 5,
 				},
 			},
 			Cog = 
@@ -3184,6 +3179,11 @@ Level =
 			bool AnimationActive = true,
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
+		},
+		PigeonSpawner = 
+		{
+			string WhatToSpawn = "5a6ea1f2412a5c3b:Pigeon",
+			float SpawnTime = 5,
 		},
 	},
 	Cog = 
