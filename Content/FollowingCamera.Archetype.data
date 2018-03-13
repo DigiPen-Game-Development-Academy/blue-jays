@@ -47,7 +47,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, 37.8626404, -39],
+				Vec3 Translation = [0, 0, -39],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -56,101 +56,22 @@ Cog =
 				string Name = "OptionsOverlay",
 			},
 		},
-		Cog = 
+		ArchetypeInstance = 
 		{
+			string Name = "5a026066ef8b66c0:PauseOverlay",
 			LinkId = 
 			{
 				uint Id = 3,
 			},
-			Named = 
-			{
-				string Name = "PauseOverlay",
-			},
-			Archetyped = 
-			{
-				string Name = "5a026066ef8b66c0:PauseOverlay",
-			},
 			Transform = 
 			{
-				Vec3 Translation = [0, 37.0879135, -39],
+				Vec3 Translation = [0, 0, -39],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
-			OverlayToggle = 
+			Named = 
 			{
-				Vec2 ButtonSize = [5, 1],
-			},
-			Hierarchy = 
-			{
-				ArchetypeInstance = 
-				{
-					string Name = "5a02651333da9589:MenuButton",
-					LinkId = 
-					{
-						uint Id = 4,
-					},
-					Transform = 
-					{
-						Vec3 Translation = [0, -3, 0],
-						Vec3 Scale = [1, 1, 1],
-						Quat Rotation = [0, 0, 0, 1],
-					},
-					Area = 
-					{
-						Vec2 Size = [5, 1],
-						Location Origin = Center,
-					},
-					Named = 
-					{
-						string Name = "Menu",
-					},
-				},
-				ArchetypeInstance = 
-				{
-					string Name = "5a02608ee5a149c3:OptionsButton",
-					LinkId = 
-					{
-						uint Id = 5,
-					},
-					Transform = 
-					{
-						Vec3 Translation = [0, 0, 0],
-						Vec3 Scale = [1, 1, 1],
-						Quat Rotation = [0, 0, 0, 1],
-					},
-					Area = 
-					{
-						Vec2 Size = [5, 1],
-						Location Origin = Center,
-					},
-					Named = 
-					{
-						string Name = "Options",
-					},
-				},
-				ArchetypeInstance = 
-				{
-					string Name = "5a0260b9da6b9ca3:ResumeButton",
-					LinkId = 
-					{
-						uint Id = 6,
-					},
-					Transform = 
-					{
-						Vec3 Translation = [0, 3, 0],
-						Vec3 Scale = [1, 1, 1],
-						Quat Rotation = [0, 0, 0, 1],
-					},
-					Area = 
-					{
-						Vec2 Size = [5, 1],
-						Location Origin = Center,
-					},
-					Named = 
-					{
-						string Name = "Resume",
-					},
-				},
+				string Name = "PauseOverlay",
 			},
 		},
 		ArchetypeInstance = 
@@ -158,7 +79,7 @@ Cog =
 			string Name = "5ae54e4c56970a08:BetweenLevelUI",
 			LinkId = 
 			{
-				uint Id = 7,
+				uint Id = 4,
 			},
 			Transform = 
 			{

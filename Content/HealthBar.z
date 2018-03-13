@@ -22,7 +22,9 @@ class HealthBar : ZilchComponent
     {
         if(this.HP != null)
         {
-            this.Owner.Area.Size = Real2(1,(-this.HP.Health/-this.HP.MaxHealth));
+            var tl = this.Owner.Transform.Translation;
+            tl.Y = 35 - this.HP.Health/this.HP.MaxHealth * (this.Owner.Transform.Scale.Y * 0.8);
+            this.Owner.Transform.Translation = tl;
         }
     }
 }
