@@ -115,7 +115,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.17995334, -8.29941368, 50],
+			Vec3 Translation = [0.693316996, -2.77261615, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -127,7 +127,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 25.3050804,
+			float Size = 41.7210045,
 		},
 		EditorCameraController = 
 		{
@@ -135,7 +135,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.17995334, -8.29941368, 5.15772811e-08],
+			Vec3 LookTarget = [0.693316996, -2.77261615, 3.03057348e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1375,9 +1375,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -4.5, 0],
-			Vec3 Scale = [1, 1, 0.936515927],
-			Quat Rotation = [0, 0, 0, 1],
+			Vec3 Translation = [-0.139038801, -2.62297463, 0],
+			Vec3 Scale = [2.9096396, 3.56378627, 0.936515927],
+			Quat Rotation = [0, 0, -0.0437288173, 0.999043465],
 		},
 		Sprite = 
 		{
@@ -1389,7 +1389,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a4650955facf1ae:Death_crow",
+			string SpriteSource = "5a49b70cef7dba78:DeathSpriteAnimation",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -1408,8 +1408,8 @@ Level =
 			bool Seamless = true,
 			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 			string SerializedGroupName = "5a916d3ed1b57688:Boss",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.5, 0.5, 0.5],
+			Vec3 Offset = [0.200000003, -0.200000003, 0],
+			Vec3 Size = [1.5, 1.875, 0.5],
 		},
 		RigidBody = 
 		{
@@ -1549,6 +1549,41 @@ Level =
 		Named = 
 		{
 			string Name = "PauseOverlay",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 33,
+		},
+		Named = 
+		{
+			string Name = "DeathBG",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.0602506399, -0.497281313, -0.100000001],
+			Vec3 Scale = [1.89999998, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a49b983c29d9b83:DeathBG",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
 		},
 	},
 },

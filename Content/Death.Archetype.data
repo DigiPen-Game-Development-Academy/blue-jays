@@ -14,9 +14,9 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, -5.05689716, 0],
-		Vec3 Scale = [10, 8, 1],
-		Quat Rotation = [0, 0, 0, 1],
+		Vec3 Translation = [-0.139038801, -2.62297463, 0],
+		Vec3 Scale = [2.9096396, 3.56378627, 0.936515927],
+		Quat Rotation = [0, 0, -0.0437288173, 0.999043465],
 	},
 	Sprite = 
 	{
@@ -24,11 +24,11 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [0, 0, 0, 1],
+		Vec4 Color = [1, 1, 1, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5275aa4d802dd6dc:Square",
+		string SpriteSource = "5a49b70cef7dba78:DeathSpriteAnimation",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -73,7 +73,6 @@ Cog =
 	DeathsMissile = 
 	{
 		float BetweenShots = 5,
-		Vec3 Direction = [0, 0, 0],
 	},
 	Hierarchy = 
 	{
