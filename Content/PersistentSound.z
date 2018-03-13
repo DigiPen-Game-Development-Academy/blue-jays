@@ -34,7 +34,7 @@ class PersistentSound : ZilchComponent
 function OnLevelStarted(event : GameEvent)
 {
   // Check to see if we're in the game level
-  if(event.LevelName == "Fool")
+  if(event.LevelName == "MainMenu")
   {
     // If the space for the Menu Music exists...
     if(this.BackgroundMenuMusicSpace != null)
@@ -60,7 +60,7 @@ function OnLevelStarted(event : GameEvent)
     // Play the background game music cue from the sound space
     this.BackgroundGameMusicSpace.SoundSpace.PlayCue(this.BackgroundGameMusic);
   }
-   else if(event.LevelName == "Level")
+   else if(event.LevelName == "Fool")
     {
       // If the space for the Game music exists...
       if(this.BackgroundGameMusicSpace != null)

@@ -6,11 +6,7 @@ Space =
 	},
 	Named = 
 	{
-		string Name = "Space",
-	},
-	Archetyped = 
-	{
-		string Name = "554cea0f94af6dc4:Space",
+		string Name = "MusicSpace",
 	},
 	TimeSpace = 
 	{

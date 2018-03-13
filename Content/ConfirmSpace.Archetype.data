@@ -6,11 +6,11 @@ Space =
 	},
 	Named = 
 	{
-		string Name = "Space",
+		string Name = "ConfirmSpace",
 	},
 	Archetyped = 
 	{
-		string Name = "554cea0f94af6dc4:Space",
+		string Name = "5a498ac9b42fe46d:ConfirmSpace",
 	},
 	TimeSpace = 
 	{
@@ -60,7 +60,7 @@ Space =
 	{
 		string BackgroundMenuMusic = "5a49a0e1c6a4504a:Song2",
 		string BackgroundGameMusic = "5a49a3dcfdeda9f9:Song5",
-		string BackgroundMusicSpaceArch = "",
+		string BackgroundMusicSpaceArch = "5a498ae4b394c676:MusicSpace",
 		string MusicLevel = "5a498b84873f1a89:MusicLevel",
 	},
 },
