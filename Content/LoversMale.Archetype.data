@@ -14,8 +14,8 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
-		Vec3 Scale = [2, 2, 1],
+		Vec3 Translation = [-11.8493109, -3.80866742, 0.100000001],
+		Vec3 Scale = [0.721045136, 0.649116993, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -70,6 +70,6 @@ Cog =
 	{
 		float TimeBetweenShots = 3,
 		float ShootSpeed = 30,
-		string Projectile = "5a9173e075a148fa:Bomb",
+		string Projectile = "5a49ac8fbdef8c9d:LoversRose",
 	},
 },
