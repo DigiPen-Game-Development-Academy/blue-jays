@@ -8,9 +8,13 @@ Cog =
 	{
 		string Name = "UI",
 	},
+	Archetyped = 
+	{
+		string Name = "5ae54e4c56970a08:BetweenLevelUI",
+	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [0, 0, -39],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -47,7 +51,7 @@ Cog =
 				string Text = "Fate: 100/100",
 				TextAlign Align = Left,
 				float PixelsPerUnit = 128,
-				bool Smoothing = false,
+				bool Smoothing = true,
 			},
 			FateText = 
 			{
@@ -61,32 +65,38 @@ Cog =
 			},
 			Named = 
 			{
-				string Name = "FateText",
+				string Name = "FateBar",
 			},
 			Transform = 
 			{
-				Vec3 Translation = [20, 11.25, 0],
-				Vec3 Scale = [1, 1, 1],
+				Vec3 Translation = [-17, -14.5, 0],
+				Vec3 Scale = [10, 27, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
-			SpriteText = 
+			Sprite = 
 			{
-				bool Visible = false,
+				bool Visible = true,
 				bool VisibilityCulling = true,
 				bool VisibilityEvents = true,
 				bool CastShadows = false,
-				Vec4 Color = [0, 0, 0, 1],
+				Vec4 Color = [1, 1, 1, 1],
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string FontName = "4e7bac697bec55c5:Verdana",
-				uint FontSize = 100,
-				string Text = "Timer",
-				TextAlign Align = Right,
-				float PixelsPerUnit = 128,
-				bool Smoothing = false,
+				string SpriteSource = "5ae3c467465ab7fb:FateBanner",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
 			},
-			TimerText = 
+			Area = 
+			{
+				Vec2 Size = [1, 1],
+				Location Origin = BottomCenter,
+			},
+			FateBar = 
 			{
 			},
 		},
@@ -98,54 +108,11 @@ Cog =
 			},
 			Named = 
 			{
-				string Name = "FateBar",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [0, 10.75, 0],
-				Vec3 Scale = [20, 1, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [0, 0, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5275aa4d802dd6dc:Square",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-			},
-			Area = 
-			{
-				Vec2 Size = [1, 1],
-				Location Origin = CenterLeft,
-			},
-			FateBar = 
-			{
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 5,
-			},
-			Named = 
-			{
 				string Name = "HealthText",
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, 11.25, 0],
+				Vec3 Translation = [0, 11.1999998, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -175,7 +142,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 6,
+				uint Id = 5,
 			},
 			Named = 
 			{
@@ -183,8 +150,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, 10.75, 0],
-				Vec3 Scale = [20, 1, 1],
+				Vec3 Translation = [-14, 12.5, 0],
+				Vec3 Scale = [10, 27, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -193,11 +160,11 @@ Cog =
 				bool VisibilityCulling = true,
 				bool VisibilityEvents = true,
 				bool CastShadows = false,
-				Vec4 Color = [1, 0, 0, 1],
+				Vec4 Color = [1, 1, 1, 1],
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5275aa4d802dd6dc:Square",
+				string SpriteSource = "5ae3d0bf63012639:HealthBanner",
 				bool RenderMask = false,
 				bool FlipX = false,
 				bool FlipY = false,
@@ -208,7 +175,7 @@ Cog =
 			Area = 
 			{
 				Vec2 Size = [1, 1],
-				Location Origin = CenterRight,
+				Location Origin = TopRight,
 			},
 			HealthBar = 
 			{
