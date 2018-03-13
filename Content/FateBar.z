@@ -13,7 +13,7 @@ class FateBar : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
         var tl = this.Owner.Transform.Translation;
-        tl.Y = 10 - this.TP.Fate/this.TP.MaxFate * this.Owner.Transform.Scale.Y;
+        tl.Y = 9 - this.TP.Fate/this.TP.MaxFate * (this.Owner.Transform.Scale.Y * 0.8);
         this.Owner.Transform.Translation = tl;
     }
 }
