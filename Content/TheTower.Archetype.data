@@ -62,6 +62,11 @@ Cog =
 	{
 		float TimeBetweenShots = 2,
 		float ShootSpeed = 2,
+		string Projectile = "5a11aeda3a97088d:Arrow",
+	},
+	DestroyTimer = 
+	{
+		float Timer = 12,
 	},
 	Hierarchy = 
 	{
