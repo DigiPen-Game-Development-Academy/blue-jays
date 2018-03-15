@@ -184,7 +184,7 @@ Level =
 		string Name = "5a6df7d6e02085d5:FollowingCamera",
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 2,
 		},
 		Transform = 
 		{
@@ -202,7 +202,7 @@ Level =
 		string Name = "5afe76de417f83a2:RaftersLevel",
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 6,
 		},
 		Transform = 
 		{
@@ -219,7 +219,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 8,
+			uint Id = 7,
 		},
 		Named = 
 		{
