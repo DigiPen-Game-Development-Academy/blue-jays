@@ -15,7 +15,7 @@ class DeathsAttack : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
         this.DestroyCounter += event.Dt;
-        
+        this.Space.FindObjectByName("ChargeBar").ChargeBar.ChargeUpdate(this.DestroyCounter/this.DestroyCooldown);
         if (this.DestroyCounter >= this.DestroyCooldown)
         {
             var turret = this.Space.FindObjectByName("Turret");
