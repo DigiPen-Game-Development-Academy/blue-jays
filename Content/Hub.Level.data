@@ -91,9 +91,6 @@ Level =
 			int HilightInterval = 10,
 			bool FollowEditorCamera = false,
 		},
-		DrawIcons = 
-		{
-		},
 		MenuController = 
 		{
 			Enum Menu = LEVEL,
@@ -123,7 +120,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 16.3323498,
+			float Size = 12.0993061,
 		},
 		EditorCameraController = 
 		{
@@ -147,7 +144,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 4,
+			uint Id = 2,
 		},
 		Named = 
 		{
@@ -188,11 +185,11 @@ Level =
 				string Name = "5a026066ef8b66c0:PauseOverlay",
 				LinkId = 
 				{
-					uint Id = 5,
+					uint Id = 4,
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 0, -40],
+					Vec3 Translation = [0, 0, -39],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -206,7 +203,7 @@ Level =
 				string Name = "5a019c947ab2b196:OptionsOverlay",
 				LinkId = 
 				{
-					uint Id = 6,
+					uint Id = 5,
 				},
 				Transform = 
 				{
@@ -223,7 +220,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 7,
+					uint Id = 6,
 				},
 				Named = 
 				{
@@ -245,7 +242,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 8,
+							uint Id = 7,
 						},
 						Named = 
 						{
@@ -253,7 +250,7 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [-7, 0, 0],
+							Vec3 Translation = [-7, 0.5, 0],
 							Vec3 Scale = [5, 10, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
@@ -288,7 +285,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 9,
+							uint Id = 8,
 						},
 						Named = 
 						{
@@ -296,7 +293,7 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [-8, 0, 0],
+							Vec3 Translation = [-8, 0.5, 0],
 							Vec3 Scale = [5, 10, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
@@ -335,7 +332,7 @@ Level =
 								bool UpdatePathOnCogChange = true,
 								bool UpdateCogOnInitialize = true,
 								bool ResolvedNullErrorOccurred = false,
-								uint ResolvedCog = 10,
+								uint ResolvedCog = 9,
 								CogPathPreference PathPreference0 = CogRelative,
 								CogPathPreference PathPreference1 = SpaceRelative,
 								CogPathPreference PathPreference2 = Absolute,
@@ -346,7 +343,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 11,
+							uint Id = 10,
 						},
 						Named = 
 						{
@@ -354,7 +351,7 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [8, 0, 0],
+							Vec3 Translation = [8, 0.5, 0],
 							Vec3 Scale = [5, 10, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
@@ -393,7 +390,7 @@ Level =
 								bool UpdatePathOnCogChange = true,
 								bool UpdateCogOnInitialize = true,
 								bool ResolvedNullErrorOccurred = false,
-								uint ResolvedCog = 10,
+								uint ResolvedCog = 9,
 								CogPathPreference PathPreference0 = CogRelative,
 								CogPathPreference PathPreference1 = SpaceRelative,
 								CogPathPreference PathPreference2 = Absolute,
@@ -402,13 +399,118 @@ Level =
 					},
 				},
 			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 11,
+				},
+				Named = 
+				{
+					string Name = "KnightCard",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-6, 4, -38.5],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a62e54dde3dd5f3:TowerTarot",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 12,
+				},
+				Named = 
+				{
+					string Name = "TowerCard",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-5, 4, -38.5],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 0.600000024],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a62e54dde3dd5f3:TowerTarot",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 13,
+				},
+				Named = 
+				{
+					string Name = "ChariotCard",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-4, 4, -38.5],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 0.600000024],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5ad17530f536d9fe:ChariotTarot",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+			},
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 12,
+			uint Id = 14,
 		},
 		Named = 
 		{
@@ -449,7 +551,7 @@ Level =
 		string Name = "5a08fb786d4f3f80:Player",
 		LinkId = 
 		{
-			uint Id = 10,
+			uint Id = 9,
 		},
 		Transform = 
 		{

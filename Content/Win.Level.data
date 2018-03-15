@@ -142,10 +142,10 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5a08fb6c68225264:LevelCamera",
+		string Name = "5ad177c63a1c31b4:MenuCamera",
 		LinkId = 
 		{
-			uint Id = 2,
+			uint Id = 4,
 		},
 		Transform = 
 		{
@@ -162,7 +162,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 4,
+			uint Id = 5,
 		},
 		Named = 
 		{
@@ -197,7 +197,7 @@ Level =
 		string Name = "5a02651333da9589:MenuButton",
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 6,
 		},
 		Transform = 
 		{

@@ -2,8 +2,8 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "TowerTarot",
-		uint64 ResourceId = 5a62e54dde3dd5f3,
+		string Name = "ChariotTarot",
+		uint64 ResourceId = 5ad17530f536d9fe,
 		uint64 AtlasId = 5274cf95e4a661fd,
 		uint FrameSizeX = 550,
 		uint FrameSizeY = 950,

@@ -2,8 +2,8 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "TurretIcon",
-		uint64 ResourceId = 5a8b9e9de3846054,
+		string Name = "MenuCamera",
+		uint64 ResourceId = 5ad177c63a1c31b4,
 		string LoaderType = "Cog",
 		uint Version = 0,
 		bool ShowInEditor = true,

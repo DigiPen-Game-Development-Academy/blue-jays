@@ -120,7 +120,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 24.428051,
+			float Size = 29.836483,
 		},
 		EditorCameraController = 
 		{
@@ -142,7 +142,7 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5a08fb6c68225264:LevelCamera",
+		string Name = "5ad177c63a1c31b4:MenuCamera",
 		LinkId = 
 		{
 			uint Id = 2,
@@ -167,7 +167,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 3.5, 0],
+			Vec3 Translation = [0, 3, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -190,7 +190,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 1, 0],
+			Vec3 Translation = [0, 0.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -213,7 +213,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -1.5, 0],
+			Vec3 Translation = [0, -2, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -236,7 +236,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -4, 0],
+			Vec3 Translation = [0, -4.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -262,7 +262,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.0335560441, 6.61033773, 0],
+			Vec3 Translation = [0, 6.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -293,11 +293,11 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Banner",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [8.52297497, -0.201330662, 0],
+			Vec3 Translation = [8.5, 0.5, 0],
 			Vec3 Scale = [1.53688049, 2.41875434, 1.53688049],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -328,11 +328,11 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Banner",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-3.0535059, -10.2342777, 0],
+			Vec3 Translation = [-3, -10, 0],
 			Vec3 Scale = [2.82613039, 4.44778585, 2.82613039],
 			Quat Rotation = [0, 0, 0, 1],
 		},

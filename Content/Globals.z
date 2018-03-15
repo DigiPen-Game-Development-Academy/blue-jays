@@ -9,13 +9,13 @@ class Globals : ZilchComponent
     var SavedStats : Cog;
     
     var KnightOfSwords : Turret = Turret(TurretType.KNIGHT, Archetype.KnightOfSwords,
-        "Knight of Swords", SpriteSource.Knight_swords, 10);
+        "Knight", SpriteSource.Knight_swords, 10);
     
     var TheTower : Turret = Turret(TurretType.STATIONARY, Archetype.TheTower,
-        "The Tower", SpriteSource.Towers, 20);
+        "Tower", SpriteSource.Towers, 20);
         
     var TheChariot : Turret = Turret(TurretType.UNIQUE, Archetype.TheChariot,
-        "The Chariot", SpriteSource.Chariot, 25);
+        "Chariot", SpriteSource.Chariot, 25);
     
     var SwordsList : Array[Turret] = new Array[Turret]();
     
@@ -31,13 +31,20 @@ class Globals : ZilchComponent
     
     function OnLevelStart(event : GameEvent)
     {
-        Zero.Mouse.Cursor = Cursor.Invisible;
-        this.Space.CreateAtPosition(Archetype.Cursor, Real3(100));
+        if(event.LevelName == "Hub")
+        {
+            Zero.Mouse.Cursor = Cursor.Invisible;
+            this.Space.CreateAtPosition(Archetype.Cursor, Real3(100));
+        }
         this.SavedStats = Zero.ObjectStore.RestoreOrArchetype("Stats", Archetype.SavedStats, this.Space);
     }
     
     function ChangeCursor(color : CursorColor)
     {
+        if(this.Space.CurrentLevel.Name != "Hub")
+        {
+            return;
+        }
         var cursor = this.Space.FindObjectByName("Cursor");
         if(color == CursorColor.WHITE)
         {
