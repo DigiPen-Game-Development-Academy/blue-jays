@@ -13,19 +13,18 @@ class LoversManager : ZilchComponent
     {
         this.Male = this.Space.FindObjectByName("Male");
         this.Female = this.Space.FindObjectByName("Female");
-        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
-    function OnLogicUpdate(event : UpdateEvent)
+    function LoversUpdate(male : Boolean)
     {
         if(this.State == LoversState.ALIVE)
         {
-            if(this.Male == null)
+            if(male)
             {
                 this.State = LoversState.FEMALE;
                 this.Female.BossShoot.TimeBetweenShots = 1;
             }
-            if(this.Female == null)
+            else
             {
                 this.State = LoversState.MALE;
                 this.Male.BossShoot.ShootSpeed = 40;
@@ -33,19 +32,13 @@ class LoversManager : ZilchComponent
         }
         else if(this.State == LoversState.FEMALE)
         {
-            if(this.Female == null)
-            {
-                this.Space.Globals.SavedStats.SavedStats.LoversBeaten += 1;
-                this.Space.LoadLevel(Level.LoversAfterLevel);
-            }
+            this.Space.Globals.SavedStats.SavedStats.LoversBeaten += 1;
+            this.Space.LoadLevel(Level.LoversAfterLevel);
         }
         else if(this.State == LoversState.MALE)
         {
-            if(this.Male == null)
-            {
-                this.Space.Globals.SavedStats.SavedStats.LoversBeaten += 1;
-                this.Space.LoadLevel(Level.Death);
-            }
+            this.Space.Globals.SavedStats.SavedStats.LoversBeaten += 1;
+            this.Space.LoadLevel(Level.LoversAfterLevel);
         }
     }
     

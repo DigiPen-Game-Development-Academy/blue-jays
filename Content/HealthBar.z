@@ -4,17 +4,10 @@
 class HealthBar : ZilchComponent
 {
     var HP : HP;
-    [Property] var Type : HealthType;
+    [Property] var Target : CogPath;
     function Initialize(init : CogInitializer)
     {
-        if(this.Type == HealthType.PLAYER)
-        {
-            this.HP = this.Space.FindObjectByName("Player").HP;
-        }
-        else
-        {
-            this.HP = this.Space.Globals.GetTarget(Real3(0,0,0)).HP;
-        }
+        this.HP = this.Target.Cog.HP;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
