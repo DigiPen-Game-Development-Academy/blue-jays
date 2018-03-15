@@ -136,7 +136,7 @@ class TurretPlace : ZilchComponent
     
     function OnLeftClick(event : MouseEvent)
     {
-        if(!this.CheckTurretPlace())
+        if(!this.CheckTurretPlace() || this.Space.TimeSpace.TimeScale != 1)
         {
             return;
         }

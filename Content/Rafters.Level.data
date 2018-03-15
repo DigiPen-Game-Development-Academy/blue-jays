@@ -123,7 +123,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 74.0818481,
+			float Size = 44.9329338,
 		},
 		EditorCameraController = 
 		{
@@ -148,42 +148,6 @@ Level =
 		string Name = "5a6df7d6e02085d5:FollowingCamera",
 		LinkId = 
 		{
-			uint Id = 4,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Camera",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a08fb786d4f3f80:Player",
-		LinkId = 
-		{
-			uint Id = 5,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-18.2554188, 21.2515087, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Player",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a6df7d6e02085d5:FollowingCamera",
-		LinkId = 
-		{
 			uint Id = 2,
 		},
 		Transform = 
@@ -199,10 +163,28 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
+		string Name = "5a08fb786d4f3f80:Player",
+		LinkId = 
+		{
+			uint Id = 4,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-18.2554188, 21.2515087, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Player",
+		},
+	},
+	ArchetypeInstance = 
+	{
 		string Name = "5afe76de417f83a2:RaftersLevel",
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 5,
 		},
 		Transform = 
 		{
