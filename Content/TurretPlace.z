@@ -134,7 +134,7 @@ class TurretPlace : ZilchComponent
         }
     }
     
-    function OnLeftClick(event : MouseEvent)
+    function OnLeftClick(event : ViewportMouseEvent)
     {
         if(!this.CheckTurretPlace() || this.Space.TimeSpace.TimeScale != 1)
         {
@@ -144,7 +144,7 @@ class TurretPlace : ZilchComponent
         {
             this.ChariotCooldown = this.ChariotCooldownTime;
         }
-        var turret = this.Space.CreateAtPosition(this.CurrentTurret.Archetype, this.Transform.Translation);
+        var turret = this.Space.CreateAtPosition(this.CurrentTurret.Archetype, event.ToWorldZPlane(0));
         turret.Transform.Translation += Real3(0,turret.BoxCollider.Size.Y / 2,0);
         if(this.CurrentTurret.Type == TurretType.KNIGHT)
         {

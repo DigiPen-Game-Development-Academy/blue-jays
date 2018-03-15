@@ -13,12 +13,9 @@ class CameraLogic : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        // create a new variable to hold the player's position
-        var newCameraPos = this.Owner.Transform.LocalTranslation;
-        
-        // save the camera's z value
-        newCameraPos.X = this.TargetObject.Transform.Translation.X;
-        // set the camera's new position to newCameraPos
+        var newCameraPos = this.TargetObject.Transform.Translation;
+        newCameraPos.Z = this.Owner.Transform.Translation.Z;
+        newCameraPos += Real3(Zero.Mouse.ScreenPosition.X / 1000, -Zero.Mouse.ScreenPosition.Y / 1000, 0);
         this.Owner.Transform.LocalTranslation = newCameraPos;
     }
 }

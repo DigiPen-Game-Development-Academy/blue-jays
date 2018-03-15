@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [0, 0, -39],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -32,8 +32,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-17, -14.3999996, 0],
-				Vec3 Scale = [10, 27, 1],
+				Vec3 Translation = [-7, 0, 0],
+				Vec3 Scale = [5, 10, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -57,7 +57,7 @@ Cog =
 			Area = 
 			{
 				Vec2 Size = [1, 1],
-				Location Origin = BottomCenter,
+				Location Origin = Center,
 			},
 			FateBar = 
 			{
@@ -75,8 +75,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-13.935257, 12.6000004, 0],
-				Vec3 Scale = [10, 27, 1],
+				Vec3 Translation = [-8, 0, 0],
+				Vec3 Scale = [5, 10, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -100,7 +100,7 @@ Cog =
 			Area = 
 			{
 				Vec2 Size = [1, 1],
-				Location Origin = TopRight,
+				Location Origin = Center,
 			},
 			HealthBar = 
 			{
@@ -114,54 +114,11 @@ Cog =
 					bool UpdatePathOnCogChange = true,
 					bool UpdateCogOnInitialize = true,
 					bool ResolvedNullErrorOccurred = false,
-					uint ResolvedCog = 4294967293,
+					uint ResolvedCog = 4,
 					CogPathPreference PathPreference0 = CogRelative,
 					CogPathPreference PathPreference1 = SpaceRelative,
 					CogPathPreference PathPreference2 = Absolute,
 				},
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 4,
-			},
-			Named = 
-			{
-				string Name = "ChargeBar",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [17, -14.3999996, 0],
-				Vec3 Scale = [10, 27, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5ae3c467465ab7fb:FateBanner",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-			},
-			Area = 
-			{
-				Vec2 Size = [1, 1],
-				Location Origin = BottomCenter,
-			},
-			ChargeBar = 
-			{
 			},
 		},
 		Cog = 
@@ -176,8 +133,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [24, 12.6000004, 0],
-				Vec3 Scale = [10, 27, 1],
+				Vec3 Translation = [8, 0, 0],
+				Vec3 Scale = [5, 10, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -201,13 +158,13 @@ Cog =
 			Area = 
 			{
 				Vec2 Size = [1, 1],
-				Location Origin = TopRight,
+				Location Origin = Center,
 			},
 			HealthBar = 
 			{
 				CogPath Target = 
 				{
-					string Path = ":/Boss",
+					string Path = ":/Player",
 					bool ErrorOnResolveToNull = false,
 					bool ErrorOnPathCantCompute = false,
 					bool ErrorOnDirectLinkFail = false,
@@ -215,7 +172,7 @@ Cog =
 					bool UpdatePathOnCogChange = true,
 					bool UpdateCogOnInitialize = true,
 					bool ResolvedNullErrorOccurred = false,
-					uint ResolvedCog = 4294967293,
+					uint ResolvedCog = 4,
 					CogPathPreference PathPreference0 = CogRelative,
 					CogPathPreference PathPreference1 = SpaceRelative,
 					CogPathPreference PathPreference2 = Absolute,

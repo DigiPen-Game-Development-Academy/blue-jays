@@ -26,11 +26,71 @@ Cog =
 		float FieldOfView = 45,
 		float NearPlane = 0.5,
 		float FarPlane = 200,
-		float Size = 22.5,
+		float Size = 10,
 	},
 	SoundListener = 
 	{
 		bool Active = true,
 		float Volume = 1,
+	},
+	CameraLogic = 
+	{
+	},
+	Hierarchy = 
+	{
+		ArchetypeInstance = 
+		{
+			string Name = "5a026066ef8b66c0:PauseOverlay",
+			LinkId = 
+			{
+				uint Id = 2,
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, 0, -40],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Named = 
+			{
+				string Name = "PauseOverlay",
+			},
+		},
+		ArchetypeInstance = 
+		{
+			string Name = "5a019c947ab2b196:OptionsOverlay",
+			LinkId = 
+			{
+				uint Id = 3,
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, 0, -39],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Named = 
+			{
+				string Name = "OptionsOverlay",
+			},
+		},
+		ArchetypeInstance = 
+		{
+			string Name = "5a08f65eab18b886:UI",
+			LinkId = 
+			{
+				uint Id = 4,
+			},
+			Transform = 
+			{
+				Vec3 Translation = [0, 0, -39],
+				Vec3 Scale = [1, 1, 1],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Named = 
+			{
+				string Name = "UI",
+			},
+		},
 	},
 },

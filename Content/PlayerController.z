@@ -17,16 +17,15 @@ class PlayerController : ZilchComponent
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        Zero.Connect(this.Owner, Events.AnyCollision, this.EnableJump);
     }
     
     function OnLogicUpdate(event : UpdateEvent)
     {
-        var vel = 0;
+        var vel = Real2();
         this.JumpTimer += event.Dt;
         if(Zero.Keyboard.KeyIsDown(Keys.D))
         {
-            vel += 1;
+            vel.X += 1;
             if(this.Owner.Sprite.SpriteSource != SpriteSource.KingOS_Run)
             {
                 this.Owner.Sprite.SpriteSource = SpriteSource.KingOS_Run;
@@ -38,7 +37,7 @@ class PlayerController : ZilchComponent
         }
         if(Zero.Keyboard.KeyIsDown(Keys.A))
         {
-            vel -= 1;
+            vel.X -= 1;
             if(this.Owner.Sprite.SpriteSource != SpriteSource.KingOS_Run)
             {
                 this.Owner.Sprite.SpriteSource = SpriteSource.KingOS_Run;
@@ -48,26 +47,27 @@ class PlayerController : ZilchComponent
                 this.Owner.Transform.SetEulerAnglesXYZ(0,0,0);
             }
         }
-        if(!(Zero.Keyboard.KeyIsDown(Keys.A) || Zero.Keyboard.KeyIsDown(Keys.D)))
+        if(Zero.Keyboard.KeyIsDown(Keys.W))
+        {
+            vel.Y += 1;
+            if(this.Owner.Sprite.SpriteSource != SpriteSource.KingOS_Run)
+            {
+                this.Owner.Sprite.SpriteSource = SpriteSource.KingOS_Run;
+            }
+        }
+        if(Zero.Keyboard.KeyIsDown(Keys.S))
+        {
+            vel.Y -= 1;
+            if(this.Owner.Sprite.SpriteSource != SpriteSource.KingOS_Run)
+            {
+                this.Owner.Sprite.SpriteSource = SpriteSource.KingOS_Run;
+            }
+        }
+        if(!(Zero.Keyboard.KeyIsDown(Keys.A) || Zero.Keyboard.KeyIsDown(Keys.D) || Zero.Keyboard.KeyIsDown(Keys.W) || Zero.Keyboard.KeyIsDown(Keys.S)))
         {
             this.Owner.Sprite.SpriteSource = SpriteSource.Swords;
         }
-        var target = Real3(vel * this.Speed * 1, this.RigidBody.Velocity.Y, 0);
-        if(this.Stunned)
-        {
-            target = Real3(-target.X,target.Y,0);
-        }
-        this.RigidBody.Velocity = Math.Lerp(this.RigidBody.Velocity,target,this.Acceleration * event.Dt);
-        if(Zero.Keyboard.KeyIsDown(Keys.Space))
-        {
-            if(this.JumpReady && this.JumpTimer >= 0.15)
-            {
-                this.JumpTimer = 0;
-                this.Space.SoundSpace.PlayCue(SoundCue.Jump);
-                this.RigidBody.ApplyForce(Real3(0,1,0) * this.JumpHeight);
-            }
-        }
-        this.JumpReady = false;
+        this.RigidBody.Velocity = Real3(vel * this.Speed, 0);
         if(this.Space.TimeSpace.Paused == false)
         {
             if (Zero.Keyboard.KeyIsPressed(Keys.Escape))
@@ -83,14 +83,6 @@ class PlayerController : ZilchComponent
                     this.Space.TimeSpace.TimeScale = 1;
                 }
             }
-        }
-    }  
-    
-    function EnableJump(event : AnyCollisionEvent)
-    {
-        if(Math.Abs(Math.Pi - Math.Abs(Math.ATan2(event.ContactNormal.X, event.ContactNormal.Y))) < Math.Pi / 4)
-        {
-            this.JumpReady = true;
         }
     }
 }

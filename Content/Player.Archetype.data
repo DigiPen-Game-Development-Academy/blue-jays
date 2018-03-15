@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, -0.5, 0],
+		Vec3 Translation = [-18.2554188, 21.2515087, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -70,9 +70,6 @@ Cog =
 		float MaxFate = 100,
 		float ChariotCooldownTime = 10,
 		float CursorUpdateTime = 1,
-	},
-	Contact = 
-	{
 	},
 	HP = 
 	{

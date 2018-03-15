@@ -3,50 +3,24 @@
 
 class KnightOfSwords : ZilchComponent
 {
-    [Dependency] var RigidBody : RigidBody;
-    
     [Property] var Speed : Real = 1;
-    [Property] var Acceleration : Real = 5;
     
     var Target : Cog;
-    var Vel : Real = 0;
     
     function Initialize(init : CogInitializer)
     {
         this.Target = this.Space.Globals.GetTarget(this.Owner.Transform.Translation);
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        Zero.Connect(this.Owner,Events.CollisionStarted, this.OnCollide);
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        var target = Real3(this.Vel, this.RigidBody.Velocity.Y, 0);
-        this.RigidBody.Velocity = Math.Lerp(this.RigidBody.Velocity,target,this.Acceleration * event.Dt);
-    }
-    
-    function OnCollide(event : CollisionEvent)
-    {
-        Console.WriteLine(event.OtherObject.Name);
         if(this.Target == null)
-        {
-            this.Target = this.Space.Globals.GetTarget(this.Owner.Transform.Translation);
-        }
-        if(this.Target == null)
-        {
-            return;
-        }
-        var mod = -1;
-        
-        if (this.Owner.Transform.Translation.X < this.Target.Transform.Translation.X)
-        {
-            mod = 1;
-        }
-      
-        this.Vel = this.Speed * mod;
-        if(event.OtherObject == this.Target)
         {
             this.Owner.Destroy();
+            return;
         }
-      
+        var vec = this.Owner.Transform.Translation - this.Target.Transform.Translation;
+        this.Owner.RigidBody.Velocity = Math.Normalize(vec) * this.Speed;
     }
 }

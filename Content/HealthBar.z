@@ -16,7 +16,7 @@ class HealthBar : ZilchComponent
         if(this.HP != null)
         {
             var tl = this.Owner.Transform.Translation;
-            tl.Y = 35 - this.HP.Health/this.HP.MaxHealth * (this.Owner.Transform.Scale.Y * 0.8);
+            tl.Y = 8.5 - this.HP.Health/this.HP.MaxHealth * (this.Owner.Transform.Scale.Y * 0.8);
             this.Owner.Transform.Translation = tl;
         }
     }
