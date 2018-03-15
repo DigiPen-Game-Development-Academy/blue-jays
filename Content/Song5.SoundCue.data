@@ -1,9 +1,9 @@
 SoundCue = 
 {
 	SoundPlayMode PlayMode = Single,
-	float Volume = 0.800000012,
+	float Volume = 1.5,
 	float VolumeVariation = 0,
-	float VolumeDB = -6,
+	float VolumeDB = 3.52182508,
 	bool UseVolumeDB = false,
 	float VolumeDBVariation = 0,
 	float Pitch = 0,
@@ -18,7 +18,7 @@ SoundCue =
 	Array Sounds = 
 	[
 		{
-			string SoundName = "5a49a3dcfdee45f3:Song5",
+			string SoundName = "5a4b052f474e809e:Song5",
 			string GeneratedSoundName = "",
 			WhichSoundType WhichToUse = FromFile,
 			float Weight = 1,
