@@ -1660,123 +1660,6 @@ Cog =
 			},
 			Named = 
 			{
-				string Name = "Wall",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [19.5, 2.65459251, 0],
-				Vec3 Scale = [1, 22.5, 1],
-				Quat Rotation = [0, 0.1305262, 0, 0.991444886],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5275aa4d802dd6dc:Square",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-			},
-			BoxCollider = 
-			{
-				bool Ghost = false,
-				bool SendsMessages = true,
-				bool Seamless = true,
-				string MaterialName = "5a1cee2c4a245b06:NoBounce",
-				string SerializedGroupName = "5a916d34df3b1676:Wall",
-				Vec3 Offset = [0, 0, 0],
-				Vec3 Size = [0.5, 0.5, 0.5],
-			},
-			RigidBody = 
-			{
-				bool Static = true,
-				bool Asleep = false,
-				bool Kinematic = false,
-				bool RotationLocked = false,
-				bool Mode2D = true,
-				bool AllowSleep = true,
-				bool Inherit2DMode = true,
-				Vec3 Velocity = [0, 0, 0],
-				Vec3 AngularVelocity = [0, 0, 0],
-			},
-			Hierarchy = 
-			{
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 29,
-			},
-			Named = 
-			{
-				string Name = "Wall",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [-19.5000038, 2.6088686, -9.53674316e-07],
-				Vec3 Scale = [1, 22.5, 1],
-				Quat Rotation = [0, 0.1305262, 0, 0.991444886],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5275aa4d802dd6dc:Square",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-			},
-			BoxCollider = 
-			{
-				bool Ghost = false,
-				bool SendsMessages = true,
-				bool Seamless = true,
-				string MaterialName = "5a1cee2c4a245b06:NoBounce",
-				string SerializedGroupName = "5a916d34df3b1676:Wall",
-				Vec3 Offset = [0, 0, 0],
-				Vec3 Size = [0.5, 0.5, 0.5],
-			},
-			RigidBody = 
-			{
-				bool Static = true,
-				bool Asleep = false,
-				bool Kinematic = false,
-				bool RotationLocked = false,
-				bool Mode2D = true,
-				bool AllowSleep = true,
-				bool Inherit2DMode = true,
-				Vec3 Velocity = [0, 0, 0],
-				Vec3 AngularVelocity = [0, 0, 0],
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 30,
-			},
-			Named = 
-			{
 				string Name = "Tutorial",
 			},
 			Transform = 
@@ -1791,7 +1674,7 @@ Cog =
 				{
 					LinkId = 
 					{
-						uint Id = 31,
+						uint Id = 29,
 					},
 					Named = 
 					{
@@ -1826,7 +1709,7 @@ Cog =
 						{
 							LinkId = 
 							{
-								uint Id = 32,
+								uint Id = 30,
 							},
 							Named = 
 							{
@@ -1861,7 +1744,7 @@ Cog =
 						{
 							LinkId = 
 							{
-								uint Id = 33,
+								uint Id = 31,
 							},
 							Named = 
 							{
@@ -1896,7 +1779,7 @@ Cog =
 						{
 							LinkId = 
 							{
-								uint Id = 34,
+								uint Id = 32,
 							},
 							Named = 
 							{
@@ -1931,7 +1814,7 @@ Cog =
 						{
 							LinkId = 
 							{
-								uint Id = 35,
+								uint Id = 33,
 							},
 							Named = 
 							{
@@ -1968,7 +1851,7 @@ Cog =
 				{
 					LinkId = 
 					{
-						uint Id = 36,
+						uint Id = 34,
 					},
 					Named = 
 					{
@@ -2003,7 +1886,7 @@ Cog =
 						{
 							LinkId = 
 							{
-								uint Id = 37,
+								uint Id = 35,
 							},
 							Named = 
 							{
@@ -2043,7 +1926,7 @@ Cog =
 						{
 							LinkId = 
 							{
-								uint Id = 38,
+								uint Id = 36,
 							},
 							Named = 
 							{
@@ -2078,7 +1961,7 @@ Cog =
 						{
 							LinkId = 
 							{
-								uint Id = 39,
+								uint Id = 37,
 							},
 							Named = 
 							{
@@ -2113,7 +1996,7 @@ Cog =
 						{
 							LinkId = 
 							{
-								uint Id = 40,
+								uint Id = 38,
 							},
 							Named = 
 							{
@@ -2150,7 +2033,7 @@ Cog =
 				{
 					LinkId = 
 					{
-						uint Id = 41,
+						uint Id = 39,
 					},
 					Named = 
 					{
@@ -2185,7 +2068,7 @@ Cog =
 						{
 							LinkId = 
 							{
-								uint Id = 42,
+								uint Id = 40,
 							},
 							Named = 
 							{
@@ -2220,7 +2103,7 @@ Cog =
 						{
 							LinkId = 
 							{
-								uint Id = 43,
+								uint Id = 41,
 							},
 							Named = 
 							{
@@ -2255,7 +2138,7 @@ Cog =
 						{
 							LinkId = 
 							{
-								uint Id = 44,
+								uint Id = 42,
 							},
 							Named = 
 							{
@@ -2290,7 +2173,7 @@ Cog =
 						{
 							LinkId = 
 							{
-								uint Id = 45,
+								uint Id = 43,
 							},
 							Named = 
 							{
@@ -2327,7 +2210,7 @@ Cog =
 				{
 					LinkId = 
 					{
-						uint Id = 46,
+						uint Id = 44,
 					},
 					Named = 
 					{
@@ -2362,7 +2245,7 @@ Cog =
 						{
 							LinkId = 
 							{
-								uint Id = 47,
+								uint Id = 45,
 							},
 							Named = 
 							{
@@ -2397,7 +2280,7 @@ Cog =
 						{
 							LinkId = 
 							{
-								uint Id = 48,
+								uint Id = 46,
 							},
 							Named = 
 							{
@@ -2432,7 +2315,7 @@ Cog =
 						{
 							LinkId = 
 							{
-								uint Id = 49,
+								uint Id = 47,
 							},
 							Named = 
 							{
@@ -2467,7 +2350,7 @@ Cog =
 						{
 							LinkId = 
 							{
-								uint Id = 50,
+								uint Id = 48,
 							},
 							Named = 
 							{
@@ -2504,7 +2387,7 @@ Cog =
 				{
 					LinkId = 
 					{
-						uint Id = 51,
+						uint Id = 49,
 					},
 					Named = 
 					{
@@ -2538,7 +2421,7 @@ Cog =
 				{
 					LinkId = 
 					{
-						uint Id = 52,
+						uint Id = 50,
 					},
 					Named = 
 					{
@@ -2568,6 +2451,41 @@ Cog =
 						bool Smoothing = true,
 					},
 				},
+			},
+		},
+		Cog = 
+		{
+			LinkId = 
+			{
+				uint Id = 51,
+			},
+			Named = 
+			{
+				string Name = "Sprite",
+			},
+			Transform = 
+			{
+				Vec3 Translation = [-0.122503519, 0.121062756, -0.000999650918],
+				Vec3 Scale = [1.07691836, 1.066962, 1.13261378],
+				Quat Rotation = [0, 0, 0, 1],
+			},
+			Sprite = 
+			{
+				bool Visible = true,
+				bool VisibilityCulling = true,
+				bool VisibilityEvents = true,
+				bool CastShadows = false,
+				Vec4 Color = [1, 1, 1, 1],
+				BlendMode BlendMode = Alpha,
+				SpriteGeometryMode GeometryMode = ZPlane,
+				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+				string SpriteSource = "5a49b2521fea599f:Rafters",
+				bool RenderMask = false,
+				bool FlipX = false,
+				bool FlipY = false,
+				bool AnimationActive = true,
+				float AnimationSpeed = 1,
+				uint StartFrame = 0,
 			},
 		},
 	},
