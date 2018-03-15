@@ -99,11 +99,29 @@ Level =
 			Enum Menu = LEVEL,
 		},
 	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a6df7d6e02085d5:FollowingCamera",
+		LinkId = 
+		{
+			uint Id = 3,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Camera",
+		},
+	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 3,
+			uint Id = 4,
 		},
 		Named = 
 		{
@@ -166,7 +184,7 @@ Level =
 		string Name = "5a08fb786d4f3f80:Player",
 		LinkId = 
 		{
-			uint Id = 4,
+			uint Id = 5,
 		},
 		Transform = 
 		{
@@ -183,7 +201,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 6,
 		},
 		Named = 
 		{
@@ -205,7 +223,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 6,
+					uint Id = 7,
 				},
 				Named = 
 				{
@@ -272,7 +290,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 7,
+					uint Id = 8,
 				},
 				Named = 
 				{
@@ -334,7 +352,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 8,
+					uint Id = 9,
 				},
 				Named = 
 				{
@@ -412,7 +430,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 9,
+					uint Id = 10,
 				},
 				Named = 
 				{
@@ -490,7 +508,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 10,
+					uint Id = 11,
 				},
 				Named = 
 				{
@@ -568,7 +586,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 11,
+					uint Id = 12,
 				},
 				Named = 
 				{
@@ -646,7 +664,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 12,
+					uint Id = 13,
 				},
 				Named = 
 				{
@@ -724,7 +742,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 13,
+					uint Id = 14,
 				},
 				Named = 
 				{
@@ -786,7 +804,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 14,
+					uint Id = 15,
 				},
 				Named = 
 				{
@@ -848,7 +866,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 15,
+					uint Id = 16,
 				},
 				Named = 
 				{
@@ -926,7 +944,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 16,
+					uint Id = 17,
 				},
 				Named = 
 				{
@@ -991,7 +1009,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 17,
+					uint Id = 18,
 				},
 				Named = 
 				{
@@ -1048,7 +1066,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 18,
+					uint Id = 19,
 				},
 				Named = 
 				{
@@ -1108,7 +1126,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 19,
+					uint Id = 20,
 				},
 				Named = 
 				{
@@ -1165,7 +1183,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 20,
+					uint Id = 21,
 				},
 				ObjectLink = 
 				{
@@ -1179,7 +1197,7 @@ Level =
 						bool UpdatePathOnCogChange = true,
 						bool UpdateCogOnInitialize = true,
 						bool ResolvedNullErrorOccurred = false,
-						uint ResolvedCog = 12,
+						uint ResolvedCog = 13,
 						CogPathPreference PathPreference0 = CogRelative,
 						CogPathPreference PathPreference1 = SpaceRelative,
 						CogPathPreference PathPreference2 = Absolute,
@@ -1194,7 +1212,7 @@ Level =
 						bool UpdatePathOnCogChange = true,
 						bool UpdateCogOnInitialize = true,
 						bool ResolvedNullErrorOccurred = false,
-						uint ResolvedCog = 19,
+						uint ResolvedCog = 20,
 						CogPathPreference PathPreference0 = CogRelative,
 						CogPathPreference PathPreference1 = SpaceRelative,
 						CogPathPreference PathPreference2 = Absolute,
@@ -1221,7 +1239,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 21,
+					uint Id = 22,
 				},
 				ObjectLink = 
 				{
@@ -1235,7 +1253,7 @@ Level =
 						bool UpdatePathOnCogChange = true,
 						bool UpdateCogOnInitialize = true,
 						bool ResolvedNullErrorOccurred = false,
-						uint ResolvedCog = 12,
+						uint ResolvedCog = 13,
 						CogPathPreference PathPreference0 = CogRelative,
 						CogPathPreference PathPreference1 = SpaceRelative,
 						CogPathPreference PathPreference2 = Absolute,
@@ -1250,7 +1268,7 @@ Level =
 						bool UpdatePathOnCogChange = true,
 						bool UpdateCogOnInitialize = true,
 						bool ResolvedNullErrorOccurred = false,
-						uint ResolvedCog = 19,
+						uint ResolvedCog = 20,
 						CogPathPreference PathPreference0 = CogRelative,
 						CogPathPreference PathPreference1 = SpaceRelative,
 						CogPathPreference PathPreference2 = Absolute,
@@ -1277,7 +1295,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 22,
+					uint Id = 23,
 				},
 				ObjectLink = 
 				{
@@ -1291,7 +1309,7 @@ Level =
 						bool UpdatePathOnCogChange = true,
 						bool UpdateCogOnInitialize = true,
 						bool ResolvedNullErrorOccurred = false,
-						uint ResolvedCog = 8,
+						uint ResolvedCog = 9,
 						CogPathPreference PathPreference0 = CogRelative,
 						CogPathPreference PathPreference1 = SpaceRelative,
 						CogPathPreference PathPreference2 = Absolute,
@@ -1306,7 +1324,7 @@ Level =
 						bool UpdatePathOnCogChange = true,
 						bool UpdateCogOnInitialize = true,
 						bool ResolvedNullErrorOccurred = false,
-						uint ResolvedCog = 19,
+						uint ResolvedCog = 20,
 						CogPathPreference PathPreference0 = CogRelative,
 						CogPathPreference PathPreference1 = SpaceRelative,
 						CogPathPreference PathPreference2 = Absolute,
@@ -1333,7 +1351,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 23,
+					uint Id = 24,
 				},
 				ObjectLink = 
 				{
@@ -1347,7 +1365,7 @@ Level =
 						bool UpdatePathOnCogChange = true,
 						bool UpdateCogOnInitialize = true,
 						bool ResolvedNullErrorOccurred = false,
-						uint ResolvedCog = 8,
+						uint ResolvedCog = 9,
 						CogPathPreference PathPreference0 = CogRelative,
 						CogPathPreference PathPreference1 = SpaceRelative,
 						CogPathPreference PathPreference2 = Absolute,
@@ -1362,7 +1380,7 @@ Level =
 						bool UpdatePathOnCogChange = true,
 						bool UpdateCogOnInitialize = true,
 						bool ResolvedNullErrorOccurred = false,
-						uint ResolvedCog = 19,
+						uint ResolvedCog = 20,
 						CogPathPreference PathPreference0 = CogRelative,
 						CogPathPreference PathPreference1 = SpaceRelative,
 						CogPathPreference PathPreference2 = Absolute,
@@ -1389,7 +1407,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 24,
+					uint Id = 25,
 				},
 				ObjectLink = 
 				{
@@ -1403,7 +1421,7 @@ Level =
 						bool UpdatePathOnCogChange = true,
 						bool UpdateCogOnInitialize = true,
 						bool ResolvedNullErrorOccurred = false,
-						uint ResolvedCog = 15,
+						uint ResolvedCog = 16,
 						CogPathPreference PathPreference0 = CogRelative,
 						CogPathPreference PathPreference1 = SpaceRelative,
 						CogPathPreference PathPreference2 = Absolute,
@@ -1418,7 +1436,7 @@ Level =
 						bool UpdatePathOnCogChange = true,
 						bool UpdateCogOnInitialize = true,
 						bool ResolvedNullErrorOccurred = false,
-						uint ResolvedCog = 19,
+						uint ResolvedCog = 20,
 						CogPathPreference PathPreference0 = CogRelative,
 						CogPathPreference PathPreference1 = SpaceRelative,
 						CogPathPreference PathPreference2 = Absolute,
@@ -1445,7 +1463,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 25,
+					uint Id = 26,
 				},
 				ObjectLink = 
 				{
@@ -1459,7 +1477,7 @@ Level =
 						bool UpdatePathOnCogChange = true,
 						bool UpdateCogOnInitialize = true,
 						bool ResolvedNullErrorOccurred = false,
-						uint ResolvedCog = 15,
+						uint ResolvedCog = 16,
 						CogPathPreference PathPreference0 = CogRelative,
 						CogPathPreference PathPreference1 = SpaceRelative,
 						CogPathPreference PathPreference2 = Absolute,
@@ -1474,7 +1492,7 @@ Level =
 						bool UpdatePathOnCogChange = true,
 						bool UpdateCogOnInitialize = true,
 						bool ResolvedNullErrorOccurred = false,
-						uint ResolvedCog = 19,
+						uint ResolvedCog = 20,
 						CogPathPreference PathPreference0 = CogRelative,
 						CogPathPreference PathPreference1 = SpaceRelative,
 						CogPathPreference PathPreference2 = Absolute,
@@ -1501,7 +1519,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 26,
+					uint Id = 27,
 				},
 				ObjectLink = 
 				{
@@ -1515,7 +1533,7 @@ Level =
 						bool UpdatePathOnCogChange = true,
 						bool UpdateCogOnInitialize = true,
 						bool ResolvedNullErrorOccurred = false,
-						uint ResolvedCog = 9,
+						uint ResolvedCog = 10,
 						CogPathPreference PathPreference0 = CogRelative,
 						CogPathPreference PathPreference1 = SpaceRelative,
 						CogPathPreference PathPreference2 = Absolute,
@@ -1530,7 +1548,7 @@ Level =
 						bool UpdatePathOnCogChange = true,
 						bool UpdateCogOnInitialize = true,
 						bool ResolvedNullErrorOccurred = false,
-						uint ResolvedCog = 6,
+						uint ResolvedCog = 7,
 						CogPathPreference PathPreference0 = CogRelative,
 						CogPathPreference PathPreference1 = SpaceRelative,
 						CogPathPreference PathPreference2 = Absolute,
@@ -1557,7 +1575,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 27,
+					uint Id = 28,
 				},
 				ObjectLink = 
 				{
@@ -1571,7 +1589,7 @@ Level =
 						bool UpdatePathOnCogChange = true,
 						bool UpdateCogOnInitialize = true,
 						bool ResolvedNullErrorOccurred = false,
-						uint ResolvedCog = 9,
+						uint ResolvedCog = 10,
 						CogPathPreference PathPreference0 = CogRelative,
 						CogPathPreference PathPreference1 = SpaceRelative,
 						CogPathPreference PathPreference2 = Absolute,
@@ -1586,7 +1604,7 @@ Level =
 						bool UpdatePathOnCogChange = true,
 						bool UpdateCogOnInitialize = true,
 						bool ResolvedNullErrorOccurred = false,
-						uint ResolvedCog = 6,
+						uint ResolvedCog = 7,
 						CogPathPreference PathPreference0 = CogRelative,
 						CogPathPreference PathPreference1 = SpaceRelative,
 						CogPathPreference PathPreference2 = Absolute,
@@ -1613,7 +1631,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 28,
+					uint Id = 29,
 				},
 				ObjectLink = 
 				{
@@ -1627,7 +1645,7 @@ Level =
 						bool UpdatePathOnCogChange = true,
 						bool UpdateCogOnInitialize = true,
 						bool ResolvedNullErrorOccurred = false,
-						uint ResolvedCog = 11,
+						uint ResolvedCog = 12,
 						CogPathPreference PathPreference0 = CogRelative,
 						CogPathPreference PathPreference1 = SpaceRelative,
 						CogPathPreference PathPreference2 = Absolute,
@@ -1642,7 +1660,7 @@ Level =
 						bool UpdatePathOnCogChange = true,
 						bool UpdateCogOnInitialize = true,
 						bool ResolvedNullErrorOccurred = false,
-						uint ResolvedCog = 6,
+						uint ResolvedCog = 7,
 						CogPathPreference PathPreference0 = CogRelative,
 						CogPathPreference PathPreference1 = SpaceRelative,
 						CogPathPreference PathPreference2 = Absolute,
@@ -1669,7 +1687,63 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 29,
+					uint Id = 30,
+				},
+				ObjectLink = 
+				{
+					CogPath ObjectA = 
+					{
+						string Path = ":/Level/Platform",
+						bool ErrorOnResolveToNull = false,
+						bool ErrorOnPathCantCompute = false,
+						bool ErrorOnDirectLinkFail = false,
+						bool UpdateCogOnPathChange = true,
+						bool UpdatePathOnCogChange = true,
+						bool UpdateCogOnInitialize = true,
+						bool ResolvedNullErrorOccurred = false,
+						uint ResolvedCog = 12,
+						CogPathPreference PathPreference0 = CogRelative,
+						CogPathPreference PathPreference1 = SpaceRelative,
+						CogPathPreference PathPreference2 = Absolute,
+					},
+					CogPath ObjectB = 
+					{
+						string Path = ":/Level/Platform",
+						bool ErrorOnResolveToNull = false,
+						bool ErrorOnPathCantCompute = false,
+						bool ErrorOnDirectLinkFail = false,
+						bool UpdateCogOnPathChange = true,
+						bool UpdatePathOnCogChange = true,
+						bool UpdateCogOnInitialize = true,
+						bool ResolvedNullErrorOccurred = false,
+						uint ResolvedCog = 7,
+						CogPathPreference PathPreference0 = CogRelative,
+						CogPathPreference PathPreference1 = SpaceRelative,
+						CogPathPreference PathPreference2 = Absolute,
+					},
+					Vec3 BodyPointA = [0.783749104, -0.00873851776, 0.5],
+					Vec3 BodyPointB = [-0.0301861838, -0.0637369156, 0.5],
+				},
+				StickJoint = 
+				{
+					bool Active = true,
+					bool SendsEvents = false,
+					bool AutoSnaps = false,
+					bool CollideConnected = true,
+					float MaxForce = 0,
+					float Length = 11.4064455,
+					Vec3 BodyPointA = [0.783749104, -0.00873851776, 0.5],
+					Vec3 BodyPointB = [-0.0301861838, -0.0637369156, 0.5],
+				},
+				FollowJoint = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 31,
 				},
 				ObjectLink = 
 				{
@@ -1698,63 +1772,7 @@ Level =
 						bool UpdatePathOnCogChange = true,
 						bool UpdateCogOnInitialize = true,
 						bool ResolvedNullErrorOccurred = false,
-						uint ResolvedCog = 6,
-						CogPathPreference PathPreference0 = CogRelative,
-						CogPathPreference PathPreference1 = SpaceRelative,
-						CogPathPreference PathPreference2 = Absolute,
-					},
-					Vec3 BodyPointA = [0.783749104, -0.00873851776, 0.5],
-					Vec3 BodyPointB = [-0.0301861838, -0.0637369156, 0.5],
-				},
-				StickJoint = 
-				{
-					bool Active = true,
-					bool SendsEvents = false,
-					bool AutoSnaps = false,
-					bool CollideConnected = true,
-					float MaxForce = 0,
-					float Length = 11.4064455,
-					Vec3 BodyPointA = [0.783749104, -0.00873851776, 0.5],
-					Vec3 BodyPointB = [-0.0301861838, -0.0637369156, 0.5],
-				},
-				FollowJoint = 
-				{
-				},
-			},
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 30,
-				},
-				ObjectLink = 
-				{
-					CogPath ObjectA = 
-					{
-						string Path = ":/Level/Platform",
-						bool ErrorOnResolveToNull = false,
-						bool ErrorOnPathCantCompute = false,
-						bool ErrorOnDirectLinkFail = false,
-						bool UpdateCogOnPathChange = true,
-						bool UpdatePathOnCogChange = true,
-						bool UpdateCogOnInitialize = true,
-						bool ResolvedNullErrorOccurred = false,
-						uint ResolvedCog = 10,
-						CogPathPreference PathPreference0 = CogRelative,
-						CogPathPreference PathPreference1 = SpaceRelative,
-						CogPathPreference PathPreference2 = Absolute,
-					},
-					CogPath ObjectB = 
-					{
-						string Path = ":/Level/Platform",
-						bool ErrorOnResolveToNull = false,
-						bool ErrorOnPathCantCompute = false,
-						bool ErrorOnDirectLinkFail = false,
-						bool UpdateCogOnPathChange = true,
-						bool UpdatePathOnCogChange = true,
-						bool UpdateCogOnInitialize = true,
-						bool ResolvedNullErrorOccurred = false,
-						uint ResolvedCog = 6,
+						uint ResolvedCog = 7,
 						CogPathPreference PathPreference0 = CogRelative,
 						CogPathPreference PathPreference1 = SpaceRelative,
 						CogPathPreference PathPreference2 = Absolute,
@@ -1781,7 +1799,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 31,
+					uint Id = 32,
 				},
 				ObjectLink = 
 				{
@@ -1795,7 +1813,7 @@ Level =
 						bool UpdatePathOnCogChange = true,
 						bool UpdateCogOnInitialize = true,
 						bool ResolvedNullErrorOccurred = false,
-						uint ResolvedCog = 10,
+						uint ResolvedCog = 11,
 						CogPathPreference PathPreference0 = CogRelative,
 						CogPathPreference PathPreference1 = SpaceRelative,
 						CogPathPreference PathPreference2 = Absolute,
@@ -1810,7 +1828,7 @@ Level =
 						bool UpdatePathOnCogChange = true,
 						bool UpdateCogOnInitialize = true,
 						bool ResolvedNullErrorOccurred = false,
-						uint ResolvedCog = 6,
+						uint ResolvedCog = 7,
 						CogPathPreference PathPreference0 = CogRelative,
 						CogPathPreference PathPreference1 = SpaceRelative,
 						CogPathPreference PathPreference2 = Absolute,
@@ -1837,7 +1855,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 32,
+					uint Id = 33,
 				},
 				Named = 
 				{
@@ -1897,7 +1915,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 33,
+					uint Id = 34,
 				},
 				Named = 
 				{
@@ -1954,7 +1972,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 34,
+					uint Id = 35,
 				},
 				Named = 
 				{
@@ -1972,7 +1990,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 35,
+							uint Id = 36,
 						},
 						Named = 
 						{
@@ -2007,7 +2025,7 @@ Level =
 							{
 								LinkId = 
 								{
-									uint Id = 36,
+									uint Id = 37,
 								},
 								Named = 
 								{
@@ -2042,7 +2060,7 @@ Level =
 							{
 								LinkId = 
 								{
-									uint Id = 37,
+									uint Id = 38,
 								},
 								Named = 
 								{
@@ -2077,7 +2095,7 @@ Level =
 							{
 								LinkId = 
 								{
-									uint Id = 38,
+									uint Id = 39,
 								},
 								Named = 
 								{
@@ -2112,7 +2130,7 @@ Level =
 							{
 								LinkId = 
 								{
-									uint Id = 39,
+									uint Id = 40,
 								},
 								Named = 
 								{
@@ -2149,7 +2167,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 40,
+							uint Id = 41,
 						},
 						Named = 
 						{
@@ -2184,7 +2202,7 @@ Level =
 							{
 								LinkId = 
 								{
-									uint Id = 41,
+									uint Id = 42,
 								},
 								Named = 
 								{
@@ -2224,7 +2242,7 @@ Level =
 							{
 								LinkId = 
 								{
-									uint Id = 42,
+									uint Id = 43,
 								},
 								Named = 
 								{
@@ -2259,7 +2277,7 @@ Level =
 							{
 								LinkId = 
 								{
-									uint Id = 43,
+									uint Id = 44,
 								},
 								Named = 
 								{
@@ -2294,7 +2312,7 @@ Level =
 							{
 								LinkId = 
 								{
-									uint Id = 44,
+									uint Id = 45,
 								},
 								Named = 
 								{
@@ -2331,7 +2349,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 45,
+							uint Id = 46,
 						},
 						Named = 
 						{
@@ -2366,7 +2384,7 @@ Level =
 							{
 								LinkId = 
 								{
-									uint Id = 46,
+									uint Id = 47,
 								},
 								Named = 
 								{
@@ -2401,7 +2419,7 @@ Level =
 							{
 								LinkId = 
 								{
-									uint Id = 47,
+									uint Id = 48,
 								},
 								Named = 
 								{
@@ -2436,7 +2454,7 @@ Level =
 							{
 								LinkId = 
 								{
-									uint Id = 48,
+									uint Id = 49,
 								},
 								Named = 
 								{
@@ -2471,7 +2489,7 @@ Level =
 							{
 								LinkId = 
 								{
-									uint Id = 49,
+									uint Id = 50,
 								},
 								Named = 
 								{
@@ -2508,7 +2526,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 50,
+							uint Id = 51,
 						},
 						Named = 
 						{
@@ -2543,7 +2561,7 @@ Level =
 							{
 								LinkId = 
 								{
-									uint Id = 51,
+									uint Id = 52,
 								},
 								Named = 
 								{
@@ -2578,7 +2596,7 @@ Level =
 							{
 								LinkId = 
 								{
-									uint Id = 52,
+									uint Id = 53,
 								},
 								Named = 
 								{
@@ -2613,7 +2631,7 @@ Level =
 							{
 								LinkId = 
 								{
-									uint Id = 53,
+									uint Id = 54,
 								},
 								Named = 
 								{
@@ -2648,7 +2666,7 @@ Level =
 							{
 								LinkId = 
 								{
-									uint Id = 54,
+									uint Id = 55,
 								},
 								Named = 
 								{
@@ -2685,7 +2703,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 55,
+							uint Id = 56,
 						},
 						Named = 
 						{
@@ -2719,7 +2737,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 56,
+							uint Id = 57,
 						},
 						Named = 
 						{
@@ -2757,7 +2775,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 57,
+			uint Id = 58,
 		},
 		Named = 
 		{

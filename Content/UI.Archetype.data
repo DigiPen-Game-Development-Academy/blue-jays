@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 1],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -25,43 +25,6 @@ Cog =
 			LinkId = 
 			{
 				uint Id = 2,
-			},
-			Named = 
-			{
-				string Name = "FateText",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [0, 11.25, 0],
-				Vec3 Scale = [1, 1, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			SpriteText = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [0, 0, 0, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string FontName = "4e7bac697bec55c5:Verdana",
-				uint FontSize = 100,
-				string Text = "Fate: 100/100",
-				TextAlign Align = Left,
-				float PixelsPerUnit = 128,
-				bool Smoothing = true,
-			},
-			FateText = 
-			{
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 3,
 			},
 			Named = 
 			{
@@ -104,45 +67,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 4,
-			},
-			Named = 
-			{
-				string Name = "HealthText",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [0, 11.1999998, 0],
-				Vec3 Scale = [1, 1, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			SpriteText = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [0, 0, 0, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string FontName = "4e7bac697bec55c5:Verdana",
-				uint FontSize = 100,
-				string Text = "Health: 100/100",
-				TextAlign Align = Right,
-				float PixelsPerUnit = 128,
-				bool Smoothing = true,
-			},
-			HealthText = 
-			{
-				Enum Type = PLAYER,
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 5,
+				uint Id = 3,
 			},
 			Named = 
 			{
@@ -186,7 +111,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 6,
+				uint Id = 4,
 			},
 			Named = 
 			{
@@ -194,7 +119,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, -10.25, 0],
+				Vec3 Translation = [18.6774864, 11.0117998, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -210,21 +135,17 @@ Cog =
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 				string FontName = "4e7bac697bec55c5:Verdana",
 				uint FontSize = 100,
-				string Text = "Health: 100/100",
+				string Text = "Boss",
 				TextAlign Align = Right,
 				float PixelsPerUnit = 128,
 				bool Smoothing = true,
-			},
-			HealthText = 
-			{
-				Enum Type = BOSS,
 			},
 		},
 		Cog = 
 		{
 			LinkId = 
 			{
-				uint Id = 7,
+				uint Id = 5,
 			},
 			Named = 
 			{
@@ -268,7 +189,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 8,
+				uint Id = 6,
 			},
 			Named = 
 			{
@@ -276,7 +197,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, -10.25, 0],
+				Vec3 Translation = [-19.1473618, 11.1879997, 0],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -292,20 +213,17 @@ Cog =
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 				string FontName = "4e7bac697bec55c5:Verdana",
 				uint FontSize = 100,
-				string Text = "Charge: 100%",
+				string Text = "Player",
 				TextAlign Align = Left,
 				float PixelsPerUnit = 128,
 				bool Smoothing = true,
-			},
-			ChargeText = 
-			{
 			},
 		},
 		Cog = 
 		{
 			LinkId = 
 			{
-				uint Id = 9,
+				uint Id = 7,
 			},
 			Named = 
 			{
@@ -313,7 +231,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [17, -14, 0],
+				Vec3 Translation = [17, -14.4111414, 0],
 				Vec3 Scale = [10, 27, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
