@@ -158,19 +158,12 @@ Level =
 			bool Wireframe = false,
 		},
 	},
-	Cog = 
+	ArchetypeInstance = 
 	{
+		string Name = "5a6dd50a3deebc98:LoversMale",
 		LinkId = 
 		{
 			uint Id = 4,
-		},
-		Named = 
-		{
-			string Name = "Male",
-		},
-		Archetyped = 
-		{
-			string Name = "5a6dd50a3deebc98:LoversMale",
 		},
 		Transform = 
 		{
@@ -178,74 +171,17 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
+		Named = 
 		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a4004b5d168c742:MaleLover",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		RigidBody = 
-		{
-			bool Static = true,
-			bool Asleep = false,
-			bool Kinematic = false,
-			bool RotationLocked = false,
-			bool Mode2D = true,
-			bool AllowSleep = true,
-			bool Inherit2DMode = true,
-			Vec3 Velocity = [0, 0, 0],
-			Vec3 AngularVelocity = [0, 0, 0],
-		},
-		BoxCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "5a916d3ed1b57688:Boss",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.5, 0.5, 0.5],
-		},
-		HP = 
-		{
-			float MaxHealth = 1000,
-		},
-		DamageOnColide = 
-		{
-			float Damage = 10,
-		},
-		BossShoot = 
-		{
-			float TimeBetweenShots = 3,
-			float ShootSpeed = 30,
-			string Projectile = "5a49ac8fbdef8c9d:LoversRose",
+			string Name = "Male",
 		},
 	},
-	Cog = 
+	ArchetypeInstance = 
 	{
+		string Name = "5a6dd5773d1944a7:LoversFemale",
 		LinkId = 
 		{
 			uint Id = 5,
-		},
-		Named = 
-		{
-			string Name = "Female",
-		},
-		Archetyped = 
-		{
-			string Name = "5a6dd5773d1944a7:LoversFemale",
 		},
 		Transform = 
 		{
@@ -253,59 +189,9 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
+		Named = 
 		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a400440d747c136:FemaleLover",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		RigidBody = 
-		{
-			bool Static = true,
-			bool Asleep = false,
-			bool Kinematic = false,
-			bool RotationLocked = false,
-			bool Mode2D = true,
-			bool AllowSleep = true,
-			bool Inherit2DMode = true,
-			Vec3 Velocity = [0, 0, 0],
-			Vec3 AngularVelocity = [0, 0, 0],
-		},
-		BoxCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "5a916d3ed1b57688:Boss",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.5, 0.5, 0.5],
-		},
-		HP = 
-		{
-			float MaxHealth = 1000,
-		},
-		DamageOnColide = 
-		{
-			float Damage = 10,
-		},
-		BossShoot = 
-		{
-			float TimeBetweenShots = 2,
-			float ShootSpeed = 25,
-			string Projectile = "5a49ac8fbdef8c9d:LoversRose",
+			string Name = "Female",
 		},
 	},
 	ArchetypeInstance = 

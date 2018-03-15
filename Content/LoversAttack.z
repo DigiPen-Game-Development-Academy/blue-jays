@@ -1,38 +1,30 @@
+//Hunter Fosler
+//Purpose: Lovers Attack
 class LoversAttack : ZilchComponent
 {
-    [Property] var TimeBetweenShots : Real = 1;
-    [Property] var ShootSpeed : Real = 1;
-    [Property] var Projectile : Archetype = Archetype.Arrow;
-    [Property] var ShootCooldown : Real = 10;
-    [Property] var ShootDuration : Real = 2;
-    var TimeTillShoot : Real;
+     [Property] var ShootCooldown : Real = 10;
+     [Property] var ShootDurration : Real = 0;
+    
     var ShootCounter : Real = 0;
+    
     function Initialize(init : CogInitializer)
     {
-        this.TimeTillShoot = this.TimeBetweenShots;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
-
+    
     function OnLogicUpdate(event : UpdateEvent)
     {
-        //couting down timer
-        this.TimeTillShoot -= event.Dt;
-        //check if we can shoot
-         if(this.Space.Globals.GetTarget(this.Owner.Transform.Translation)  != null)
-        if (this.TimeTillShoot <= 0)
+        this.ShootCounter += event.Dt;
+        this.Space.FindObjectByName("ChargeBar").ChargeBar.ChargeUpdate(this.ShootCounter/this.ShootCooldown);
+        if (this.ShootCounter >= this.ShootCooldown)
         {
-            var vel = (this.Space.Globals.GetTarget(this.Owner.Transform.Translation).Transform.Translation - this.Owner.Transform.Translation) * this.ShootSpeed;
-            
-            //Create the bullet
-            var arrow = this.Space.CreateAtPosition(this.Projectile, this.Owner.Transform.WorldTranslation + vel / 100);
-            
-            //Launch the bullet
-            arrow.RigidBody.Velocity = vel;
-            
-            //Reset our time
-            this.TimeTillShoot = this.TimeBetweenShots;
-            
-            this.Space.SoundSpace.PlayCue(SoundCue.TowerShoot);
+             var loversRose = this.Space.FindObjectByName("LoversRose");
+             
+             if (loversRose != null)
+             {
+            this.Space.CreateAtPosition(Archetype.LoversRose, loversRose.Transform.Translation);
+            this.ShootCounter = 0;
         }
-    }
+        }
+}
 }

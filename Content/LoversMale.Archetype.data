@@ -14,8 +14,8 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-11.8493109, -3.80866742, 0.100000001],
-		Vec3 Scale = [0.721045136, 0.649116993, 1],
+		Vec3 Translation = [-11.8133869, -3.23386693, 0.100000001],
+		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -71,5 +71,9 @@ Cog =
 		float TimeBetweenShots = 3,
 		float ShootSpeed = 30,
 		string Projectile = "5a49ac8fbdef8c9d:LoversRose",
+	},
+	LoversAttack = 
+	{
+		float ShootCooldown = 10,
 	},
 },
