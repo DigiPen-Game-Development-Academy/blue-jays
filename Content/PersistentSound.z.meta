@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "PersistentSound",
-		uint64 ResourceId = 5a49b68cef253448,
-	},
-},

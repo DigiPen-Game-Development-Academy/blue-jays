@@ -115,7 +115,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.06676495, -0.0998391062, 51],
+			Vec3 Translation = [3.22511411, -16.5817776, 51],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -127,7 +127,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 27.2531948,
+			float Size = 40.6569748,
 		},
 		EditorCameraController = 
 		{
@@ -135,7 +135,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.06676495, -0.0998391062, 0.999999523],
+			Vec3 LookTarget = [3.22511411, -16.5817776, 0.999999583],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1076,12 +1076,19 @@ Level =
 			},
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "5a916c8c1094a85b:Fool",
 		LinkId = 
 		{
 			uint Id = 22,
+		},
+		Named = 
+		{
+			string Name = "Boss",
+		},
+		Archetyped = 
+		{
+			string Name = "5a916c8c1094a85b:Fool",
 		},
 		Transform = 
 		{
@@ -1089,9 +1096,141 @@ Level =
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		Sprite = 
 		{
-			string Name = "Boss",
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a91640833bb1ccd:Fool",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "5a916d3ed1b57688:Boss",
+			Vec3 Offset = [0, -0.100000001, 0],
+			Vec3 Size = [0.375, 0.800000012, 0.5],
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = true,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		FoolMovement = 
+		{
+			float PaceSpeed = 5,
+			float MaxMoveDistance = 10,
+			Vec3 PaceDirection = [1, 0, 0],
+		},
+		HP = 
+		{
+			float MaxHealth = 500,
+		},
+		DamageOnColide = 
+		{
+			float Damage = 10,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 23,
+				},
+				Named = 
+				{
+					string Name = "Sparks",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, 0],
+					Vec3 Scale = [0.5, 0.5, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteParticleSystem = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					SystemChildMode ChildMode = Independent,
+					SystemSpace SystemSpace = WorldSpace,
+					uint DrawOrder = 0,
+					Vec4 Tint = [1, 0.878431439, 0.501960814, 0.649999976],
+					float WarmUpTime = 0,
+					ParticleGeometry GeometryMode = Beam,
+					ParticleRenderMode RenderMode = Additive,
+					ParticleSortMode SortMode = Youngest,
+					ParticleAnimation ParticleAnimation = Single,
+					string Texture = "5310e87946e94ef2:FastSpark",
+					float VelocityScale = 0.5,
+					float LengthScale = 1,
+					float MaxParticleSize = 100,
+					Vec3 SystemSize = [4, 4, 4],
+				},
+				SphericalParticleEmitter = 
+				{
+					bool Active = true,
+					uint EmitCount = 0,
+					float EmitRate = 10,
+					float EmitVariance = 0,
+					float Size = 0.400000006,
+					float SizeVariance = 0.400000006,
+					float Lifetime = 0.5,
+					float LifetimeVariance = 0.150000006,
+					float Spin = 0,
+					float SpinVariance = 50,
+					bool RandomSpin = true,
+					float Fill = 1,
+					float EmitterVelocityPercent = 0,
+					Vec3 StartVelocity = [0, 0, 0],
+					Vec3 RandomVelocity = [10, 10, 10],
+					Vec3 TangentVelocity = [0, 0, 0],
+					Vec3 EmitterSize = [0, 0, 0],
+					bool FastMovingEmitter = false,
+				},
+				LinearParticleAnimator = 
+				{
+					Vec3 Force = [0, 0, 0],
+					Vec3 RandomForce = [0, 0, 0],
+					float Torque = 0,
+					float Growth = 0,
+					float Dampening = 0,
+					Vec3 Twist = [0, 0, 0],
+				},
+				ParticleColorAnimator = 
+				{
+					Vec4 Color0 = [1, 1, 1, 1],
+					Vec4 Color1 = [1, 1, 1, 0.75],
+					Vec4 Color2 = [1, 1, 1, 0.5],
+					Vec4 Color3 = [1, 1, 1, 0.25],
+					Vec4 Color4 = [1, 1, 1, 0],
+				},
+				ParticleRemove = 
+				{
+				},
+			},
 		},
 	},
 	ArchetypeInstance = 
@@ -1099,7 +1238,7 @@ Level =
 		string Name = "5a026066ef8b66c0:PauseOverlay",
 		LinkId = 
 		{
-			uint Id = 23,
+			uint Id = 24,
 		},
 		Transform = 
 		{
@@ -1117,7 +1256,7 @@ Level =
 		string Name = "5a019c947ab2b196:OptionsOverlay",
 		LinkId = 
 		{
-			uint Id = 24,
+			uint Id = 25,
 		},
 		Transform = 
 		{
@@ -1128,6 +1267,24 @@ Level =
 		Named = 
 		{
 			string Name = "OptionsOverlay",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a4b005c95de7eb0:MusicPlayer",
+		LinkId = 
+		{
+			uint Id = 26,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.0418081284, -11.9464359, -0.00100000005],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "MusicPlayer",
 		},
 	},
 },
