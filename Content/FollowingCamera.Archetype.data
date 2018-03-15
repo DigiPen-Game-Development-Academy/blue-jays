@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 40],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -74,12 +74,19 @@ Cog =
 				string Name = "PauseOverlay",
 			},
 		},
-		ArchetypeInstance = 
+		Cog = 
 		{
-			string Name = "5ae54e4c56970a08:BetweenLevelUI",
 			LinkId = 
 			{
 				uint Id = 4,
+			},
+			Named = 
+			{
+				string Name = "UI",
+			},
+			Archetyped = 
+			{
+				string Name = "5ae54e4c56970a08:BetweenLevelUI",
 			},
 			Transform = 
 			{
@@ -87,9 +94,129 @@ Cog =
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
-			Named = 
+			Hierarchy = 
 			{
-				string Name = "UI",
+				Cog = 
+				{
+					LinkId = 
+					{
+						uint Id = 5,
+					},
+					Named = 
+					{
+						string Name = "FateText",
+					},
+					Transform = 
+					{
+						Vec3 Translation = [-19.3159657, 11.0775356, 0],
+						Vec3 Scale = [1, 1, 1],
+						Quat Rotation = [0, 0, 0, 1],
+					},
+					SpriteText = 
+					{
+						bool Visible = true,
+						bool VisibilityCulling = true,
+						bool VisibilityEvents = true,
+						bool CastShadows = false,
+						Vec4 Color = [0, 0, 0, 1],
+						BlendMode BlendMode = Alpha,
+						SpriteGeometryMode GeometryMode = ZPlane,
+						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+						string FontName = "4e7bac697bec55c5:Verdana",
+						uint FontSize = 100,
+						string Text = "Player",
+						TextAlign Align = Left,
+						float PixelsPerUnit = 128,
+						bool Smoothing = true,
+					},
+				},
+				Cog = 
+				{
+					LinkId = 
+					{
+						uint Id = 6,
+					},
+					Named = 
+					{
+						string Name = "FateBar",
+					},
+					Transform = 
+					{
+						Vec3 Translation = [-17, -14.5, 0],
+						Vec3 Scale = [10, 27, 1],
+						Quat Rotation = [0, 0, 0, 1],
+					},
+					Sprite = 
+					{
+						bool Visible = true,
+						bool VisibilityCulling = true,
+						bool VisibilityEvents = true,
+						bool CastShadows = false,
+						Vec4 Color = [1, 1, 1, 1],
+						BlendMode BlendMode = Alpha,
+						SpriteGeometryMode GeometryMode = ZPlane,
+						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+						string SpriteSource = "5ae3c467465ab7fb:FateBanner",
+						bool RenderMask = false,
+						bool FlipX = false,
+						bool FlipY = false,
+						bool AnimationActive = true,
+						float AnimationSpeed = 1,
+						uint StartFrame = 0,
+					},
+					Area = 
+					{
+						Vec2 Size = [1, 1],
+						Location Origin = BottomCenter,
+					},
+					FateBar = 
+					{
+					},
+				},
+				Cog = 
+				{
+					LinkId = 
+					{
+						uint Id = 7,
+					},
+					Named = 
+					{
+						string Name = "HealthBar",
+					},
+					Transform = 
+					{
+						Vec3 Translation = [-14, 12.5, 0],
+						Vec3 Scale = [10, 27, 1],
+						Quat Rotation = [0, 0, 0, 1],
+					},
+					Sprite = 
+					{
+						bool Visible = true,
+						bool VisibilityCulling = true,
+						bool VisibilityEvents = true,
+						bool CastShadows = false,
+						Vec4 Color = [1, 1, 1, 1],
+						BlendMode BlendMode = Alpha,
+						SpriteGeometryMode GeometryMode = ZPlane,
+						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+						string SpriteSource = "5ae3d0bf63012639:HealthBanner",
+						bool RenderMask = false,
+						bool FlipX = false,
+						bool FlipY = false,
+						bool AnimationActive = true,
+						float AnimationSpeed = 1,
+						uint StartFrame = 0,
+					},
+					Area = 
+					{
+						Vec2 Size = [1, 1],
+						Location Origin = TopRight,
+					},
+					HealthBar = 
+					{
+						Enum Type = PLAYER,
+					},
+				},
 			},
 		},
 	},

@@ -283,11 +283,11 @@ class AchievementTracker : ZilchComponent
         Achievement("Unique Master", "Spawn 25 chariots.", "Never stops being satisfying.",
             AchRequire.UNIQUE_SPAWNS, 25, 100000, this, AchEvent.CHECK, SpriteSource.Chariot);
         Achievement("Lovers Beaten", "Beat the Lovers.", "Don't you feel a bit guilty?",
-            AchRequire.LOVERS_BEATEN, 1, 100000, this, AchEvent.CHECK, SpriteSource.Square);
+            AchRequire.LOVERS_BEATEN, 1, 100000, this, AchEvent.CHECK, SpriteSource.MaleLover);
         Achievement("All You Need Is Love", "Beat the Lovers 5 times.", "Ruthless.",
-            AchRequire.LOVERS_BEATEN, 5, 100000, this, AchEvent.CHECK, SpriteSource.Square);
+            AchRequire.LOVERS_BEATEN, 5, 100000, this, AchEvent.CHECK, SpriteSource.FemaleLover);
         Achievement("Perfect Lovers Run", "Beat the Lovers with full health.", "Love is blind...",
-            AchRequire.HEALTH, 100, 100, this, AchEvent.BEAT_LOVERS, SpriteSource.Square);
+            AchRequire.HEALTH, 100, 100, this, AchEvent.BEAT_LOVERS, SpriteSource.LoverBG);
         Achievement("One Minute In Heaven", "Beat the Lovers in a minute.", "It wasn't meant to last.",
             AchRequire.TIME, 0, 60, this, AchEvent.BEAT_LOVERS, SpriteSource.Clock);
         Achievement("I Don't Wanna See That", "Beat the Lovers in 30 seconds.", "Eww, kissing!",
@@ -301,15 +301,15 @@ class AchievementTracker : ZilchComponent
         Achievement("Master Spawner", "Spawn 75 turrets.", "Carpal tunnel awaits.",
             AchRequire.SPAWNS, 75, 100000, this, AchEvent.CHECK, SpriteSource.Bomb);
         Achievement("Winner, Winner", "Beat Death.", "They said it was impossible.",
-            AchRequire.WINS, 1, 100000, this, AchEvent.CHECK, SpriteSource.Bomb);
+            AchRequire.WINS, 1, 100000, this, AchEvent.CHECK, SpriteSource.Death_crow);
         Achievement("Winner, Winner, Winner, Winner...", "Beat Death 5 times.", "They said it was possible.",
-            AchRequire.WINS, 5, 100000, this, AchEvent.CHECK, SpriteSource.Bomb);
+            AchRequire.WINS, 5, 100000, this, AchEvent.CHECK, SpriteSource.Death_crow);
         Achievement("Perfect Death Run", "Beat Death without taking damage.", "Definitely not dying now.",
-            AchRequire.HEALTH, 100, 100, this, AchEvent.WIN, SpriteSource.Bomb);
+            AchRequire.HEALTH, 100, 100, this, AchEvent.WIN, SpriteSource.Death_crow);
         Achievement("A Quick Death", "Beat Death in a minute.", "Death: wow ur a dum hacker",
-            AchRequire.TIME, 0, 60, this, AchEvent.WIN, SpriteSource.Bomb);
+            AchRequire.TIME, 0, 60, this, AchEvent.WIN, SpriteSource.Death_crow);
         Achievement("Anticlimactic", "Beat Death in 30 seconds.", "Death: stupid spawnkiller",
-            AchRequire.TIME, 0, 30, this, AchEvent.WIN, SpriteSource.Bomb);
+            AchRequire.TIME, 0, 30, this, AchEvent.WIN, SpriteSource.Death_crow);
         Achievement("First Run", "Play the game 1 time.", "That was dumb.",
             AchRequire.TOTAL_RUNS, 1, 100000, this, AchEvent.CHECK, SpriteSource.One);
         Achievement("Novice Player", "Play the game 5 times.", "This is boring.",
