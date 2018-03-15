@@ -33,5 +33,19 @@ class ChargeBar : ZilchComponent
         var tl = this.Owner.Transform.Translation;
         tl.Y = 9 - charge * (this.Owner.Transform.Scale.Y * 0.8);
         this.Owner.Transform.Translation = tl;
+        
+        if(this.Type == Boss.DEATH)
+        {
+            charge = this.Boss.DeathsAttack.DestroyCounter/this.Boss.DeathsAttack.DestroyCooldown;
+           
+        }
+        else
+        {
+            charge = 1;
+        }
+    
+         var tl2  = this.Owner.Transform.Translation;
+         tl2.Y = 9 - charge * (this.Owner.Transform.Scale.Y * 0.8);
+         this.Owner.Transform.Translation = tl2;
     }
 }
