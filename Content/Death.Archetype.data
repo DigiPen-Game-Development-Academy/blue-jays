@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-0.139038801, -2.62297463, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [2.9096396, 3.56378627, 0.936515927],
 		Quat Rotation = [0, 0, -0.0437288173, 0.999043465],
 	},
@@ -56,7 +56,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -68,7 +68,7 @@ Cog =
 	},
 	DeathsAttack = 
 	{
-		float DestroyCooldown = 10,
+		float DestroyCooldown = 15,
 	},
 	DeathsMissile = 
 	{
