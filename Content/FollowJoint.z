@@ -27,6 +27,6 @@ class FollowJoint : ZilchComponent
         var radians = Math.Angle2D ( b - a );
         this.Rope.Transform.SetEulerAnglesXYZ(0,0,radians);
         
-        this.Rope.Transform.Scale = Real3(this.Link.Length,0.15,0.15);
+        this.Rope.Area.Size = Real2(this.Link.Length/2,0.15);
     }
 }
