@@ -37,9 +37,13 @@ class HP : ZilchComponent
                 this.Space.Globals.SavedStats.SavedStats.TotalRuns += 1;
                 this.Space.LoadLevel(Level.Win);
             }
-            else
+            else if(this.Owner.ArchetypeName == "Pigeon")
             {
                 this.Owner.Destroy();
+            }
+            else
+            {
+                this.LevelSettings.LoversManager.LoversUpdate(this.Owner.ArchetypeName == "Male");
             }
             this.Space.Globals.StoreStats();
         }

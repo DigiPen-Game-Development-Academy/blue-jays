@@ -94,6 +94,10 @@ Level =
 		DrawIcons = 
 		{
 		},
+		MenuController = 
+		{
+			Enum Menu = LEVEL,
+		},
 	},
 	Cog = 
 	{

@@ -3,33 +3,8 @@
 
 class ChargeBar : ZilchComponent
 {
-    var Boss : Cog;
-    var Type : Boss;
-    function Initialize(init : CogInitializer)
+    function ChargeUpdate(charge : Real)
     {
-        this.Boss = this.Space.Globals.GetTarget(Real3());
-        if(this.Boss.FoolAttack != null)
-        {
-            this.Type = Boss.FOOL;
-        }
-        else
-        {
-            this.Type = Boss.DEATH;
-        }
-        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-    }
-
-    function OnLogicUpdate(event : UpdateEvent)
-    {
-        var charge : Real = 0;
-        if(this.Type == Boss.FOOL)
-        {
-            charge = this.Boss.FoolAttack.SpecialAttackCounter/this.Boss.FoolAttack.SpecialCooldown;
-        }
-        else
-        {
-            charge = 1;
-        }
         var tl = this.Owner.Transform.Translation;
         tl.Y = 9 - charge * (this.Owner.Transform.Scale.Y * 0.8);
         this.Owner.Transform.Translation = tl;

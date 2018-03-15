@@ -77,6 +77,7 @@ class FoolAttack : ZilchComponent
         {
             this.Owner.FindChildByName("Sparks").SphericalParticleEmitter.EmitRate = emit;
         }
+        this.Space.FindObjectByName("ChargeBar").ChargeBar.ChargeUpdate(this.SpecialAttackCounter / this.SpecialCooldown);
     }
     
     function Shoot()

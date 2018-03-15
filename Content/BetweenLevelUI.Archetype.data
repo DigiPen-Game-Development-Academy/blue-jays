@@ -28,43 +28,6 @@ Cog =
 			},
 			Named = 
 			{
-				string Name = "FateText",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [0, 11.25, 0],
-				Vec3 Scale = [1, 1, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			SpriteText = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [0, 0, 0, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string FontName = "4e7bac697bec55c5:Verdana",
-				uint FontSize = 100,
-				string Text = "Fate: 100/100",
-				TextAlign Align = Left,
-				float PixelsPerUnit = 128,
-				bool Smoothing = true,
-			},
-			FateText = 
-			{
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 3,
-			},
-			Named = 
-			{
 				string Name = "FateBar",
 			},
 			Transform = 
@@ -104,45 +67,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 4,
-			},
-			Named = 
-			{
-				string Name = "HealthText",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [0, 11.1999998, 0],
-				Vec3 Scale = [1, 1, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			SpriteText = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [0, 0, 0, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string FontName = "4e7bac697bec55c5:Verdana",
-				uint FontSize = 100,
-				string Text = "Health: 100/100",
-				TextAlign Align = Right,
-				float PixelsPerUnit = 128,
-				bool Smoothing = true,
-			},
-			HealthText = 
-			{
-				Enum Type = PLAYER,
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 5,
+				uint Id = 3,
 			},
 			Named = 
 			{
@@ -179,7 +104,21 @@ Cog =
 			},
 			HealthBar = 
 			{
-				Enum Type = PLAYER,
+				CogPath Target = 
+				{
+					string Path = ":/Player",
+					bool ErrorOnResolveToNull = false,
+					bool ErrorOnPathCantCompute = false,
+					bool ErrorOnDirectLinkFail = false,
+					bool UpdateCogOnPathChange = true,
+					bool UpdatePathOnCogChange = true,
+					bool UpdateCogOnInitialize = true,
+					bool ResolvedNullErrorOccurred = false,
+					uint ResolvedCog = 4,
+					CogPathPreference PathPreference0 = CogRelative,
+					CogPathPreference PathPreference1 = SpaceRelative,
+					CogPathPreference PathPreference2 = Absolute,
+				},
 			},
 		},
 	},
