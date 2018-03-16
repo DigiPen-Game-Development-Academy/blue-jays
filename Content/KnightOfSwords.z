@@ -20,7 +20,7 @@ class KnightOfSwords : ZilchComponent
             this.Owner.Destroy();
             return;
         }
-        var vec = this.Owner.Transform.Translation - this.Target.Transform.Translation;
+        var vec = this.Target.Transform.Translation - this.Owner.Transform.Translation;
         this.Owner.RigidBody.Velocity = Math.Normalize(vec) * this.Speed;
     }
 }
