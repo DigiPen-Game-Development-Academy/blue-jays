@@ -108,7 +108,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 50],
+			Vec3 Translation = [-0.267698348, -0.750715733, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -120,7 +120,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 40.1710625,
+			float Size = 4.97871923,
 		},
 		EditorCameraController = 
 		{
@@ -128,7 +128,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0, 0, 0],
+			Vec3 LookTarget = [-0.267698348, -0.750715733, -1.17013714e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -506,51 +506,6 @@ Level =
 			},
 		},
 	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 14,
-		},
-		Named = 
-		{
-			string Name = "Floor",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, -0.100000001],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a6e9b1e487621db:StoneBrick",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [40, 40],
-			Location Origin = Center,
-		},
-		PigeonSpawner = 
-		{
-			string WhatToSpawn = "5a6ea1f2412a5c3b:Pigeon",
-			float SpawnTime = 3,
-		},
-	},
 	ArchetypeInstance = 
 	{
 		string Name = "5a08fb786d4f3f80:Player",
@@ -567,6 +522,46 @@ Level =
 		Named = 
 		{
 			string Name = "Player",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 14,
+		},
+		Named = 
+		{
+			string Name = "TileMap",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "5a23c44a56d0c1e7:Hub_TileMap02",
+			string PaletteName = "5a23cf4d543270df:HubTile",
+			float UnitsPerTile = 1.125,
+			float MeshThickness = 1.20000005,
+		},
+		PigeonSpawner = 
+		{
+			string WhatToSpawn = "5a6ea1f2412a5c3b:Pigeon",
+			float SpawnTime = 3,
 		},
 	},
 },
