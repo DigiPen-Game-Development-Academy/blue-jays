@@ -14,7 +14,7 @@ class LoadtoNextLevel : ZilchComponent
         // If we collided with the block,
         if (otherObject.Name == "Player")
         {
-            this.Space.LoadLevel (Level.Fool);
+            this.Space.LoadLevel (Level.FoolTopDown);
         }
     }
 }
