@@ -1,0 +1,12 @@
+BinaryContent = 
+{
+	BinaryBuilder = 
+	{
+		string Name = "theHermit_TileMap00",
+		uint64 ResourceId = 5a3c3f666409b1bb,
+		string LoaderType = "TileMapSource",
+		uint Version = 0,
+		string FilterTag = "",
+		string ResourceOwner = "5a3c3f8f766f5138:theHermit",
+	},
+},
