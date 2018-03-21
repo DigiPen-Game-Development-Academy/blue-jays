@@ -36,7 +36,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.82537007, 5.66970921, 50],
+			Vec3 Translation = [0.719084024, -0.193608165, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -48,7 +48,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 36.7880096,
+			float Size = 12.099309,
 		},
 		EditorCameraController = 
 		{
@@ -56,7 +56,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.82537007, 5.66970921, 7.97894586e-08],
+			Vec3 LookTarget = [0.719084024, -0.193608165, 3.14321795e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -85,16 +85,39 @@ Level =
 		{
 			string Name = "Camera",
 		},
+		EditorFlags = 
+		{
+			bool Locked = false,
+			bool Hidden = true,
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a08fb786d4f3f80:Player",
+		LinkId = 
+		{
+			uint Id = 5,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-7.13553715, 0.110628605, 0.200000003],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Player",
+		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 6,
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Floor",
 		},
 		Transform = 
 		{
@@ -121,24 +144,6 @@ Level =
 			uint StartFrame = 0,
 		},
 	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a08fb786d4f3f80:Player",
-		LinkId = 
-		{
-			uint Id = 6,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-7.13553715, 0.110628605, 0.200000003],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Player",
-		},
-	},
 	Cog = 
 	{
 		LinkId = 
@@ -147,7 +152,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Wall",
 		},
 		Transform = 
 		{
