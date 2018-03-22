@@ -1,0 +1,12 @@
+BinaryContent = 
+{
+	BinaryBuilder = 
+	{
+		string Name = "FoolTopDown_TileMap00",
+		uint64 ResourceId = 5afe15f1579f29cc,
+		string LoaderType = "TileMapSource",
+		uint Version = 0,
+		string FilterTag = "",
+		string ResourceOwner = "5afe150b689f2952:FoolTopDown",
+	},
+},
