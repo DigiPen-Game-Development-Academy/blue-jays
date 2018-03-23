@@ -5,24 +5,40 @@ class CameraConstraint : ZilchComponent
 {
     function Initialize(init : CogInitializer)
     {
-        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
         var position = this.Owner.Transform.WorldTranslation.XY;
         //Up
-        if (position.Y>10-this.Owner.Camera.Size)
+        if (position.Y > 20 - this.Owner.Camera.Size)
         {
-            position.Y = 10 + this.Owner.Camera.Size;
+            position.Y = 20 - this.Owner.Camera.Size;
         }
         
         this.Owner.Transform.WorldTranslation =
         Real3(position, this.Owner.Transform.WorldTranslation.Z);
         //Down
-        if (position.Y<-10 - this.Owner.Camera.Size)
+        if (position.Y < -10 + this.Owner.Camera.Size)
         {
-            position.Y = -10 - this.Owner.Camera.Size;
+            position.Y = -10 + this.Owner.Camera.Size;
+        }
+        
+        this.Owner.Transform.WorldTranslation =
+        Real3(position, this.Owner.Transform.WorldTranslation.Z);
+        
+        if (position.X > 15 - this.Owner.Camera.Size)
+        {
+            position.X = 15 - this.Owner.Camera.Size;
+        }
+        
+        this.Owner.Transform.WorldTranslation =
+        Real3(position, this.Owner.Transform.WorldTranslation.Z);
+        
+        if (position.X < -15 + this.Owner.Camera.Size)
+        {
+            position.X = -15 + this.Owner.Camera.Size;
         }
         
         this.Owner.Transform.WorldTranslation =
