@@ -108,7 +108,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [2.70858741, 5.79537296, 51],
+			Vec3 Translation = [9.08514595, 0.5, 51],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -120,7 +120,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 30.1195011,
+			float Size = 20.1897125,
 		},
 		EditorCameraController = 
 		{
@@ -128,7 +128,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [2.70858741, 5.79537296, 1],
+			Vec3 LookTarget = [9.08514595, 0.5, 1],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -188,149 +188,6 @@ Level =
 				},
 				Named = 
 				{
-					string Name = "PauseOverlay",
-				},
-				Archetyped = 
-				{
-					string Name = "5a026066ef8b66c0:PauseOverlay",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 0, -39],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				OverlayToggle = 
-				{
-					Vec2 ButtonSize = [5, 1],
-				},
-				Hierarchy = 
-				{
-					Cog = 
-					{
-						LinkId = 
-						{
-							uint Id = 5,
-						},
-						Named = 
-						{
-							string Name = "Menu",
-						},
-						Archetyped = 
-						{
-							string Name = "5a02651333da9589:MenuButton",
-						},
-						Transform = 
-						{
-							Vec3 Translation = [0, -3, 0],
-							Vec3 Scale = [1, 1, 1],
-							Quat Rotation = [0, 0, 0, 1],
-						},
-						Sprite = 
-						{
-							bool Visible = true,
-							bool VisibilityCulling = true,
-							bool VisibilityEvents = true,
-							bool CastShadows = false,
-							Vec4 Color = [1, 1, 1, 1],
-							BlendMode BlendMode = Alpha,
-							SpriteGeometryMode GeometryMode = ZPlane,
-							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-							string SpriteSource = "5ae548fab70a4370:Button_Bacround",
-							bool RenderMask = false,
-							bool FlipX = false,
-							bool FlipY = false,
-							bool AnimationActive = true,
-							float AnimationSpeed = 1,
-							uint StartFrame = 0,
-						},
-						Area = 
-						{
-							Vec2 Size = [5, 1],
-							Location Origin = Center,
-						},
-						Button = 
-						{
-							float ScaleFactor = 1.10000002,
-						},
-						Hierarchy = 
-						{
-						},
-					},
-					ArchetypeInstance = 
-					{
-						string Name = "5a02608ee5a149c3:OptionsButton",
-						LinkId = 
-						{
-							uint Id = 6,
-						},
-						Transform = 
-						{
-							Vec3 Translation = [0, 0, 0],
-							Vec3 Scale = [1, 1, 1],
-							Quat Rotation = [0, 0, 0, 1],
-						},
-						Area = 
-						{
-							Vec2 Size = [5, 1],
-							Location Origin = Center,
-						},
-						Named = 
-						{
-							string Name = "Options",
-						},
-					},
-					ArchetypeInstance = 
-					{
-						string Name = "5a0260b9da6b9ca3:ResumeButton",
-						LinkId = 
-						{
-							uint Id = 7,
-						},
-						Transform = 
-						{
-							Vec3 Translation = [0, 3, 0],
-							Vec3 Scale = [1, 1, 1],
-							Quat Rotation = [0, 0, 0, 1],
-						},
-						Area = 
-						{
-							Vec2 Size = [5, 1],
-							Location Origin = Center,
-						},
-						Named = 
-						{
-							string Name = "Resume",
-						},
-					},
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "5a019c947ab2b196:OptionsOverlay",
-				LinkId = 
-				{
-					uint Id = 8,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 0, -39],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "OptionsOverlay",
-				},
-			},
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 9,
-				},
-				Named = 
-				{
 					string Name = "UI",
 				},
 				Archetyped = 
@@ -349,7 +206,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 10,
+							uint Id = 5,
 						},
 						Named = 
 						{
@@ -392,15 +249,15 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 11,
+							uint Id = 6,
 						},
 						Named = 
 						{
-							string Name = "FateBar",
+							string Name = "ChargeBar",
 						},
 						Transform = 
 						{
-							Vec3 Translation = [9.08514595, 0.5, 0],
+							Vec3 Translation = [8.78833771, 0.5, 0],
 							Vec3 Scale = [5, 10, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
@@ -435,7 +292,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 12,
+							uint Id = 7,
 						},
 						Named = 
 						{
@@ -482,7 +339,7 @@ Level =
 								bool UpdatePathOnCogChange = true,
 								bool UpdateCogOnInitialize = true,
 								bool ResolvedNullErrorOccurred = false,
-								uint ResolvedCog = 13,
+								uint ResolvedCog = 8,
 								CogPathPreference PathPreference0 = CogRelative,
 								CogPathPreference PathPreference1 = SpaceRelative,
 								CogPathPreference PathPreference2 = Absolute,
@@ -493,7 +350,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 14,
+							uint Id = 9,
 						},
 						Named = 
 						{
@@ -501,7 +358,7 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [8, 0.5, 0],
+							Vec3 Translation = [7.69421005, 0.5, 0],
 							Vec3 Scale = [5, 10, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
@@ -540,7 +397,7 @@ Level =
 								bool UpdatePathOnCogChange = true,
 								bool UpdateCogOnInitialize = true,
 								bool ResolvedNullErrorOccurred = false,
-								uint ResolvedCog = 13,
+								uint ResolvedCog = 8,
 								CogPathPreference PathPreference0 = CogRelative,
 								CogPathPreference PathPreference1 = SpaceRelative,
 								CogPathPreference PathPreference2 = Absolute,
@@ -551,7 +408,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 15,
+							uint Id = 10,
 						},
 						Named = 
 						{
@@ -559,7 +416,7 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [8.59402752, 4.80622244, 0],
+							Vec3 Translation = [8.22872353, 4.8975482, 0],
 							Vec3 Scale = [1, 1, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
@@ -585,7 +442,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 16,
+							uint Id = 11,
 						},
 						Named = 
 						{
@@ -593,7 +450,7 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [7.56108952, 2.47178841, 0],
+							Vec3 Translation = [7.33277512, 2.47178841, 0],
 							Vec3 Scale = [1.00000012, 1.00000012, 1],
 							Quat Rotation = [0, 0, 0.707106829, 0.707106769],
 						},
@@ -619,7 +476,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 17,
+							uint Id = 12,
 						},
 						Named = 
 						{
@@ -627,7 +484,7 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [8.711236, 2.47178841, 0],
+							Vec3 Translation = [8.34593391, 2.47178841, 0],
 							Vec3 Scale = [1.00000012, 1.00000012, 1],
 							Quat Rotation = [0, 0, 0.707106829, 0.707106769],
 						},
@@ -653,7 +510,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 18,
+							uint Id = 13,
 						},
 						Named = 
 						{
@@ -687,7 +544,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 19,
+							uint Id = 14,
 						},
 						Named = 
 						{
@@ -721,7 +578,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 20,
+							uint Id = 15,
 						},
 						Named = 
 						{
@@ -757,7 +614,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 21,
+					uint Id = 16,
 				},
 				Named = 
 				{
@@ -792,7 +649,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 22,
+					uint Id = 17,
 				},
 				Named = 
 				{
@@ -827,7 +684,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 23,
+					uint Id = 18,
 				},
 				Named = 
 				{
@@ -865,7 +722,7 @@ Level =
 		string Name = "5a08fb786d4f3f80:Player",
 		LinkId = 
 		{
-			uint Id = 13,
+			uint Id = 8,
 		},
 		Transform = 
 		{
@@ -882,7 +739,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 24,
+			uint Id = 19,
 		},
 		Named = 
 		{
@@ -923,7 +780,7 @@ Level =
 		string Name = "5a916c8c1094a85b:Fool",
 		LinkId = 
 		{
-			uint Id = 25,
+			uint Id = 20,
 		},
 		Transform = 
 		{
@@ -941,7 +798,7 @@ Level =
 		string Name = "5afe13c4cdf381f0:FoolBackround",
 		LinkId = 
 		{
-			uint Id = 26,
+			uint Id = 21,
 		},
 		Transform = 
 		{
@@ -959,17 +816,53 @@ Level =
 		string Name = "5a62821ef1c80783:Eye",
 		LinkId = 
 		{
-			uint Id = 27,
+			uint Id = 22,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.577931762, 1.71842432, 1],
+			Vec3 Translation = [-0.772424579, 0.741379142, 1],
 			Vec3 Scale = [8, 8, 8],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
 		{
 			string Name = "Eye",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a026066ef8b66c0:PauseOverlay",
+		LinkId = 
+		{
+			uint Id = 23,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "PauseOverlay",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a019c947ab2b196:OptionsOverlay",
+		LinkId = 
+		{
+			uint Id = 24,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "OptionsOverlay",
 		},
 	},
 },
