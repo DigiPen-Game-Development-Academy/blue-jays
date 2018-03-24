@@ -1,0 +1,21 @@
+//Author: Callie (with Jeffery's Help)
+//Purpose: automatically calculate Z coordinate
+
+[RunInEditor]
+class AutoDepth : ZilchComponent
+{
+    [Property] var Offset : Real;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.FrameUpdate, this.OnFrameUpdate);
+    }
+
+    function OnFrameUpdate(event : UpdateEvent)
+    {
+        var adjusted = this.Owner.Transform.WorldTranslation;
+        adjusted.Z = this.Offset - adjusted.Y*0.01;
+        this.Owner.Transform.WorldTranslation = adjusted;
+    }
+
+}

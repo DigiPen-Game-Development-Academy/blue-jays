@@ -8,6 +8,7 @@ class PlayerController : ZilchComponent
     [Property] var Speed : Real = 1;
     [Property] var Acceleration : Real = 1;
     [Property] var JumpHeight : Real = 1;
+    [Property] var Velocity : Real = 1;
     
     var JumpReady : Boolean = false;
     var Stunned : Boolean = false;
@@ -66,8 +67,9 @@ class PlayerController : ZilchComponent
         if(!(Zero.Keyboard.KeyIsDown(Keys.A) || Zero.Keyboard.KeyIsDown(Keys.D) || Zero.Keyboard.KeyIsDown(Keys.W) || Zero.Keyboard.KeyIsDown(Keys.S)))
         {
             this.Owner.Sprite.SpriteSource = SpriteSource.Swords;
+            this.RigidBody.Velocity *= this.Velocity;
         }
-        this.RigidBody.Velocity = Real3(vel * this.Speed, 0);
+        this.RigidBody.Velocity = Math.Lerp(this.RigidBody.Velocity, Real3(vel * this.Speed, 0), this.Acceleration * event.Dt);
         if(this.Space.TimeSpace.Paused == false)
         {
             if (Zero.Keyboard.KeyIsPressed(Keys.Escape))

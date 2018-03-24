@@ -138,6 +138,9 @@ Level =
 			bool DrawEditorIcons = true,
 			bool Wireframe = false,
 		},
+		CameraConstraint = 
+		{
+		},
 	},
 	ArchetypeInstance = 
 	{
@@ -148,7 +151,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 0],
+			Vec3 Translation = [0.398468018, 1.42846084, 0.485715389],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -157,44 +160,22 @@ Level =
 			string Name = "Player",
 		},
 	},
-	Cog = 
+	ArchetypeInstance = 
 	{
+		string Name = "5a5de6655a780222:HubBG",
 		LinkId = 
 		{
 			uint Id = 5,
 		},
-		Named = 
-		{
-			string Name = "TileMap",
-		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 0],
+			Vec3 Translation = [-0.0158742908, 1.01650643, -0.0399999432],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		MultiSprite = 
+		Named = 
 		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		},
-		TileMap = 
-		{
-			string SourceName = "5a23c44a56d0c1e7:Hub_TileMap02",
-			string PaletteName = "5a23cf4d543270df:HubTile",
-			float UnitsPerTile = 1.125,
-			float MeshThickness = 1.20000005,
-		},
-		PigeonSpawner = 
-		{
-			string WhatToSpawn = "5a6ea1f2412a5c3b:Pigeon",
-			float SpawnTime = 3,
+			string Name = "BG",
 		},
 	},
 	Cog = 

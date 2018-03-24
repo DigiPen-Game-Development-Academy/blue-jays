@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-18.2554188, 21.2515087, 0],
+		Vec3 Translation = [0.398468018, 1.42846084, 0.485715389],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -63,6 +63,7 @@ Cog =
 		float Speed = 10,
 		float Acceleration = 5,
 		float JumpHeight = 1200,
+		float Velocity = 1,
 	},
 	TurretPlace = 
 	{
@@ -74,6 +75,10 @@ Cog =
 	HP = 
 	{
 		float MaxHealth = 100,
+	},
+	AutoDepth = 
+	{
+		float Offset = 0.5,
 	},
 	Hierarchy = 
 	{
