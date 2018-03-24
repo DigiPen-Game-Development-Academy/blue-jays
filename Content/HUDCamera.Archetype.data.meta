@@ -2,8 +2,8 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "LevelCamera",
-		uint64 ResourceId = 5a08fb6c68225264,
+		string Name = "HUDCamera",
+		uint64 ResourceId = 5a445440991eab2b,
 		string LoaderType = "Cog",
 		uint Version = 0,
 		bool ShowInEditor = true,

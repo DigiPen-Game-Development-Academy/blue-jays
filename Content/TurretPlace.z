@@ -139,10 +139,12 @@ class TurretPlace : ZilchComponent
     
     function OnLeftClick(event : ViewportMouseEvent)
     {
+        Console.WriteLine("Left Click (0)");
         if(!this.CheckTurretPlace() || this.Space.TimeSpace.TimeScale != 1)
         {
             return;
         }
+        Console.WriteLine("Valid Place (1)");
         if(this.CurrentTurret.Name == "The Chariot")
         {
             this.ChariotCooldown = this.ChariotCooldownTime;
@@ -164,24 +166,25 @@ class TurretPlace : ZilchComponent
         this.Space.Globals.SavedStats.SavedStats.Spawns += 1;
         this.Space.Globals.StoreStats();
         this.Fate -= this.CurrentTurret.Fate;
+        Console.WriteLine("Completed Place (2)");
     }
     
     function UpdateCards(num : Integer)
     {
-        this.Space.FindObjectByName("KnightCard").Sprite.Color = Real4(1,1,1,0.6);
-        this.Space.FindObjectByName("TowerCard").Sprite.Color = Real4(1,1,1,0.6);
-        this.Space.FindObjectByName("ChariotCard").Sprite.Color = Real4(1,1,1,0.6);
+        Spaces.HUDSpace.FindObjectByName("KnightCard").Sprite.Color = Real4(1,1,1,0.6);
+        Spaces.HUDSpace.FindObjectByName("TowerCard").Sprite.Color = Real4(1,1,1,0.6);
+        Spaces.HUDSpace.FindObjectByName("ChariotCard").Sprite.Color = Real4(1,1,1,0.6);
         if(num == 0)
         {
-            this.Space.FindObjectByName("KnightCard").Sprite.Color = Real4(1,1,1,1);
+            Spaces.HUDSpace.FindObjectByName("KnightCard").Sprite.Color = Real4(1,1,1,1);
         }
         else if(num == 1)
         {
-            this.Space.FindObjectByName("TowerCard").Sprite.Color = Real4(1,1,1,1);
+            Spaces.HUDSpace.FindObjectByName("TowerCard").Sprite.Color = Real4(1,1,1,1);
         }
         else if(num == 2)
         {
-            this.Space.FindObjectByName("ChariotCard").Sprite.Color = Real4(1,1,1,1);
+            Spaces.HUDSpace.FindObjectByName("ChariotCard").Sprite.Color = Real4(1,1,1,1);
         }
     }
 }

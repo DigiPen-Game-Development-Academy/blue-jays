@@ -8,13 +8,9 @@ Cog =
 	{
 		string Name = "Camera",
 	},
-	Archetyped = 
-	{
-		string Name = "5a08fb6c68225264:LevelCamera",
-	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 40],
+		Vec3 Translation = [0, 0, -40],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -32,9 +28,6 @@ Cog =
 	{
 		bool Active = true,
 		float Volume = 1,
-	},
-	CameraLogic = 
-	{
 	},
 	Hierarchy = 
 	{
@@ -190,7 +183,7 @@ Cog =
 							bool UpdatePathOnCogChange = true,
 							bool UpdateCogOnInitialize = true,
 							bool ResolvedNullErrorOccurred = false,
-							uint ResolvedCog = 7,
+							uint ResolvedCog = 4294967293,
 							CogPathPreference PathPreference0 = CogRelative,
 							CogPathPreference PathPreference1 = SpaceRelative,
 							CogPathPreference PathPreference2 = Absolute,
@@ -201,7 +194,7 @@ Cog =
 				{
 					LinkId = 
 					{
-						uint Id = 8,
+						uint Id = 7,
 					},
 					Named = 
 					{
@@ -248,7 +241,7 @@ Cog =
 							bool UpdatePathOnCogChange = true,
 							bool UpdateCogOnInitialize = true,
 							bool ResolvedNullErrorOccurred = false,
-							uint ResolvedCog = 7,
+							uint ResolvedCog = 4294967293,
 							CogPathPreference PathPreference0 = CogRelative,
 							CogPathPreference PathPreference1 = SpaceRelative,
 							CogPathPreference PathPreference2 = Absolute,
@@ -261,7 +254,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 9,
+				uint Id = 8,
 			},
 			Named = 
 			{
@@ -296,7 +289,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 10,
+				uint Id = 9,
 			},
 			Named = 
 			{
@@ -314,7 +307,7 @@ Cog =
 				bool VisibilityCulling = true,
 				bool VisibilityEvents = true,
 				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
+				Vec4 Color = [1, 1, 1, 0.600000024],
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -331,7 +324,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 11,
+				uint Id = 10,
 			},
 			Named = 
 			{
@@ -349,7 +342,7 @@ Cog =
 				bool VisibilityCulling = true,
 				bool VisibilityEvents = true,
 				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
+				Vec4 Color = [1, 1, 1, 0.600000024],
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",

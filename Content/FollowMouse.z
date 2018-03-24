@@ -12,6 +12,7 @@ class FollowMouse : ZilchComponent
     function OnMouseUpdate(event : ViewportMouseEvent)
     {
         var mousepos = event.ToWorldZPlane(0);
-        this.Owner.Transform.Translation = this.Offset + mousepos;
+        var cameraOffset = Real3(Zero.Mouse.ScreenPosition.X / 1000, -Zero.Mouse.ScreenPosition.Y / 1000, 0);
+        this.Owner.Transform.Translation = this.Offset + cameraOffset + mousepos;
     }
 }

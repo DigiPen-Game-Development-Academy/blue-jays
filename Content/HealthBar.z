@@ -4,11 +4,19 @@
 class HealthBar : ZilchComponent
 {
     var HP : HP;
-    [Property] var Target : CogPath;
+    [Property] var Target : String;
     function Initialize(init : CogInitializer)
     {
-        this.HP = this.Target.Cog.HP;
-        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        var target = Spaces.LevelSpace.FindObjectByName(this.Target);
+        if(target != null)
+        {
+            this.HP = Spaces.LevelSpace.FindObjectByName(this.Target).HP;
+            Zero.Connect(Spaces.LevelSpace, Events.LogicUpdate, this.OnLogicUpdate);
+        }
+        else
+        {
+            this.Owner.Destroy();
+        }
     }
 
     function OnLogicUpdate(event : UpdateEvent)

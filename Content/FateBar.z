@@ -6,8 +6,8 @@ class FateBar : ZilchComponent
     var TP : TurretPlace;
     function Initialize(init : CogInitializer)
     {
-        this.TP = this.Space.FindObjectByName("Player").TurretPlace;
-        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        this.TP = Spaces.LevelSpace.FindObjectByName("Player").TurretPlace;
+        Zero.Connect(Spaces.LevelSpace, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
     function OnLogicUpdate(event : UpdateEvent)
