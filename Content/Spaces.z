@@ -1,5 +1,0 @@
-class Spaces
-{
-    [Static] var LevelSpace : Space = null;
-    [Static] var HUDSpace : Space = null;
-}

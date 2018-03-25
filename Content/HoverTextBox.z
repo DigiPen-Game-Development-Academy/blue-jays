@@ -26,7 +26,7 @@ class HoverTextBox : ZilchComponent
         this.Title = ach.Name;
         this.Objective = ach.Objective;
         this.Flavor = ach.Flavor;
-        this.Progress = ach.GetProgressText();
+        this.Progress = this.Space.AchievementTracker.GetProgressText(ach);
         this.Unlocked = ach.Unlocked;
         if(!ach.Unlocked)
         {

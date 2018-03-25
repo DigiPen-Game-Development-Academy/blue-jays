@@ -7,16 +7,7 @@ class HealthBar : ZilchComponent
     [Property] var Target : String;
     function Initialize(init : CogInitializer)
     {
-        var target = Spaces.LevelSpace.FindObjectByName(this.Target);
-        if(target != null)
-        {
-            this.HP = Spaces.LevelSpace.FindObjectByName(this.Target).HP;
-            Zero.Connect(Spaces.LevelSpace, Events.LogicUpdate, this.OnLogicUpdate);
-        }
-        else
-        {
-            this.Owner.Destroy();
-        }
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
     function OnLogicUpdate(event : UpdateEvent)
@@ -26,6 +17,19 @@ class HealthBar : ZilchComponent
             var tl = this.Owner.Transform.Translation;
             tl.Y = 8.5 - this.HP.Health/this.HP.MaxHealth * (this.Owner.Transform.Scale.Y * 0.8);
             this.Owner.Transform.Translation = tl;
+        }
+        else if(this.Space.OtherSpace.Ref != null)
+        {
+            var target = this.Space.OtherSpace.Ref.FindObjectByName(this.Target);
+            if(target != null)
+            {
+                this.HP = target.HP;
+                Console.WriteLine("HealthBar initialized successfully");
+            }
+            else
+            {
+                this.Owner.Destroy();
+            }
         }
     }
 }

@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "Spaces",
-		uint64 ResourceId = 5a5dde9451b2b65f,
-	},
-},

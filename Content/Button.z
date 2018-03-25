@@ -21,8 +21,9 @@ class Button : ZilchComponent
     function OnMouseUpdate(event : ViewportMouseEvent)
     {
         var mousepos = event.ToWorldZPlane(0);
-        var max : Real2 = this.Transform.WorldTranslation.XY + this.Area.Size / 2;
-        var min : Real2 = this.Transform.WorldTranslation.XY - this.Area.Size / 2;
+        var tl = this.Owner.Transform.WorldTranslation.XY;
+        var max : Real2 = tl + this.Area.Size / 2;
+        var min : Real2 = tl - this.Area.Size / 2;
         //If the mouse is in the bounds of the button...
         if(mousepos.X < max.X && mousepos.Y < max.Y && mousepos.X > min.X && mousepos.Y > min.Y)
         {
@@ -31,7 +32,7 @@ class Button : ZilchComponent
             {
                 this.Selected = true;
                 this.Transform.Scale *= this.ScaleFactor;
-                this.Space.Globals.ChangeCursor(CursorColor.BLUE);
+                this.Space.OtherSpace.Ref.Globals.ChangeCursor(CursorColor.BLUE);
                 this.Space.SoundSpace.PlayCue(SoundCue.Select);
             }
         }
@@ -39,7 +40,7 @@ class Button : ZilchComponent
         {
             this.Selected = false;
             this.Transform.Scale /= this.ScaleFactor;
-            this.Space.Globals.ChangeCursor(CursorColor.WHITE);
+            this.Space.OtherSpace.Ref.Globals.ChangeCursor(CursorColor.WHITE);
         }
     }
     
@@ -47,7 +48,7 @@ class Button : ZilchComponent
     {
         if(this.Selected && (this.ToCall != null))
         {
-            this.Space.Globals.ChangeCursor(CursorColor.WHITE);
+            this.Space.OtherSpace.Ref.Globals.ChangeCursor(CursorColor.WHITE);
             this.ToCall();
         }
     }

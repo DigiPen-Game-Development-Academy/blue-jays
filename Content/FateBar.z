@@ -6,14 +6,29 @@ class FateBar : ZilchComponent
     var TP : TurretPlace;
     function Initialize(init : CogInitializer)
     {
-        this.TP = Spaces.LevelSpace.FindObjectByName("Player").TurretPlace;
-        Zero.Connect(Spaces.LevelSpace, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        var tl = this.Owner.Transform.Translation;
-        tl.Y = 8.5 - this.TP.Fate/this.TP.MaxFate * (this.Owner.Transform.Scale.Y * 0.8);
-        this.Owner.Transform.Translation = tl;
+        if(this.TP != null)
+        {
+            var tl = this.Owner.Transform.Translation;
+            tl.Y = 8.5 - this.TP.Fate/this.TP.MaxFate * (this.Owner.Transform.Scale.Y * 0.8);
+            this.Owner.Transform.Translation = tl;
+        }
+        else if(this.Space.OtherSpace.Ref != null)
+        {
+            var target = this.Space.OtherSpace.Ref.FindObjectByName("Player");
+            if(target != null)
+            {
+                this.TP = target.TurretPlace;
+                Console.WriteLine("FateBar initialized successfully");
+            }
+            else
+            {
+                this.Owner.Destroy();
+            }
+        }
     }
 }

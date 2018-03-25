@@ -21,6 +21,9 @@ class Globals : ZilchComponent
     
     function Initialize(init : CogInitializer)
     {
+        this.Space.OtherSpace.Ref = this.GameSession.CreateNamedSpace("HUDSpace", Archetype.HUDSpace);
+        this.Space.OtherSpace.Ref.LoadLevel(Level.HUDLevel);
+        this.Space.OtherSpace.Ref.OtherSpace.Ref = this.Space;
         Zero.Connect(this.GameSession, Events.GameRequestQuit, this.OnGameRequestQuit);
         Zero.Connect(this.Space, Events.LevelStarted, this.OnLevelStart);
         this.SavedStats = Zero.ObjectStore.RestoreOrArchetype("Stats", Archetype.SavedStats, this.Space);
@@ -81,6 +84,7 @@ class Globals : ZilchComponent
     function OnGameRequestQuit(event : GameEvent)
     {
         event.Handled = true;
+        Zero.Mouse.Cursor = Cursor.Invisible;
     }
     
     function GetTurrets() : Array[Turret]

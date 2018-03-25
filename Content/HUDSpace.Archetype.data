@@ -10,7 +10,7 @@ Space =
 	},
 	Archetyped = 
 	{
-		string Name = "554cea0f94af6dc4:Space",
+		string Name = "5a5d837592a2ecb8:HUDSpace",
 	},
 	TimeSpace = 
 	{
@@ -45,15 +45,6 @@ Space =
 	{
 	},
 	ReactiveSpace = 
-	{
-	},
-	Globals = 
-	{
-	},
-	AchievementTracker = 
-	{
-	},
-	Timer = 
 	{
 	},
 	OtherSpace = 
