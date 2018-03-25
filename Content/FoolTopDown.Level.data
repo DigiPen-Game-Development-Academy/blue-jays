@@ -152,7 +152,7 @@ Level =
 		},
 		Archetyped = 
 		{
-			string Name = "5a08fb6c68225264:LevelCamera",
+			string Name = "4faa6050b86884ec:DefaultArchetype",
 		},
 		Transform = 
 		{
@@ -329,28 +329,14 @@ Level =
 						},
 						HealthBar = 
 						{
-							CogPath Target = 
-							{
-								string Path = ":/Player",
-								bool ErrorOnResolveToNull = false,
-								bool ErrorOnPathCantCompute = false,
-								bool ErrorOnDirectLinkFail = false,
-								bool UpdateCogOnPathChange = true,
-								bool UpdatePathOnCogChange = true,
-								bool UpdateCogOnInitialize = true,
-								bool ResolvedNullErrorOccurred = false,
-								uint ResolvedCog = 8,
-								CogPathPreference PathPreference0 = CogRelative,
-								CogPathPreference PathPreference1 = SpaceRelative,
-								CogPathPreference PathPreference2 = Absolute,
-							},
+							string Target = "",
 						},
 					},
 					Cog = 
 					{
 						LinkId = 
 						{
-							uint Id = 9,
+							uint Id = 8,
 						},
 						Named = 
 						{
@@ -387,28 +373,14 @@ Level =
 						},
 						HealthBar = 
 						{
-							CogPath Target = 
-							{
-								string Path = ":/Player",
-								bool ErrorOnResolveToNull = false,
-								bool ErrorOnPathCantCompute = false,
-								bool ErrorOnDirectLinkFail = false,
-								bool UpdateCogOnPathChange = true,
-								bool UpdatePathOnCogChange = true,
-								bool UpdateCogOnInitialize = true,
-								bool ResolvedNullErrorOccurred = false,
-								uint ResolvedCog = 8,
-								CogPathPreference PathPreference0 = CogRelative,
-								CogPathPreference PathPreference1 = SpaceRelative,
-								CogPathPreference PathPreference2 = Absolute,
-							},
+							string Target = "",
 						},
 					},
 					Cog = 
 					{
 						LinkId = 
 						{
-							uint Id = 10,
+							uint Id = 9,
 						},
 						Named = 
 						{
@@ -442,7 +414,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 11,
+							uint Id = 10,
 						},
 						Named = 
 						{
@@ -476,7 +448,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 12,
+							uint Id = 11,
 						},
 						Named = 
 						{
@@ -510,7 +482,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 13,
+							uint Id = 12,
 						},
 						Named = 
 						{
@@ -544,7 +516,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 14,
+							uint Id = 13,
 						},
 						Named = 
 						{
@@ -578,7 +550,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 15,
+							uint Id = 14,
 						},
 						Named = 
 						{
@@ -614,7 +586,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 16,
+					uint Id = 15,
 				},
 				Named = 
 				{
@@ -649,7 +621,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 17,
+					uint Id = 16,
 				},
 				Named = 
 				{
@@ -684,7 +656,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 18,
+					uint Id = 17,
 				},
 				Named = 
 				{
@@ -722,11 +694,11 @@ Level =
 		string Name = "5a08fb786d4f3f80:Player",
 		LinkId = 
 		{
-			uint Id = 8,
+			uint Id = 18,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 0.200000003],
+			Vec3 Translation = [0, 0, 0.5],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -768,11 +740,6 @@ Level =
 			string PaletteName = "5a23cf4d543270df:HubTile",
 			float UnitsPerTile = 1.125,
 			float MeshThickness = 1.20000005,
-		},
-		PigeonSpawner = 
-		{
-			string WhatToSpawn = "5a6ea1f2412a5c3b:Pigeon",
-			float SpawnTime = 3,
 		},
 	},
 	ArchetypeInstance = 
