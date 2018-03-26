@@ -1,0 +1,12 @@
+BinaryContent = 
+{
+	BinaryBuilder = 
+	{
+		string Name = "Hub_TileMap06",
+		uint64 ResourceId = 5a366f01cd666f13,
+		string LoaderType = "TileMapSource",
+		uint Version = 0,
+		string FilterTag = "",
+		string ResourceOwner = "5ad17eac2114dbc6:Hub",
+	},
+},
