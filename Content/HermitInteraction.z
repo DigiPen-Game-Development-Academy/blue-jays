@@ -3,9 +3,8 @@
 
 class HermitInteraction : ZilchComponent
 {
-     var Fool : Level = Level.Find("FoolTopDown");
-
-     
+    var Fool : Level = Level.Find("Fool");
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Owner, Events.CollisionPersisted, this.OnCollisionPersisted);

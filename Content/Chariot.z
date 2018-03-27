@@ -17,6 +17,9 @@ class Chariot : ZilchComponent
     
     function Destroyed()
     {
-        this.PlayerTF.Translation = this.OriginalTL;
+        if(this.PlayerTF != null)
+        {
+            this.PlayerTF.Translation = this.OriginalTL;
+        }
     }
 }

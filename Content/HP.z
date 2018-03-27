@@ -8,6 +8,7 @@ class HP : ZilchComponent
     var Health : Real;
     var FlashTimer : Real = 0;
     var Flashed : Boolean = false;
+    var Dead : Boolean = false;
     
     function Initialize(init : CogInitializer)
     {
@@ -36,7 +37,7 @@ class HP : ZilchComponent
         this.FlashTimer = 0.25;
         this.Space.SoundSpace.PlayCue(SoundCue.Damage);
         this.Health -= damage;
-        if(this.Health <= 0)
+        if(this.Health <= 0 && !this.Dead)
         {
             if(this.Owner.Name == "Player")
             {
@@ -50,13 +51,18 @@ class HP : ZilchComponent
                 this.Space.Globals.SavedStats.SavedStats.FoolsBeaten += 1;
                 this.Space.Globals.SavedStats.SavedStats.Wins += 1;
                 this.Space.Globals.SavedStats.SavedStats.TotalRuns += 1;
-                this.Space.LoadLevel(Level.Win);
+                if(!this.Dead)
+                {
+                    Console.WriteLine("AAAAAAAAAA");
+                    this.Space.LoadLevel(Level.Win);
+                }
             }
             else if(this.Owner.ArchetypeName == "Pigeon")
             {
                 this.Owner.Destroy();
             }
             this.Space.Globals.StoreStats();
+            this.Dead = true;
         }
     }
 }

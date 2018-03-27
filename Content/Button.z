@@ -32,6 +32,8 @@ class Button : ZilchComponent
             {
                 this.Selected = true;
                 this.Transform.Scale *= this.ScaleFactor;
+                Console.WriteLine(this.Space.ArchetypeName);
+                Console.WriteLine(this.Space.OtherSpace.Ref.ArchetypeName);
                 this.Space.OtherSpace.Ref.Globals.ChangeCursor(CursorColor.BLUE);
                 this.Space.SoundSpace.PlayCue(SoundCue.Select);
             }

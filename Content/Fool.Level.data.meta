@@ -2,7 +2,7 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "FoolTopDown",
+		string Name = "Fool",
 		uint64 ResourceId = 5afe150b689f2952,
 		string LoaderType = "Level",
 		uint Version = 0,

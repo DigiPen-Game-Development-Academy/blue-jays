@@ -95,7 +95,7 @@ class Globals : ZilchComponent
     function GetTarget(pos : Real3) : Cog
     {
         var l = this.Space.CurrentLevel.Name;
-        if(l == "FoolTopDown")
+        if(l == "Fool")
         {
             return this.Space.FindObjectByName("Boss");
         }
