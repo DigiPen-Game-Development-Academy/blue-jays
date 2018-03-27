@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, -9.25, 0],
+		Vec3 Translation = [-0.0559372306, -6.07564735, 0.060756471],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -63,6 +63,10 @@ Cog =
 		float PaceSpeed = 5,
 		float MaxMoveDistance = 10,
 		Vec3 PaceDirection = [1, 0, 0],
+		float MaxX = 10,
+		float MaxY = 10,
+		float MinY = -10,
+		float MinX = -10,
 	},
 	HP = 
 	{
@@ -74,13 +78,17 @@ Cog =
 	},
 	FoolAttack = 
 	{
-		float BombSpeed = 40,
+		float BombSpeed = 30,
 		float BasicCooldown = 2,
 		float SpecialCooldown = 15,
 		float StunCooldown = 16,
 		float StunDuration = 2,
 		float EyeTelegraphTime = 1.20000005,
 		float EyeReverseTelegraphTime = 0.800000012,
+	},
+	AutoDepth = 
+	{
+		float Offset = 0,
 	},
 	Hierarchy = 
 	{
