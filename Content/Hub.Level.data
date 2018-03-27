@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-2.4917357, 4.67440653, 50],
+			Vec3 Translation = [-0.0742254034, 8.6825428, 49],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 44.3958664,
+			float Size = 29.7594509,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-2.4917357, 4.67440653, -8.11681673e-08],
+			Vec3 LookTarget = [-0.0742254034, 8.6825428, -1],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -393,7 +393,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 5, 0],
+					Vec3 Translation = [0, 6.38986492, 0],
 					Vec3 Scale = [1.00000012, 1, 14],
 					Quat Rotation = [0, 0, 0.707106829, 0.707106769],
 				},
@@ -1065,164 +1065,12 @@ Level =
 			string CueName = "5af76cac93f6a0ab:FoolUpdate",
 		},
 	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 22,
-		},
-		Named = 
-		{
-			string Name = "RosesFalling",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [6.78767776, 11.9048576, -1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteParticleSystem = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			SystemChildMode ChildMode = Independent,
-			SystemSpace SystemSpace = WorldSpace,
-			uint DrawOrder = 0,
-			Vec4 Tint = [1, 1, 1, 1],
-			float WarmUpTime = 0,
-			ParticleGeometry GeometryMode = Billboarded,
-			ParticleRenderMode RenderMode = Blended,
-			ParticleSortMode SortMode = Youngest,
-			ParticleAnimation ParticleAnimation = Single,
-			string Texture = "5aee5a0aa1d65ad1:RoseP6",
-			float VelocityScale = 1,
-			float LengthScale = 1,
-			float MaxParticleSize = 100,
-			Vec3 SystemSize = [15, 1, 0],
-		},
-		LinearParticleAnimator = 
-		{
-			Vec3 Force = [0, 0, 0],
-			Vec3 RandomForce = [0, 0, 0],
-			float Torque = 0,
-			float Growth = 0,
-			float Dampening = 0,
-			Vec3 Twist = [0, 0, 0],
-		},
-		ParticleColorAnimator = 
-		{
-			Vec4 Color0 = [1, 1, 1, 0],
-			Vec4 Color1 = [1, 1, 1, 1],
-			Vec4 Color2 = [1, 1, 1, 1],
-			Vec4 Color3 = [1, 1, 1, 1],
-			Vec4 Color4 = [1, 1, 1, 0],
-		},
-		BoxParticleEmitter = 
-		{
-			bool Active = true,
-			uint EmitCount = 0,
-			float EmitRate = 10,
-			float EmitVariance = 0,
-			float Size = 0.5,
-			float SizeVariance = 0,
-			float Lifetime = 3,
-			float LifetimeVariance = 0.200000003,
-			float Spin = 0,
-			float SpinVariance = 50,
-			bool RandomSpin = true,
-			float Fill = 1,
-			float EmitterVelocityPercent = 0,
-			Vec3 StartVelocity = [0, -3, 0],
-			Vec3 RandomVelocity = [0, 2, 2],
-			Vec3 TangentVelocity = [0, 0, 0],
-			Vec3 EmitterSize = [10, 10, 0],
-			bool FastMovingEmitter = false,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 23,
-		},
-		Named = 
-		{
-			string Name = "RosesFalling",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-7.42143917, 11.5389566, -1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteParticleSystem = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			SystemChildMode ChildMode = Independent,
-			SystemSpace SystemSpace = WorldSpace,
-			uint DrawOrder = 0,
-			Vec4 Tint = [1, 1, 1, 1],
-			float WarmUpTime = 0,
-			ParticleGeometry GeometryMode = Billboarded,
-			ParticleRenderMode RenderMode = Blended,
-			ParticleSortMode SortMode = Youngest,
-			ParticleAnimation ParticleAnimation = Single,
-			string Texture = "5aee5a0aa1d65ad1:RoseP6",
-			float VelocityScale = 1,
-			float LengthScale = 1,
-			float MaxParticleSize = 100,
-			Vec3 SystemSize = [15, 1, 0],
-		},
-		LinearParticleAnimator = 
-		{
-			Vec3 Force = [0, 0, 0],
-			Vec3 RandomForce = [0, 0, 0],
-			float Torque = 0,
-			float Growth = 0,
-			float Dampening = 0,
-			Vec3 Twist = [0, 0, 0],
-		},
-		ParticleColorAnimator = 
-		{
-			Vec4 Color0 = [1, 1, 1, 0],
-			Vec4 Color1 = [1, 1, 1, 1],
-			Vec4 Color2 = [1, 1, 1, 1],
-			Vec4 Color3 = [1, 1, 1, 1],
-			Vec4 Color4 = [1, 1, 1, 0],
-		},
-		BoxParticleEmitter = 
-		{
-			bool Active = true,
-			uint EmitCount = 0,
-			float EmitRate = 10,
-			float EmitVariance = 0,
-			float Size = 0.5,
-			float SizeVariance = 0,
-			float Lifetime = 3,
-			float LifetimeVariance = 0.200000003,
-			float Spin = 0,
-			float SpinVariance = 50,
-			bool RandomSpin = true,
-			float Fill = 1,
-			float EmitterVelocityPercent = 0,
-			Vec3 StartVelocity = [0, -3, 0],
-			Vec3 RandomVelocity = [0, 2, 2],
-			Vec3 TangentVelocity = [0, 0, 0],
-			Vec3 EmitterSize = [10, 10, 0],
-			bool FastMovingEmitter = false,
-		},
-	},
 	ArchetypeInstance = 
 	{
 		string Name = "5a56bfa2af355e29:Candle",
 		LinkId = 
 		{
-			uint Id = 24,
+			uint Id = 22,
 		},
 		Transform = 
 		{
@@ -1245,7 +1093,7 @@ Level =
 		string Name = "5a56bfa2af355e29:Candle",
 		LinkId = 
 		{
-			uint Id = 25,
+			uint Id = 23,
 		},
 		Transform = 
 		{
@@ -1268,7 +1116,7 @@ Level =
 		string Name = "5a56bfa2af355e29:Candle",
 		LinkId = 
 		{
-			uint Id = 26,
+			uint Id = 24,
 		},
 		Transform = 
 		{
@@ -1291,7 +1139,7 @@ Level =
 		string Name = "5a56bfa2af355e29:Candle",
 		LinkId = 
 		{
-			uint Id = 27,
+			uint Id = 25,
 		},
 		Transform = 
 		{
@@ -1307,6 +1155,178 @@ Level =
 		Named = 
 		{
 			string Name = "Candle",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 26,
+		},
+		Named = 
+		{
+			string Name = "Root",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [1.59024715, 12.6032982, -1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 27,
+				},
+				Named = 
+				{
+					string Name = "RosesFalling",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-5.23142624, 2.23316097, -1],
+					Vec3 Scale = [2, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteParticleSystem = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					SystemChildMode ChildMode = Independent,
+					SystemSpace SystemSpace = WorldSpace,
+					uint DrawOrder = 0,
+					Vec4 Tint = [1, 1, 1, 1],
+					float WarmUpTime = 0,
+					ParticleGeometry GeometryMode = Billboarded,
+					ParticleRenderMode RenderMode = Blended,
+					ParticleSortMode SortMode = Youngest,
+					ParticleAnimation ParticleAnimation = Single,
+					string Texture = "5aee5a0aa1d65ad1:RoseP6",
+					float VelocityScale = 1,
+					float LengthScale = 1,
+					float MaxParticleSize = 100,
+					Vec3 SystemSize = [20, 1, 0],
+				},
+				LinearParticleAnimator = 
+				{
+					Vec3 Force = [1.5, 0, 0],
+					Vec3 RandomForce = [0, 0, 0],
+					float Torque = 0.5,
+					float Growth = 0,
+					float Dampening = 0,
+					Vec3 Twist = [0, 0, 0],
+				},
+				ParticleColorAnimator = 
+				{
+					Vec4 Color0 = [1, 1, 1, 0],
+					Vec4 Color1 = [1, 1, 1, 1],
+					Vec4 Color2 = [1, 1, 1, 1],
+					Vec4 Color3 = [1, 1, 1, 1],
+					Vec4 Color4 = [1, 1, 1, 0],
+				},
+				BoxParticleEmitter = 
+				{
+					bool Active = true,
+					uint EmitCount = 0,
+					float EmitRate = 10,
+					float EmitVariance = 0,
+					float Size = 0.5,
+					float SizeVariance = 0,
+					float Lifetime = 3,
+					float LifetimeVariance = 0.200000003,
+					float Spin = 0,
+					float SpinVariance = 50,
+					bool RandomSpin = true,
+					float Fill = 1,
+					float EmitterVelocityPercent = 0,
+					Vec3 StartVelocity = [0, -3, 0],
+					Vec3 RandomVelocity = [0, 2, 2],
+					Vec3 TangentVelocity = [0, 2, 0],
+					Vec3 EmitterSize = [10, 10, 0],
+					bool FastMovingEmitter = false,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 28,
+				},
+				Named = 
+				{
+					string Name = "RosesFalling",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.0378940105, 1.99089432, -1],
+					Vec3 Scale = [2, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteParticleSystem = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					SystemChildMode ChildMode = Independent,
+					SystemSpace SystemSpace = WorldSpace,
+					uint DrawOrder = 0,
+					Vec4 Tint = [0.845000029, 0.173224986, 0.173224986, 1],
+					float WarmUpTime = 0,
+					ParticleGeometry GeometryMode = Billboarded,
+					ParticleRenderMode RenderMode = Blended,
+					ParticleSortMode SortMode = Youngest,
+					ParticleAnimation ParticleAnimation = Single,
+					string Texture = "5aee5a15a1c65ed5:RoseP3",
+					float VelocityScale = 1,
+					float LengthScale = 1,
+					float MaxParticleSize = 100,
+					Vec3 SystemSize = [20, 1, 0],
+				},
+				LinearParticleAnimator = 
+				{
+					Vec3 Force = [1.5, 0, 0],
+					Vec3 RandomForce = [0, 0, 0],
+					float Torque = 0.5,
+					float Growth = 0,
+					float Dampening = 0,
+					Vec3 Twist = [0, 0, 0],
+				},
+				ParticleColorAnimator = 
+				{
+					Vec4 Color0 = [1, 1, 1, 0],
+					Vec4 Color1 = [1, 1, 1, 1],
+					Vec4 Color2 = [1, 1, 1, 1],
+					Vec4 Color3 = [1, 1, 1, 1],
+					Vec4 Color4 = [1, 1, 1, 0],
+				},
+				BoxParticleEmitter = 
+				{
+					bool Active = true,
+					uint EmitCount = 0,
+					float EmitRate = 10,
+					float EmitVariance = 0,
+					float Size = 0.5,
+					float SizeVariance = 0,
+					float Lifetime = 3,
+					float LifetimeVariance = 0.200000003,
+					float Spin = 0,
+					float SpinVariance = 50,
+					bool RandomSpin = true,
+					float Fill = 1,
+					float EmitterVelocityPercent = 0,
+					Vec3 StartVelocity = [0, -3, 0],
+					Vec3 RandomVelocity = [0, 2, 2],
+					Vec3 TangentVelocity = [0, 2, 0],
+					Vec3 EmitterSize = [10, 10, 0],
+					bool FastMovingEmitter = false,
+				},
+			},
 		},
 	},
 },
