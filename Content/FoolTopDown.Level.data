@@ -95,14 +95,6 @@ Level =
 		{
 			Enum Menu = LEVEL,
 		},
-		RoseThrow = 
-		{
-			float Cooldown = 10,
-			float Time = 4,
-			float MaxRPS = 50,
-			float Chance = 0.5,
-			float SpawnRadius = 20,
-		},
 	},
 	Cog = 
 	{
@@ -116,9 +108,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.78261143, 4.18389225, 49.8184967],
+			Vec3 Translation = [-1.24824667, 0.113983423, 50.999073],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [-0.0418743566, -0.00784702413, -0.000328888273, 0.999091923],
+			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
 		Camera = 
 		{
@@ -128,15 +120,15 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 44.932869,
+			float Size = 33.2870827,
 		},
 		EditorCameraController = 
 		{
 			ControlMode ControlMode = ZPlane,
 			float LookDistance = 50,
-			float VerticalAngle = 0.0837758034,
-			float HorizontalAngle = 0.0157079622,
-			Vec3 LookTarget = [0, 0, 0],
+			float VerticalAngle = 0,
+			float HorizontalAngle = 0,
+			Vec3 LookTarget = [-1.24824667, 0.113983423, 0.999071836],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -166,47 +158,12 @@ Level =
 			string Name = "Player",
 		},
 	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 5,
-		},
-		Named = 
-		{
-			string Name = "FoolFloor",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		MultiSprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		},
-		TileMap = 
-		{
-			string SourceName = "",
-			string PaletteName = "5a23cf4d543270df:HubTile",
-			float UnitsPerTile = 1.125,
-			float MeshThickness = 1.20000005,
-		},
-	},
 	ArchetypeInstance = 
 	{
 		string Name = "5a916c8c1094a85b:Fool",
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 5,
 		},
 		Transform = 
 		{
@@ -221,121 +178,20 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
-		string Name = "5a62821ef1c80783:Eye",
+		string Name = "5a4b005c95de7eb0:MusicPlayer",
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 6,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.772424579, 0.741379142, 1],
-			Vec3 Scale = [8, 8, 8],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Eye",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a026066ef8b66c0:PauseOverlay",
-		LinkId = 
-		{
-			uint Id = 8,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, 1],
+			Vec3 Translation = [0, -12, -0.100000001],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "PauseOverlay",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a019c947ab2b196:OptionsOverlay",
-		LinkId = 
-		{
-			uint Id = 9,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "OptionsOverlay",
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 10,
 		},
 		Named = 
 		{
 			string Name = "MusicPlayer",
-		},
-		Archetyped = 
-		{
-			string Name = "5a4b005c95de7eb0:MusicPlayer",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0.0418081284, -11.9464359, -1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 0],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		RigidBody = 
-		{
-			bool Static = false,
-			bool Asleep = false,
-			bool Kinematic = false,
-			bool RotationLocked = false,
-			bool Mode2D = true,
-			bool AllowSleep = true,
-			bool Inherit2DMode = true,
-			Vec3 Velocity = [0, 0, 0],
-			Vec3 AngularVelocity = [0, 0, 0],
-		},
-		SoundEmitter = 
-		{
-			float Volume = 1,
-			float Pitch = 0,
-			float PitchSemitones = 0,
-			bool UsePitchSemitones = true,
-			bool Positional = false,
-			int Version = 1,
-		},
-		SimpleSound = 
-		{
-			bool StartPlaying = true,
-			string CueName = "5af76cac93f6a0ab:FoolUpdate",
 		},
 	},
 	ArchetypeInstance = 
@@ -356,71 +212,22 @@ Level =
 			string Name = "Camera",
 		},
 	},
-	Cog = 
+	ArchetypeInstance = 
 	{
+		string Name = "5a5b312631920701:FoolLevelTD",
 		LinkId = 
 		{
-			uint Id = 11,
-		},
-		Named = 
-		{
-			string Name = "Sprite",
+			uint Id = 7,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 0],
+			Vec3 Translation = [0, 3, 0.5],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5a6e9b1e487621db:StoneBrick",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [30, 25],
-			Location Origin = Center,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 12,
 		},
 		Named = 
 		{
-			string Name = "Trigger",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SphereCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "5a5b3e53cd244e5d:RoseTrigger",
-			Vec3 Offset = [0, 0, 0],
-			float Radius = 4,
+			string Name = "Root",
 		},
 	},
 },

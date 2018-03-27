@@ -79,4 +79,8 @@ Cog =
 	SpriteFlip = 
 	{
 	},
+	AutoDepth = 
+	{
+		float Offset = 0,
+	},
 },
