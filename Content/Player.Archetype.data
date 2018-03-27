@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0.398468018, 1.42846084, 0.485715389],
+		Vec3 Translation = [-10.1171379, -1.5620482, 0.51562047],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -79,6 +79,9 @@ Cog =
 	AutoDepth = 
 	{
 		float Offset = 0.5,
+	},
+	SpriteFlip = 
+	{
 	},
 	Hierarchy = 
 	{

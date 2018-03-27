@@ -64,7 +64,7 @@ Level =
 				CogPathPreference PathPreference2 = Absolute,
 			},
 			ViewportScaling Scaling = Letterbox,
-			Vec2 Resolution = [960, 720],
+			Vec2 Resolution = [1280, 720],
 			Vec4 MarginColor = [0, 0, 0, 1],
 		},
 		ForwardRenderer = 
@@ -91,6 +91,10 @@ Level =
 			int HilightInterval = 10,
 			bool FollowEditorCamera = false,
 		},
+		MenuController = 
+		{
+			Enum Menu = LEVEL,
+		},
 	},
 	Cog = 
 	{
@@ -104,7 +108,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.78261143, 4.18389225, 49.8184967],
+			Vec3 Translation = [-0.83854872, -1.8917551, 49.8792534],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0.0418743566, -0.00784702413, -0.000328888273, 0.999091923],
 		},
@@ -116,7 +120,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 33.2870827,
+			float Size = 24.6596832,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +128,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0.0837758034,
 			float HorizontalAngle = 0.0157079622,
-			Vec3 LookTarget = [0, 0, 0],
+			Vec3 LookTarget = [-0.0559372902, -6.07564735, 0.0607565641],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -145,7 +149,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-10, -1.5, 0.514999986],
+			Vec3 Translation = [-10.1171379, -1.5620482, 0.51562047],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -183,7 +187,7 @@ Level =
 		},
 		TileMap = 
 		{
-			string SourceName = "5afe15f1579f29cc:FoolTopDown_TileMap00",
+			string SourceName = "",
 			string PaletteName = "5a23cf4d543270df:HubTile",
 			float UnitsPerTile = 1.125,
 			float MeshThickness = 1.20000005,
@@ -198,7 +202,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -6, 0.0599999987],
+			Vec3 Translation = [-12, -7, 1.07000005],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -342,6 +346,46 @@ Level =
 		Named = 
 		{
 			string Name = "Camera",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 11,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a6e9b1e487621db:StoneBrick",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Area = 
+		{
+			Vec2 Size = [30, 25],
+			Location Origin = Center,
 		},
 	},
 },

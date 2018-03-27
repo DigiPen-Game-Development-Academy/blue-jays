@@ -27,47 +27,30 @@ class PlayerController : ZilchComponent
         if(Zero.Keyboard.KeyIsDown(Keys.D))
         {
             vel.X += 1;
-            if(this.Owner.Sprite.SpriteSource != SpriteSource.KingOS_Run)
-            {
-                this.Owner.Sprite.SpriteSource = SpriteSource.KingOS_Run;
-            }
-            if(this.Owner.Transform.EulerAngles.Y == 0)
-            {
-                this.Owner.Transform.SetEulerAnglesXYZ(0,Math.Pi,0);
-            }
         }
         if(Zero.Keyboard.KeyIsDown(Keys.A))
         {
             vel.X -= 1;
-            if(this.Owner.Sprite.SpriteSource != SpriteSource.KingOS_Run)
-            {
-                this.Owner.Sprite.SpriteSource = SpriteSource.KingOS_Run;
-            }
-            if(this.Owner.Transform.EulerAngles.Y != 0)
-            {
-                this.Owner.Transform.SetEulerAnglesXYZ(0,0,0);
-            }
         }
         if(Zero.Keyboard.KeyIsDown(Keys.W))
         {
             vel.Y += 1;
-            if(this.Owner.Sprite.SpriteSource != SpriteSource.KingOS_Run)
-            {
-                this.Owner.Sprite.SpriteSource = SpriteSource.KingOS_Run;
-            }
         }
         if(Zero.Keyboard.KeyIsDown(Keys.S))
         {
             vel.Y -= 1;
-            if(this.Owner.Sprite.SpriteSource != SpriteSource.KingOS_Run)
-            {
-                this.Owner.Sprite.SpriteSource = SpriteSource.KingOS_Run;
-            }
         }
         if(!(Zero.Keyboard.KeyIsDown(Keys.A) || Zero.Keyboard.KeyIsDown(Keys.D) || Zero.Keyboard.KeyIsDown(Keys.W) || Zero.Keyboard.KeyIsDown(Keys.S)))
         {
-            this.Owner.Sprite.SpriteSource = SpriteSource.Swords;
+            if(this.Owner.Sprite.SpriteSource == SpriteSource.KingOS_Run)
+            {
+                this.Owner.Sprite.SpriteSource = SpriteSource.Swords;
+            }
             this.RigidBody.Velocity *= this.Velocity;
+        }
+        else if(this.Owner.Sprite.SpriteSource != SpriteSource.KingOS_Run)
+        {
+            this.Owner.Sprite.SpriteSource = SpriteSource.KingOS_Run;
         }
         if(this.Stunned)
         {
