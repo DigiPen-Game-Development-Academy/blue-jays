@@ -108,7 +108,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-2.52485943, 3.50753927, 50.3184967],
+			Vec3 Translation = [8.31837368, 9.16800785, 50.4420013],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0.0418743566, -0.00784702413, -0.000328888273, 0.999091923],
 		},
@@ -120,7 +120,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 30.1194,
+			float Size = 44.9328461,
 		},
 		EditorCameraController = 
 		{
@@ -128,7 +128,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0.0837758034,
 			float HorizontalAngle = 0.0157079622,
-			Vec3 LookTarget = [-1.74224794, -0.676352978, 0.5],
+			Vec3 LookTarget = [9.10098553, 4.9841156, 0.623504817],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -257,7 +257,7 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [8.78833771, 0.5, 0],
+							Vec3 Translation = [9.09507084, 0.5, 0],
 							Vec3 Scale = [5, 10, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
@@ -344,7 +344,7 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [7.69421005, 0.5, 0],
+							Vec3 Translation = [8, 0.5, 0],
 							Vec3 Scale = [5, 10, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
@@ -388,7 +388,7 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [8.22872353, 4.8975482, 0],
+							Vec3 Translation = [8.01895428, 4.80622244, 0],
 							Vec3 Scale = [1, 1, 1],
 							Quat Rotation = [0, 0, 0, 1],
 						},
@@ -422,9 +422,9 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [7.33277512, 2.47178841, 0],
-							Vec3 Scale = [1.00000012, 1.00000012, 1],
-							Quat Rotation = [0, 0, 0.707106829, 0.707106769],
+							Vec3 Translation = [9.44457626, 4.80622244, 0],
+							Vec3 Scale = [1, 1, 1],
+							Quat Rotation = [0, 0, 0, 1],
 						},
 						SpriteText = 
 						{
@@ -438,7 +438,7 @@ Level =
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 							string FontName = "4e7bac697bec55c5:Verdana",
 							uint FontSize = 30,
-							string Text = "Health",
+							string Text = "Charge",
 							TextAlign Align = Center,
 							float PixelsPerUnit = 64,
 							bool Smoothing = true,
@@ -456,7 +456,7 @@ Level =
 						},
 						Transform = 
 						{
-							Vec3 Translation = [8.34593391, 2.47178841, 0],
+							Vec3 Translation = [7.56108952, 2.47178841, 0],
 							Vec3 Scale = [1.00000012, 1.00000012, 1],
 							Quat Rotation = [0, 0, 0.707106829, 0.707106769],
 						},
@@ -472,7 +472,7 @@ Level =
 							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 							string FontName = "4e7bac697bec55c5:Verdana",
 							uint FontSize = 30,
-							string Text = "Charge",
+							string Text = "Health",
 							TextAlign Align = Center,
 							float PixelsPerUnit = 64,
 							bool Smoothing = true,
@@ -913,55 +913,12 @@ Level =
 			},
 		},
 	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 22,
-		},
-		Named = 
-		{
-			string Name = "FoolBackground",
-		},
-		Archetyped = 
-		{
-			string Name = "5afe13c4cdf381f0:FoolBackround",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0.0663524941, 12.2485228, -0.122485228],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5af554c10f644933:FoolBg_update_0",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		AutoDepth = 
-		{
-			float Offset = 0,
-		},
-	},
 	ArchetypeInstance = 
 	{
 		string Name = "5a62821ef1c80783:Eye",
 		LinkId = 
 		{
-			uint Id = 23,
+			uint Id = 22,
 		},
 		Transform = 
 		{
@@ -979,7 +936,7 @@ Level =
 		string Name = "5a026066ef8b66c0:PauseOverlay",
 		LinkId = 
 		{
-			uint Id = 24,
+			uint Id = 23,
 		},
 		Transform = 
 		{
@@ -997,7 +954,7 @@ Level =
 		string Name = "5a019c947ab2b196:OptionsOverlay",
 		LinkId = 
 		{
-			uint Id = 25,
+			uint Id = 24,
 		},
 		Transform = 
 		{
@@ -1008,6 +965,71 @@ Level =
 		Named = 
 		{
 			string Name = "OptionsOverlay",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 25,
+		},
+		Named = 
+		{
+			string Name = "MusicPlayer",
+		},
+		Archetyped = 
+		{
+			string Name = "5a4b005c95de7eb0:MusicPlayer",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.0418081284, -11.9464359, -1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 0],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		SoundEmitter = 
+		{
+			float Volume = 1,
+			float Pitch = 0,
+			float PitchSemitones = 0,
+			bool UsePitchSemitones = true,
+			bool Positional = false,
+			int Version = 1,
+		},
+		SimpleSound = 
+		{
+			bool StartPlaying = true,
+			string CueName = "5af76cac93f6a0ab:FoolUpdate",
 		},
 	},
 },

@@ -60,6 +60,6 @@ Cog =
 	SimpleSound = 
 	{
 		bool StartPlaying = true,
-		string CueName = "5a4b052f474f8812:Song5",
+		string CueName = "5af76cac93f6a0ab:FoolUpdate",
 	},
 },
