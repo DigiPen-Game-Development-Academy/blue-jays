@@ -115,7 +115,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [2.58916235, 0.655606985, 51],
+			Vec3 Translation = [-1.66387761, -4.15217543, 51],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -127,7 +127,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 30.1194572,
+			float Size = 33.2871437,
 		},
 		EditorCameraController = 
 		{
@@ -135,7 +135,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [2.58916235, 0.655606985, 0.999999464],
+			Vec3 LookTarget = [-1.66387761, -4.15217543, 0.999999464],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -145,6 +145,24 @@ Level =
 			bool DrawDebugObjects = true,
 			bool DrawEditorIcons = true,
 			bool Wireframe = false,
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a08fb6c68225264:LevelCamera",
+		LinkId = 
+		{
+			uint Id = 2,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 40],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Camera",
 		},
 	},
 	Cog = 
@@ -212,7 +230,6 @@ Level =
 			float Speed = 10,
 			float Acceleration = 5,
 			float JumpHeight = 1200,
-			float Velocity = 1,
 		},
 		TurretPlace = 
 		{
@@ -1123,8 +1140,7 @@ Level =
 		{
 			float PaceSpeed = 5,
 			float MaxMoveDistance = 10,
-			Vec3 PaceDirectionUpAndDown = [0, 1, 0],
-			Vec3 PaceDirectionLeftAndRight = [1, 0, 0],
+			Vec3 PaceDirection = [1, 0, 0],
 		},
 		HP = 
 		{
@@ -1269,24 +1285,6 @@ Level =
 		Named = 
 		{
 			string Name = "MusicPlayer",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a3c3094491f9a8b:UniversalCamera",
-		LinkId = 
-		{
-			uint Id = 27,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0.647557974, 0.0700436234, 1],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Camera",
 		},
 	},
 },

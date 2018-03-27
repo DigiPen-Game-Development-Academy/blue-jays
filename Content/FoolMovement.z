@@ -4,8 +4,7 @@ class FoolMovement : ZilchComponent
 {
     [Property] var PaceSpeed : Real = 5.0;
     [Property] var MaxMoveDistance : Real = 10.0;
-    [Property] var PaceDirectionUpAndDown : Real3 = Real3(0,1,0);
-    [Property] var PaceDirectionLeftAndRight : Real3 = Real3(1,0,0);
+    [Property] var PaceDirection : Real3 = Real3(1,0,0);
     
     var StartPosition: Real3 = Real3();
     
@@ -29,24 +28,9 @@ class FoolMovement : ZilchComponent
         if (distanceFromStart >= this.MaxMoveDistance)
         {
             // once he goes past max switch directions
-       
-           this.PaceDirectionLeftAndRight*=-1;
-            
+            this.PaceDirection *= -1;
         }
-     
-        this.Owner.RigidBody.Velocity = this.PaceDirectionLeftAndRight * this.PaceSpeed;
         
+        this.Owner.RigidBody.Velocity = this.PaceDirection * this.PaceSpeed;
     }
-      function PaceUpAndDown(event:UpdateEvent)
-    {
-        var displacment2 = this.Transform.Translation - this.StartPosition;
-        var distanceFromStart2 = Math.Length(displacment2);
-        
-        if(distanceFromStart2 >= this.MaxMoveDistance)
-        {
-            this.PaceDirectionUpAndDown*=-1;
-        }
-           this.Owner.RigidBody.Velocity = this.PaceDirectionUpAndDown * this.PaceSpeed;
-    }
-  
 }

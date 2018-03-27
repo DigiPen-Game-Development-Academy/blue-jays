@@ -8,10 +8,6 @@ Cog =
 	{
 		string Name = "BG",
 	},
-	Archetyped = 
-	{
-		string Name = "5a5de6655a780222:HubBG",
-	},
 	Transform = 
 	{
 		Vec3 Translation = [-0.0158742908, 1.01650643, -0.0399999432],
@@ -49,7 +45,7 @@ Cog =
 			},
 			TileMap = 
 			{
-				string SourceName = "5a366f01cd619e77:Hub_TileMap05",
+				string SourceName = "5a3c3c9f12ead33d:Hub_TileMap04",
 				string PaletteName = "5a23cf4d543270df:HubTile",
 				float UnitsPerTile = 1.5,
 				float MeshThickness = 1.20000005,
@@ -84,7 +80,7 @@ Cog =
 			},
 			TileMap = 
 			{
-				string SourceName = "5a366f01cd666f13:Hub_TileMap06",
+				string SourceName = "5a23c44a56d0c1e7:Hub_TileMap02",
 				string PaletteName = "5a23cf4d543270df:HubTile",
 				float UnitsPerTile = 1.125,
 				float MeshThickness = 1.20000005,
@@ -92,7 +88,7 @@ Cog =
 			PigeonSpawner = 
 			{
 				string WhatToSpawn = "5a6ea1f2412a5c3b:Pigeon",
-				float SpawnTime = 5,
+				float SpawnTime = 3,
 			},
 		},
 		Cog = 
