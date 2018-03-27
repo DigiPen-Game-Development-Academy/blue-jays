@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, -40],
+		Vec3 Translation = [0, 0, 100],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -105,7 +105,7 @@ Cog =
 					},
 					Transform = 
 					{
-						Vec3 Translation = [-7, 7.68829489, 0],
+						Vec3 Translation = [-7, 0.5, 0],
 						Vec3 Scale = [5, 10, 1],
 						Quat Rotation = [0, 0, 0, 1],
 					},
@@ -148,7 +148,7 @@ Cog =
 					},
 					Transform = 
 					{
-						Vec3 Translation = [-8, 1.30000019, 0],
+						Vec3 Translation = [-8, 0.5, 0],
 						Vec3 Scale = [5, 10, 1],
 						Quat Rotation = [0, 0, 0, 1],
 					},
@@ -180,13 +180,57 @@ Cog =
 						string Target = "Player",
 					},
 				},
+				Cog = 
+				{
+					LinkId = 
+					{
+						uint Id = 7,
+					},
+					Named = 
+					{
+						string Name = "HealthBar",
+					},
+					Transform = 
+					{
+						Vec3 Translation = [8, 0.5, 0],
+						Vec3 Scale = [5, 10, 1],
+						Quat Rotation = [0, 0, 0, 1],
+					},
+					Sprite = 
+					{
+						bool Visible = true,
+						bool VisibilityCulling = true,
+						bool VisibilityEvents = true,
+						bool CastShadows = false,
+						Vec4 Color = [1, 1, 1, 1],
+						BlendMode BlendMode = Alpha,
+						SpriteGeometryMode GeometryMode = ZPlane,
+						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+						string SpriteSource = "5ae3d0bf63012639:HealthBanner",
+						bool RenderMask = false,
+						bool FlipX = false,
+						bool FlipY = false,
+						bool AnimationActive = true,
+						float AnimationSpeed = 1,
+						uint StartFrame = 0,
+					},
+					Area = 
+					{
+						Vec2 Size = [1, 1],
+						Location Origin = Center,
+					},
+					HealthBar = 
+					{
+						string Target = "Boss",
+					},
+				},
 			},
 		},
 		Cog = 
 		{
 			LinkId = 
 			{
-				uint Id = 7,
+				uint Id = 8,
 			},
 			Named = 
 			{
@@ -221,7 +265,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 8,
+				uint Id = 9,
 			},
 			Named = 
 			{
@@ -256,7 +300,7 @@ Cog =
 		{
 			LinkId = 
 			{
-				uint Id = 9,
+				uint Id = 10,
 			},
 			Named = 
 			{
