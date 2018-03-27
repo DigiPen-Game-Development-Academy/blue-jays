@@ -120,20 +120,13 @@ class TurretPlace : ZilchComponent
         {
             return false;
         }
-        if(this.CurrentTurret.Name == "The Chariot")
+        if(this.CurrentTurret.Name == "The Chariot" && this.ChariotCooldown != 0)
         {
-            if(this.ChariotCooldown <= 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return false;
         }
         else
         {
-            return true;
+            return !this.Space.FindObjectByName("Cursor").CollisionMonitor.Colliding;
         }
     }
     

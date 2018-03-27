@@ -1,0 +1,24 @@
+class CollisionMonitor : ZilchComponent
+{
+    var Colliding : Boolean { get { return (this.Collisions > 0); } set {} }
+    var Collisions : Integer = 0;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollide);
+        Zero.Connect(this.Owner, Events.CollisionEnded, this.OnNoCollide);
+    }
+
+    function OnCollide(event : CollisionEvent)
+    {
+        this.Collisions += 1;
+        Console.WriteLine(this.Colliding);
+        Console.WriteLine(this.Collisions);
+    }
+    
+    function OnNoCollide(event : CollisionEvent)
+    {
+        this.Collisions -= 1;
+        Console.WriteLine(this.Colliding);
+        Console.WriteLine(this.Collisions);
+    }
+}
