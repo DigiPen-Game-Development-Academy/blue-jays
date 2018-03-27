@@ -64,7 +64,7 @@ Level =
 				CogPathPreference PathPreference2 = Absolute,
 			},
 			ViewportScaling Scaling = Letterbox,
-			Vec2 Resolution = [960, 720],
+			Vec2 Resolution = [1280, 720],
 			Vec4 MarginColor = [0, 0, 0, 1],
 		},
 		ForwardRenderer = 
@@ -91,6 +91,10 @@ Level =
 			int HilightInterval = 10,
 			bool FollowEditorCamera = false,
 		},
+		MenuController = 
+		{
+			Enum Menu = LEVEL,
+		},
 	},
 	Cog = 
 	{
@@ -104,7 +108,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.78261143, 4.18389225, 49.8184967],
+			Vec3 Translation = [-0.78261143, 3.05889225, 49.8184967],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0.0418743566, -0.00784702413, -0.000328888273, 0.999091923],
 		},
@@ -124,7 +128,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0.0837758034,
 			float HorizontalAngle = 0.0157079622,
-			Vec3 LookTarget = [0, 0, 0],
+			Vec3 LookTarget = [0, -1.125, 0],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -138,6 +142,24 @@ Level =
 	},
 	ArchetypeInstance = 
 	{
+		string Name = "4faa6050b86884ec:DefaultArchetype",
+		LinkId = 
+		{
+			uint Id = 2,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 40],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Camera",
+		},
+	},
+	ArchetypeInstance = 
+	{
 		string Name = "5a08fb786d4f3f80:Player",
 		LinkId = 
 		{
@@ -145,7 +167,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-10, -1.5, 0.514999986],
+			Vec3 Translation = [-10.1171379, -1.5620482, 0.51562047],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -198,7 +220,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -6, 0.0599999987],
+			Vec3 Translation = [-0.0559372306, -6.07564735, 0.060756471],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
