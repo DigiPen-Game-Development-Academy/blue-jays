@@ -32,32 +32,37 @@ class MenuController : ZilchComponent
         }
     }
     
+    function SetTC(name : String, del : delegate())
+    {
+        this.Space.FindObjectByName(name).Button.ToCall = del;
+    }
+    
     function MainMenu()
     {
-        this.Space.FindObjectByName("StartGame").Button.ToCall = this.LoadHub;
-        this.Space.FindObjectByName("Achievements").Button.ToCall = this.LoadAchievements;
-        this.Space.FindObjectByName("Credits").Button.ToCall = this.LoadCredits;
-        this.Space.FindObjectByName("Quit").Button.ToCall = this.GameSession.Quit;
+        this.SetTC("StartGame", this.LoadHub);
+        this.SetTC("Achievements", this.LoadAchievements);
+        this.SetTC("Credits", this.LoadCredits);
+        this.SetTC("Quit", this.GameSession.Quit);
     }
     
     function Credits()
     {
-        this.Space.FindObjectByName("Menu").Button.ToCall = this.LoadMenu;
+        this.SetTC("Menu", this.LoadMenu);
     }
     
     function Level()
     {
-        this.Space.FindObjectByName("Menu").Button.ToCall = this.LoadMenu;
-        this.Space.FindObjectByName("Resume").Button.ToCall = this.Resume;
-        this.Space.FindObjectByName("Options").Button.ToCall = this.ToggleOptions;
-        this.Space.FindObjectByName("Back").Button.ToCall = this.ToggleOptions;
-        this.Space.FindObjectByName("DisableParticles").Button.ToCall = this.ToggleParticles;
+        this.SetTC("Menu", this.LoadMenu);
+        this.SetTC("Resume", this.Resume);
+        this.SetTC("Options", this.ToggleOptions);
+        this.SetTC("Back", this.ToggleOptions);
+        this.SetTC("DisableParticles", this.ToggleParticles);
     }
     
     function Achievements()
     {
-        this.Space.FindObjectByName("Menu").Button.ToCall = this.LoadMenu;
-        this.Space.FindObjectByName("Reset").Button.ToCall = this.ResetAchievements;
+        this.SetTC("Menu", this.LoadMenu);
+        this.SetTC("Reset", this.ResetAchievements);
     }
     
     function ResetAchievements()
@@ -87,11 +92,6 @@ class MenuController : ZilchComponent
         this.Space.OtherSpace.Ref.Globals.Particles = !this.Space.OtherSpace.Ref.Globals.Particles;
     }
     
-    function LoadCharSelect()
-    {
-        this.Space.LoadLevel(Level.Find("CharacterSelect"));
-    }
-    
     function LoadCredits()
     {
         this.Space.LoadLevel(Level.Find("Credits"));
@@ -103,14 +103,10 @@ class MenuController : ZilchComponent
         this.Space.TimeSpace.TimeScale = 1;
     }
     
-    function LoadFool()
-    {
-        this.Space.LoadLevel(Level.Find("Rafters"));
-    }
-    
     function LoadHub()
     {
-        this.Space.LoadLevel(Level.Find("Hub"));
+        this.Space.OtherSpace.Ref.LoadLevel(Level.Find("Hub"));
+        this.Space.LoadLevel(Level.Find("HUDLevel"));
     }
     
     function LoadAchievements()

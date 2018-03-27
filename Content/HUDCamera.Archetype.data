@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, -40],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -108,7 +108,7 @@ Cog =
 					},
 					Transform = 
 					{
-						Vec3 Translation = [-7, 0.5, 0],
+						Vec3 Translation = [-7.5, 0.5, 0],
 						Vec3 Scale = [5, 10, 1],
 						Quat Rotation = [0, 0, 0, 1],
 					},
@@ -151,7 +151,7 @@ Cog =
 					},
 					Transform = 
 					{
-						Vec3 Translation = [-8, 0.5, 0],
+						Vec3 Translation = [-8.5, 0.5, 0],
 						Vec3 Scale = [5, 10, 1],
 						Quat Rotation = [0, 0, 0, 1],
 					},
@@ -191,11 +191,116 @@ Cog =
 					},
 					Named = 
 					{
+						string Name = "TowerCard",
+					},
+					Transform = 
+					{
+						Vec3 Translation = [7.25, 2, 0.5],
+						Vec3 Scale = [1, 1, 1],
+						Quat Rotation = [0, 0, 0, 1],
+					},
+					Sprite = 
+					{
+						bool Visible = true,
+						bool VisibilityCulling = true,
+						bool VisibilityEvents = true,
+						bool CastShadows = false,
+						Vec4 Color = [1, 1, 1, 0.600000024],
+						BlendMode BlendMode = Alpha,
+						SpriteGeometryMode GeometryMode = ZPlane,
+						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+						string SpriteSource = "5a62e54dde3dd5f3:TowerTarot",
+						bool RenderMask = false,
+						bool FlipX = false,
+						bool FlipY = false,
+						bool AnimationActive = true,
+						float AnimationSpeed = 1,
+						uint StartFrame = 0,
+					},
+				},
+				Cog = 
+				{
+					LinkId = 
+					{
+						uint Id = 8,
+					},
+					Named = 
+					{
+						string Name = "KnightCard",
+					},
+					Transform = 
+					{
+						Vec3 Translation = [7.25, 4, 0.5],
+						Vec3 Scale = [1, 1, 1],
+						Quat Rotation = [0, 0, 0, 1],
+					},
+					Sprite = 
+					{
+						bool Visible = true,
+						bool VisibilityCulling = true,
+						bool VisibilityEvents = true,
+						bool CastShadows = false,
+						Vec4 Color = [1, 1, 1, 1],
+						BlendMode BlendMode = Alpha,
+						SpriteGeometryMode GeometryMode = ZPlane,
+						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+						string SpriteSource = "5a341c2555eeb039:KnightTarot",
+						bool RenderMask = false,
+						bool FlipX = false,
+						bool FlipY = false,
+						bool AnimationActive = true,
+						float AnimationSpeed = 1,
+						uint StartFrame = 0,
+					},
+				},
+				Cog = 
+				{
+					LinkId = 
+					{
+						uint Id = 9,
+					},
+					Named = 
+					{
+						string Name = "ChariotCard",
+					},
+					Transform = 
+					{
+						Vec3 Translation = [7.25, 0, 0.5],
+						Vec3 Scale = [1, 1, 1],
+						Quat Rotation = [0, 0, 0, 1],
+					},
+					Sprite = 
+					{
+						bool Visible = true,
+						bool VisibilityCulling = true,
+						bool VisibilityEvents = true,
+						bool CastShadows = false,
+						Vec4 Color = [1, 1, 1, 0.600000024],
+						BlendMode BlendMode = Alpha,
+						SpriteGeometryMode GeometryMode = ZPlane,
+						string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+						string SpriteSource = "5ad17530f536d9fe:ChariotTarot",
+						bool RenderMask = false,
+						bool FlipX = false,
+						bool FlipY = false,
+						bool AnimationActive = true,
+						float AnimationSpeed = 1,
+						uint StartFrame = 0,
+					},
+				},
+				Cog = 
+				{
+					LinkId = 
+					{
+						uint Id = 10,
+					},
+					Named = 
+					{
 						string Name = "HealthBar",
 					},
 					Transform = 
 					{
-						Vec3 Translation = [8, 0.5, 0],
+						Vec3 Translation = [8.5, 0.5, 0],
 						Vec3 Scale = [5, 10, 1],
 						Quat Rotation = [0, 0, 0, 1],
 					},
@@ -227,111 +332,6 @@ Cog =
 						string Target = "Boss",
 					},
 				},
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 8,
-			},
-			Named = 
-			{
-				string Name = "KnightCard",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [-6, 4, -38.5],
-				Vec3 Scale = [1, 1, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 1],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5a62e54dde3dd5f3:TowerTarot",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 9,
-			},
-			Named = 
-			{
-				string Name = "TowerCard",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [-5, 4, -38.5],
-				Vec3 Scale = [1, 1, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 0.600000024],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5a62e54dde3dd5f3:TowerTarot",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
-			},
-		},
-		Cog = 
-		{
-			LinkId = 
-			{
-				uint Id = 10,
-			},
-			Named = 
-			{
-				string Name = "ChariotCard",
-			},
-			Transform = 
-			{
-				Vec3 Translation = [-4, 4, -38.5],
-				Vec3 Scale = [1, 1, 1],
-				Quat Rotation = [0, 0, 0, 1],
-			},
-			Sprite = 
-			{
-				bool Visible = true,
-				bool VisibilityCulling = true,
-				bool VisibilityEvents = true,
-				bool CastShadows = false,
-				Vec4 Color = [1, 1, 1, 0.600000024],
-				BlendMode BlendMode = Alpha,
-				SpriteGeometryMode GeometryMode = ZPlane,
-				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5ad17530f536d9fe:ChariotTarot",
-				bool RenderMask = false,
-				bool FlipX = false,
-				bool FlipY = false,
-				bool AnimationActive = true,
-				float AnimationSpeed = 1,
-				uint StartFrame = 0,
 			},
 		},
 	},

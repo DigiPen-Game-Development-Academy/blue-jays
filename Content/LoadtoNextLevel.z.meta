@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "LoadtoNextLevel",
-		uint64 ResourceId = 5afe7306fdebe284,
-	},
-},

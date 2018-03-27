@@ -95,6 +95,9 @@ Level =
 		{
 			Enum Menu = MAIN,
 		},
+		MenuFix = 
+		{
+		},
 	},
 	Cog = 
 	{

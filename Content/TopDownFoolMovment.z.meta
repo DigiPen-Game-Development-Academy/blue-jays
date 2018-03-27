@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "TopDownFoolMovment",
-		uint64 ResourceId = 5afe18aeb851a8ef,
-	},
-},

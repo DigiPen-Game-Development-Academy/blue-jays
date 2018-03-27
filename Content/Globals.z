@@ -34,7 +34,7 @@ class Globals : ZilchComponent
     
     function OnLevelStart(event : GameEvent)
     {
-        if(event.LevelName == "Hub" || event.LevelName == "FoolTopDown")
+        if(!(event.LevelName == "EmptyLevel"))
         {
             Zero.Mouse.Cursor = Cursor.Invisible;
             this.Space.CreateAtPosition(Archetype.Cursor, Real3(100));
@@ -95,18 +95,9 @@ class Globals : ZilchComponent
     function GetTarget(pos : Real3) : Cog
     {
         var l = this.Space.CurrentLevel.Name;
-         if (l == "Rafters" || l == "FoolAfterLevel" || l == "LoversAfterLevel")
-        {
-            return this.Space.FindObjectByName("Pigeon");
-        }
-        
-        if(l == "FoolTopDown" || l == "Death")
+        if(l == "FoolTopDown")
         {
             return this.Space.FindObjectByName("Boss");
-        }
-        else if(l == "Lovers")
-        {
-            return this.LevelSettings.LoversManager.GetLover(pos);
         }
         else if(this.Space.FindObjectByName("Pigeon") != null)
         {

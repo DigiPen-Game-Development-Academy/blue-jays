@@ -95,6 +95,9 @@ Level =
 		{
 			Enum Menu = CREDITS,
 		},
+		MenuFix = 
+		{
+		},
 	},
 	Cog = 
 	{
@@ -145,7 +148,7 @@ Level =
 		string Name = "5ad177c63a1c31b4:MenuCamera",
 		LinkId = 
 		{
-			uint Id = 4,
+			uint Id = 2,
 		},
 		Transform = 
 		{
@@ -163,7 +166,7 @@ Level =
 		string Name = "5a02651333da9589:MenuButton",
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 4,
 		},
 		Transform = 
 		{
@@ -185,7 +188,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 5,
 		},
 		Named = 
 		{
@@ -207,7 +210,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 7,
+					uint Id = 6,
 				},
 				Named = 
 				{
@@ -232,6 +235,40 @@ Level =
 					string FontName = "4e7bac697bec55c5:Verdana",
 					uint FontSize = 24,
 					string Text = "(c) 2018 DigiPen Institute of Technology",
+					TextAlign Align = Center,
+					float PixelsPerUnit = 64,
+					bool Smoothing = true,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 7,
+				},
+				Named = 
+				{
+					string Name = "Credits",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteText = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string FontName = "4e7bac697bec55c5:Verdana",
+					uint FontSize = 60,
+					string Text = "Credits",
 					TextAlign Align = Center,
 					float PixelsPerUnit = 64,
 					bool Smoothing = true,
@@ -279,40 +316,6 @@ Level =
 				},
 				Named = 
 				{
-					string Name = "Credits",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0, 5, 0],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				SpriteText = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string FontName = "4e7bac697bec55c5:Verdana",
-					uint FontSize = 60,
-					string Text = "Credits",
-					TextAlign Align = Center,
-					float PixelsPerUnit = 64,
-					bool Smoothing = true,
-				},
-			},
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 10,
-				},
-				Named = 
-				{
 					string Name = "Eli",
 				},
 				Transform = 
@@ -343,7 +346,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 11,
+					uint Id = 10,
 				},
 				Named = 
 				{
@@ -377,7 +380,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 12,
+					uint Id = 11,
 				},
 				Named = 
 				{
@@ -411,7 +414,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 13,
+					uint Id = 12,
 				},
 				Named = 
 				{
@@ -445,7 +448,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 14,
+					uint Id = 13,
 				},
 				Named = 
 				{

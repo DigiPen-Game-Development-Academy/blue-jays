@@ -48,10 +48,6 @@ class HP : ZilchComponent
             else if(this.Owner.ArchetypeName == "Fool")
             {
                 this.Space.Globals.SavedStats.SavedStats.FoolsBeaten += 1;
-                this.Space.LoadLevel(Level.FoolAfterLevel);
-            }
-            else if(this.Owner.ArchetypeName == "Death")
-            {
                 this.Space.Globals.SavedStats.SavedStats.Wins += 1;
                 this.Space.Globals.SavedStats.SavedStats.TotalRuns += 1;
                 this.Space.LoadLevel(Level.Win);
@@ -59,10 +55,6 @@ class HP : ZilchComponent
             else if(this.Owner.ArchetypeName == "Pigeon")
             {
                 this.Owner.Destroy();
-            }
-            else
-            {
-                this.LevelSettings.LoversManager.LoversUpdate(this.Owner.ArchetypeName == "Male");
             }
             this.Space.Globals.StoreStats();
         }

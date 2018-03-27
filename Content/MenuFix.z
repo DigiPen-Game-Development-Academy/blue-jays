@@ -1,0 +1,13 @@
+class MenuFix : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        if(this.Space.ArchetypeName == "HUDSpace")
+        {
+            this.Owner.RemoveComponentByName("MenuFix");
+            return;
+        }
+        this.Space.OtherSpace.Ref.LoadLevel(this.Space.CurrentLevel);
+        this.Space.LoadLevel(Level.EmptyLevel);
+    }
+}

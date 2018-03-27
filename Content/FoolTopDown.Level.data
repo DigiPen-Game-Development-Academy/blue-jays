@@ -64,7 +64,7 @@ Level =
 				CogPathPreference PathPreference2 = Absolute,
 			},
 			ViewportScaling Scaling = Letterbox,
-			Vec2 Resolution = [1280, 720],
+			Vec2 Resolution = [1280, 960],
 			Vec4 MarginColor = [0, 0, 0, 1],
 		},
 		ForwardRenderer = 
@@ -92,11 +92,29 @@ Level =
 			bool FollowEditorCamera = false,
 		},
 	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a445440991eab2b:HUDCamera",
+		LinkId = 
+		{
+			uint Id = 3,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Camera",
+		},
+	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 3,
+			uint Id = 4,
 		},
 		Named = 
 		{
@@ -116,7 +134,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 33.2870827,
+			float Size = 36.7879105,
 		},
 		EditorCameraController = 
 		{
@@ -141,7 +159,7 @@ Level =
 		string Name = "5a08fb786d4f3f80:Player",
 		LinkId = 
 		{
-			uint Id = 4,
+			uint Id = 5,
 		},
 		Transform = 
 		{
@@ -159,7 +177,7 @@ Level =
 		string Name = "5a916c8c1094a85b:Fool",
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 6,
 		},
 		Transform = 
 		{
@@ -177,7 +195,7 @@ Level =
 		string Name = "5a4b005c95de7eb0:MusicPlayer",
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 7,
 		},
 		Transform = 
 		{
@@ -213,7 +231,7 @@ Level =
 		string Name = "5a5b312631920701:FoolLevelTD",
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 8,
 		},
 		Transform = 
 		{

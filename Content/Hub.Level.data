@@ -64,7 +64,7 @@ Level =
 				CogPathPreference PathPreference2 = Absolute,
 			},
 			ViewportScaling Scaling = Letterbox,
-			Vec2 Resolution = [1280, 720],
+			Vec2 Resolution = [1280, 960],
 			Vec4 MarginColor = [0, 0, 0, 1],
 		},
 		GridDraw = 

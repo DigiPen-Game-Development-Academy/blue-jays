@@ -100,6 +100,9 @@ Level =
 			int Columns = 9,
 			float Width = 3.5,
 		},
+		MenuFix = 
+		{
+		},
 	},
 	Cog = 
 	{
@@ -150,7 +153,7 @@ Level =
 		string Name = "5ad177c63a1c31b4:MenuCamera",
 		LinkId = 
 		{
-			uint Id = 4,
+			uint Id = 2,
 		},
 		Transform = 
 		{
@@ -168,7 +171,7 @@ Level =
 		string Name = "5a02651333da9589:MenuButton",
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 4,
 		},
 		Transform = 
 		{
@@ -191,7 +194,7 @@ Level =
 		string Name = "5a6ea47013426dbe:ResetButton",
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 5,
 		},
 		Transform = 
 		{
