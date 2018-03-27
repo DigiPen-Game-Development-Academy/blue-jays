@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.0742254034, 9.67943382, 49],
+			Vec3 Translation = [1.16888165, 9.13771915, 49],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 18.0500278,
+			float Size = 22.0463543,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.0742254034, 9.67943382, -1],
+			Vec3 LookTarget = [1.16888165, 9.13771915, -1],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -543,7 +543,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-7.6752634, 10.0565939, -0.100000001],
+					Vec3 Translation = [0.302834272, 15.1565466, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -567,7 +567,7 @@ Level =
 				},
 				Area = 
 				{
-					Vec2 Size = [5, 10],
+					Vec2 Size = [25, 3.33440971],
 					Location Origin = Center,
 				},
 			},
@@ -583,7 +583,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 13.990633, -0.100000001],
+					Vec3 Translation = [0, 4.47003937, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -607,7 +607,7 @@ Level =
 				},
 				Area = 
 				{
-					Vec2 Size = [25, 5],
+					Vec2 Size = [25, 3.94007921],
 					Location Origin = Center,
 				},
 			},
@@ -623,7 +623,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 5, -0.100000001],
+					Vec3 Translation = [0.203139067, 9.94027328, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -647,7 +647,7 @@ Level =
 				},
 				Area = 
 				{
-					Vec2 Size = [25, 5],
+					Vec2 Size = [7.59585953, 10],
 					Location Origin = Center,
 				},
 			},
@@ -663,7 +663,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0.263706088, 9.94027328, -0.100000001],
+					Vec3 Translation = [6.14023018, 9.91261768, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -687,7 +687,7 @@ Level =
 				},
 				Area = 
 				{
-					Vec2 Size = [5.47601891, 10],
+					Vec2 Size = [2.29625702, 10],
 					Location Origin = Center,
 				},
 			},
@@ -703,7 +703,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [8.24493027, 10.0034676, -0.100000001],
+					Vec3 Translation = [-5.70059776, 10.1851683, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -727,7 +727,7 @@ Level =
 				},
 				Area = 
 				{
-					Vec2 Size = [5.47601891, 10],
+					Vec2 Size = [2.29625702, 10],
 					Location Origin = Center,
 				},
 			},
@@ -736,6 +736,86 @@ Level =
 				LinkId = 
 				{
 					uint Id = 16,
+				},
+				Named = 
+				{
+					string Name = "Sprite",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [10.3950539, 9.85205173, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a6e9b1e487621db:StoneBrick",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Area = 
+				{
+					Vec2 Size = [4.56751442, 10],
+					Location Origin = Center,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 17,
+				},
+				Named = 
+				{
+					string Name = "Sprite",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-10.0159893, 10.4274378, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a6e9b1e487621db:StoneBrick",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Area = 
+				{
+					Vec2 Size = [4.56751442, 10],
+					Location Origin = Center,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 18,
 				},
 				Named = 
 				{
@@ -780,95 +860,95 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 17,
-				},
-				Named = 
-				{
-					string Name = "Throne",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-2, 7.09334517, 0.427956879],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5a342aaafcde8742:Throne",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-				Area = 
-				{
-					Vec2 Size = [2.96365738, 6.30343485],
-					Location Origin = Center,
-				},
-				AutoDepth = 
-				{
-					float Offset = 0.5,
-				},
-			},
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 18,
-				},
-				Named = 
-				{
-					string Name = "Throne",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [2, 7, 0.428890347],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5a342aaafcde8742:Throne",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-				Area = 
-				{
-					Vec2 Size = [2.96365738, 6.30343485],
-					Location Origin = Center,
-				},
-				AutoDepth = 
-				{
-					float Offset = 0.5,
-				},
-			},
-			Cog = 
-			{
-				LinkId = 
-				{
 					uint Id = 19,
+				},
+				Named = 
+				{
+					string Name = "Throne",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-2.03028345, 6.66937637, 0.432196587],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a342aaafcde8742:Throne",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Area = 
+				{
+					Vec2 Size = [2.96365738, 6.30343485],
+					Location Origin = Center,
+				},
+				AutoDepth = 
+				{
+					float Offset = 0.5,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 20,
+				},
+				Named = 
+				{
+					string Name = "Throne",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [2, 6.63659859, 0.432524353],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a342aaafcde8742:Throne",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Area = 
+				{
+					Vec2 Size = [2.96365738, 6.30343485],
+					Location Origin = Center,
+				},
+				AutoDepth = 
+				{
+					float Offset = 0.5,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 21,
 				},
 				Named = 
 				{
@@ -876,7 +956,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 10, 0.398890346],
+					Vec3 Translation = [-0.181700587, 10.8782215, 0.390108138],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -947,7 +1027,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 20,
+			uint Id = 22,
 		},
 		Named = 
 		{
@@ -1004,7 +1084,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 21,
+			uint Id = 23,
 		},
 		Named = 
 		{
@@ -1070,57 +1150,11 @@ Level =
 		string Name = "5a56bfa2af355e29:Candle",
 		LinkId = 
 		{
-			uint Id = 22,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [10, 10, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Area = 
-		{
-			Vec2 Size = [0.100000001, 0.5],
-			Location Origin = Center,
-		},
-		Named = 
-		{
-			string Name = "Candle",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a56bfa2af355e29:Candle",
-		LinkId = 
-		{
-			uint Id = 23,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [7, 10, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Area = 
-		{
-			Vec2 Size = [0.100000001, 0.5],
-			Location Origin = Center,
-		},
-		Named = 
-		{
-			string Name = "Candle",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "5a56bfa2af355e29:Candle",
-		LinkId = 
-		{
 			uint Id = 24,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-10, 10, 0],
+			Vec3 Translation = [9.42461586, 9.96971607, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1143,7 +1177,53 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-7, 10, 0],
+			Vec3 Translation = [6.1823473, 10, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Area = 
+		{
+			Vec2 Size = [0.100000001, 0.5],
+			Location Origin = Center,
+		},
+		Named = 
+		{
+			string Name = "Candle",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a56bfa2af355e29:Candle",
+		LinkId = 
+		{
+			uint Id = 26,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-9.18234634, 9.8788662, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Area = 
+		{
+			Vec2 Size = [0.100000001, 0.5],
+			Location Origin = Center,
+		},
+		Named = 
+		{
+			string Name = "Candle",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a56bfa2af355e29:Candle",
+		LinkId = 
+		{
+			uint Id = 27,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-5.81894588, 9.8788662, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1161,7 +1241,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 26,
+			uint Id = 28,
 		},
 		Named = 
 		{
@@ -1179,7 +1259,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 27,
+					uint Id = 29,
 				},
 				Named = 
 				{
@@ -1255,7 +1335,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 28,
+					uint Id = 30,
 				},
 				Named = 
 				{
