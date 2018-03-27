@@ -56,18 +56,21 @@ Cog =
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "5a916d23d1622478:Turret",
 		Vec3 Offset = [0, -0.400000006, 0],
-		Vec3 Size = [2.5, 1.5, 0.5],
+		Vec3 Size = [2.5, 1.5, 55.5],
 	},
 	DamageOnColide = 
 	{
 		float Damage = 100,
 	},
-	KnightOfSwords = 
-	{
-		float Speed = 25,
-	},
 	SpriteFlip = 
 	{
+	},
+	Chariot = 
+	{
+	},
+	DestroyOnCollide = 
+	{
+		string Replacement = "",
 	},
 	Hierarchy = 
 	{
