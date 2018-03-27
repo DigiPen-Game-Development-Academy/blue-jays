@@ -120,7 +120,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 16.5298862,
+			float Size = 30.1194,
 		},
 		EditorCameraController = 
 		{
@@ -1008,138 +1008,6 @@ Level =
 		Named = 
 		{
 			string Name = "OptionsOverlay",
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 26,
-		},
-		Named = 
-		{
-			string Name = "CurtainFacade",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-10.7031221, 6.27696514, 0.45723033],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5ae3fd1b7ebafe20:CurtainFacade",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		AutoDepth = 
-		{
-			float Offset = 0.519999981,
-		},
-		Area = 
-		{
-			Vec2 Size = [3.17016792, 6.50183773],
-			Location Origin = Center,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 27,
-		},
-		Named = 
-		{
-			string Name = "CurtainFacade",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-10.7773809, 1.47075272, 0.505292475],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5ae3fd1b7ebafe20:CurtainFacade",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		AutoDepth = 
-		{
-			float Offset = 0.519999981,
-		},
-		Area = 
-		{
-			Vec2 Size = [3.17016792, 6.50183773],
-			Location Origin = Center,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 28,
-		},
-		Named = 
-		{
-			string Name = "CurtainFacade",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-10.8079939, -4.57649136, 0.565764904],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5ae3fd1b7ebafe20:CurtainFacade",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		AutoDepth = 
-		{
-			float Offset = 0.519999981,
-		},
-		Area = 
-		{
-			Vec2 Size = [3.17016792, 6.50183773],
-			Location Origin = Center,
 		},
 	},
 },
