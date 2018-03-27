@@ -13,7 +13,7 @@ class HeartSpawn : ZilchComponent
     {
         foreach(var platform in this.Space.FindAllObjectsByName("Platform"))
         {
-            this.Positions.Add(platform.Transform.WorldTranslation + Real3(0,1,0));
+            this.Positions.Add(platform.Transform.WorldTranslation + Real3(0,0,1));
         }
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
