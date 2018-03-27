@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [5.68983269, -0.736681342, 1],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -24,7 +24,7 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [1, 1, 1, 1],
+		Vec4 Color = [0.410000026, 0.222384036, 0.116850019, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -69,7 +69,7 @@ Cog =
 	{
 		bool Active = true,
 		uint EmitCount = 0,
-		float EmitRate = 2,
+		float EmitRate = 10,
 		float EmitVariance = 0,
 		float Size = 0.25,
 		float SizeVariance = 0.00999999978,
@@ -80,8 +80,8 @@ Cog =
 		bool RandomSpin = true,
 		float Fill = 0.340000004,
 		float EmitterVelocityPercent = 0,
-		Vec3 StartVelocity = [0, 0, 0],
-		Vec3 RandomVelocity = [2, 2, 2],
+		Vec3 StartVelocity = [0, 0.5, 0],
+		Vec3 RandomVelocity = [0.100000001, 0.100000001, 0],
 		Vec3 TangentVelocity = [0, 0, 0],
 		Vec3 EmitterSize = [0, 0, 0],
 		bool FastMovingEmitter = false,
@@ -94,5 +94,10 @@ Cog =
 		float Growth = 0,
 		float Dampening = 0,
 		Vec3 Twist = [0, 0, 0],
+	},
+	Area = 
+	{
+		Vec2 Size = [0.100000001, 0.5],
+		Location Origin = Center,
 	},
 },
