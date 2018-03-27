@@ -69,6 +69,10 @@ class PlayerController : ZilchComponent
             this.Owner.Sprite.SpriteSource = SpriteSource.Swords;
             this.RigidBody.Velocity *= this.Velocity;
         }
+        if(this.Stunned)
+        {
+            vel = -vel;
+        }
         this.RigidBody.Velocity = Math.Lerp(this.RigidBody.Velocity, Real3(vel * this.Speed, 0), this.Acceleration * event.Dt);
         if(this.Space.TimeSpace.Paused == false)
         {
