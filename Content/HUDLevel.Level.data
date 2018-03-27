@@ -175,6 +175,9 @@ Level =
 			bool Active = true,
 			float Volume = 1,
 		},
+		CameraConstraint = 
+		{
+		},
 		Hierarchy = 
 		{
 			ArchetypeInstance = 

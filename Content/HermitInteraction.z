@@ -1,0 +1,29 @@
+//Author: Callie Robinson
+//Purpose: When Player Interacts with Hermit, Fool Level Loads (not working atm)
+
+class HermitInteraction : ZilchComponent
+{
+     var Fool : Level = Level.Find("FoolTopDown");
+
+     
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.CollisionStarted, this.OnCollisionStarted);
+    }
+
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        Zero.Connect(Zero.Keyboard, Events.KeyDown, this.OnKeyDown);
+    }
+    function OnKeyDown(event: KeyboardEvent)
+    {
+        if (event.Key == Keys.E)
+        {
+            
+            
+            this.Space.LoadLevel(this.Fool);
+            
+        }
+    }
+
+}
