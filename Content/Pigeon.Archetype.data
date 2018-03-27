@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [0, 0, 0.699999988],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -24,13 +24,13 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [1, 1, 1, 1],
+		Vec4 Color = [1, 1, 1, 0.999899983],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5adae4165a0ccfed:Pigeon",
+		string SpriteSource = "5a5b184bf39b7b7f:PigeonFly",
 		bool RenderMask = false,
-		bool FlipX = false,
+		bool FlipX = true,
 		bool FlipY = false,
 		bool AnimationActive = true,
 		float AnimationSpeed = 1,
@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -81,6 +81,6 @@ Cog =
 	},
 	AutoDepth = 
 	{
-		float Offset = 0,
+		float Offset = 0.699999988,
 	},
 },
