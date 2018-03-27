@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-0.487873077, -0.00903472304, 0],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -90,8 +90,8 @@ Cog =
 				bool RandomSpin = true,
 				float Fill = 1,
 				float EmitterVelocityPercent = 0,
-				Vec3 StartVelocity = [2, 0, 0],
-				Vec3 RandomVelocity = [0, 0, 0],
+				Vec3 StartVelocity = [0, 0, 0],
+				Vec3 RandomVelocity = [2, 0, 0],
 				Vec3 TangentVelocity = [0, 0, 0],
 				Vec3 EmitterSize = [0, 0, 0],
 				bool FastMovingEmitter = false,
