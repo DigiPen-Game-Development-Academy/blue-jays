@@ -21,8 +21,8 @@ class TurretPlace : ZilchComponent
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        Zero.Connect(this.Space, Events.MouseScroll, this.OnScroll);
-        Zero.Connect(this.Space, Events.LeftMouseDown, this.OnLeftClick);
+        Zero.Connect(this.Space.OtherSpace.Ref, Events.MouseScroll, this.OnScroll);
+        Zero.Connect(this.Space.OtherSpace.Ref, Events.LeftMouseDown, this.OnLeftClick);
         this.TurretList = this.Space.Globals.GetTurrets();
         this.CurrentTurret = this.TurretList[0];
     }
