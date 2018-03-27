@@ -147,8 +147,7 @@ class TurretPlace : ZilchComponent
         {
             this.ChariotCooldown = this.ChariotCooldownTime;
         }
-        var turret = this.Space.CreateAtPosition(this.CurrentTurret.Archetype, event.ToWorldZPlane(0));
-        turret.Transform.Translation += Real3(0,turret.BoxCollider.Size.Y / 2,0);
+        var turret = this.Space.CreateAtPosition(this.CurrentTurret.Archetype, this.Space.FindObjectByName("Cursor").Transform.Translation - Real3(0,0,2));
         if(this.CurrentTurret.Type == TurretType.KNIGHT)
         {
             this.Space.Globals.SavedStats.SavedStats.KnightSpawns += 1;

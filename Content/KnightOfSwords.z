@@ -17,6 +17,7 @@ class KnightOfSwords : ZilchComponent
     {
         if(this.Target == null)
         {
+            Console.WriteLine("potat");
             this.Owner.Destroy();
             return;
         }

@@ -69,6 +69,10 @@ Cog =
 	SpriteFlip = 
 	{
 	},
+	DestroyOnCollide = 
+	{
+		string Replacement = "",
+	},
 	Hierarchy = 
 	{
 		Cog = 

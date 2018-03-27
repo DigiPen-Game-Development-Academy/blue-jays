@@ -91,10 +91,6 @@ Level =
 			int HilightInterval = 10,
 			bool FollowEditorCamera = false,
 		},
-		MenuController = 
-		{
-			Enum Menu = LEVEL,
-		},
 	},
 	Cog = 
 	{

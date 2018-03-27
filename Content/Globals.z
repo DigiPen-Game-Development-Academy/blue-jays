@@ -34,7 +34,7 @@ class Globals : ZilchComponent
     
     function OnLevelStart(event : GameEvent)
     {
-        if(event.LevelName == "Hub")
+        if(event.LevelName == "Hub" || event.LevelName == "FoolTopDown")
         {
             Zero.Mouse.Cursor = Cursor.Invisible;
             this.Space.CreateAtPosition(Archetype.Cursor, Real3(100));
@@ -100,7 +100,7 @@ class Globals : ZilchComponent
             return this.Space.FindObjectByName("Pigeon");
         }
         
-        if(l == "Fool" || l == "Death")
+        if(l == "FoolTopDown" || l == "Death")
         {
             return this.Space.FindObjectByName("Boss");
         }
