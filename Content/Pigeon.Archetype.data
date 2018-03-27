@@ -76,4 +76,7 @@ Cog =
 	{
 		float MaxHealth = 10,
 	},
+	SpriteFlip = 
+	{
+	},
 },

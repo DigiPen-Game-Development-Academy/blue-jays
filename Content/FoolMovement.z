@@ -2,66 +2,46 @@
 //Purpose: Fool Movement
 class FoolMovement : ZilchComponent
 {
-   
     [Property] var PaceSpeed : Real = 5.0;
-    [Property] var MaxMoveDistance : Real = 10.0;
-    [Property] var PaceDirection : Real3 = Real3(1,0,0);
-    [Property] var MaxX : Real = Real(10.0);
-    [Property] var MaxY : Real = Real(7.0);
-    [Property] var MinY : Real = Real (-7.0);
-    [Property] var MinX : Real = Real(-10.0);
-   
+    [Property] var MaxX : Real = 10.0;
+    [Property] var MaxY : Real = 7.0;
+    [Property] var MinY : Real = -7.0;
+    [Property] var MinX : Real = -10.0;
     
-    var StartPosition: Real3 = Real3();
+    var StartPosition : Real3;
     
-    [Dependency]
-    var Transform : Transform;
     function Initialize(init : CogInitializer)
     {
         // update the fool whenever this updates
         Zero.Connect(this.Space, Events.LogicUpdate, this.PaceBackAndForth);
         // track where the fool started and how far he has moved
         this.StartPosition = this.Owner.Transform.Translation;
+        this.Owner.RigidBody.Velocity = Real3(0,1,0);
     }
 
     function PaceBackAndForth(event: UpdateEvent)
     {
-      var dir = this.PaceDirection;
-      var pos = this.Owner.Transform.WorldTranslation;
-      
-      if (dir == Real3.XAxis && pos.X >= this.MaxX)
-      {
-          this.PaceDirection = -Real3.YAxis;
-      }
-        else if (dir == -Real3.YAxis && pos.Y >= this.MinY)
+        var dir = Math.Normalize(this.Owner.RigidBody.Velocity);
+        var pos = this.Owner.Transform.WorldTranslation;
+        var vel = dir;
+        
+        if (dir == Real3(1,0,0) && pos.X >= this.MaxX)
         {
-            this.PaceDirection = -Real3.XAxis;
+            vel = Real3(0,-1,0);
         }
-        else if (dir == -Real3.XAxis && pos.X <= this.MinX)
+        else if (dir == Real3(0,-1,0) && pos.Y <= this.MinY)
         {
-            this.PaceDirection = Real3.YAxis;
-        
+            vel = Real3(-1,0,0);
         }
-        else if (dir == Real3.YAxis && pos.Y >= this.MaxY)
+        else if (dir == Real3(-1,0,0) && pos.X <= this.MinX)
         {
-            this.PaceDirection = Real3.XAxis;
+            vel = Real3(0,1,0);
         }
-        this.Owner.RigidBody.Velocity = this.PaceDirection* this.PaceSpeed;
-        
-         /* // how far he has moved from where he started
-        var displacement = this.Transform.Translation - this.StartPosition;
-        var distanceFromStart = Math.Length(displacement);
-
-        // check if fool has moved past max distance
-        if (distanceFromStart >= this.MaxMoveDistance)
+        else if (dir == Real3(0,1,0) && pos.Y >= this.MaxY)
         {
-            // once he goes past max switch directions
-            this.PaceDirectionLeftAndRight *= -1;
+            vel = Real3(1,0,0);
         }
-        */
         
-        
-        
+        this.Owner.RigidBody.Velocity = vel * this.PaceSpeed;
     }
-   
 }

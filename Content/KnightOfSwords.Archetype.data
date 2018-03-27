@@ -66,6 +66,9 @@ Cog =
 	{
 		float Speed = 10,
 	},
+	SpriteFlip = 
+	{
+	},
 	Hierarchy = 
 	{
 		Cog = 

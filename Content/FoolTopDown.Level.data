@@ -108,7 +108,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.78261143, 3.05889225, 49.8184967],
+			Vec3 Translation = [-0.83854872, -1.8917551, 49.8792534],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0.0418743566, -0.00784702413, -0.000328888273, 0.999091923],
 		},
@@ -120,7 +120,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 36.7879105,
+			float Size = 24.6596832,
 		},
 		EditorCameraController = 
 		{
@@ -128,7 +128,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0.0837758034,
 			float HorizontalAngle = 0.0157079622,
-			Vec3 LookTarget = [0, -1.125, 0],
+			Vec3 LookTarget = [-0.0559372902, -6.07564735, 0.0607565641],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -138,24 +138,6 @@ Level =
 			bool DrawDebugObjects = true,
 			bool DrawEditorIcons = true,
 			bool Wireframe = false,
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "4faa6050b86884ec:DefaultArchetype",
-		LinkId = 
-		{
-			uint Id = 2,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, 40],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Camera",
 		},
 	},
 	ArchetypeInstance = 
@@ -220,7 +202,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.0559372306, -6.07564735, 0.060756471],
+			Vec3 Translation = [-12, -7, 1.07000005],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -402,7 +384,7 @@ Level =
 		},
 		Area = 
 		{
-			Vec2 Size = [30, 20],
+			Vec2 Size = [30, 25],
 			Location Origin = Center,
 		},
 	},
