@@ -58,7 +58,6 @@ class PigeonNPC : ZilchComponent
             }
             else this.TurnTimer -= event.Dt;
             
-            Console.WriteLine(this.Velocity);
             // Acceleration
             this.Velocity += this.WanderDirection * this.WanderAcceleration * event.Dt;
             // Turning

@@ -1,0 +1,103 @@
+enum Team
+{
+    Player,
+    Enemy,
+}
+enum HealthType
+{
+    PlayerMinion,
+    EnemyMinion,
+    Player,
+    Boss,
+}
+
+class DamageOnCollide : ZilchComponent
+{
+    [Property] var TeamToHurt : Team;
+    [Property] var DamageToDeal : Real = 1;
+    [Property] var DestroySelf : Boolean;
+    
+    function DamageDealt(to : Health)
+    {
+        if (this.DestroySelf)
+        {
+            this.Owner.Destroy();
+        }
+    }
+}
+
+class Health : ZilchComponent
+{
+    [Property] var HealthType : HealthType = HealthType.PlayerMinion;
+    var Team : Team {
+        get {
+            if (this.HealthType == HealthType.Player || this.HealthType == HealthType.PlayerMinion)
+                return Team.Player; else
+            return Team.Enemy;
+        }
+    }
+    
+    [Property] var Health : Real = 10;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+    
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        if (event.OtherObject.DamageOnCollide == null) return;
+        if (event.OtherObject.DamageOnCollide.TeamToHurt == this.Team)
+        {
+            this.Health -= event.OtherObject.DamageOnCollide.DamageToDeal;
+            event.OtherObject.DamageOnCollide.DamageDealt(this);
+            
+            if (this.HealthType == HealthType.Player)
+            {
+                this.GameSession.Globals.PlayerCurrentHealth = this.Health;
+            }
+            else if (this.HealthType == HealthType.Boss)
+            {
+                this.GameSession.Globals.BossCurrentHealth = this.Health;
+            }
+        }
+    }
+    
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if (this.HealthType == HealthType.Player)
+        {
+            this.Health = this.GameSession.Globals.PlayerCurrentHealth;
+        }
+        else if (this.HealthType == HealthType.Boss)
+        {
+            this.Health = this.GameSession.Globals.BossCurrentHealth;
+        }
+        
+        if (this.Health <= 0) this.Die();
+    }
+    
+    var Dead : Boolean;
+    function Die()
+    {
+        if (this.Dead) return;
+        this.Dead = true;
+        
+        if (this.HealthType == HealthType.Player)
+        {
+            // @missing Death effect and lose result
+            this.GameSession.Globals.GameSpace.LoadLevel(Level.Hub);
+        }
+        else if (this.HealthType == HealthType.Boss)
+        {
+            // @missing Death effect and win result
+            this.GameSession.Globals.GameSpace.LoadLevel(Level.Hub);
+        }
+        else
+        {
+            // @missing Death effect
+            this.Owner.Destroy();
+        }
+    }
+}

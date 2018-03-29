@@ -1,3 +1,25 @@
+class CardDisplay : ZilchComponent
+{
+    [Property] var Index : Integer;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if (this.Index == this.GameSession.Globals.CurrentTurretIndex)
+        {
+            // Selected
+            this.Owner.Sprite.Color = Real4(1, 1, 1, 1);
+        }
+        else
+        {
+            // Not selected
+            this.Owner.Sprite.Color = Real4(0.2, 0.2, 0.2, 0.5);
+        }
+    }
+}
 
 enum BarType
 {
@@ -23,11 +45,11 @@ class BarDisplay : ZilchComponent
         
         if (this.BarType == BarType.PlayerHealth)
         {
-            ratio = this.GameSession.Globals.CurrentHealth / this.GameSession.Globals.MaxHealth;
+            ratio = this.GameSession.Globals.PlayerCurrentHealth / this.GameSession.Globals.PlayerMaxHealth;
         }
         else if (this.BarType == BarType.PlayerFate)
         {
-            ratio = this.GameSession.Globals.CurrentFate / this.GameSession.Globals.MaxFate;
+            ratio = this.GameSession.Globals.PlayerCurrentFate / this.GameSession.Globals.PlayerMaxFate;
         }
         else if (this.BarType == BarType.BossHealth)
         {

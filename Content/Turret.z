@@ -52,7 +52,7 @@ class TowerLogic : ZilchComponent
         //check if we can shoot
         if (this.TimeTillShoot <= 0)
         {
-            var target = this.GameSession.Globals.GetEnemy(this.Owner.Transform.WorldTranslation);
+            var target = Globals.GetTarget(this.Owner, Team.Enemy);
             if (target == null) return;
             
             var vel = (target.Transform.WorldTranslation - this.Owner.Transform.WorldTranslation) * this.ShootSpeed;

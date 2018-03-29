@@ -33,7 +33,7 @@ class CursorLogic : ZilchComponent
             var globals = this.GameSession.Globals;
             var turret = globals.GetCurrentTurret();
             globals.GameSpace.CreateAtPosition(turret.Archetype, this.Owner.Transform.WorldTranslation);
-            globals.CurrentFate -= turret.Cost;
+            globals.PlayerCurrentFate -= turret.Cost;
             if (globals.CurrentTurretIndex == 2)
                 globals.CurrentChariotCooldown = globals.MaxChariotCooldown;
         }
@@ -84,7 +84,7 @@ class CursorLogic : ZilchComponent
     }
     function IsTooExpensive() : Boolean
     {
-        return this.GameSession.Globals.CurrentFate < this.GameSession.Globals.GetCurrentTurret().Cost;
+        return this.GameSession.Globals.PlayerCurrentFate < this.GameSession.Globals.GetCurrentTurret().Cost;
     }
     function IsOnCooldown() : Boolean
     {

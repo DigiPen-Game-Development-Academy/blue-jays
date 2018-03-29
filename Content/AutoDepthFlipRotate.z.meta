@@ -2,7 +2,7 @@ TextContent =
 {
 	ZilchScriptBuilder = 
 	{
-		string Name = "AutoDepth",
+		string Name = "AutoDepthFlipRotate",
 		uint64 ResourceId = 5a3d3655422f46dc,
 	},
 },

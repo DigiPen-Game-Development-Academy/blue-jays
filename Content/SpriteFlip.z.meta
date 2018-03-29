@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "SpriteFlip",
-		uint64 ResourceId = 5a5b2645854fa783,
-	},
-},

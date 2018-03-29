@@ -56,10 +56,16 @@ Cog =
 	},
 	AutoDepth = 
 	{
+		bool Local = false,
 		float Offset = 0.5,
 	},
 	SpriteFlip = 
 	{
+	},
+	Health = 
+	{
+		Enum HealthType = Player,
+		float PRIVATE_Health = 1,
 	},
 	Hierarchy = 
 	{
@@ -75,7 +81,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, -0.800000012, -0.00999999978],
+				Vec3 Translation = [0, -0.799999952, -0.00999999046],
 				Vec3 Scale = [1.10000002, 0.400000006, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -106,6 +112,11 @@ Cog =
 				string SerializedGroupName = "5ae8cbdeb44e8fd4:Player",
 				Vec3 Offset = [0, 0, 0],
 				Vec3 Radii = [0.5, 0.5, 1],
+			},
+			AutoDepth = 
+			{
+				bool Local = true,
+				float Offset = -0.00999999978,
 			},
 		},
 		Cog = 

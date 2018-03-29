@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [5.13864946, -3.14507914, 0.432197571],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -58,7 +58,13 @@ Cog =
 		Vec3 Offset = [0, 0, 0],
 		float Radius = 0.25,
 	},
-	ArrowAutoRotate = 
+	AutoDepth = 
 	{
+		bool Local = false,
+		float Offset = 0,
+	},
+	AutoOrientToVelocity = 
+	{
+		float AngleOffset = 0,
 	},
 },

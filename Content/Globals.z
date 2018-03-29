@@ -20,11 +20,11 @@ class PostInitializeGlobals : ZilchComponent
 {
     function Initialize(init : CogInitializer)
     {
-        Console.WriteLine(this.Space);
         this.GameSession.Globals.PostInitialize();
     }
 }
 
+[RunInEditor]
 class Globals : ZilchComponent
 {
     // Enabled by holding ALT (also enables cheats)
@@ -45,18 +45,18 @@ class Globals : ZilchComponent
     // Stats should be persistent across levels
     
     // Health and Fate
-    [Property] var MaxHealth : Real = 10;
-    [Property] var MaxFate : Real = 10;
+    [Property] var PlayerMaxHealth : Real = 10;
+    [Property] var PlayerMaxFate : Real = 10;
     [Property] var BossMaxHealth : Real = 100;
     [Property] var BossMaxFate : Real = 100;
     
-    var CurrentHealth : Real;
-    var CurrentFate : Real;
+    var PlayerCurrentHealth : Real;
+    var PlayerCurrentFate : Real;
     var BossCurrentHealth : Real;
     var BossCurrentFate : Real;
     
-    [Property] var RegenHealth : Real = 1;
-    [Property] var RegenFate : Real = 1;
+    [Property] var PlayerRegenHealth : Real = 1;
+    [Property] var PlayerRegenFate : Real = 1;
     [Property] var BossRegenHealth : Real = 0;
     [Property] var BossRegenFate : Real = 0;
     
@@ -105,8 +105,8 @@ class Globals : ZilchComponent
         this.SingletonCursor = obj.CursorLogic;
         
         // Set up stats
-        this.CurrentHealth = this.MaxHealth;
-        this.CurrentFate = this.MaxFate;
+        this.PlayerCurrentHealth = this.PlayerMaxHealth;
+        this.PlayerCurrentFate = this.PlayerMaxFate;
         
         // Set up turrets
         this.Turrets = new Array[Turret]()
@@ -136,12 +136,12 @@ class Globals : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
         // Regen stats
-        this.CurrentHealth += this.RegenHealth * event.Dt;
-        this.CurrentFate += this.RegenFate * event.Dt;
+        this.PlayerCurrentHealth += this.PlayerRegenHealth * event.Dt;
+        this.PlayerCurrentFate += this.PlayerRegenFate * event.Dt;
         
         // Clamp to max stats
-        this.CurrentHealth = Math.Min(this.CurrentHealth, this.MaxHealth);
-        this.CurrentFate = Math.Min(this.CurrentFate, this.MaxFate);
+        this.PlayerCurrentHealth = Math.Min(this.PlayerCurrentHealth, this.PlayerMaxHealth);
+        this.PlayerCurrentFate = Math.Min(this.PlayerCurrentFate, this.PlayerMaxFate);
     }
     
     function OnKeyUp(event : KeyboardEvent)
@@ -162,14 +162,14 @@ class Globals : ZilchComponent
         // Instant Health
         else if (event.Key == Keys.H)
         {
-            if (event.ShiftPressed) this.RegenHealth = 1000000000;
-            else this.CurrentHealth = this.MaxHealth;
+            if (event.ShiftPressed) this.PlayerRegenHealth = 1000000000;
+            else this.PlayerCurrentHealth = this.PlayerMaxHealth;
         }
         // Instant Fate
         else if (event.Key == Keys.F)
         {
-            if (event.ShiftPressed) this.RegenFate = 1000000000;
-            else this.CurrentFate = this.MaxFate;
+            if (event.ShiftPressed) this.PlayerRegenFate = 1000000000;
+            else this.PlayerCurrentFate = this.PlayerMaxFate;
         }
     }
     
@@ -183,19 +183,28 @@ class Globals : ZilchComponent
         Zero.ObjectStore.Store("Stats", this.SavedStats.Owner);
     }
     
-    function GetEnemy(nearestTo : Real3) : Cog
+    [Static]
+    function GetTarget(nearestTo : Cog, targetTeam : Team) : Cog
     {
         var closest : Cog = null;
         var distanceSquared : Real = Real.PositiveMax;
         
-        foreach (var obj in this.Space.AllObjects())
+        foreach (var obj in nearestTo.Space.AllObjects())
         {
+            if (obj.Health == null) continue;
+            if (obj.Health.Team != targetTeam) continue;
             if (obj.Transform == null) continue;
-            var tempDistanceSquared = Math.DistanceSq(nearestTo.XY, obj.Transform.WorldTranslation.XY);
+            var tempDistanceSquared = Math.DistanceSq(nearestTo.Transform.WorldTranslation.XY, obj.Transform.WorldTranslation.XY);
             if (tempDistanceSquared >= distanceSquared) continue;
             distanceSquared = tempDistanceSquared;
             closest = obj;
         }
         return closest;
+    }
+    
+    [Static]
+    function HierarchyHas()
+    {
+        
     }
 }

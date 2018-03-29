@@ -1,0 +1,69 @@
+//Author: Callie (with Jeffrey's Help)
+//Purpose: automatically calculate Z coordinate
+
+[RunInEditor]
+class AutoDepth : ZilchComponent
+{
+    [Property] var Local : Boolean;
+    [Property] var Offset : Real;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.FrameUpdate, this.OnFrameUpdate);
+    }
+    function OnFrameUpdate(event : UpdateEvent)
+    {
+        if (this.Local && this.Owner.Parent != null)
+        {
+            var adjusted = this.Owner.Transform.WorldTranslation;
+            adjusted.Z = this.Offset + this.Owner.Parent.Transform.WorldTranslation.Z;
+            this.Owner.Transform.WorldTranslation = adjusted;
+        }
+        else
+        {
+            var adjusted = this.Owner.Transform.WorldTranslation;
+            adjusted.Z = this.Offset - adjusted.Y*0.01;
+            this.Owner.Transform.WorldTranslation = adjusted;
+        }
+    }
+
+}
+class SpriteFlip : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.Owner.RigidBody.Velocity.X > 0.05)
+        {
+            if(this.Owner.Transform.EulerAngles.Y == 0)
+            {
+                this.Owner.Transform.SetEulerAnglesXYZ(0,Math.Pi,0);
+            }
+        }
+        else if(this.Owner.RigidBody.Velocity.X < -0.05)
+        {
+            if(this.Owner.Transform.EulerAngles.Y != 0)
+            {
+                this.Owner.Transform.SetEulerAnglesXYZ(0,0,0);
+            }
+        }
+    }
+}
+class AutoRotate : ZilchComponent
+{
+    [Property] var Offset : Real = 90;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.Owner.Transform.SetEulerAnglesXYZ(0,0,Math.ATan2(
+            this.Owner.RigidBody.Velocity.Y, this.Owner.RigidBody.Velocity.X) + Math.ToRadians(this.Offset));
+    }
+}
