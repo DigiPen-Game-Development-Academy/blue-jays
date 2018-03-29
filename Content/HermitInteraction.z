@@ -21,7 +21,7 @@ class Interaction : ZilchComponent
     }
     function OnCollisionStarted(event : CollisionEvent)
     {
-        if (event.OtherObject.PlayerController == null) return;
+        if (event.OtherObject.Collider.ActiveBody.Owner.PlayerController == null) return;
         
         this.Object = this.Space.CreateAtPosition(this.Archetype, this.Owner.Transform.WorldTranslation);
         
@@ -31,7 +31,7 @@ class Interaction : ZilchComponent
     }
     function OnCollisionEnded(event : CollisionEvent)
     {
-        if (event.OtherObject.PlayerController == null) return;
+        if (event.OtherObject.Collider.ActiveBody.Owner.PlayerController == null) return;
         
         var seq = Action.Sequence(this.Owner.Actions);
         Action.Property(seq, @this.Object.Transform.Scale, Real3.Zero, 1.5, Ease.QuadInOut);
@@ -40,7 +40,7 @@ class Interaction : ZilchComponent
     }
     function OnCollisionPersisted(event : CollisionEvent)
     {
-        if (event.OtherObject.PlayerController == null) return;
+        if (event.OtherObject.Collider.ActiveBody.Owner.PlayerController == null) return;
         
         if (Zero.Keyboard.KeyIsPressed(Keys.E)) this.Space.LoadLevel(this.Level);
     }

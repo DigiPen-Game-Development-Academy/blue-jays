@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "CameraLogic",
-		uint64 ResourceId = 5afe6b5f853c07f7,
-	},
-},

@@ -3,19 +3,33 @@
 
 class CameraConstraint : ZilchComponent
 {
+    [Property] var MouseInfluence : Real = 0.1;
+    [Property] var Speed : Real = 5;
+    
     [Property] var Top : Real = 20;
     [Property] var Bottom : Real = -20;
     [Property] var Left : Real = -20;
     [Property] var Right : Real = 20;
     
+    var TargetObject : Cog = null;
+    
     function Initialize(init : CogInitializer)
     {
+        this.TargetObject = this.Space.FindObjectByName("Player");
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        if (this.TargetObject == null) this.TargetObject = this.Space.FindObjectByName("Player");
+        if (this.TargetObject == null) return;
+        
         var position = this.Owner.Transform.WorldTranslation.XY;
+        var target = this.TargetObject.Transform.WorldTranslation.XY;
+        var mouse = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0).XY;
+        target = Math.Lerp(target, mouse, this.MouseInfluence);
+        position = Math.Lerp(position, target, this.Speed * event.Dt);
+        
         //Up
         if (position.Y > this.Top - this.Owner.Camera.Size)
         {

@@ -2,9 +2,9 @@ CollisionTable =
 {
 	Array RegisteredGroups = 
 	[
-		"5ae8cbc8b648997c:Enemy",
 		"4e740859314e5515:DefaultGroup",
 		"5ae8cbdeb44e8fd4:Player",
+		"5ae8cbc8b648997c:Enemy",
 	],
 	Array CollisionFilters = 
 	[
@@ -22,7 +22,7 @@ CollisionTable =
 			string TypeA = "5ae8cbdeb44e8fd4:Player",
 			string TypeB = "5ae8cbdeb44e8fd4:Player",
 			bool SkipResolution = false,
-			bool SkipDetectingCollision = true,
+			bool SkipDetectingCollision = false,
 			bool StartEvent = false,
 			bool EndEvent = false,
 			bool PersistedEvent = false,
@@ -41,7 +41,7 @@ CollisionTable =
 		{
 			string TypeA = "5ae8cbc8b648997c:Enemy",
 			string TypeB = "5ae8cbdeb44e8fd4:Player",
-			bool SkipResolution = true,
+			bool SkipResolution = false,
 			bool SkipDetectingCollision = false,
 			bool StartEvent = false,
 			bool EndEvent = false,
