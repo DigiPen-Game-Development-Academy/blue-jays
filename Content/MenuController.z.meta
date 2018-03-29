@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "MenuController",
-		uint64 ResourceId = 5a080518878d7827,
-	},
-},

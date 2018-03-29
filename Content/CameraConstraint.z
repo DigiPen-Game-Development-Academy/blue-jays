@@ -3,6 +3,11 @@
 
 class CameraConstraint : ZilchComponent
 {
+    [Property] var Top : Real = 20;
+    [Property] var Bottom : Real = -20;
+    [Property] var Left : Real = -20;
+    [Property] var Right : Real = 20;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -12,36 +17,27 @@ class CameraConstraint : ZilchComponent
     {
         var position = this.Owner.Transform.WorldTranslation.XY;
         //Up
-        if (position.Y > 20 - this.Owner.Camera.Size)
+        if (position.Y > this.Top - this.Owner.Camera.Size)
         {
-            position.Y = 20 - this.Owner.Camera.Size;
+            position.Y = this.Top - this.Owner.Camera.Size;
         }
-        
-        this.Owner.Transform.WorldTranslation =
-        Real3(position, this.Owner.Transform.WorldTranslation.Z);
         //Down
-        if (position.Y < -10 + this.Owner.Camera.Size)
+        if (position.Y < -this.Bottom + this.Owner.Camera.Size)
         {
-            position.Y = -10 + this.Owner.Camera.Size;
+            position.Y = -this.Bottom + this.Owner.Camera.Size;
+        }
+        //Right
+        if (position.X > this.Right - this.Owner.Camera.Size)
+        {
+            position.X = this.Right - this.Owner.Camera.Size;
+        }
+        //Left
+        if (position.X < -this.Left + this.Owner.Camera.Size)
+        {
+            position.X = -this.Left + this.Owner.Camera.Size;
         }
         
         this.Owner.Transform.WorldTranslation =
-        Real3(position, this.Owner.Transform.WorldTranslation.Z);
-        
-        if (position.X > 15 - this.Owner.Camera.Size)
-        {
-            position.X = 15 - this.Owner.Camera.Size;
-        }
-        
-        this.Owner.Transform.WorldTranslation =
-        Real3(position, this.Owner.Transform.WorldTranslation.Z);
-        
-        if (position.X < -15 + this.Owner.Camera.Size)
-        {
-            position.X = -15 + this.Owner.Camera.Size;
-        }
-        
-        this.Owner.Transform.WorldTranslation =
-        Real3(position, this.Owner.Transform.WorldTranslation.Z);
+            Real3(position, this.Owner.Transform.WorldTranslation.Z);
     }
 }

@@ -9,6 +9,6 @@ class Spin : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
         var radians = Math.ToRadians(this.Speed * event.Dt);
-        this.Owner.Transform.RotateAnglesWorld(Real3(0, 0, this.Speed * event.Dt));
+        this.Owner.Transform.RotateAnglesWorld(Real3(0, 0, radians));
     }
 }

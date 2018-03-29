@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "WindScript",
-		uint64 ResourceId = 5aee4221cdb97639,
-	},
-},

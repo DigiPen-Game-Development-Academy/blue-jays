@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "TimerText",
-		uint64 ResourceId = 5a6eb7caa8ef4821,
-	},
-},

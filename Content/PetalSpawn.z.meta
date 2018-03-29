@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "PetalSpawn",
-		uint64 ResourceId = 5a79e45c22d26934,
-	},
-},

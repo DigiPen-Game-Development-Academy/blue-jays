@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "WindController",
-		uint64 ResourceId = 5aee522d731a43c1,
-	},
-},

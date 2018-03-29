@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "FollowJoint",
-		uint64 ResourceId = 5af7f5aad96f88b4,
-	},
-},

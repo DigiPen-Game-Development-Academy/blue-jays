@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "AchievementIcon",
-		uint64 ResourceId = 5afd933518532538,
-	},
-},

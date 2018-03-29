@@ -1,108 +1,201 @@
 // Author: Eli Miller
 // Purpose: Easily accessible global variables that stay the same between levels.
-enum CursorColor {RED, WHITE, BLUE}
+
+class SavedStats : ZilchComponent
+{
+    [Serialized] var TotalRuns : Real = 0;
+    [Serialized] var Deaths : Real = 0;
+    [Serialized] var Wins : Real = 0;
+    [Serialized] var FoolsBeaten : Real = 0;
+    [Serialized] var LoversBeaten : Real = 0;
+    [Serialized] var Spawns : Real = 0;
+    [Serialized] var KnightSpawns : Real = 0;
+    [Serialized] var StationarySpawns : Real = 0;
+    [Serialized] var UniqueSpawns : Real = 0;
+    [Serialized] var AchUnlocks : String = "";
+    var PrevHealth : Real = 0;
+}
+
+class PostInitializeGlobals : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        Console.WriteLine(this.Space);
+        this.GameSession.Globals.PostInitialize();
+    }
+}
 
 class Globals : ZilchComponent
 {
-    var Particles : Boolean = true;
+    // Enabled by holding ALT (also enables cheats)
+    var DebugMode : Boolean;
     
-    var SavedStats : Cog;
+    // The space where gameplay happens
+    var GameSpace : Space;
+    // The space where HUD is stored
+    var HUDSpace : Space;
     
-    var KnightOfSwords : Turret = Turret(TurretType.KNIGHT, Archetype.KnightOfSwords,
-        "Knight", SpriteSource.Knight_swords, 10);
+    // Saves should be persistent across games
+    var SavedStats : SavedStats;
     
-    var TheTower : Turret = Turret(TurretType.STATIONARY, Archetype.TheTower,
-        "Tower", SpriteSource.Towers, 20);
+    // Only one should ever exist at a time
+    var SingletonCursor : CursorLogic;
+    var SingletonChariot : ChariotLogic;
+    
+    // Stats should be persistent across levels
+    
+    // Health and Fate
+    [Property] var MaxHealth : Real = 10;
+    [Property] var MaxFate : Real = 10;
+    [Property] var BossMaxHealth : Real = 100;
+    [Property] var BossMaxFate : Real = 100;
+    
+    var CurrentHealth : Real;
+    var CurrentFate : Real;
+    var BossCurrentHealth : Real;
+    var BossCurrentFate : Real;
+    
+    [Property] var RegenHealth : Real = 1;
+    [Property] var RegenFate : Real = 1;
+    [Property] var BossRegenHealth : Real = 0;
+    [Property] var BossRegenFate : Real = 0;
+    
+    // Turrets
+    [Property] var ArchetypeKnight : Archetype = Archetype.KnightOfSwords;
+    [Property] var ArchetypeTower : Archetype = Archetype.TheTower;
+    [Property] var ArchetypeChariot : Archetype = Archetype.TheChariot;
+    
+    [Property] var CostKnight : Real = 1;
+    [Property] var CostTower : Real = 3;
+    [Property] var CostChariot : Real = 5;
+    
+    [Property] var RadiusKnight : Real = 3;
+    [Property] var RadiusTower : Real = 3;
+    [Property] var RadiusChariot : Real = 3;
+    
+    [Property] var MaxChariotCooldown : Real = 10;
+    var CurrentChariotCooldown : Real;
+    
+    var Turrets : Array[Turret];
+    var PRIVATE_CurrentTurretIndex : Integer = 0;
+    var CurrentTurretIndex : Integer {
+        get { var wrapped = this.PRIVATE_CurrentTurretIndex % this.Turrets.Count; if (wrapped < 0) return wrapped + this.Turrets.Count; return wrapped; }
+        set { this.PRIVATE_CurrentTurretIndex = value; }
+    }
+    function GetCurrentTurret() : Turret
+    {
+        return this.Turrets[this.CurrentTurretIndex];
+    }
+    
+    var Initialized : Boolean;
+    function PostInitialize()
+    {
+        if (this.Initialized) return;
+        this.Initialized = true;
         
-    var TheChariot : Turret = Turret(TurretType.UNIQUE, Archetype.TheChariot,
-        "Chariot", SpriteSource.Chariot, 25);
-    
-    var SwordsList : Array[Turret] = new Array[Turret]();
-    
-    function Initialize(init : CogInitializer)
-    {
-        this.Space.OtherSpace.Ref = this.GameSession.CreateNamedSpace("HUDSpace", Archetype.HUDSpace);
-        this.Space.OtherSpace.Ref.LoadLevel(Level.HUDLevel);
-        this.Space.OtherSpace.Ref.OtherSpace.Ref = this.Space;
+        // Set up spaces
+        this.GameSpace = this.GameSession.CreateNamedSpace("GameSpace", Archetype.Space);
+        this.GameSpace.LoadLevel(Level.Hub);
+        this.HUDSpace = this.GameSession.CreateNamedSpace("HUDSpace", Archetype.Space);
+        this.HUDSpace.LoadLevel(Level.HUDLevel);
+        foreach(var space in this.GameSession.AllSpaces) Console.WriteLine(space);
+        
+        // Set up cursor
+        var obj = this.HUDSpace.CreateAtPosition(Archetype.Cursor, Real3.Zero);
+        this.SingletonCursor = obj.CursorLogic;
+        
+        // Set up stats
+        this.CurrentHealth = this.MaxHealth;
+        this.CurrentFate = this.MaxFate;
+        
+        // Set up turrets
+        this.Turrets = new Array[Turret]()
+        {
+            Turret(this.ArchetypeKnight, this.CostKnight, this.RadiusKnight),
+            Turret(this.ArchetypeTower, this.CostTower, this.RadiusTower),
+            Turret(this.ArchetypeChariot, this.CostChariot, this.RadiusChariot),
+        };
+        
+        // Deny quit with escape
         Zero.Connect(this.GameSession, Events.GameRequestQuit, this.OnGameRequestQuit);
-        Zero.Connect(this.Space, Events.LevelStarted, this.OnLevelStart);
-        this.SavedStats = Zero.ObjectStore.RestoreOrArchetype("Stats", Archetype.SavedStats, this.Space);
-        this.SwordsList.Add(this.KnightOfSwords);
-        this.SwordsList.Add(this.TheTower);
-        this.SwordsList.Add(this.TheChariot);
+        
+        // Update global logic, like stats
+        Zero.Connect(this.GameSpace, Events.LogicUpdate, this.OnLogicUpdate);
+        
+        // Cheats
+        Zero.Connect(Zero.Keyboard, Events.KeyUp, this.OnKeyUp);
+        Zero.Connect(Zero.Keyboard, Events.KeyDown, this.OnKeyDown);
     }
     
-    function OnLevelStart(event : GameEvent)
-    {
-        if(!(event.LevelName == "EmptyLevel"))
-        {
-            Zero.Mouse.Cursor = Cursor.Invisible;
-            this.Space.CreateAtPosition(Archetype.Cursor, Real3(100));
-        }
-        this.SavedStats = Zero.ObjectStore.RestoreOrArchetype("Stats", Archetype.SavedStats, this.Space);
-    }
-    
-    function ChangeCursor(color : CursorColor)
-    {
-        if(this.Space.CurrentLevel.Name != "Hub")
-        {
-            return;
-        }
-        var cursor = this.Space.FindObjectByName("Cursor");
-        if(color == CursorColor.WHITE)
-        {
-            cursor.Sprite.Color = Real4(1,1,1,1);
-        }
-        else if(color == CursorColor.RED)
-        {
-            cursor.Sprite.Color = Real4(1,0,0,1);
-        }
-        else if(color == CursorColor.BLUE)
-        {
-            cursor.Sprite.Color = Real4(0,0,1,1);
-        }
-    }
-    
-    function StoreStats()
-    {
-        var au = "";
-        foreach (var ach in this.Space.AchievementTracker.AllAchievements)
-        {
-            if(ach.Unlocked)
-            {
-                au = "`au`y";
-            }
-            else
-            {
-                au = "`au`n";
-            }
-        }
-        this.SavedStats.SavedStats.AchUnlocks = au;
-        Zero.ObjectStore.Store("Stats", this.SavedStats);
-    }
-
     function OnGameRequestQuit(event : GameEvent)
     {
         event.Handled = true;
         Zero.Mouse.Cursor = Cursor.Invisible;
     }
     
-    function GetTurrets() : Array[Turret]
+    function OnLogicUpdate(event : UpdateEvent)
     {
-        return this.SwordsList;
+        // Regen stats
+        this.CurrentHealth += this.RegenHealth * event.Dt;
+        this.CurrentFate += this.RegenFate * event.Dt;
+        
+        // Clamp to max stats
+        this.CurrentHealth = Math.Min(this.CurrentHealth, this.MaxHealth);
+        this.CurrentFate = Math.Min(this.CurrentFate, this.MaxFate);
     }
     
-    function GetTarget(pos : Real3) : Cog
+    function OnKeyUp(event : KeyboardEvent)
     {
-        var l = this.Space.CurrentLevel.Name;
-        if(l == "Fool")
+        // Press ALT to enter debug mode
+        if (event.Key == Keys.Alt) this.DebugMode = false;
+    }
+    function OnKeyDown(event : KeyboardEvent)
+    {
+        // Press ALT to enter debug mode
+        if (event.Key == Keys.Alt) this.DebugMode = true;
+        
+        // Hold ALT to cheat!
+        if (event.AltPressed == false) return;
+        
+        // Instant Restart
+        if (event.Key == Keys.R) this.GameSpace.ReloadLevel();
+        // Instant Health
+        else if (event.Key == Keys.H)
         {
-            return this.Space.FindObjectByName("Boss");
+            if (event.ShiftPressed) this.RegenHealth = 1000000000;
+            else this.CurrentHealth = this.MaxHealth;
         }
-        else if(this.Space.FindObjectByName("Pigeon") != null)
+        // Instant Fate
+        else if (event.Key == Keys.F)
         {
-            return this.Space.FindObjectByName("Pigeon");
+            if (event.ShiftPressed) this.RegenFate = 1000000000;
+            else this.CurrentFate = this.MaxFate;
         }
-        return null;
+    }
+    
+    function LoadStats()
+    {
+        var obj = Zero.ObjectStore.RestoreOrArchetype("Stats", Archetype.SavedStats, this.HUDSpace);
+        this.SavedStats = obj.SavedStats;
+    }
+    function SaveStats()
+    {
+        Zero.ObjectStore.Store("Stats", this.SavedStats.Owner);
+    }
+    
+    function GetEnemy(nearestTo : Real3) : Cog
+    {
+        var closest : Cog = null;
+        var distanceSquared : Real = Real.PositiveMax;
+        
+        foreach (var obj in this.Space.AllObjects())
+        {
+            if (obj.Transform == null) continue;
+            var tempDistanceSquared = Math.DistanceSq(nearestTo.XY, obj.Transform.WorldTranslation.XY);
+            if (tempDistanceSquared >= distanceSquared) continue;
+            distanceSquared = tempDistanceSquared;
+            closest = obj;
+        }
+        return closest;
     }
 }

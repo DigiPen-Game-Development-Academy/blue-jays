@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "FateBar",
-		uint64 ResourceId = 5a8bf9a5e8bba0d1,
-	},
-},

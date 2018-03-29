@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "DestroyOnCollide",
-		uint64 ResourceId = 5a916b3cb6375f86,
-	},
-},

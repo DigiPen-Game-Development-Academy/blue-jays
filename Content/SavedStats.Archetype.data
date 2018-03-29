@@ -6,16 +6,19 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Stats",
-	},
-	Archetyped = 
-	{
-		string Name = "5a6d29b2bf9b1b34:SavedStats",
+		string Name = "SavedStats",
 	},
 	SavedStats = 
 	{
-	},
-	Hierarchy = 
-	{
+		float TotalRuns = 0,
+		float Deaths = 0,
+		float Wins = 0,
+		float FoolsBeaten = 0,
+		float LoversBeaten = 0,
+		float Spawns = 0,
+		float KnightSpawns = 0,
+		float StationarySpawns = 0,
+		float UniqueSpawns = 0,
+		string AchUnlocks = "",
 	},
 },

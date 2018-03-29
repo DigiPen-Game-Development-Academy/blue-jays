@@ -11,13 +11,34 @@ GameSession =
 	Viewports = 
 	{
 	},
+	CameraViewports = 
+	{
+	},
 	DefaultGameSetup = 
 	{
 		string StartingSpaceName = "554cea0f94af6dc4:Space",
-		string StartingLevelName = "5a08118fa7684539:MainMenu",
+		string StartingLevelName = "4faa6050b86892a8:DefaultLevel",
 	},
-	CameraViewports = 
+	Globals = 
 	{
+		float MaxHealth = 10,
+		float MaxFate = 10,
+		float BossMaxHealth = 100,
+		float BossMaxFate = 100,
+		float RegenHealth = 1,
+		float RegenFate = 1,
+		float BossRegenHealth = 0,
+		float BossRegenFate = 0,
+		string ArchetypeKnight = "5a1c1664de0b4de6:KnightOfSwords",
+		string ArchetypeTower = "5a8bf32146ffed37:TheTower",
+		string ArchetypeChariot = "5a8be71044b57a71:TheChariot",
+		float CostKnight = 1,
+		float CostTower = 3,
+		float CostChariot = 5,
+		float RadiusKnight = 3,
+		float RadiusTower = 3,
+		float RadiusChariot = 3,
+		float MaxChariotCooldown = 10,
 	},
 	ZilchState = 
 	{

@@ -1,21 +1,72 @@
 // Author: Eli Miller
 // Purpose: Class for turrets.
 
-enum TurretType {KNIGHT, STATIONARY, UNIQUE, BOSS, NULL}
-
 class Turret
 {
-    var Type : TurretType = TurretType.NULL;
-    var Archetype : Archetype = Archetype.DefaultArchetype;
-    var Name : String = "Unnamed";
-    var Sprite : SpriteSource = SpriteSource.DefaultSprite;
-    var Fate : Real;
-    constructor (t : TurretType, a : Archetype, n : String, s : SpriteSource, f : Real)
+    var Archetype : Archetype;
+    var Cost : Real;
+    var Radius : Real;
+    constructor (archetype : Archetype, cost : Real, radius : Real)
     {
-        this.Type = t;
-        this.Archetype = a;
-        this.Name = n;
-        this.Sprite = s;
-        this.Fate = f;
+        this.Archetype = archetype;
+        this.Cost = cost;
+        this.Radius = radius;
+    }
+}
+
+class KnightLogic : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        
+    }
+}
+class ChariotLogic : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        var player = this.Space.FindObjectByName("Player");
+        if (player == null) return;
+        this.Owner.AttachTo(player);
+        this.Owner.Transform.Translation = Real3.Zero;
+        this.GameSession.Globals.SingletonChariot = this;
+    }
+}
+class TowerLogic : ZilchComponent
+{
+    [Property] var TimeBetweenShots : Real = 1;
+    [Property] var ShootSpeed : Real = 1;
+    [Property] var Projectile : Archetype = Archetype.Arrow;
+    var TimeTillShoot : Real;
+    
+    function Initialize(init : CogInitializer)
+    {
+        this.TimeTillShoot = this.TimeBetweenShots;
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        //couting down timer
+        this.TimeTillShoot -= event.Dt;
+        //check if we can shoot
+        if (this.TimeTillShoot <= 0)
+        {
+            var target = this.GameSession.Globals.GetEnemy(this.Owner.Transform.WorldTranslation);
+            if (target == null) return;
+            
+            var vel = (target.Transform.WorldTranslation - this.Owner.Transform.WorldTranslation) * this.ShootSpeed;
+            
+            //Create the bullet
+            var arrow = this.Space.CreateAtPosition(this.Projectile, this.Owner.Transform.WorldTranslation + vel / 100);
+            
+            //Launch the bullet
+            arrow.RigidBody.Velocity = vel;
+            
+            //Reset our time
+            this.TimeTillShoot = this.TimeBetweenShots;
+            
+            this.Space.SoundSpace.PlayCue(SoundCue.TowerShoot);
+        }
     }
 }

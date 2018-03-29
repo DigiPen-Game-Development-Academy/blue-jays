@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "OverlayToggle",
-		uint64 ResourceId = 5a02603ce9e2ceb0,
-	},
-},

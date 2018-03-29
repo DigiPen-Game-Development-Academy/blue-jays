@@ -7,14 +7,14 @@ class SpriteFlip : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(this.Owner.RigidBody.Velocity.X > 0)
+        if(this.Owner.RigidBody.Velocity.X > 0.01)
         {
             if(this.Owner.Transform.EulerAngles.Y == 0)
             {
                 this.Owner.Transform.SetEulerAnglesXYZ(0,Math.Pi,0);
             }
         }
-        else if(this.Owner.RigidBody.Velocity.X < 0)
+        else if(this.Owner.RigidBody.Velocity.X < -0.01)
         {
             if(this.Owner.Transform.EulerAngles.Y != 0)
             {

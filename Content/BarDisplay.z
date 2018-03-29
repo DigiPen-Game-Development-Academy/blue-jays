@@ -1,0 +1,48 @@
+
+enum BarType
+{
+    PlayerHealth,
+    PlayerFate,
+    BossHealth,
+    BossFate,
+}
+
+class BarDisplay : ZilchComponent
+{
+    [Property] var BarType : BarType;
+    [Property] var Length : Real = 10;
+    [Property] var Gradient : ColorGradient;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var ratio = 0.0;
+        
+        if (this.BarType == BarType.PlayerHealth)
+        {
+            ratio = this.GameSession.Globals.CurrentHealth / this.GameSession.Globals.MaxHealth;
+        }
+        else if (this.BarType == BarType.PlayerFate)
+        {
+            ratio = this.GameSession.Globals.CurrentFate / this.GameSession.Globals.MaxFate;
+        }
+        else if (this.BarType == BarType.BossHealth)
+        {
+            ratio = this.GameSession.Globals.BossCurrentHealth / this.GameSession.Globals.BossMaxHealth;
+        }
+        else if (this.BarType == BarType.BossFate)
+        {
+            ratio = this.GameSession.Globals.BossCurrentFate / this.GameSession.Globals.BossMaxFate;
+        }
+        ratio = Math.Clamp(ratio, 0, 1);
+        
+        var pos = this.Owner.Transform.Translation;
+        pos.Y = -this.Length * ratio;
+        this.Owner.Transform.Translation = pos;
+        
+        if (this.Gradient != null) this.Owner.Sprite.Color = this.Gradient.Sample(ratio);
+    }
+}

@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "CameraForTutorial",
-		uint64 ResourceId = 5a40d2b6f57d9fc4,
-	},
-},

@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "ParticleRemove",
-		uint64 ResourceId = 5afe4335467076d0,
-	},
-},

@@ -1,4 +1,0 @@
-class OtherSpace : ZilchComponent
-{
-    var Ref : Space;
-}
