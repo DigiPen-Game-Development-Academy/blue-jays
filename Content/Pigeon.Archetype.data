@@ -14,8 +14,8 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [2.90146685, -1.09134769, 0.510913491],
-		Vec3 Scale = [1, 1, 1],
+		Vec3 Translation = [6.55879593, 0.683540344, -0.00683540339],
+		Vec3 Scale = [1, 0.400000006, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -24,11 +24,11 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [1, 1, 1, 0.999899983],
+		Vec4 Color = [0, 0, 0, 0.5],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5a5b184bf39b7b7f:PigeonFly",
+		string SpriteSource = "5274db4c2e7c11f9:Circle",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -48,23 +48,45 @@ Cog =
 		Vec3 Velocity = [0, 0, 0],
 		Vec3 AngularVelocity = [0, 0, 0],
 	},
-	PigeonNPC = 
+	EllipsoidCollider = 
 	{
-		Vec2 Velocity = [0, 15],
-		float WanderAcceleration = 10,
-		float WanderMoveSpeed = 5,
-		float WanderTurnSpeed = 10,
-		float ChaseAcceleration = 10,
-		float ChaseMoveSpeed = 5,
-		float ChaseTurnSpeed = 5,
-		Vec2 TurnFrequency = [0.100000001, 1],
-	},
-	SpriteFlip = 
-	{
+		bool Ghost = false,
+		bool SendsMessages = true,
+		bool Seamless = true,
+		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+		string SerializedGroupName = "5ae8cbc8b648997c:Enemy",
+		Vec3 Offset = [0, 0, 0],
+		Vec3 Radii = [0.5, 0.5, 1],
 	},
 	AutoDepth = 
 	{
-		float Offset = 0.5,
+		bool Local = false,
+		float Offset = 0,
+	},
+	Health = 
+	{
+		Enum HealthType = EnemyMinion,
+		float Health = 3,
+	},
+	DamageOnCollide = 
+	{
+		Enum TeamToHurt = Player,
+		float DamageToDeal = 1,
+		bool DeactivateSelf = false,
+		bool AttachSelf = false,
+		bool DestroySelf = false,
+		float DestroyDelay = 0,
+	},
+	PigeonNPC = 
+	{
+		Vec2 Velocity = [0, 0],
+		float WanderAcceleration = 10,
+		float WanderMoveSpeed = 5,
+		float WanderTurnSpeed = 10,
+		float ChaseAcceleration = 5,
+		float ChaseMoveSpeed = 10,
+		float ChaseTurnSpeed = 3,
+		Vec2 TurnFrequency = [0.100000001, 1],
 	},
 	Hierarchy = 
 	{
@@ -76,12 +98,12 @@ Cog =
 			},
 			Named = 
 			{
-				string Name = "Shadow",
+				string Name = "MainSprite",
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, -2, 0],
-				Vec3 Scale = [1, 0.400000006, 1],
+				Vec3 Translation = [0, 5, 0.479999989],
+				Vec3 Scale = [1, 2.5, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -90,11 +112,11 @@ Cog =
 				bool VisibilityCulling = true,
 				bool VisibilityEvents = true,
 				bool CastShadows = false,
-				Vec4 Color = [0, 0, 0, 0.5],
+				Vec4 Color = [1, 1, 1, 0.999899983],
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5274db4c2e7c11f9:Circle",
+				string SpriteSource = "5a5b184bf39b7b7f:PigeonFly",
 				bool RenderMask = false,
 				bool FlipX = false,
 				bool FlipY = false,
@@ -102,15 +124,11 @@ Cog =
 				float AnimationSpeed = 1,
 				uint StartFrame = 0,
 			},
-			EllipsoidCollider = 
+			SpriteFlip = 
 			{
-				bool Ghost = false,
-				bool SendsMessages = true,
-				bool Seamless = true,
-				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-				string SerializedGroupName = "5ae8cbc8b648997c:Enemy",
-				Vec3 Offset = [0, 0, 0],
-				Vec3 Radii = [0.5, 0.5, 1],
+			},
+			Hierarchy = 
+			{
 			},
 		},
 		Cog = 
@@ -125,8 +143,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, 0, 0],
-				Vec3 Scale = [1, 1, 1],
+				Vec3 Translation = [0, 5, 0.479999989],
+				Vec3 Scale = [1, 2.5, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			SpriteParticleSystem = 

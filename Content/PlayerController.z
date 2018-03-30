@@ -24,24 +24,6 @@ class PlayerController : ZilchComponent
         if(Zero.Keyboard.KeyIsDown(Keys.W)) vel.Y += 1;
         if(Zero.Keyboard.KeyIsDown(Keys.S)) vel.Y -= 1;
         
-        var chariotExists = this.GameSession.Globals.SingletonChariot != null;
-        
-        if (chariotExists || vel == Real2.Zero)
-        {
-            if (this.Owner.Sprite.SpriteSource != SpriteSource.Swords)
-            {
-                this.Owner.Sprite.SpriteSource = SpriteSource.Swords;
-            }
-        }
-        
-        if (!chariotExists && vel != Real2.Zero && Math.LengthSq(this.RigidBody.Velocity) > 0.1)
-        {
-            if (this.Owner.Sprite.SpriteSource != SpriteSource.KingOS_Run)
-            {
-                this.Owner.Sprite.SpriteSource = SpriteSource.KingOS_Run;
-            }
-        }
-        
         if (vel == Real2.Zero)
         {
             this.RigidBody.Velocity = Math.Lerp(this.RigidBody.Velocity, Real3.Zero, this.Deceleration * event.Dt);
@@ -51,5 +33,43 @@ class PlayerController : ZilchComponent
             if (this.Reversed) vel = -vel;
             this.RigidBody.Velocity = Math.Lerp(this.RigidBody.Velocity, Real3(vel * this.Speed, 0), this.Acceleration * event.Dt);
         }
+    }
+}
+class PlayerAnimator : ZilchComponent
+{
+    var Previous : Real2;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        
+        this.Previous = this.Owner.Transform.WorldTranslation.XY;
+    }
+    
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var movement = this.Owner.Transform.WorldTranslation.XY - this.Previous;
+        var moveSpeedSq = Math.LengthSq(movement);
+        
+        var input = Zero.Keyboard.KeyIsDown(Keys.W) || Zero.Keyboard.KeyIsDown(Keys.A) || Zero.Keyboard.KeyIsDown(Keys.S) || Zero.Keyboard.KeyIsDown(Keys.D);
+        var chariotExists = this.GameSession.Globals.SingletonChariot != null;
+        
+        if (chariotExists || !input || moveSpeedSq < 0.001)
+        {
+            if (this.Owner.Sprite.SpriteSource != SpriteSource.Swords)
+            {
+                this.Owner.Sprite.SpriteSource = SpriteSource.Swords;
+            }
+        }
+        
+        if (!chariotExists && input && moveSpeedSq > 0.01)
+        {
+            if (this.Owner.Sprite.SpriteSource != SpriteSource.KingOS_Run)
+            {
+                this.Owner.Sprite.SpriteSource = SpriteSource.KingOS_Run;
+            }
+        }
+        
+        this.Previous = this.Owner.Transform.WorldTranslation.XY;
     }
 }

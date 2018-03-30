@@ -15,14 +15,49 @@ class DamageOnCollide : ZilchComponent
 {
     [Property] var TeamToHurt : Team;
     [Property] var DamageToDeal : Real = 1;
+    [Property] var DeactivateSelf : Boolean;
+    [Property] var AttachSelf : Boolean;
     [Property] var DestroySelf : Boolean;
+    [Property] var DestroyDelay : Real;
     
-    function DamageDealt(to : Health)
+    function Initialize(init : CogInitializer)
     {
-        if (this.DestroySelf)
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+    }
+    
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        if (event.OtherObject.Health == null) return;
+        if (event.OtherObject.Health.Team == this.TeamToHurt)
         {
-            this.Owner.Destroy();
+            event.OtherObject.Health.DealDamage(this.DamageToDeal);
+            
+            if (this.DeactivateSelf)
+            {
+                this.TryToRemoveComponent(typeid(DamageOnCollide));
+            }
+            
+            if (this.AttachSelf)
+            {
+                this.Owner.AttachToRelative(event.OtherObject);
+                this.TryToRemoveComponent(typeid(RigidBody));
+                this.TryToRemoveComponent(typeid(BoxCollider));
+                this.TryToRemoveComponent(typeid(SphereCollider));
+            }
+            
+            if (this.DestroySelf)
+            {
+                var seq = Action.Sequence(this.Owner.Actions);
+                Action.Delay(seq, this.DestroyDelay);
+                Action.Call(seq, this.Owner.Destroy);
+            }
         }
+    }
+    
+    function TryToRemoveComponent(boundType : BoundType)
+    {
+        if (this.Owner.GetComponentByName(boundType.Name) != null)
+            this.Owner.RemoveComponentByName(boundType.Name);
     }
 }
 
@@ -41,27 +76,7 @@ class Health : ZilchComponent
     
     function Initialize(init : CogInitializer)
     {
-        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-    }
-    
-    function OnCollisionStarted(event : CollisionEvent)
-    {
-        if (event.OtherObject.DamageOnCollide == null) return;
-        if (event.OtherObject.DamageOnCollide.TeamToHurt == this.Team)
-        {
-            this.Health -= event.OtherObject.DamageOnCollide.DamageToDeal;
-            event.OtherObject.DamageOnCollide.DamageDealt(this);
-            
-            if (this.HealthType == HealthType.Player)
-            {
-                this.GameSession.Globals.PlayerCurrentHealth = this.Health;
-            }
-            else if (this.HealthType == HealthType.Boss)
-            {
-                this.GameSession.Globals.BossCurrentHealth = this.Health;
-            }
-        }
     }
     
     function OnLogicUpdate(event : UpdateEvent)
@@ -76,6 +91,20 @@ class Health : ZilchComponent
         }
         
         if (this.Health <= 0) this.Die();
+    }
+    
+    function DealDamage(amount : Real)
+    {
+        this.Health -= amount;
+        
+        if (this.HealthType == HealthType.Player)
+        {
+            this.GameSession.Globals.PlayerCurrentHealth = this.Health;
+        }
+        else if (this.HealthType == HealthType.Boss)
+        {
+            this.GameSession.Globals.BossCurrentHealth = this.Health;
+        }
     }
     
     var Dead : Boolean;

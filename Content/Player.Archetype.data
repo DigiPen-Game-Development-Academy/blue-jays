@@ -14,8 +14,8 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-2.07430172, 4.57723188, 0.454227686],
-		Vec3 Scale = [2, 2, 1],
+		Vec3 Translation = [2.1575098, 1.90579164, -0.0190579165],
+		Vec3 Scale = [2.20000005, 0.800000012, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -24,11 +24,11 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [1, 1, 1, 1],
+		Vec4 Color = [0, 0, 0, 0.5],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5a916408338446d3:Swords",
+		string SpriteSource = "5274db4c2e7c11f9:Circle",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -48,24 +48,31 @@ Cog =
 		Vec3 Velocity = [0, 0, 0],
 		Vec3 AngularVelocity = [0, 0, 0],
 	},
+	EllipsoidCollider = 
+	{
+		bool Ghost = false,
+		bool SendsMessages = true,
+		bool Seamless = true,
+		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+		string SerializedGroupName = "5ae8cbdeb44e8fd4:Player",
+		Vec3 Offset = [0, 0, 0],
+		Vec3 Radii = [0.5, 0.5, 1],
+	},
+	AutoDepth = 
+	{
+		bool Local = false,
+		float Offset = 0,
+	},
+	Health = 
+	{
+		Enum HealthType = PlayerMinion,
+		float Health = 10,
+	},
 	PlayerController = 
 	{
 		float Speed = 10,
 		float Acceleration = 5,
 		float Deceleration = 10,
-	},
-	AutoDepth = 
-	{
-		bool Local = false,
-		float Offset = 0.5,
-	},
-	SpriteFlip = 
-	{
-	},
-	Health = 
-	{
-		Enum HealthType = Player,
-		float Health = 10,
 	},
 	Hierarchy = 
 	{
@@ -77,12 +84,12 @@ Cog =
 			},
 			Named = 
 			{
-				string Name = "Shadow",
+				string Name = "MainSprite",
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, -0.799999952, -0.00999999046],
-				Vec3 Scale = [1.10000002, 0.400000006, 1],
+				Vec3 Translation = [0.0183370113, 1.99997425, 0.0100000007],
+				Vec3 Scale = [0.909090817, 2.49999976, 0.99999994],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			Sprite = 
@@ -91,11 +98,11 @@ Cog =
 				bool VisibilityCulling = true,
 				bool VisibilityEvents = true,
 				bool CastShadows = false,
-				Vec4 Color = [0, 0, 0, 0.5],
+				Vec4 Color = [1, 1, 1, 1],
 				BlendMode BlendMode = Alpha,
 				SpriteGeometryMode GeometryMode = ZPlane,
 				string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-				string SpriteSource = "5274db4c2e7c11f9:Circle",
+				string SpriteSource = "5a916408338446d3:Swords",
 				bool RenderMask = false,
 				bool FlipX = false,
 				bool FlipY = false,
@@ -103,20 +110,14 @@ Cog =
 				float AnimationSpeed = 1,
 				uint StartFrame = 0,
 			},
-			EllipsoidCollider = 
+			SpriteFlip = 
 			{
-				bool Ghost = false,
-				bool SendsMessages = true,
-				bool Seamless = true,
-				string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-				string SerializedGroupName = "5ae8cbdeb44e8fd4:Player",
-				Vec3 Offset = [0, 0, 0],
-				Vec3 Radii = [0.5, 0.5, 1],
 			},
-			AutoDepth = 
+			PlayerAnimator = 
 			{
-				bool Local = true,
-				float Offset = -0.00999999978,
+			},
+			Hierarchy = 
+			{
 			},
 		},
 		Cog = 
@@ -131,8 +132,8 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, -0.77187407, -0.00999999046],
-				Vec3 Scale = [0.400618374, 0.801236749, 0.801236749],
+				Vec3 Translation = [0, 0.0704827309, -0.00999999791],
+				Vec3 Scale = [0.364198446, 2.00309157, 0.801236629],
 				Quat Rotation = [0, 0, 0, 1],
 			},
 			SpriteParticleSystem = 
@@ -193,16 +194,6 @@ Cog =
 				Vec4 Color2 = [1, 1, 1, 1],
 				Vec4 Color3 = [1, 1, 1, 1],
 				Vec4 Color4 = [1, 1, 1, 0],
-			},
-			Area = 
-			{
-				Vec2 Size = [0.25, 0.25],
-				Location Origin = Center,
-			},
-			AutoDepth = 
-			{
-				bool Local = true,
-				float Offset = -0.00999999978,
 			},
 		},
 	},
