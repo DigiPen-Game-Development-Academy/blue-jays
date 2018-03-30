@@ -65,7 +65,7 @@ Cog =
 	Health = 
 	{
 		Enum HealthType = Player,
-		float PRIVATE_Health = 1,
+		float Health = 10,
 	},
 	Hierarchy = 
 	{
@@ -131,7 +131,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, -0.77187407, -0.100000001],
+				Vec3 Translation = [0, -0.77187407, -0.00999999046],
 				Vec3 Scale = [0.400618374, 0.801236749, 0.801236749],
 				Quat Rotation = [0, 0, 0, 1],
 			},
@@ -198,6 +198,11 @@ Cog =
 			{
 				Vec2 Size = [0.25, 0.25],
 				Location Origin = Center,
+			},
+			AutoDepth = 
+			{
+				bool Local = true,
+				float Offset = -0.00999999978,
 			},
 		},
 	},

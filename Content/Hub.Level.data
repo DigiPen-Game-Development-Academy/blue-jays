@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.16429842, 3.3301878, 70],
+			Vec3 Translation = [2.61310339, 0.773380339, 70],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 18.0500546,
+			float Size = 19.9483395,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.16429842, 3.3301878, 20],
+			Vec3 LookTarget = [2.61310339, 0.773380339, 20],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -181,12 +181,19 @@ Level =
 			float Right = 15.5,
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "5a08fb786d4f3f80:Player",
 		LinkId = 
 		{
 			uint Id = 4,
+		},
+		Named = 
+		{
+			string Name = "Player",
+		},
+		Archetyped = 
+		{
+			string Name = "5a08fb786d4f3f80:Player",
 		},
 		Transform = 
 		{
@@ -194,16 +201,195 @@ Level =
 			Vec3 Scale = [2, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		Sprite = 
 		{
-			string Name = "Player",
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a916408338446d3:Swords",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = true,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		PlayerController = 
+		{
+			float Speed = 10,
+			float Acceleration = 5,
+			float Deceleration = 10,
+		},
+		AutoDepth = 
+		{
+			bool Local = false,
+			float Offset = 0.5,
+		},
+		SpriteFlip = 
+		{
+		},
+		Health = 
+		{
+			Enum HealthType = Player,
+			float Health = 10,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 5,
+				},
+				Named = 
+				{
+					string Name = "Shadow",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, -0.799999952, -0.00999999046],
+					Vec3 Scale = [1.10000002, 0.400000006, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0, 0, 0, 0.5],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5274db4c2e7c11f9:Circle",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				EllipsoidCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "5ae8cbdeb44e8fd4:Player",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Radii = [0.5, 0.5, 1],
+				},
+				AutoDepth = 
+				{
+					bool Local = true,
+					float Offset = -0.00999999978,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 6,
+				},
+				Named = 
+				{
+					string Name = "BasicParticleEffect",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, -0.77187407, -0.00999999046],
+					Vec3 Scale = [0.400618374, 0.801236749, 0.801236749],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteParticleSystem = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					SystemChildMode ChildMode = Independent,
+					SystemSpace SystemSpace = WorldSpace,
+					uint DrawOrder = 0,
+					Vec4 Tint = [1, 1, 1, 1],
+					float WarmUpTime = 0,
+					ParticleGeometry GeometryMode = Billboarded,
+					ParticleRenderMode RenderMode = Blended,
+					ParticleSortMode SortMode = Youngest,
+					ParticleAnimation ParticleAnimation = Single,
+					string Texture = "5310e87946edb371:WhiteCloud",
+					float VelocityScale = 1,
+					float LengthScale = 1,
+					float MaxParticleSize = 100,
+					Vec3 SystemSize = [4, 4, 4],
+				},
+				SphericalParticleEmitter = 
+				{
+					bool Active = true,
+					uint EmitCount = 0,
+					float EmitRate = 9.66743469,
+					float EmitVariance = 0,
+					float Size = 0.5,
+					float SizeVariance = 0.5,
+					float Lifetime = 1,
+					float LifetimeVariance = 0.200000003,
+					float Spin = 0,
+					float SpinVariance = 50,
+					bool RandomSpin = true,
+					float Fill = 1,
+					float EmitterVelocityPercent = 0,
+					Vec3 StartVelocity = [0, 0, 0],
+					Vec3 RandomVelocity = [2, 0, 0],
+					Vec3 TangentVelocity = [0, 0, 0],
+					Vec3 EmitterSize = [0, 0, 0],
+					bool FastMovingEmitter = false,
+				},
+				LinearParticleAnimator = 
+				{
+					Vec3 Force = [0, 0, 0],
+					Vec3 RandomForce = [0, 0, 0],
+					float Torque = 0,
+					float Growth = 0,
+					float Dampening = 0,
+					Vec3 Twist = [0, 0, 0],
+				},
+				ParticleColorAnimator = 
+				{
+					Vec4 Color0 = [1, 1, 1, 0],
+					Vec4 Color1 = [1, 1, 1, 1],
+					Vec4 Color2 = [1, 1, 1, 1],
+					Vec4 Color3 = [1, 1, 1, 1],
+					Vec4 Color4 = [1, 1, 1, 0],
+				},
+				AutoDepth = 
+				{
+					bool Local = true,
+					float Offset = -0.00999999978,
+				},
+			},
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 7,
 		},
 		Named = 
 		{
@@ -221,7 +407,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 6,
+					uint Id = 8,
 				},
 				Named = 
 				{
@@ -266,7 +452,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 7,
+					uint Id = 9,
 				},
 				Named = 
 				{
@@ -311,7 +497,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 8,
+					uint Id = 10,
 				},
 				Named = 
 				{
@@ -356,7 +542,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 9,
+					uint Id = 11,
 				},
 				Named = 
 				{
@@ -401,7 +587,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 10,
+					uint Id = 12,
 				},
 				Named = 
 				{
@@ -457,7 +643,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 11,
+							uint Id = 13,
 						},
 						Named = 
 						{
@@ -499,7 +685,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 12,
+					uint Id = 14,
 				},
 				Named = 
 				{
@@ -555,7 +741,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 13,
+							uint Id = 15,
 						},
 						Named = 
 						{
@@ -597,7 +783,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 14,
+					uint Id = 16,
 				},
 				Named = 
 				{
@@ -643,7 +829,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 15,
+							uint Id = 17,
 						},
 						Named = 
 						{
@@ -685,7 +871,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 16,
+					uint Id = 18,
 				},
 				Named = 
 				{
@@ -703,7 +889,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 17,
+							uint Id = 19,
 						},
 						Named = 
 						{
@@ -748,7 +934,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 18,
+							uint Id = 20,
 						},
 						Named = 
 						{
@@ -793,7 +979,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 19,
+							uint Id = 21,
 						},
 						Named = 
 						{
@@ -833,7 +1019,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 20,
+							uint Id = 22,
 						},
 						Named = 
 						{
@@ -878,7 +1064,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 21,
+							uint Id = 23,
 						},
 						Named = 
 						{
@@ -923,7 +1109,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 22,
+							uint Id = 24,
 						},
 						Named = 
 						{
@@ -968,7 +1154,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 23,
+							uint Id = 25,
 						},
 						Named = 
 						{
@@ -1013,7 +1199,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 24,
+							uint Id = 26,
 						},
 						Named = 
 						{
@@ -1058,7 +1244,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 25,
+							uint Id = 27,
 						},
 						Named = 
 						{
@@ -1098,7 +1284,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 26,
+							uint Id = 28,
 						},
 						Named = 
 						{
@@ -1138,7 +1324,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 27,
+							uint Id = 29,
 						},
 						Named = 
 						{
@@ -1178,7 +1364,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 28,
+							uint Id = 30,
 						},
 						Named = 
 						{
@@ -1218,7 +1404,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 29,
+							uint Id = 31,
 						},
 						Named = 
 						{
@@ -1260,7 +1446,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 30,
+					uint Id = 32,
 				},
 				Named = 
 				{
@@ -1269,7 +1455,7 @@ Level =
 				Transform = 
 				{
 					Vec3 Translation = [0, -2, -0.105000004],
-					Vec3 Scale = [1, 1, 1],
+					Vec3 Scale = [1, 0.5, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				Sprite = 
@@ -1292,7 +1478,7 @@ Level =
 				},
 				Area = 
 				{
-					Vec2 Size = [25, 14],
+					Vec2 Size = [25, 28],
 					Location Origin = Center,
 				},
 				PigeonSpawner = 
@@ -1311,7 +1497,7 @@ Level =
 				string Name = "5a56bfa2af355e29:Candle",
 				LinkId = 
 				{
-					uint Id = 31,
+					uint Id = 33,
 				},
 				Transform = 
 				{
@@ -1334,7 +1520,7 @@ Level =
 				string Name = "5a56bfa2af355e29:Candle",
 				LinkId = 
 				{
-					uint Id = 32,
+					uint Id = 34,
 				},
 				Transform = 
 				{
@@ -1357,7 +1543,7 @@ Level =
 				string Name = "5a56bfa2af355e29:Candle",
 				LinkId = 
 				{
-					uint Id = 33,
+					uint Id = 35,
 				},
 				Transform = 
 				{
@@ -1380,7 +1566,7 @@ Level =
 				string Name = "5a56bfa2af355e29:Candle",
 				LinkId = 
 				{
-					uint Id = 34,
+					uint Id = 36,
 				},
 				Transform = 
 				{
@@ -1402,7 +1588,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 35,
+					uint Id = 37,
 				},
 				Named = 
 				{
@@ -1442,7 +1628,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 36,
+					uint Id = 38,
 				},
 				Named = 
 				{
@@ -1478,7 +1664,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 37,
+							uint Id = 39,
 						},
 						Named = 
 						{
@@ -1513,7 +1699,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 38,
+							uint Id = 40,
 						},
 						Named = 
 						{
@@ -1548,7 +1734,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 39,
+							uint Id = 41,
 						},
 						Named = 
 						{
@@ -1583,7 +1769,7 @@ Level =
 					{
 						LinkId = 
 						{
-							uint Id = 40,
+							uint Id = 42,
 						},
 						Named = 
 						{
@@ -1616,13 +1802,121 @@ Level =
 					},
 				},
 			},
+			ArchetypeInstance = 
+			{
+				string Name = "5ae91b1ed7fdd8c4:Planter",
+				LinkId = 
+				{
+					uint Id = 43,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [12, 6.80000019, -0.0680000037],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Planter",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "5ae91b1ed7fdd8c4:Planter",
+				LinkId = 
+				{
+					uint Id = 44,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-12, 6.80000019, -0.0680000037],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Planter",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "5ae91b1ed7fdd8c4:Planter",
+				LinkId = 
+				{
+					uint Id = 45,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-4, 6.80000019, -0.0680000037],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Planter",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "5ae91b1ed7fdd8c4:Planter",
+				LinkId = 
+				{
+					uint Id = 46,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [8, 6.80000019, -0.0680000037],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Planter",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "5ae91b1ed7fdd8c4:Planter",
+				LinkId = 
+				{
+					uint Id = 47,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-8, 6.80000019, -0.0680000037],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Planter",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "5ae91b1ed7fdd8c4:Planter",
+				LinkId = 
+				{
+					uint Id = 48,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [4, 6.80000019, -0.0680000037],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "Planter",
+				},
+			},
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 41,
+			uint Id = 49,
 		},
 		Named = 
 		{
@@ -1672,12 +1966,66 @@ Level =
 			Vec3 Offset = [0, -1.29999995, 0],
 			Vec3 Radii = [1.10000002, 0.400000006, 1],
 		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 50,
+				},
+				Named = 
+				{
+					string Name = "LevelChangeTrigger",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.801465988, -1.36394215, -0.144102991],
+					Vec3 Scale = [3.99999976, 1.49999988, 1.18836176],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 0.209999979],
+					BlendMode BlendMode = Additive,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5586f1922250b073:CircleBordered",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				EllipsoidCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Radii = [0.5, 0.5, 1],
+				},
+				Interaction = 
+				{
+					string Level = "5afe150b689f2952:Fool",
+					string Archetype = "5ae8d85d8d7be601:PressE",
+					float BlinkStrength = 0.100000001,
+				},
+			},
+		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 42,
+			uint Id = 51,
 		},
 		Named = 
 		{
@@ -1726,11 +2074,11 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 43,
+			uint Id = 52,
 		},
 		Named = 
 		{
-			string Name = "Root",
+			string Name = "Petals",
 		},
 		Transform = 
 		{
@@ -1744,7 +2092,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 44,
+					uint Id = 53,
 				},
 				Named = 
 				{
@@ -1820,7 +2168,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 45,
+					uint Id = 54,
 				},
 				Named = 
 				{
@@ -1898,51 +2246,368 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 46,
+			uint Id = 55,
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Lovers",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [8.88008499, -6.70985937, 0.432197273],
-			Vec3 Scale = [4, 1.5, 1],
+			Vec3 Translation = [25, 0, 0],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Sprite = 
+		Hierarchy = 
 		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 0.209999979],
-			BlendMode BlendMode = Additive,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5586f1922250b073:CircleBordered",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 56,
+				},
+				Named = 
+				{
+					string Name = "LoverBG",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.0232715607, 0.278148651, -0.100000001],
+					Vec3 Scale = [0.319999993, 0.330000013, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a4006716d382bdf:LoverBG",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 57,
+				},
+				Named = 
+				{
+					string Name = "FoolBorder",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.0494060516, 0.324013352, 0],
+					Vec3 Scale = [2, 2, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5ae545feff5c6fd2:FoolBorder",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Area = 
+				{
+					Vec2 Size = [3.5, 2],
+					Location Origin = Center,
+				},
+				Hierarchy = 
+				{
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 58,
+						},
+						Named = 
+						{
+							string Name = "FoolBorder",
+						},
+						Transform = 
+						{
+							Vec3 Translation = [0, 0, 0.0500000007],
+							Vec3 Scale = [1, 1, 1],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						Sprite = 
+						{
+							bool Visible = true,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [0.625, 0.625, 0.625, 1],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string SpriteSource = "5ae545feff5c6fd2:FoolBorder",
+							bool RenderMask = false,
+							bool FlipX = false,
+							bool FlipY = false,
+							bool AnimationActive = true,
+							float AnimationSpeed = 1,
+							uint StartFrame = 0,
+						},
+						Area = 
+						{
+							Vec2 Size = [3.29999995, 1.79999995],
+							Location Origin = Center,
+						},
+					},
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 59,
+				},
+				Named = 
+				{
+					string Name = "FemaleLover",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [2.269804, -0.417923331, 0.100000001],
+					Vec3 Scale = [0.5, 0.5, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a400440d747c136:FemaleLover",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 60,
+				},
+				Named = 
+				{
+					string Name = "MaleLover",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-2.19426537, -0.508252025, 0.100000001],
+					Vec3 Scale = [0.5, 0.5, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a4004b5d168c742:MaleLover",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+			},
 		},
-		EllipsoidCollider = 
+	},
+	Cog = 
+	{
+		LinkId = 
 		{
-			bool Ghost = true,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Radii = [0.5, 0.5, 1],
+			uint Id = 61,
 		},
-		Interaction = 
+		Named = 
 		{
-			string Level = "5afe150b689f2952:Fool",
-			string Archetype = "5ae8d85d8d7be601:PressE",
-			float BlinkStrength = 0.100000001,
+			string Name = "Rug",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 2.5, 0],
+			Vec3 Scale = [1, 2, 1],
+			Quat Rotation = [0, 0, 0.707106829, 0.707106829],
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 62,
+				},
+				Named = 
+				{
+					string Name = "TabelclothEdited",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1, 1, 0],
+					Vec3 Scale = [0.327499986, 0.327499986, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a62eba188657bbf:TabelclothEdited",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = true,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 63,
+				},
+				Named = 
+				{
+					string Name = "TabelclothEdited",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1, -1, 0],
+					Vec3 Scale = [0.327499986, 0.327499986, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a62eba188657bbf:TabelclothEdited",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 64,
+				},
+				Named = 
+				{
+					string Name = "TabelclothEdited",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [1, 1, 0],
+					Vec3 Scale = [0.327499986, 0.327499986, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a62eba188657bbf:TabelclothEdited",
+					bool RenderMask = false,
+					bool FlipX = true,
+					bool FlipY = true,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 65,
+				},
+				Named = 
+				{
+					string Name = "TabelclothEdited",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [1, -1, 0],
+					Vec3 Scale = [0.327499986, 0.327499986, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5a62eba188657bbf:TabelclothEdited",
+					bool RenderMask = false,
+					bool FlipX = true,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+			},
 		},
 	},
 },
