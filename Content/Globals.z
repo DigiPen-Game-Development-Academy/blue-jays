@@ -16,14 +16,6 @@ class SavedStats : ZilchComponent
     var PrevHealth : Real = 0;
 }
 
-class PostInitializeGlobals : ZilchComponent
-{
-    function Initialize(init : CogInitializer)
-    {
-        this.GameSession.Globals.PostInitialize();
-    }
-}
-
 [RunInEditor]
 class Globals : ZilchComponent
 {
@@ -87,20 +79,20 @@ class Globals : ZilchComponent
         return this.Turrets[this.CurrentTurretIndex];
     }
     
-    var Initialized : Boolean;
-    function PostInitialize()
+    function Initialize(init : CogInitializer)
     {
-        if (this.Initialized) return;
-        this.Initialized = true;
-        
+        Zero.Connect(this.GameSession, Events.GameSetup, this.OnGameSetup);
+    }
+    function OnGameSetup(event : GameEvent)
+    {
         // Set up spaces
         this.GameSpace = this.GameSession.CreateNamedSpace("GameSpace", Archetype.Space);
         this.GameSpace.LoadLevel(Level.Hub);
         this.HUDSpace = this.GameSession.CreateNamedSpace("HUDSpace", Archetype.Space);
         this.HUDSpace.LoadLevel(Level.HUDLevel);
-        foreach(var space in this.GameSession.AllSpaces) Console.WriteLine(space);
-        
-        Console.WriteLine(this.GameSession.FindSpaceByName("Space"));
+        Console.WriteLine("Game Setup {");
+        foreach (var space in this.GameSession.AllSpaces) Console.WriteLine("\t[`space` : `space.CurrentLevel`],");
+        Console.WriteLine("}");
         
         // Set up cursor
         var obj = this.HUDSpace.CreateAtPosition(Archetype.Cursor, Real3.Zero);
