@@ -88,17 +88,21 @@ class CursorLogic : ZilchComponent
     }
     function IsOnCooldown() : Boolean
     {
+        if (this.GameSession.Globals.CurrentTurretIndex != 2) return false;
         return this.GameSession.Globals.CurrentChariotCooldown > 0;
     }
     function IsBlocked() : Boolean
     {
         var physics = this.GameSession.Globals.GameSpace.PhysicsSpace;
-        var radius = 0;
+        var radius = this.GameSession.Globals.GetCurrentTurret().Radius;
         var filter = CastFilter();
         filter.IgnoreGhost = true;
         if (this.GameSession.Globals.CurrentTurretIndex != 1) // Tower
             filter.CollisionGroup = CollisionGroup.Player;
-        var results = physics.CastSphereResults(this.Owner.Transform.WorldTranslation, radius, 10, filter);
-        return true;
+        var gameViewport = this.GameSession.Globals.GameSpace.LevelSettings.CameraViewport;
+        var mouseInGame = gameViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0);
+        mouseInGame.Z = mouseInGame.Y*0.01;
+        var results = physics.CastSphereResults(mouseInGame, radius, 10, filter);
+        return results.IsNotEmpty;
     }
 }

@@ -16,9 +16,27 @@ class Turret
 
 class KnightLogic : ZilchComponent
 {
+    [Property] var Speed : Real = 1;
+    
+    var Target : Cog;
+    
     function Initialize(init : CogInitializer)
     {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if (this.Owner.RigidBody == null) return;
         
+        if(this.Target == null)
+        {
+            this.Target = Globals.GetTarget(this.Owner, Team.Enemy);
+            if(this.Target == null) return;
+        }
+        
+        var vec = this.Target.Transform.Translation - this.Owner.Transform.Translation;
+        this.Owner.RigidBody.Velocity = Math.Normalize(vec) * this.Speed;
     }
 }
 class ChariotLogic : ZilchComponent
@@ -27,7 +45,7 @@ class ChariotLogic : ZilchComponent
     {
         var player = this.Space.FindObjectByName("Player");
         if (player == null) return;
-        this.Owner.AttachTo(player);
+        this.Owner.AttachToRelative(player);
         this.Owner.Transform.Translation = Real3.Zero;
         this.GameSession.Globals.SingletonChariot = this;
     }

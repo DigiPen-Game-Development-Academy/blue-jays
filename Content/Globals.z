@@ -100,6 +100,8 @@ class Globals : ZilchComponent
         this.HUDSpace.LoadLevel(Level.HUDLevel);
         foreach(var space in this.GameSession.AllSpaces) Console.WriteLine(space);
         
+        Console.WriteLine(this.GameSession.FindSpaceByName("Space"));
+        
         // Set up cursor
         var obj = this.HUDSpace.CreateAtPosition(Archetype.Cursor, Real3.Zero);
         this.SingletonCursor = obj.CursorLogic;
