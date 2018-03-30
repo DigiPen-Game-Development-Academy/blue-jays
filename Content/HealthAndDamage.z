@@ -11,10 +11,12 @@ enum HealthType
     Boss,
 }
 
-class DamageOnCollide : ZilchComponent
+class DoOnCollide : ZilchComponent
 {
-    [Property] var TeamToHurt : Team;
-    [Property] var DamageToDeal : Real = 1;
+    [Property] var TeamToAffect : Team;
+    [Property] var HealthToChange : Real = 0;
+    [Property] var FateToChange : Real = 0;
+    
     [Property] var DeactivateSelf : Boolean;
     [Property] var AttachSelf : Boolean;
     [Property] var DestroySelf : Boolean;
@@ -27,14 +29,13 @@ class DamageOnCollide : ZilchComponent
     
     function OnCollisionStarted(event : CollisionEvent)
     {
-        if (event.OtherObject.Health == null) return;
-        if (event.OtherObject.Health.Team == this.TeamToHurt)
+        if (event.OtherObject.Health != null && event.OtherObject.Health.Team == this.TeamToAffect)
         {
-            event.OtherObject.Health.DealDamage(this.DamageToDeal);
+            event.OtherObject.Health.ChangeHealth(this.HealthToChange);
             
             if (this.DeactivateSelf)
             {
-                this.TryToRemoveComponent(typeid(DamageOnCollide));
+                this.TryToRemoveComponent(typeid(DoOnCollide));
             }
             
             if (this.AttachSelf)
@@ -63,6 +64,9 @@ class DamageOnCollide : ZilchComponent
 
 class Health : ZilchComponent
 {
+    sends Damaged : ZilchEvent;
+    sends Healed : ZilchEvent;
+    
     [Property] var HealthType : HealthType = HealthType.PlayerMinion;
     var Team : Team {
         get {
@@ -93,9 +97,20 @@ class Health : ZilchComponent
         if (this.Health <= 0) this.Die();
     }
     
-    function DealDamage(amount : Real)
+    function ChangeHealth(amount : Real)
     {
-        this.Health -= amount;
+        this.Health += amount;
+        
+        if (amount < 0)
+        {
+            // Damaged
+            this.Owner.DispatchDown(Events.Damaged, ZilchEvent());
+        }
+        else if (amount > 0)
+        {
+            // Healed
+            this.Owner.DispatchDown(Events.Healed, ZilchEvent());
+        }
         
         if (this.HealthType == HealthType.Player)
         {
@@ -128,5 +143,32 @@ class Health : ZilchComponent
             // @missing Death effect
             this.Owner.Destroy();
         }
+    }
+}
+
+class HealthEffect : ZilchComponent
+{
+    var OriginalColor : Real4;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Owner, Events.Damaged, this.OnDamaged);
+        Zero.Connect(this.Owner, Events.Healed, this.OnHealed);
+        
+        this.OriginalColor = this.Owner.Sprite.Color;
+    }
+    function OnDamaged(event : ZilchEvent)
+    {
+        var seq = Action.Sequence(this.Owner.Actions);
+        Action.Property(seq, @this.Owner.Sprite.Color, Real4(1, 0.5, 0.5, 0.5), 0.05, Ease.Linear);
+        Action.Delay(seq, 0.1);
+        Action.Property(seq, @this.Owner.Sprite.Color, this.OriginalColor, 0.05, Ease.Linear);
+    }
+    function OnHealed(event : ZilchEvent)
+    {
+        var seq = Action.Sequence(this.Owner.Actions);
+        Action.Property(seq, @this.Owner.Sprite.Color, Real4(0.5, 1, 0.5, 0.5), 0.05, Ease.Linear);
+        Action.Delay(seq, 0.1);
+        Action.Property(seq, @this.Owner.Sprite.Color, this.OriginalColor, 0.05, Ease.Linear);
     }
 }

@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [6.55879593, 0.683540344, -0.00683540339],
+		Vec3 Translation = [2.31589937, 3.04985905, -0.0204985905],
 		Vec3 Scale = [1, 0.400000006, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -61,17 +61,18 @@ Cog =
 	AutoDepth = 
 	{
 		bool Local = false,
-		float Offset = 0,
+		float Offset = 0.00999999978,
 	},
 	Health = 
 	{
 		Enum HealthType = EnemyMinion,
 		float Health = 3,
 	},
-	DamageOnCollide = 
+	DoOnCollide = 
 	{
-		Enum TeamToHurt = Player,
-		float DamageToDeal = 1,
+		Enum TeamToAffect = Player,
+		float HealthToChange = -1,
+		float FateToChange = 0,
 		bool DeactivateSelf = false,
 		bool AttachSelf = false,
 		bool DestroySelf = false,
@@ -102,7 +103,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [0, 5, 0.479999989],
+				Vec3 Translation = [0, 5, 0],
 				Vec3 Scale = [1, 2.5, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},

@@ -70,10 +70,11 @@ Cog =
 	{
 		float AngleOffset = 0,
 	},
-	DamageOnCollide = 
+	DoOnCollide = 
 	{
-		Enum TeamToHurt = Enemy,
-		float DamageToDeal = 1,
+		Enum TeamToAffect = Enemy,
+		float HealthToChange = -1,
+		float FateToChange = 0,
 		bool DeactivateSelf = true,
 		bool AttachSelf = true,
 		bool DestroySelf = true,
