@@ -32,7 +32,7 @@ class CursorLogic : ZilchComponent
         {
             var globals = this.GameSession.Globals;
             var turret = globals.GetCurrentTurret();
-            globals.GameSpace.CreateAtPosition(turret.Archetype, this.Owner.Transform.WorldTranslation);
+            globals.GameSpace.CreateAtPosition(turret.Archetype, this.GetMouseGamePosition());
             globals.PlayerCurrentFate -= turret.Cost;
             if (globals.CurrentTurretIndex == 2)
                 globals.CurrentChariotCooldown = globals.MaxChariotCooldown;
@@ -82,6 +82,13 @@ class CursorLogic : ZilchComponent
             this.Owner.Sprite.SpriteSource = this.ImageCanPlace;
         }
     }
+    function GetMouseGamePosition() : Real3
+    {
+        var gameViewport = this.GameSession.Globals.GameSpace.LevelSettings.CameraViewport;
+        var mouseInGame = gameViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0);
+        mouseInGame.Z = mouseInGame.Y*0.01;
+        return mouseInGame;
+    }
     function IsTooExpensive() : Boolean
     {
         return this.GameSession.Globals.PlayerCurrentFate < this.GameSession.Globals.GetCurrentTurret().Cost;
@@ -99,10 +106,7 @@ class CursorLogic : ZilchComponent
         filter.IgnoreGhost = true;
         if (this.GameSession.Globals.CurrentTurretIndex != 1) // Tower
             filter.CollisionGroup = CollisionGroup.Player;
-        var gameViewport = this.GameSession.Globals.GameSpace.LevelSettings.CameraViewport;
-        var mouseInGame = gameViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0);
-        mouseInGame.Z = mouseInGame.Y*0.01;
-        var results = physics.CastSphereResults(mouseInGame, radius, 10, filter);
+        var results = physics.CastSphereResults(this.GetMouseGamePosition(), radius, 10, filter);
         return results.IsNotEmpty;
     }
 }

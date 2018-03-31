@@ -59,14 +59,59 @@ class AutoRotate : ZilchComponent
 {
     [Property] var Offset : Real = 90;
     
+    var PreviousPosition : Real3;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        
+        this.PreviousPosition = this.Owner.Transform.WorldTranslation;
     }
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.Owner.Transform.SetEulerAnglesXYZ(0,0,Math.ATan2(
-            this.Owner.RigidBody.Velocity.Y, this.Owner.RigidBody.Velocity.X) + Math.ToRadians(this.Offset));
+        var velocity = this.Owner.Transform.WorldTranslation - this.PreviousPosition;
+        if (velocity == Real3.Zero) return;
+        this.Owner.Transform.SetEulerAnglesXYZ(0, 0, Math.ATan2(velocity.Y, velocity.X) + Math.ToRadians(this.Offset));
+        this.PreviousPosition = this.Owner.Transform.WorldTranslation;
+    }
+}
+[RunInEditor]
+class AutoStretch : ZilchComponent
+{
+    [Dependency] var Transform : Transform;
+    [Dependency] var ObjectLink : ObjectLink;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.FrameUpdate, this.OnFrameUpdate);
+    }
+    function OnFrameUpdate(event : UpdateEvent)
+    {
+        if (this.ObjectLink.ObjectA == null || this.ObjectLink.ObjectB == null) return;
+        
+        this.Transform.WorldTranslation = (this.ObjectLink.WorldPointA + this.ObjectLink.WorldPointB) / 2;
+        var difference = this.ObjectLink.WorldPointB - this.ObjectLink.WorldPointA;
+        this.Transform.WorldRotation = Math.RotationQuaternionBetween(Real3.XAxis, difference);
+        this.Transform.Scale = this.ObjectLink.ObjectB.Transform.Scale;
+        var scale = this.Transform.WorldScale;
+        scale.X = Math.Length(difference);
+        this.Transform.WorldScale = scale;
+    }
+}
+[RunInEditor]
+class AutoFollow : ZilchComponent
+{
+    [Dependency] var Transform : Transform;
+    [Property] var ToFollow : CogPath;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.FrameUpdate, this.OnFrameUpdate);
+    }
+    function OnFrameUpdate(event : UpdateEvent)
+    {
+        if (this.ToFollow == null || this.ToFollow.Cog == null || this.ToFollow.Cog.Transform == null) return;
+        this.Transform.WorldTranslation = this.ToFollow.Cog.Transform.WorldTranslation;
     }
 }
 class CopyParent : ZilchComponent

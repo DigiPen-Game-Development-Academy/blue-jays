@@ -1,6 +1,3 @@
-// Author: Eli Miller
-// Purpose: Easily accessible global variables that stay the same between levels.
-
 class SavedStats : ZilchComponent
 {
     [Serialized] var TotalRuns : Real = 0;
@@ -53,8 +50,8 @@ class Globals : ZilchComponent
     [Property] var BossRegenFate : Real = 0;
     
     // Turrets
-    [Property] var ArchetypeKnight : Archetype = Archetype.KnightOfSwords;
-    [Property] var ArchetypeTower : Archetype = Archetype.TheTower;
+    [Property] var ArchetypeKnight : Archetype = Archetype.Knight;
+    [Property] var ArchetypeTower : Archetype = Archetype.Tower;
     [Property] var ArchetypeChariot : Archetype = Archetype.TheChariot;
     
     [Property] var CostKnight : Real = 1;
@@ -194,11 +191,5 @@ class Globals : ZilchComponent
             closest = obj;
         }
         return closest;
-    }
-    
-    [Static]
-    function HierarchyHas()
-    {
-        
     }
 }

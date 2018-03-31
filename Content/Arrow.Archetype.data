@@ -66,9 +66,9 @@ Cog =
 		bool Local = false,
 		float Offset = 0,
 	},
-	AutoOrientToVelocity = 
+	AutoRotate = 
 	{
-		float AngleOffset = 0,
+		float Offset = 90,
 	},
 	DoOnCollide = 
 	{

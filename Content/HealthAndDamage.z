@@ -36,6 +36,7 @@ class DoOnCollide : ZilchComponent
             if (this.AttachSelf)
             {
                 this.Owner.AttachToRelative(event.OtherObject);
+                this.TryToRemoveComponent(typeid(AutoRotate));
                 this.TryToRemoveComponent(typeid(RigidBody));
                 this.TryToRemoveComponent(typeid(BoxCollider));
                 this.TryToRemoveComponent(typeid(SphereCollider));

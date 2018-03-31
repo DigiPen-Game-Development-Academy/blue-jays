@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [6.99332619, 2.23721194, -0.0123721194],
+		Vec3 Translation = [0, 0, 0.00999999978],
 		Vec3 Scale = [4, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -67,6 +67,7 @@ Cog =
 	{
 		Enum HealthType = PlayerMinion,
 		float Health = 3,
+		bool Debug = false,
 	},
 	DoOnCollide = 
 	{
@@ -81,6 +82,8 @@ Cog =
 	KnightLogic = 
 	{
 		float Speed = 10,
+		float Acceleration = 5,
+		float Deceleration = 10,
 	},
 	Hierarchy = 
 	{
