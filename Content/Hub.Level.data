@@ -595,7 +595,9 @@ Level =
 				},
 				PigeonSpawner = 
 				{
+					string Pigeon = "5a6ea1f2412a5c3b:Pigeon",
 					string WhatToSpawn = "5a6ea1f2412a5c3b:Pigeon",
+					int PigeonLimit = 5,
 					float SpawnTime = 5,
 				},
 			},
