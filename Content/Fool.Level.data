@@ -104,11 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-<<<<<<< HEAD
 			Vec3 Translation = [3.21320558, -1.4648875, 70],
-=======
-			Vec3 Translation = [-7.20881653, -1.06520748, 51.0255737],
->>>>>>> 7c99ef32707454f1b2f34e6ef6264794f4d52347
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -120,11 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-<<<<<<< HEAD
 			float Size = 24.3650055,
-=======
-			float Size = 49.6585426,
->>>>>>> 7c99ef32707454f1b2f34e6ef6264794f4d52347
 		},
 		EditorCameraController = 
 		{
@@ -132,11 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-<<<<<<< HEAD
 			Vec3 LookTarget = [3.21320558, -1.4648875, 20],
-=======
-			Vec3 LookTarget = [-7.20881653, -1.06520748, 1.02557373],
->>>>>>> 7c99ef32707454f1b2f34e6ef6264794f4d52347
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -181,17 +169,10 @@ Level =
 		{
 			float MouseInfluence = 0.100000001,
 			float Speed = 5,
-<<<<<<< HEAD
 			float Top = 24,
 			float Bottom = 21.5,
 			float Left = 19.5,
 			float Right = 19.5,
-=======
-			float Top = 20,
-			float Bottom = 14,
-			float Left = 15.5,
-			float Right = 15.5,
->>>>>>> 7c99ef32707454f1b2f34e6ef6264794f4d52347
 		},
 	},
 	ArchetypeInstance = 
@@ -203,13 +184,8 @@ Level =
 		},
 		Transform = 
 		{
-<<<<<<< HEAD
 			Vec3 Translation = [-11.9560785, -9.95607662, 1.09956074],
 			Vec3 Scale = [2.14220238, 2.14220238, 2.14220238],
-=======
-			Vec3 Translation = [-12, -10, 1.10000002],
-			Vec3 Scale = [1, 1, 1],
->>>>>>> 7c99ef32707454f1b2f34e6ef6264794f4d52347
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
@@ -287,7 +263,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 18, -1],
+					Vec3 Translation = [0, 17, -1],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -327,7 +303,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-15.5, -3, -1],
+					Vec3 Translation = [-15.5036812, -1.80587327, 2.5],
 					Vec3 Scale = [1, 1, 8],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -351,7 +327,7 @@ Level =
 				},
 				Area = 
 				{
-					Vec2 Size = [1, 27],
+					Vec2 Size = [1, 29.5],
 					Location Origin = Center,
 				},
 				BoxCollider = 
@@ -380,7 +356,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 10, 0.5],
+					Vec3 Translation = [0.12617515, 10.0174732, 0.5],
 					Vec3 Scale = [1.00000012, 1, 14],
 					Quat Rotation = [0, 0, 0.707106829, 0.707106769],
 				},
@@ -404,7 +380,7 @@ Level =
 				},
 				Area = 
 				{
-					Vec2 Size = [1, 30],
+					Vec2 Size = [1, 30.5],
 					Location Origin = Center,
 				},
 				BoxCollider = 
@@ -430,7 +406,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [15.5, -3, -0.5],
+					Vec3 Translation = [15.5099401, -1.80876195, 2.5],
 					Vec3 Scale = [1, 1, 8],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -454,7 +430,7 @@ Level =
 				},
 				Area = 
 				{
-					Vec2 Size = [1, 27],
+					Vec2 Size = [1, 29.5],
 					Location Origin = Center,
 				},
 				BoxCollider = 
@@ -483,7 +459,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, -16, 0.5],
+					Vec3 Translation = [0, -16, 2.5],
 					Vec3 Scale = [1.00000012, 1, 14],
 					Quat Rotation = [0, 0, 0.707106829, 0.707106769],
 				},
@@ -507,7 +483,7 @@ Level =
 				},
 				Area = 
 				{
-					Vec2 Size = [1, 30],
+					Vec2 Size = [1, 30.5],
 					Location Origin = Center,
 				},
 				BoxCollider = 
@@ -530,7 +506,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, -3, -0.5],
+					Vec3 Translation = [0, -3, 0.5],
 					Vec3 Scale = [8, 8, 8],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -599,13 +575,8 @@ Level =
 		},
 		Transform = 
 		{
-<<<<<<< HEAD
 			Vec3 Translation = [-7.34492159, -2.5496397, 0.0254963972],
 			Vec3 Scale = [1.96984994, 0.716307998, 1],
-=======
-			Vec3 Translation = [-7.24915791, -2.65737438, 0.0265737437],
-			Vec3 Scale = [2.20000005, 0.800000012, 1],
->>>>>>> 7c99ef32707454f1b2f34e6ef6264794f4d52347
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 

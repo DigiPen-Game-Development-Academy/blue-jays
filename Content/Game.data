@@ -19,21 +19,18 @@ GameSession =
 		string StartingSpaceName = "554cea0f94af6dc4:Space",
 		string StartingLevelName = "4faa6050b86892a8:DefaultLevel",
 	},
-	ZilchState = 
-	{
-	},
 	Globals = 
 	{
-		float PlayerMaxHealth = 10,
-		float PlayerMaxFate = 10,
+		float MaxHealth = 10,
+		float MaxFate = 10,
 		float BossMaxHealth = 100,
 		float BossMaxFate = 100,
-		float PlayerRegenHealth = 1,
-		float PlayerRegenFate = 1,
+		float RegenHealth = 1,
+		float RegenFate = 1,
 		float BossRegenHealth = 0,
 		float BossRegenFate = 0,
-		string ArchetypeKnight = "5aeacb7144eafedd:Knight",
-		string ArchetypeTower = "5aea1bea3167182a:Tower",
+		string ArchetypeKnight = "5a1c1664de0b4de6:KnightOfSwords",
+		string ArchetypeTower = "5a8bf32146ffed37:TheTower",
 		string ArchetypeChariot = "5a8be71044b57a71:TheChariot",
 		float CostKnight = 1,
 		float CostTower = 3,
@@ -42,5 +39,8 @@ GameSession =
 		float RadiusTower = 3,
 		float RadiusChariot = 3,
 		float MaxChariotCooldown = 10,
+	},
+	ZilchState = 
+	{
 	},
 },

@@ -5,12 +5,9 @@ class PigeonSpawner : ZilchComponent
 {
     [Property]
     var WhatToSpawn : Archetype;
-    [Property]
-    var Pigeon : Archetype;
+
     [Property]
     var SpawnTime : Real = 1.0;
-    [Property]
-    var PigeonLimit : Integer = 5;
 
     var TimeSinceLastSpawn : Real = 0.0;
 
@@ -35,12 +32,6 @@ class PigeonSpawner : ZilchComponent
 
             // Need to reset the value
             this.TimeSinceLastSpawn = 0.0;
-        }
-        if (this.Space.LevelSettings.PigeonCounter.PigeonCount>= this.PigeonLimit)
-        {
-            Console.WriteLine("ghiwuhkshcajklj");
-            this.Owner.Destroy();
-            
         }
     }
 }
