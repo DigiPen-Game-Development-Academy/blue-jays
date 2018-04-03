@@ -18,7 +18,6 @@ class PigeonNPC : ZilchComponent
     [Property] var ChaseTurnSpeed : Real = 3.0;
     
     var Target : Cog;
-    
     // How often to choose a new wander direction (min, max)
     [Property] var TurnFrequency : Real2 = Real2(0.1, 1);
     var TurnTimer : Real;
@@ -28,6 +27,7 @@ class PigeonNPC : ZilchComponent
     {
         // We need to update the enemy's behavior every logic update
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        this.Space.LevelSettings.PigeonCounter.PigeonCount+=1;
     }
 
     function OnLogicUpdate(event: UpdateEvent)

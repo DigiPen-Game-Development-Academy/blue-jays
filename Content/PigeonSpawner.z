@@ -38,7 +38,7 @@ class PigeonSpawner : ZilchComponent
         }
                 if (this.Space.LevelSettings.PigeonCounter.PigeonCount>= this.PigeonLimit)
         {
-            Console.WriteLine("ghiwuhkshcajklj");
+           
             this.Owner.Destroy();
             
         }
