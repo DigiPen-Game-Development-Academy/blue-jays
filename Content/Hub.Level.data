@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.90180397, 1.45518947, 50],
+			Vec3 Translation = [4.48760843, -2.49347949, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 14.7781048,
+			float Size = 22.046339,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.90180397, 1.45518947, -3.94194011e-08],
+			Vec3 LookTarget = [4.48760843, -2.49347949, 1.96159306e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -167,7 +167,7 @@ Level =
 			float MouseInfluence = 0.100000001,
 			float Speed = 5,
 			float Top = 20,
-			float Bottom = 14,
+			float Bottom = 15.5,
 			float Left = 15.5,
 			float Right = 15.5,
 		},
@@ -1115,7 +1115,7 @@ Level =
 				PigeonSpawner = 
 				{
 					string WhatToSpawn = "5a6ea1f2412a5c3b:Pigeon",
-					float SpawnTime = 3,
+					float SpawnTime = 5,
 				},
 			},
 			ArchetypeInstance = 
@@ -4061,6 +4061,48 @@ Level =
 					string Level = "5afe150b689f2952:Fool",
 					string Archetype = "5ae8d85d8d7be601:PressE",
 					float BlinkStrength = 0.100000001,
+				},
+				SpriteParticleSystem = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					SystemChildMode ChildMode = Independent,
+					SystemSpace SystemSpace = WorldSpace,
+					uint DrawOrder = 0,
+					Vec4 Tint = [1, 1, 1, 0.675000012],
+					float WarmUpTime = 0,
+					ParticleGeometry GeometryMode = Billboarded,
+					ParticleRenderMode RenderMode = Additive,
+					ParticleSortMode SortMode = Youngest,
+					ParticleAnimation ParticleAnimation = Single,
+					string Texture = "5274db4c2e7c11f9:Circle",
+					float VelocityScale = 1,
+					float LengthScale = 1,
+					float MaxParticleSize = 100,
+					Vec3 SystemSize = [4, 4, 4],
+				},
+				SphericalParticleEmitter = 
+				{
+					bool Active = true,
+					uint EmitCount = 0,
+					float EmitRate = 10,
+					float EmitVariance = 0,
+					float Size = 1,
+					float SizeVariance = 0.5,
+					float Lifetime = 1,
+					float LifetimeVariance = 0.200000003,
+					float Spin = 0,
+					float SpinVariance = 50,
+					bool RandomSpin = true,
+					float Fill = 1,
+					float EmitterVelocityPercent = 0,
+					Vec3 StartVelocity = [0, 0, 0],
+					Vec3 RandomVelocity = [2, 2, 2],
+					Vec3 TangentVelocity = [0, 0, 0],
+					Vec3 EmitterSize = [0, 0, 0],
+					bool FastMovingEmitter = false,
 				},
 			},
 		},
