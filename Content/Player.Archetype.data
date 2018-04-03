@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-7.34492159, -2.5496397, 0.0254963972],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [2.20000005, 0.800000012, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -74,6 +74,16 @@ Cog =
 		float Speed = 10,
 		float Acceleration = 5,
 		float Deceleration = 10,
+	},
+	DoOnCollide = 
+	{
+		Enum TeamToAffect = Enemy,
+		float HealthToChange = 1,
+		float FateToChange = 0,
+		bool DeactivateSelf = false,
+		bool AttachSelf = false,
+		bool DestroySelf = false,
+		float DestroyDelay = 0,
 	},
 	Hierarchy = 
 	{

@@ -28,6 +28,7 @@ class PigeonNPC : ZilchComponent
     {
         // We need to update the enemy's behavior every logic update
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        this.Space.LevelSettings.PigeonCounter.PigeonCount +=1;
     }
 
     function OnLogicUpdate(event: UpdateEvent)
