@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 1],
+		Vec3 Translation = [-11.9560785, -9.95607662, 1.09956074],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -42,7 +42,7 @@ Cog =
 		bool SendsMessages = true,
 		bool Seamless = true,
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+		string SerializedGroupName = "5ae8cbc8b648997c:Enemy",
 		Vec3 Offset = [0, -0.100000001, 0],
 		Vec3 Size = [0.375, 0.800000012, 0.5],
 	},
@@ -52,7 +52,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -68,10 +68,21 @@ Cog =
 	},
 	AutoDepth = 
 	{
+		bool Local = false,
 		float Offset = 1,
 	},
 	SpriteFlip = 
 	{
+	},
+	DoOnCollide = 
+	{
+		Enum TeamToAffect = Player,
+		float HealthToChange = 1,
+		float FateToChange = 0,
+		bool DeactivateSelf = false,
+		bool AttachSelf = false,
+		bool DestroySelf = false,
+		float DestroyDelay = 0,
 	},
 	Hierarchy = 
 	{
