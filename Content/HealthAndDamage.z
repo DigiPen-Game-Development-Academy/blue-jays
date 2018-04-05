@@ -135,7 +135,7 @@ class Health : ZilchComponent
         if (this.HealthType == HealthType.Player)
         {
             // @missing Death effect and lose result
-            this.GameSession.Globals.GameSpace.LoadLevel(Level.Hub);
+            //this.GameSession.Globals.GameSpace.LoadLevel(Level.Hub);
         }
         else if (this.HealthType == HealthType.Boss)
         {

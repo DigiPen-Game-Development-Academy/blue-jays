@@ -87,7 +87,7 @@ Cog =
 	Health = 
 	{
 		Enum HealthType = Boss,
-		float Health = 10,
+		float Health = 100000,
 		bool Debug = false,
 	},
 	Hierarchy = 
