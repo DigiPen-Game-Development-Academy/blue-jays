@@ -83,6 +83,15 @@ class Health : ZilchComponent
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        
+        if (this.HealthType == HealthType.Player)
+        {
+            this.GameSession.Globals.PlayerCurrentHealth = this.Health;
+        }
+        else if (this.HealthType == HealthType.Boss)
+        {
+            this.GameSession.Globals.BossCurrentHealth = this.Health;
+        }
     }
     
     function OnLogicUpdate(event : UpdateEvent)
@@ -135,12 +144,17 @@ class Health : ZilchComponent
         if (this.HealthType == HealthType.Player)
         {
             // @missing Death effect and lose result
-            //this.GameSession.Globals.GameSpace.LoadLevel(Level.Hub);
+            this.GameSession.Globals.GameSpace.LoadLevel(Level.Hub);
         }
         else if (this.HealthType == HealthType.Boss)
         {
             // @missing Death effect and win result
-            this.GameSession.Globals.GameSpace.LoadLevel(Level.Hub);
+            if (this.GameSession.Globals.BossCurrentHealth <= 0)
+            {
+                Console.WriteLine("AHHHHH");
+                this.GameSession.Globals.GameSpace.LoadLevel(Level.Hub);
+            }
+            
         }
         else
         {

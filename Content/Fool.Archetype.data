@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-11.9560785, -9.95607662, 1.09956074],
+		Vec3 Translation = [0, 0, 1],
 		Vec3 Scale = [2, 1, 2.14220238],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -87,7 +87,7 @@ Cog =
 	Health = 
 	{
 		Enum HealthType = Boss,
-		float Health = 100000,
+		float Health = 100,
 		bool Debug = false,
 	},
 	Hierarchy = 
