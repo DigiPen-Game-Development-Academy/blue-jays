@@ -14,8 +14,8 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
-		Vec3 Scale = [1.9698478, 0.716308236, 0.895385325],
+		Vec3 Translation = [-7.34492159, -2.5496397, 0.0254963972],
+		Vec3 Scale = [1.96984994, 0.716307998, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -65,7 +65,7 @@ Cog =
 	},
 	Health = 
 	{
-		Enum HealthType = PlayerMinion,
+		Enum HealthType = Player,
 		float Health = 10,
 		bool Debug = false,
 	},

@@ -52,7 +52,7 @@ class Globals : ZilchComponent
     // Turrets
     [Property] var ArchetypeKnight : Archetype = Archetype.Knight;
     [Property] var ArchetypeTower : Archetype = Archetype.Tower;
-    [Property] var ArchetypeChariot : Archetype = Archetype.TheChariot;
+    [Property] var ArchetypeChariot : Archetype = Archetype.Chariot;
     
     [Property] var CostKnight : Real = 1;
     [Property] var CostTower : Real = 3;
