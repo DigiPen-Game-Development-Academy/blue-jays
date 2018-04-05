@@ -38,6 +38,7 @@ class FoolAttack : ZilchComponent
     
     function OnLogicUpdate(event : UpdateEvent)
     {
+        
         this.BasicAttackCounter += event.Dt;
         this.StunCounter += event.Dt;
         this.StunReverseCounter += event.Dt;
@@ -79,17 +80,17 @@ class FoolAttack : ZilchComponent
             this.Eye.Sprite.Visible = false;
             this.StunReverseCounter = -1000;
         }
-        //else if(this.StunReverseCounter >= this.StunDuration &&
-        //    this.Space.FindObjectByName("Player").PlayerController.Stunned)
-        //{
-        //    this.Space.FindObjectByName("Player").PlayerController.Stunned = false;
-        //    this.Eye.Sprite.SpriteSource = SpriteSource.EyeEnd;
-        //}
+       // else if(this.StunReverseCounter >= this.StunDuration &&
+        //   this.Space.FindObjectByName("Player").PlayerController.Stunned)
+      //  {
+       //     this.Space.FindObjectByName("Player").PlayerController.Stunned = false;
+       //     this.Eye.Sprite.SpriteSource = SpriteSource.EyeEnd;
+      //  }
         //var emit = (this.StunCounter/this.StunCooldown) * (this.StunCounter/this.StunCooldown) * 1000;
         //if(this.Owner.FindChildByName("Sparks").ParticleRemove.Enabled)
-        //{
+       // {
         //    this.Owner.FindChildByName("Sparks").SphericalParticleEmitter.EmitRate = emit;
-        //}
+       // }
     }
     
     function Shoot()
@@ -107,6 +108,6 @@ class FoolAttack : ZilchComponent
         
         this.RandomRoseLocation = Real3(randX,randY,0.0);
         
-        //this.Space.CreateAtPosition(Archetype.LoversRose,this.RandomRoseLocation);
+        this.Space.CreateAtPosition(Archetype.RoseAttack,this.RandomRoseLocation);
     }
 }
