@@ -14,8 +14,8 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0.0740391612, -0.029615581, 1.00029612],
-		Vec3 Scale = [1, 0.5, 1],
+		Vec3 Translation = [-11.9560785, -9.95607662, 1.09956074],
+		Vec3 Scale = [2, 1, 2.14220238],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -83,6 +83,12 @@ Cog =
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
 		Vec3 Radii = [0.5, 0.5, 1],
+	},
+	Health = 
+	{
+		Enum HealthType = Boss,
+		float Health = 10,
+		bool Debug = false,
 	},
 	Hierarchy = 
 	{

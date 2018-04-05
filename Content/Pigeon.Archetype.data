@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [2.31589937, 3.04985905, -0.0204985905],
+		Vec3 Translation = [0, 0, 0.00999999978],
 		Vec3 Scale = [1, 0.400000006, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -67,6 +67,7 @@ Cog =
 	{
 		Enum HealthType = EnemyMinion,
 		float Health = 3,
+		bool Debug = false,
 	},
 	DoOnCollide = 
 	{
@@ -126,6 +127,9 @@ Cog =
 				uint StartFrame = 0,
 			},
 			SpriteFlip = 
+			{
+			},
+			HealthEffect = 
 			{
 			},
 			Hierarchy = 
