@@ -30,6 +30,8 @@ class Globals : ZilchComponent
     // Only one should ever exist at a time
     var SingletonCursor : CursorLogic;
     var SingletonChariot : ChariotLogic;
+    var SingletonPlayer : PlayerController;
+    var SingletonFool : FoolAttack;
     
     // Stats should be persistent across levels
     

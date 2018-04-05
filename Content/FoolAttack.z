@@ -1,0 +1,112 @@
+//Author: Eli Miller
+//Purpose: The attacks for the fool.
+
+class FoolAttack : ZilchComponent
+{
+    [Property] var BombSpeed : Real = 10;
+    [Property] var BasicCooldown : Real = 1.5;
+    [Property] var StunCooldown : Real = 16;
+    [Property] var StunDuration : Real = 2;
+    [Property] var EyeTelegraphTime : Real = 1.2;
+    [Property] var EyeReverseTelegraphTime : Real = 1.2;
+    [Property] var RoseAttackCooldown :Real =10;
+    [Property] var RoseDuration : Real = 2;
+    
+    [Property] var MaxX: Real = 10; 
+    [Property] var MaxY: Real = 10;
+    [Property] var MinX: Real = -10;
+    [Property] var MinY: Real = -10;
+    
+    var Eye : Cog;
+    var Rose : Cog;
+    var BasicAttackCounter : Real = 0;
+    var RoseAttackCounter : Real = 0;
+    var RoseReverseCounter : Real = 0;
+    var StunCounter : Real = 0;
+    var StunReverseCounter : Real = 0;
+    var RandomRoseLocation : Real3;
+    var RandomGenerator : Random = Random();
+    var SpecialAttackLocations : Array[Real3] = Array[Real3]();
+    
+    function Initialize(init : CogInitializer)
+    {
+        this.GameSession.Globals.SingletonFool = this;
+        this.Eye = this.Space.FindObjectByName("Eye");
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        
+    }
+    
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.BasicAttackCounter += event.Dt;
+        this.StunCounter += event.Dt;
+        this.StunReverseCounter += event.Dt;
+        this.RoseAttackCounter += event.Dt;
+        if(this.BasicAttackCounter >= this.BasicCooldown)
+        {
+            this.Shoot();
+            this.BasicAttackCounter = 0;
+        }
+        if (this.RoseAttackCounter >= this.RoseAttackCooldown)
+        {
+            this.SpawnRoses();
+        }
+        if (this.RoseReverseCounter >= this.RoseDuration)
+        {
+            
+        }
+        if(this.StunCounter >= this.StunCooldown)
+        {
+            var player = this.GameSession.Globals.SingletonPlayer;
+            if (player != null)
+            {
+                this.GameSession.Globals;
+                player.Speed = -Math.Abs(player.Speed);
+                this.StunCounter = 0;
+                this.StunReverseCounter = 0;
+                this.Eye.Sprite.SpriteSource = SpriteSource.EyeContinue;
+            }
+        }
+        else if(this.StunCounter >= this.StunCooldown - this.EyeTelegraphTime &&
+            !this.Eye.Sprite.Visible)
+        {
+            this.Eye.Sprite.Visible = true;
+            this.Eye.Sprite.SpriteSource = SpriteSource.EyeStart;
+        }
+        if(this.StunReverseCounter >= this.StunDuration + this.EyeReverseTelegraphTime &&
+            this.Eye.Sprite.Visible)
+        {
+            this.Eye.Sprite.Visible = false;
+            this.StunReverseCounter = -1000;
+        }
+        //else if(this.StunReverseCounter >= this.StunDuration &&
+        //    this.Space.FindObjectByName("Player").PlayerController.Stunned)
+        //{
+        //    this.Space.FindObjectByName("Player").PlayerController.Stunned = false;
+        //    this.Eye.Sprite.SpriteSource = SpriteSource.EyeEnd;
+        //}
+        //var emit = (this.StunCounter/this.StunCooldown) * (this.StunCounter/this.StunCooldown) * 1000;
+        //if(this.Owner.FindChildByName("Sparks").ParticleRemove.Enabled)
+        //{
+        //    this.Owner.FindChildByName("Sparks").SphericalParticleEmitter.EmitRate = emit;
+        //}
+    }
+    
+    function Shoot()
+    {
+        var bomb = this.Space.CreateAtPosition(Archetype.Bomb, this.Owner.Transform.Translation);
+        var vec = this.Space.FindObjectByName("Player").Transform.Translation - this.Owner.Transform.Translation;
+        vec = Math.Normalize(vec);
+        bomb.RigidBody.Velocity = vec * this.BombSpeed;
+    }
+    
+    function SpawnRoses()
+    {
+        var randX = this.RandomGenerator.Range(0,20)-10;
+        var randY = this.RandomGenerator.Range(0,20)-10;
+        
+        this.RandomRoseLocation = Real3(randX,randY,0.0);
+        
+        //this.Space.CreateAtPosition(Archetype.LoversRose,this.RandomRoseLocation);
+    }
+}
