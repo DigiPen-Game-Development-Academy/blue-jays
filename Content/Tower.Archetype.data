@@ -64,6 +64,10 @@ Cog =
 		float BeamAcceleration = 10,
 		float DamagePerSecond = 3,
 	},
+	DestroyTimer = 
+	{
+		float Timer = 20,
+	},
 	Hierarchy = 
 	{
 		Cog = 

@@ -24,7 +24,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = false,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -43,6 +43,19 @@ Cog =
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, -0.5, 0],
 		Vec3 Radii = [0.899999976, 1.5, 1],
+	},
+	DestroyOnCollide = 
+	{
+	},
+	DoOnCollide = 
+	{
+		Enum TeamToAffect = Player,
+		float HealthToChange = -10,
+		float FateToChange = 0,
+		bool DeactivateSelf = false,
+		bool AttachSelf = false,
+		bool DestroySelf = false,
+		float DestroyDelay = 0,
 	},
 	Hierarchy = 
 	{
