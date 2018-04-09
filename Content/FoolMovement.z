@@ -9,6 +9,7 @@ class FoolMovement : ZilchComponent
     [Property] var MinX : Real = -10.0;
     
     var StartPosition : Real3;
+    var Direction : Real3;
     
     function Initialize(init : CogInitializer)
     {
@@ -21,27 +22,29 @@ class FoolMovement : ZilchComponent
 
     function PaceBackAndForth(event: UpdateEvent)
     {
-        var dir = Math.Normalize(this.Owner.RigidBody.Velocity);
         var pos = this.Owner.Transform.WorldTranslation;
-        var vel = dir;
         
-        if (dir == Real3(1,0,0) && pos.X >= this.MaxX)
+        if (this.Direction == Real3.Zero)
         {
-            vel = Real3(0,-1,0);
+            this.Direction = Real3(1, 0, 0);
         }
-        else if (dir == Real3(0,-1,0) && pos.Y <= this.MinY)
+        else if (this.Direction == Real3(1,0,0) && pos.X >= this.MaxX)
         {
-            vel = Real3(-1,0,0);
+            this.Direction = Real3(0,-1,0);
         }
-        else if (dir == Real3(-1,0,0) && pos.X <= this.MinX)
+        else if (this.Direction == Real3(0,-1,0) && pos.Y <= this.MinY)
         {
-            vel = Real3(0,1,0);
+            this.Direction = Real3(-1,0,0);
         }
-        else if (dir == Real3(0,1,0) && pos.Y >= this.MaxY)
+        else if (this.Direction == Real3(-1,0,0) && pos.X <= this.MinX)
         {
-            vel = Real3(1,0,0);
+            this.Direction = Real3(0,1,0);
+        }
+        else if (this.Direction == Real3(0,1,0) && pos.Y >= this.MaxY)
+        {
+            this.Direction = Real3(1,0,0);
         }
         
-        this.Owner.RigidBody.Velocity = vel * this.PaceSpeed;
+        this.Owner.RigidBody.Velocity = this.Direction * this.PaceSpeed;
     }
 }

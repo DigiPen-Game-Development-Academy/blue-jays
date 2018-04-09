@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-11.9560785, -9.95607662, 1.09956074],
+		Vec3 Translation = [-0.00821781158, 9.9163866, 0.90083611],
 		Vec3 Scale = [2, 1, 2.14220238],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -48,6 +48,16 @@ Cog =
 		Vec3 Velocity = [0, 0, 0],
 		Vec3 AngularVelocity = [0, 0, 0],
 	},
+	EllipsoidCollider = 
+	{
+		bool Ghost = false,
+		bool SendsMessages = true,
+		bool Seamless = true,
+		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+		string SerializedGroupName = "5ae8cbc8b648997c:Enemy",
+		Vec3 Offset = [0, 0, 0],
+		Vec3 Radii = [0.5, 0.5, 1],
+	},
 	FoolMovement = 
 	{
 		float PaceSpeed = 5,
@@ -74,21 +84,18 @@ Cog =
 		bool DestroySelf = false,
 		float DestroyDelay = 0,
 	},
-	EllipsoidCollider = 
-	{
-		bool Ghost = false,
-		bool SendsMessages = true,
-		bool Seamless = true,
-		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-		Vec3 Offset = [0, 0, 0],
-		Vec3 Radii = [0.5, 0.5, 1],
-	},
 	Health = 
 	{
 		Enum HealthType = Boss,
 		float Health = 100,
 		bool Debug = true,
+	},
+	BossShoot = 
+	{
+		float TimeBetweenShots = 1,
+		float ShootSpeed = 10,
+		float ShootSpin = 90,
+		string Projectile = "5a9173e075a148fa:Bomb",
 	},
 	Hierarchy = 
 	{

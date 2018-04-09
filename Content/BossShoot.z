@@ -5,8 +5,11 @@ class BossShoot : ZilchComponent
 {
     [Property] var TimeBetweenShots : Real = 1;
     [Property] var ShootSpeed : Real = 1;
+    [Property] var ShootSpin : Real = 90;
     [Property] var Projectile : Archetype = Archetype.Arrow;
     var TimeTillShoot : Real;
+    
+    var RNG : Random = new Random();
     
     function Initialize(init : CogInitializer)
     {
@@ -16,18 +19,27 @@ class BossShoot : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        var player = this.GameSession.Globals.SingletonPlayer;
+        if (player == null) return;
+        
         //couting down timer
         this.TimeTillShoot -= event.Dt;
         //check if we can shoot
         if (this.TimeTillShoot <= 0)
         {
-            var vel = (this.Space.FindObjectByName("Player").Transform.Translation - this.Owner.Transform.Translation);
+            var vel = (player.Owner.Transform.Translation - this.Owner.Transform.Translation);
             vel = Math.Normalize(vel) * this.ShootSpeed;
+            
             //Create the bullet
             var arrow = this.Space.CreateAtPosition(this.Projectile, this.Owner.Transform.WorldTranslation + vel / 100);
+            if (arrow == null && arrow.RigidBody == null) return;
+            
+            arrow.Transform.SetEulerAnglesXYZ(0, 0, this.RNG.Range(Math.Pi, -Math.Pi));
             
             //Launch the bullet
             arrow.RigidBody.Velocity = vel;
+            var spin = Math.ToRadians(this.ShootSpin);
+            arrow.RigidBody.AngularVelocity = Real3(0, 0, this.RNG.Range(-spin, spin));
             
             //Reset our time
             this.TimeTillShoot = this.TimeBetweenShots;
