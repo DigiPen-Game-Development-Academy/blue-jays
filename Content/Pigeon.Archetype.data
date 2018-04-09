@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -76,7 +76,7 @@ Cog =
 		float FateToChange = 0,
 		bool DeactivateSelf = false,
 		bool AttachSelf = false,
-		bool DestroySelf = false,
+		bool DestroySelf = true,
 		float DestroyDelay = 0,
 	},
 	PigeonNPC = 

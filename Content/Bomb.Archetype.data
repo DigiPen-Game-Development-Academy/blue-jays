@@ -58,7 +58,14 @@ Cog =
 		Vec3 Offset = [0, 0, 0],
 		float Radius = 0.25,
 	},
-	DestroyOnCollide = 
+	DoOnCollide = 
 	{
+		Enum TeamToAffect = Player,
+		float HealthToChange = -10,
+		float FateToChange = 0,
+		bool DeactivateSelf = false,
+		bool AttachSelf = false,
+		bool DestroySelf = true,
+		float DestroyDelay = 0,
 	},
 },

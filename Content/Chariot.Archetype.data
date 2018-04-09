@@ -25,8 +25,15 @@ Cog =
 	{
 		Vec3 Offset = [0, 0, 0],
 	},
-	DestroyOnCollide = 
+	DoOnCollide = 
 	{
+		Enum TeamToAffect = Player,
+		float HealthToChange = 0,
+		float FateToChange = 0,
+		bool DeactivateSelf = false,
+		bool AttachSelf = false,
+		bool DestroySelf = true,
+		float DestroyDelay = 0,
 	},
 	Hierarchy = 
 	{
