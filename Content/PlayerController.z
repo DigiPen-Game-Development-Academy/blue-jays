@@ -28,11 +28,13 @@ class PlayerController : ZilchComponent
         if (vel == Real2.Zero)
         {
             this.RigidBody.Velocity = Math.Lerp(this.RigidBody.Velocity, Real3.Zero, this.Deceleration * event.Dt);
+            
         }
         else
         {
             if (this.Reversed) vel = -vel;
             this.RigidBody.Velocity = Math.Lerp(this.RigidBody.Velocity, Real3(vel * this.Speed, 0), this.Acceleration * event.Dt);
+             this.Space.SoundSpace.PlayCue(SoundCue.Walk2);
         }
     }
 }
@@ -54,6 +56,7 @@ class PlayerAnimator : ZilchComponent
         
         var input = Zero.Keyboard.KeyIsDown(Keys.W) || Zero.Keyboard.KeyIsDown(Keys.A) || Zero.Keyboard.KeyIsDown(Keys.S) || Zero.Keyboard.KeyIsDown(Keys.D);
         var chariotExists = this.GameSession.Globals.SingletonChariot != null;
+       
         
         if (chariotExists || !input || moveSpeedSq < 0.001)
         {

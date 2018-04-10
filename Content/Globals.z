@@ -36,10 +36,10 @@ class Globals : ZilchComponent
     // Stats should be persistent across levels
     
     // Health and Fate
-    [Property] var PlayerMaxHealth : Real = 100;
-    [Property] var PlayerMaxFate : Real = 100;
-    [Property] var BossMaxHealth : Real = 1000;
-    [Property] var BossMaxFate : Real = 100;
+    [Property] var PlayerMaxHealth : Real = 10;
+    [Property] var PlayerMaxFate : Real = 10;
+    [Property] var BossMaxHealth : Real = 100;
+    [Property] var BossMaxFate : Real = 10;
     
     var PlayerCurrentHealth : Real;
     var PlayerCurrentFate : Real;
@@ -48,7 +48,7 @@ class Globals : ZilchComponent
     
     [Property] var PlayerRegenHealth : Real = 0;
     [Property] var PlayerRegenFate : Real = 1;
-    [Property] var BossRegenHealth : Real = 0;
+    [Property] var BossRegenHealth : Real = 2;
     [Property] var BossRegenFate : Real = 0;
     
     // Turrets
@@ -56,9 +56,9 @@ class Globals : ZilchComponent
     [Property] var ArchetypeTower : Archetype = Archetype.Tower;
     [Property] var ArchetypeChariot : Archetype = Archetype.Chariot;
     
-    [Property] var CostKnight : Real = 10;
-    [Property] var CostTower : Real = 15;
-    [Property] var CostChariot : Real = 25;
+    [Property] var CostKnight : Real = 1;
+    [Property] var CostTower : Real = 3;
+    [Property] var CostChariot : Real = 5;
     
     [Property] var RadiusKnight : Real = 3;
     [Property] var RadiusTower : Real = 3;

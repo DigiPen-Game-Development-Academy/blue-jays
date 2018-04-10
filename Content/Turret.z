@@ -112,7 +112,7 @@ class TowerLogic : ZilchComponent
           //MainSpriteReapear
             Action.Property(seq, @this.Space.FindObjectByName("MainSprite").Sprite.Color, Real4(255, 255, 255, 1), 0.05, Ease.Linear);
             Console.WriteLine("MainSpriteReaper");
-            Action.Delay(seq, 0.1);
+            Action.Delay(seq, 2);
            
         
     }
@@ -151,6 +151,7 @@ class TowerLogic : ZilchComponent
             var target = this.Target.Transform.WorldTranslation;
             this.SetPosition(this.BeamEndObject, Math.Lerp(end, target, this.BeamAcceleration * event.Dt));
             this.Target.Health.ChangeHealth(-this.DamagePerSecond * event.Dt);
+            this.Space.SoundSpace.PlayCue(SoundCue.TowerCharge2);
         }
         else
         {
