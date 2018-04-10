@@ -119,7 +119,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 13.3717995,
+			float Size = 16.3323498,
 		},
 		EditorCameraController = 
 		{
@@ -3696,7 +3696,7 @@ Level =
 			float EmitVariance = 0,
 			float Size = 0.100000001,
 			float SizeVariance = 0,
-			float Lifetime = 2,
+			float Lifetime = 1.5,
 			float LifetimeVariance = 0.200000003,
 			float Spin = 0,
 			float SpinVariance = 50,
