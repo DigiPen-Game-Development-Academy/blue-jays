@@ -2,14 +2,16 @@ class TutorialManager : ZilchComponent
 {
     function Initialize(init : CogInitializer)
     {
-        Zero.Connect(this.Space, Events.OnLevelStart, this.OnOnLevelStart);
+        Zero.Connect(this.Space, Events.LevelStarted, this.OnLevelStarted);
+        
         //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
-    function OnOnLevelStart(event : Event)
+    function OnLevelStarted(event : GameEvent)
     {
         
     }
+
 
     function OnLogicUpdate(event : UpdateEvent)
     {
