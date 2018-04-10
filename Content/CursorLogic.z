@@ -5,7 +5,7 @@ class CursorLogic : ZilchComponent
     [Property] var ImageCanPlace : SpriteSource = SpriteSource.Cursor;
     [Property] var ImageTooExpensive : SpriteSource = SpriteSource.Circle;
     [Property] var ImageOnCooldown : SpriteSource = SpriteSource.CircleBordered;
-    [Property] var ImageBlocked : SpriteSource = SpriteSource.Square;
+    [Property] var ImageBlocked : SpriteSource = SpriteSource.DontPlace;
     
     var CanPlace : Boolean;
     

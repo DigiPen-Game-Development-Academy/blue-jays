@@ -6,15 +6,15 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Cursor",
+		string Name = "Spotlight",
 	},
 	Archetyped = 
 	{
-		string Name = "5ae56d553e6c4d3b:Cursor",
+		string Name = "5a2c9f1e3a9142df:Spotlight",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [0.147970676, -0.0309724808, 0.900836229],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -24,11 +24,11 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [1, 1, 1, 1],
-		BlendMode BlendMode = Alpha,
+		Vec4 Color = [0.614250004, 0.801839948, 0.975000024, 0.664999962],
+		BlendMode BlendMode = Additive,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5ae57337772f2476:Cursor",
+		string SpriteSource = "5274db4c2e7c11f9:Circle",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -36,12 +36,9 @@ Cog =
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
 	},
-	CursorLogic = 
+	Area = 
 	{
-		Vec3 Offset = [0, 0, 0],
-		string ImageCanPlace = "5ae57337772f2476:Cursor",
-		string ImageTooExpensive = "5a2c8ba1f21fb83b:DontPlace",
-		string ImageOnCooldown = "5a2c8ba1f21fb83b:DontPlace",
-		string ImageBlocked = "5a2c8ba1f21fb83b:DontPlace",
+		Vec2 Size = [6.68822384, 4.64401817],
+		Location Origin = Center,
 	},
 },

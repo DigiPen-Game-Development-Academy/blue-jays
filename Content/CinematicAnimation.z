@@ -7,7 +7,7 @@ class CinematicAnimation : ZilchComponent
         Actions.Property(
             sequence,
             @this.Owner.Camera.Size,
-            this.Owner.Camera.Size + 10,
+            this.Owner.Camera.Size + 11,
             3,
             Ease.SinOut);
             
