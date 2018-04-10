@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [6.6717, -0.965018988, 50.9008369],
+			Vec3 Translation = [3.03882456, 5.54901123, 50.9008369],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 35.5593529,
+			float Size = 43.4322929,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [6.6717, -0.965018988, 0.900836229],
+			Vec3 LookTarget = [3.03882456, 5.54901123, 0.900836229],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -989,6 +989,64 @@ Level =
 					uint StartFrame = 0,
 				},
 			},
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5a2c9f1e3a9142df:Spotlight",
+		LinkId = 
+		{
+			uint Id = 27,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.147970676, -0.0309724808, 0.900836229],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Area = 
+		{
+			Vec2 Size = [6.68822384, 4.64401817],
+			Location Origin = Center,
+		},
+		Named = 
+		{
+			string Name = "Spotlight",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 28,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.211639404, 14.1358452, 0.900836229],
+			Vec3 Scale = [1.73290908, 2.68721032, 1],
+			Quat Rotation = [0, 0, -0.999997616, 0.00217838516],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.63499999, 0.791949928, 1, 0.544999957],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a22459b70f2b9f7:Light",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
 		},
 	},
 },
