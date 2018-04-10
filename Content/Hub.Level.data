@@ -107,7 +107,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.26519406, 0.712453306, 49.9439621],
+			Vec3 Translation = [1.14010108, 6.22923803, 49.9439621],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -119,7 +119,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 24.3650684,
+			float Size = 26.9275627,
 		},
 		EditorCameraController = 
 		{
@@ -127,7 +127,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.26519406, 0.712453306, -0.0560369417],
+			Vec3 LookTarget = [1.14010108, 6.22923803, -0.0560369641],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -2572,11 +2572,6 @@ Level =
 			bool AttachSelf = false,
 			bool DestroySelf = false,
 			float DestroyDelay = 0,
-		},
-		TutorialManager = 
-		{
-			string ArchetypetoSpawn = "5a2c8d1772df695d:Tutorial_1",
-			Vec3 WheretoSpawn = [0, 0, 0],
 		},
 		Hierarchy = 
 		{
