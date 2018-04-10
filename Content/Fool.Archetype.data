@@ -97,6 +97,19 @@ Cog =
 		float ShootSpin = 90,
 		string Projectile = "5a9173e075a148fa:Bomb",
 	},
+	BossUltimate = 
+	{
+		string Projectile = "5a27c346a71e7b52:RoseAttack",
+		Vec2 RandomRoseLocationSize = [10, 7.5],
+		float RadiusStart = 20,
+		float RadiusEndMax = 10,
+		float RadiusEndMin = 4,
+		string RadiusEndTransition = "5a9f7bfdc4b9eb66:RoseThrowRadius",
+		int AmountOfRosesTotal = 50,
+		string AmountOfRosesTransition = "5a9f7a3d98375aff:RosesThrown",
+		float Cooldown = 15,
+		float Duration = 5,
+	},
 	Hierarchy = 
 	{
 		Cog = 
