@@ -40,8 +40,8 @@ Cog =
 	{
 		Vec3 Offset = [0, 0, 0],
 		string ImageCanPlace = "5ae57337772f2476:Cursor",
-		string ImageTooExpensive = "5274db4c2e7c11f9:Circle",
-		string ImageOnCooldown = "5586f1922250b073:CircleBordered",
-		string ImageBlocked = "5275aa4d802dd6dc:Square",
+		string ImageTooExpensive = "5a2c8ba1f21fb83b:DontPlace",
+		string ImageOnCooldown = "5a2c8ba1f21fb83b:DontPlace",
+		string ImageBlocked = "5a2c8ba1f21fb83b:DontPlace",
 	},
 },
