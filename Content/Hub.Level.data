@@ -107,7 +107,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.473804057, -0.157934576, 70],
+			Vec3 Translation = [2.98695374, -3.68827438, 49.9429626],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -119,7 +119,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 16.3323498,
+			float Size = 16.3323536,
 		},
 		EditorCameraController = 
 		{
@@ -127,7 +127,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.473804057, -0.157934576, 20],
+			Vec3 LookTarget = [2.98695374, -3.68827438, -0.05703789],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -3632,86 +3632,126 @@ Level =
 					uint StartFrame = 0,
 				},
 			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 96,
+				},
+				Named = 
+				{
+					string Name = "Sparkles",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.424977809, 0.721839488, 8.66391277],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				SpriteParticleSystem = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					SystemChildMode ChildMode = Independent,
+					SystemSpace SystemSpace = WorldSpace,
+					uint DrawOrder = 0,
+					Vec4 Tint = [0.985000014, 0.945599973, 0.738749981, 1],
+					float WarmUpTime = 0,
+					ParticleGeometry GeometryMode = Billboarded,
+					ParticleRenderMode RenderMode = Blended,
+					ParticleSortMode SortMode = Youngest,
+					ParticleAnimation ParticleAnimation = Single,
+					string Texture = "5274db4c2e7c11f9:Circle",
+					float VelocityScale = 1,
+					float LengthScale = 1,
+					float MaxParticleSize = 0,
+					Vec3 SystemSize = [4, 4, 4],
+				},
+				LinearParticleAnimator = 
+				{
+					Vec3 Force = [0, 0, 0],
+					Vec3 RandomForce = [0, 0, 0],
+					float Torque = 0,
+					float Growth = 0,
+					float Dampening = 0,
+					Vec3 Twist = [0, 0, 0],
+				},
+				ParticleColorAnimator = 
+				{
+					Vec4 Color0 = [1, 1, 1, 0],
+					Vec4 Color1 = [1, 0.976199925, 0.659999967, 1],
+					Vec4 Color2 = [1, 1, 1, 1],
+					Vec4 Color3 = [1, 1, 1, 1],
+					Vec4 Color4 = [1, 1, 1, 0],
+				},
+				BoxParticleEmitter = 
+				{
+					bool Active = true,
+					uint EmitCount = 0,
+					float EmitRate = 10,
+					float EmitVariance = 0,
+					float Size = 0.100000001,
+					float SizeVariance = 0,
+					float Lifetime = 1.5,
+					float LifetimeVariance = 0.200000003,
+					float Spin = 0,
+					float SpinVariance = 50,
+					bool RandomSpin = true,
+					float Fill = 1,
+					float EmitterVelocityPercent = 0,
+					Vec3 StartVelocity = [-0.5, 0, 0],
+					Vec3 RandomVelocity = [0.5, 0.5, 0.5],
+					Vec3 TangentVelocity = [0, 0, 0],
+					Vec3 EmitterSize = [20, 4, 0],
+					bool FastMovingEmitter = false,
+				},
+				Area = 
+				{
+					Vec2 Size = [2.99344397, 1],
+					Location Origin = Center,
+				},
+			},
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 96,
+			uint Id = 97,
 		},
 		Named = 
 		{
-			string Name = "BasicParticleEffect",
+			string Name = "TutorialBannerFlip",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [2.28982091, 0.220245481, 20],
+			Vec3 Translation = [-0.134485006, 0.752109528, -0.0560379028],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		SpriteParticleSystem = 
+		Sprite = 
 		{
 			bool Visible = true,
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			SystemChildMode ChildMode = Independent,
-			SystemSpace SystemSpace = WorldSpace,
-			uint DrawOrder = 0,
-			Vec4 Tint = [0.985000014, 0.945599973, 0.738749981, 1],
-			float WarmUpTime = 0,
-			ParticleGeometry GeometryMode = Billboarded,
-			ParticleRenderMode RenderMode = Blended,
-			ParticleSortMode SortMode = Youngest,
-			ParticleAnimation ParticleAnimation = Single,
-			string Texture = "5274db4c2e7c11f9:Circle",
-			float VelocityScale = 1,
-			float LengthScale = 1,
-			float MaxParticleSize = 0,
-			Vec3 SystemSize = [4, 4, 4],
-		},
-		LinearParticleAnimator = 
-		{
-			Vec3 Force = [0, 0, 0],
-			Vec3 RandomForce = [0, 0, 0],
-			float Torque = 0,
-			float Growth = 0,
-			float Dampening = 0,
-			Vec3 Twist = [0, 0, 0],
-		},
-		ParticleColorAnimator = 
-		{
-			Vec4 Color0 = [1, 1, 1, 0],
-			Vec4 Color1 = [1, 0.976199925, 0.659999967, 1],
-			Vec4 Color2 = [1, 1, 1, 1],
-			Vec4 Color3 = [1, 1, 1, 1],
-			Vec4 Color4 = [1, 1, 1, 0],
-		},
-		BoxParticleEmitter = 
-		{
-			bool Active = true,
-			uint EmitCount = 0,
-			float EmitRate = 10,
-			float EmitVariance = 0,
-			float Size = 0.100000001,
-			float SizeVariance = 0,
-			float Lifetime = 1.5,
-			float LifetimeVariance = 0.200000003,
-			float Spin = 0,
-			float SpinVariance = 50,
-			bool RandomSpin = true,
-			float Fill = 1,
-			float EmitterVelocityPercent = 0,
-			Vec3 StartVelocity = [-0.5, 0, 0],
-			Vec3 RandomVelocity = [0.5, 0.5, 0.5],
-			Vec3 TangentVelocity = [0, 0, 0],
-			Vec3 EmitterSize = [20, 4, 0],
-			bool FastMovingEmitter = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a2cbe9597f42d95:TutorialBannerFlip",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
 		},
 		Area = 
 		{
-			Vec2 Size = [2.99344397, 1],
+			Vec2 Size = [8.12071896, 9.96713066],
 			Location Origin = Center,
 		},
 	},
