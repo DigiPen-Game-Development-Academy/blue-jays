@@ -95,10 +95,17 @@ class TowerLogic : ZilchComponent
     }
     function TowerFlash()
     {
+        Console.WriteLine("HI!");
+        //What ever is on the botom of the tower
             var seq = Action.Sequence(this.Owner.Actions);
-            Action.Property(seq, @this.Owner.Sprite.Color, Real4(255, 255, 0.5, 0.1), 0.05, Ease.Linear);
+            Action.Property(seq, @this.Owner.Sprite.Color, Real4(255, 255, 255, 1), 0.05, Ease.Linear);
             Action.Delay(seq, 0.1);
-            Action.Property(seq, @this.Owner.Sprite.Color, Real4(255, 255, 0, 1), 0.05, Ease.Linear);
+            Action.Property(seq, @this.Owner.Sprite.Color, Real4(255, 255, 255, 0), 0.05, Ease.Linear);
+            //Achtuall Sprite
+            Action.Property(seq, @this.Space.FindObjectByName("MainSprite").Sprite.Color, Real4(255, 255, 255, 1), 0.05, Ease.Linear);
+            Action.Delay(seq, 0.1);
+            Action.Property(seq, @this.Space.FindObjectByName("MainSprite").Sprite.Color, Real4(255, 255, 255, 0), 0.05, Ease.Linear);
+            Console.WriteLine("Waring Tower Ruing out of Energy in 5 Seconds");
         
     }
 
@@ -113,7 +120,7 @@ class TowerLogic : ZilchComponent
     {
         
             Console.WriteLine(this.Owner.DestroyTimer.Timer);
-        if (this.Owner.DestroyTimer.Timer < 5)
+        if (this.Owner.DestroyTimer.Timer <= 5)
         {
             this.TowerFlash();
         }   
