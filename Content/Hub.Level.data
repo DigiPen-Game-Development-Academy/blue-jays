@@ -107,7 +107,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4.54381847, 0.279808819, 45.9990005],
+			Vec3 Translation = [-0.0284384675, 2.40459085, 51.0015984],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -119,7 +119,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 32.8893089,
+			float Size = 29.7594872,
 		},
 		EditorCameraController = 
 		{
@@ -127,7 +127,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [4.54381847, 0.279808819, -4.00099993],
+			Vec3 LookTarget = [-0.0284384675, 2.40459085, 1.00159729],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -3344,7 +3344,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-9.6216898, -0.0185353756, -0.333781242],
+					Vec3 Translation = [-9.6216898, -0.0185353756, 10],
 					Vec3 Scale = [0.708625257, 0.708625257, 0.708624542],
 					Quat Rotation = [0, 0, 0.999793589, 0.0203207321],
 				},
@@ -3365,11 +3365,6 @@ Level =
 					bool AnimationActive = true,
 					float AnimationSpeed = 1,
 					uint StartFrame = 0,
-				},
-				AutoDepth = 
-				{
-					bool Local = false,
-					float Offset = 1,
 				},
 			},
 			Cog = 
@@ -3459,7 +3454,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [9.58372593, -0.0216273665, -1.83375037],
+					Vec3 Translation = [9.58372593, -0.0216273665, 10],
 					Vec3 Scale = [0.708624542, 0.708624542, 0.708624542],
 					Quat Rotation = [0, 0, 1, -4.37113883e-08],
 				},
@@ -3480,11 +3475,6 @@ Level =
 					bool AnimationActive = true,
 					float AnimationSpeed = 1,
 					uint StartFrame = 0,
-				},
-				AutoDepth = 
-				{
-					bool Local = false,
-					float Offset = -0.5,
 				},
 			},
 			Cog = 
@@ -3601,11 +3591,6 @@ Level =
 					float AnimationSpeed = 1,
 					uint StartFrame = 0,
 				},
-				AutoDepth = 
-				{
-					bool Local = false,
-					float Offset = 1,
-				},
 			},
 			Cog = 
 			{
@@ -3619,7 +3604,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [5.08278465, -0.114958048, -0.332817078],
+					Vec3 Translation = [5.08278465, -0.114958048, 10],
 					Vec3 Scale = [0.708625257, 0.708625257, 0.708624542],
 					Quat Rotation = [0, 0, 0.999793589, 0.0203207321],
 				},
@@ -3641,12 +3626,88 @@ Level =
 					float AnimationSpeed = 1,
 					uint StartFrame = 0,
 				},
-				AutoDepth = 
-				{
-					bool Local = false,
-					float Offset = 1,
-				},
 			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 96,
+		},
+		Named = 
+		{
+			string Name = "DustLightParticulates",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.845796585, 1.43868971, 1.0015974],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteParticleSystem = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			SystemChildMode ChildMode = Independent,
+			SystemSpace SystemSpace = WorldSpace,
+			uint DrawOrder = 0,
+			Vec4 Tint = [0.875, 0.843937516, 0.564375043, 1],
+			float WarmUpTime = 0,
+			ParticleGeometry GeometryMode = Billboarded,
+			ParticleRenderMode RenderMode = Blended,
+			ParticleSortMode SortMode = Youngest,
+			ParticleAnimation ParticleAnimation = Single,
+			string Texture = "5274db4c2e7c11f9:Circle",
+			float VelocityScale = 1,
+			float LengthScale = 1,
+			float MaxParticleSize = 100,
+			Vec3 SystemSize = [4, 4, 4],
+		},
+		LinearParticleAnimator = 
+		{
+			Vec3 Force = [0, 0, 0],
+			Vec3 RandomForce = [0, 0, 0],
+			float Torque = 0,
+			float Growth = 0,
+			float Dampening = 0,
+			Vec3 Twist = [0, 0, 0],
+		},
+		ParticleColorAnimator = 
+		{
+			Vec4 Color0 = [1, 1, 1, 0],
+			Vec4 Color1 = [0.962049961, 1, 0.654999971, 1],
+			Vec4 Color2 = [1, 1, 1, 1],
+			Vec4 Color3 = [1, 1, 1, 1],
+			Vec4 Color4 = [1, 1, 1, 0],
+		},
+		BoxParticleEmitter = 
+		{
+			bool Active = true,
+			uint EmitCount = 0,
+			float EmitRate = 5,
+			float EmitVariance = 0,
+			float Size = 0.100000001,
+			float SizeVariance = 0,
+			float Lifetime = 1.38343656,
+			float LifetimeVariance = 0.200000003,
+			float Spin = 3.78124523,
+			float SpinVariance = 50,
+			bool RandomSpin = true,
+			float Fill = 1,
+			float EmitterVelocityPercent = 0,
+			Vec3 StartVelocity = [-0.25, 0, 0],
+			Vec3 RandomVelocity = [0.5, 0.5, 2],
+			Vec3 TangentVelocity = [0, 0, 0],
+			Vec3 EmitterSize = [11, 4, 0],
+			bool FastMovingEmitter = false,
+		},
+		Area = 
+		{
+			Vec2 Size = [4.59619904, 1],
+			Location Origin = Center,
 		},
 	},
 },
