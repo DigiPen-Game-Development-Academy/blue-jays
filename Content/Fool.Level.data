@@ -171,6 +171,11 @@ Level =
 			float Left = 19.5,
 			float Right = 19.5,
 		},
+		SoundListener = 
+		{
+			bool Active = true,
+			float Volume = 1,
+		},
 	},
 	ArchetypeInstance = 
 	{

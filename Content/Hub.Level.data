@@ -107,7 +107,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4.54381847, 0.279808819, 45.9990005],
+			Vec3 Translation = [0, 0, 70],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -127,7 +127,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [4.54381847, 0.279808819, -4.00099993],
+			Vec3 LookTarget = [0, 0, 20],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -173,6 +173,11 @@ Level =
 			float Bottom = 15.5,
 			float Left = 16,
 			float Right = 16,
+		},
+		SoundListener = 
+		{
+			bool Active = true,
+			float Volume = 1,
 		},
 	},
 	Cog = 
