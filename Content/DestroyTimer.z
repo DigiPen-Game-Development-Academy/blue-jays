@@ -14,6 +14,7 @@ class DestroyTimer : ZilchComponent
         this.Timer -= event.Dt;
         if(this.Timer <= 0)
         {
+            this.Owner.DispatchEvent("Destroying",ZilchEvent());
             this.Owner.Destroy();
         }
     }

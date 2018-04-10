@@ -82,7 +82,7 @@ class TowerLogic : ZilchComponent
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        
+        Zero.Connect(this.Owner, "Destroying", this.OnDestroying);
         this.TimeTillShoot = this.TimeBetweenShots;
         
         this.BeamStartObject = this.Owner.FindChildByName("BeamOrigin");
@@ -93,8 +93,31 @@ class TowerLogic : ZilchComponent
         
         this.DisableBeam();
     }
+    function TowerFlash()
+    {
+            var seq = Action.Sequence(this.Owner.Actions);
+            Action.Property(seq, @this.Owner.Sprite.Color, Real4(255, 255, 0.5, 0.1), 0.05, Ease.Linear);
+            Action.Delay(seq, 0.1);
+            Action.Property(seq, @this.Owner.Sprite.Color, Real4(255, 255, 0, 1), 0.05, Ease.Linear);
+        
+    }
+
+    function OnDestroying(event : ZilchEvent)
+    {
+        if (this.BeamMiddleObject!=null)
+        {
+            this.BeamMiddleObject.Destroy();
+        }
+    }
     function OnLogicUpdate(event : UpdateEvent)
     {
+        
+            Console.WriteLine(this.Owner.DestroyTimer.Timer);
+        if (this.Owner.DestroyTimer.Timer < 5)
+        {
+            this.TowerFlash();
+        }   
+
         if(this.Target == null)
         {
             this.Target = Globals.GetTarget(this.Owner, Team.Enemy);
@@ -104,6 +127,7 @@ class TowerLogic : ZilchComponent
                 return;
             }
         }
+        
         
         if (this.BeamEnabled)
         {
@@ -117,7 +141,8 @@ class TowerLogic : ZilchComponent
             this.SetPosition(this.BeamEndObject, this.Target.Transform.WorldTranslation);
             
             // @missing Charging sound effect and visual effect
-             this.Space.SoundSpace.PlayCue(SoundCue.TowerCharge);
+           // this.Space.SoundSpace.PlayCue(SoundCue.TowerCharge);
+            
         }
         
         //couting down timer
@@ -135,7 +160,7 @@ class TowerLogic : ZilchComponent
             //Reset our time
             this.TimeTillShoot = this.TimeBetweenShots;
             
-            this.Space.SoundSpace.PlayCue(SoundCue.FoolDeath);
+           // this.Space.SoundSpace.PlayCue(SoundCue.FoolDeath);
         }
     }
     function EnableBeam()
