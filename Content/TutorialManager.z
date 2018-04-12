@@ -1,27 +1,15 @@
 class TutorialManager : ZilchComponent
 {
-    [Property]
-    var ArchetypetoSpawn : Archetype;
-    
-    [Property]
-    var WheretoSpawn : Real3;
+
     
     function Initialize(init : CogInitializer)
     {
-        Zero.Connect(this.Space, Events.LevelStarted, this.OnLevelStarted);
-        
-        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-    }
-
-    function OnLevelStarted(event : GameEvent)
-    {
-        this.Space.CreateAtPosition(this.ArchetypetoSpawn, this.WheretoSpawn);
-        //this.Space.TimeSpace.Paused;
-    }
-
-
-    function OnLogicUpdate(event : UpdateEvent)
-    {
-        
+        var sequence = Actions.Sequence(this.Owner.Actions);
+        Actions.Delay(sequence,10);
+        Actions.Property(
+            sequence,
+            @this.Owner.Sprite.Color,
+            Real4 (1,1,1,1),
+            2, Ease.QuadInOut);
     }
 }

@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-20.3048935, 3.24526739, -0.0560379028],
+		Vec3 Translation = [-0.358824432, 0.555827856, 20],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -40,6 +40,9 @@ Cog =
 	{
 		Vec2 Size = [13.6037283, 14.9308577],
 		Location Origin = Center,
+	},
+	TutorialManager = 
+	{
 	},
 	Hierarchy = 
 	{
