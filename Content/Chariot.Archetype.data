@@ -27,8 +27,8 @@ Cog =
 	},
 	DoOnCollide = 
 	{
-		Enum TeamToAffect = Player,
-		float HealthToChange = 0,
+		Enum TeamToAffect = Enemy,
+		float HealthToChange = -5,
 		float FateToChange = 0,
 		bool DeactivateSelf = false,
 		bool AttachSelf = false,

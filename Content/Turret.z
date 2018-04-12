@@ -68,7 +68,7 @@ class TowerLogic : ZilchComponent
     [Property] var ShootDuration : Real = 1;
     
     [Property] var BeamAcceleration : Real = 10;
-    [Property] var DamagePerSecond : Real = 1;
+    [Property] var DamagePerSecond : Real = 0.5;
   
     
     var BeamOriginObject : Cog;

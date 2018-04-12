@@ -10,6 +10,7 @@ class CameraConstraint : ZilchComponent
     [Property] var Bottom : Real = -20;
     [Property] var Left : Real = -20;
     [Property] var Right : Real = 20;
+    [Property] var Offset : Real2;
     
     var TargetObject : Cog = null;
     
@@ -28,7 +29,7 @@ class CameraConstraint : ZilchComponent
         var target = this.TargetObject.Transform.WorldTranslation.XY;
         var mouse = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0).XY;
         target = Math.Lerp(target, mouse, this.MouseInfluence);
-        position = Math.Lerp(position, target, this.Speed * event.Dt);
+        position = Math.Lerp(position, target + this.Offset, this.Speed * event.Dt);
         
         //Up
         if (position.Y > this.Top - this.Owner.Camera.Size)
