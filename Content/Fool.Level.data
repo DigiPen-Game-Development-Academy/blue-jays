@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 43.4322929,
+			float Size = 32.1754684,
 		},
 		EditorCameraController = 
 		{
@@ -991,27 +991,53 @@ Level =
 			},
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "5a2c9f1e3a9142df:Spotlight",
 		LinkId = 
 		{
 			uint Id = 27,
 		},
+		Named = 
+		{
+			string Name = "Spotlight",
+		},
+		Archetyped = 
+		{
+			string Name = "5a2c9f1e3a9142df:Spotlight",
+		},
 		Transform = 
 		{
-			Vec3 Translation = [0.147970676, -0.0309724808, 0.900836229],
+			Vec3 Translation = [0.147970676, -0.0309724808, 0.000309724797],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.614250004, 0.801839948, 0.975000024, 0.664999962],
+			BlendMode BlendMode = Additive,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5274db4c2e7c11f9:Circle",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
 		},
 		Area = 
 		{
 			Vec2 Size = [6.68822384, 4.64401817],
 			Location Origin = Center,
 		},
-		Named = 
+		AutoDepth = 
 		{
-			string Name = "Spotlight",
+			bool Local = false,
+			float Offset = 0,
 		},
 	},
 	Cog = 
@@ -1026,7 +1052,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.211639404, 14.1358452, 0.900836229],
+			Vec3 Translation = [0.211639404, 14.1358452, 0.358641565],
 			Vec3 Scale = [1.73290908, 2.68721032, 1],
 			Quat Rotation = [0, 0, -0.999997616, 0.00217838516],
 		},
@@ -1037,7 +1063,7 @@ Level =
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
 			Vec4 Color = [0.63499999, 0.791949928, 1, 0.544999957],
-			BlendMode BlendMode = Alpha,
+			BlendMode BlendMode = Additive,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string SpriteSource = "5a22459b70f2b9f7:Light",
@@ -1047,6 +1073,11 @@ Level =
 			bool AnimationActive = true,
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
+		},
+		AutoDepth = 
+		{
+			bool Local = false,
+			float Offset = 0.5,
 		},
 	},
 },
