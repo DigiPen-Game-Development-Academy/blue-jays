@@ -1,13 +1,13 @@
 SoundCue = 
 {
 	SoundPlayMode PlayMode = Single,
-	float Volume = 0.800000012,
+	float Volume = 0.099999994,
 	float VolumeVariation = 0,
-	float VolumeDB = -6,
+	float VolumeDB = -20,
 	bool UseVolumeDB = false,
 	float VolumeDBVariation = 0,
-	float Pitch = 0,
-	float PitchSemitones = 0,
+	float Pitch = -1,
+	float PitchSemitones = -11.9899998,
 	bool UsePitchSemitones = false,
 	float PitchVariation = 0,
 	float PitchSTVariation = 0,
@@ -19,7 +19,7 @@ SoundCue =
 	[
 		{
 			string SoundName = "5af76c9d996b10c1:FoolDeath",
-			string GeneratedSoundName = "",
+			string GeneratedSoundName = "55017c595ef88bf0:DefaultGeneratedSound",
 			WhichSoundType WhichToUse = FromFile,
 			float Weight = 1,
 			float LoopEndTime = 0,
@@ -34,5 +34,5 @@ SoundCue =
 	],
 	string RolloffCurveName = "",
 	int Version = 1,
-	RolloffCurveType RolloffCurveType = Error,
+	RolloffCurveType RolloffCurveType = Linear,
 },

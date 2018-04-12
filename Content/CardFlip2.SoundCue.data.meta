@@ -2,7 +2,7 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "Card Flip2",
+		string Name = "CardFlip2",
 		uint64 ResourceId = 5af76d699da3b3a9,
 		string LoaderType = "SoundCue",
 		uint Version = 0,

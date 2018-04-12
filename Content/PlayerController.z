@@ -34,7 +34,7 @@ class PlayerController : ZilchComponent
         {
             if (this.Reversed) vel = -vel;
             this.RigidBody.Velocity = Math.Lerp(this.RigidBody.Velocity, Real3(vel * this.Speed, 0), this.Acceleration * event.Dt);
-             this.Space.SoundSpace.PlayCue(SoundCue.Walk2);
+            // this.Space.SoundSpace.PlayCue(SoundCue.Walk2); I still working on this!!
         }
     }
 }
