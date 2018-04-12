@@ -96,7 +96,6 @@ class TowerLogic : ZilchComponent
     function TowerFlash()
     {
         var mainSprite = this.Owner.FindChildByName("MainSprite");
-        //What ever is on the botom of the tower
         //Botom dissapear
         var seq = Action.Sequence(this.Owner.Actions);
         
@@ -160,7 +159,7 @@ class TowerLogic : ZilchComponent
             this.SetPosition(this.BeamEndObject, this.Target.Transform.WorldTranslation);
             
             // @missing Charging sound effect and visual effect
-            //this.Space.SoundSpace.PlayCue(SoundCue.TowerCharge2); //DO NOT PLAY THIS ONE YOUR EARS WILL BLEED!!!
+            //athis.Space.SoundSpace.PlayCue(SoundCue.TowerCharge2); //DO NOT PLAY THIS ONE YOUR EARS WILL BLEED!!!
             //what kind of charge effect
             
         }

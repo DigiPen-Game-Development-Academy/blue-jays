@@ -1,15 +1,15 @@
 SoundCue = 
 {
 	SoundPlayMode PlayMode = Single,
-	float Volume = 1.5,
+	float Volume = 0.800000012,
 	float VolumeVariation = 0,
-	float VolumeDB = 3.52182508,
+	float VolumeDB = -6,
 	bool UseVolumeDB = false,
 	float VolumeDBVariation = 0,
 	float Pitch = 0,
 	float PitchSemitones = 0,
 	bool UsePitchSemitones = false,
-	float PitchVariation = 2,
+	float PitchVariation = 0,
 	float PitchSTVariation = 0,
 	float MinDistance = 1,
 	float MaxDistance = 70,
@@ -19,7 +19,7 @@ SoundCue =
 	[
 		{
 			string SoundName = "5ab4256c13c17422:TowerPlace",
-			string GeneratedSoundName = "55017c595ef88bf0:DefaultGeneratedSound",
+			string GeneratedSoundName = "",
 			WhichSoundType WhichToUse = FromFile,
 			float Weight = 1,
 			float LoopEndTime = 0,
@@ -34,5 +34,5 @@ SoundCue =
 	],
 	string RolloffCurveName = "",
 	int Version = 1,
-	RolloffCurveType RolloffCurveType = Linear,
+	RolloffCurveType RolloffCurveType = Error,
 },

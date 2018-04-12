@@ -36,11 +36,13 @@ class CursorLogic : ZilchComponent
             globals.PlayerCurrentFate -= turret.Cost;
             if (globals.CurrentTurretIndex == 2)
                 globals.CurrentChariotCooldown = globals.MaxChariotCooldown;
+                this.Space.SoundSpace.PlayCue(SoundCue.TowerPlace);
+                
         }
         else
         {
             // @missing Play sound
-            //this.Space.SoundSpace.PlayCue(SoundCue.TowerPlace); //need to be worked on!!!
+            this.Space.SoundSpace.PlayCue(SoundCue.TowerCantPlace); 
         }
     }
     function OnLogicUpdate(event : UpdateEvent)
