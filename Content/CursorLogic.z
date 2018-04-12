@@ -40,7 +40,7 @@ class CursorLogic : ZilchComponent
         else
         {
             // @missing Play sound
-            this.Space.SoundSpace.PlayCue(SoundCue.TowerPlace); //need to be worked on!!!
+            this.Space.SoundSpace.PlayCue(SoundCue.TowerPlace); //hmm for some reson this on doesn't wan't to play but the sound effect.
         }
     }
     function OnLogicUpdate(event : UpdateEvent)
