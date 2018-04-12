@@ -111,11 +111,11 @@ class TowerLogic : ZilchComponent
         
         //BottomReapear
         Action.Property(fadIn, @this.Owner.Sprite.Color, Real4(0, 0, 0, 1), 0.5, Ease.Linear);
-        Console.WriteLine("BottomReaper");
+       
         
         //MainSpriteReapear
         Action.Property(fadIn, @mainSprite.Sprite.Color, Real4(1, 1, 1, 1), 0.5, Ease.Linear);
-        Console.WriteLine("MainSpriteReaper");
+      
         
         Action.Property(seq, @this.Flashing, false, 0, Ease.Linear);
     }
@@ -130,13 +130,11 @@ class TowerLogic : ZilchComponent
     var Flashing : Boolean;
     function OnLogicUpdate(event : UpdateEvent)
     {
-        Console.WriteLine(this.Owner.DestroyTimer.Timer);
         if (this.Owner.DestroyTimer.Timer <= 5 && this.Flashing == false)
         {
             this.Flashing = true;
             this.TowerFlash();
         }
-        Console.WriteLine("Waring Tower Ruing out of Energy in 5 Seconds");
 
         if(this.Target == null)
         {
@@ -162,7 +160,8 @@ class TowerLogic : ZilchComponent
             this.SetPosition(this.BeamEndObject, this.Target.Transform.WorldTranslation);
             
             // @missing Charging sound effect and visual effect
-            //this.Space.SoundSpace.PlayCue(SoundCue.TowerCharge2); DO NOT PLAY THIS ONE YOUR EARS WILL BLEED!!!
+            //this.Space.SoundSpace.PlayCue(SoundCue.TowerCharge2); //DO NOT PLAY THIS ONE YOUR EARS WILL BLEED!!!
+            //what kind of charge effect
             
         }
         
@@ -181,7 +180,7 @@ class TowerLogic : ZilchComponent
             //Reset our time
             this.TimeTillShoot = this.TimeBetweenShots;
             
-            //this.Space.SoundSpace.PlayCue(SoundCue.FoolDeath);
+            this.Space.SoundSpace.PlayCue(SoundCue.TowerShoot);
         }
     }
     function EnableBeam()
