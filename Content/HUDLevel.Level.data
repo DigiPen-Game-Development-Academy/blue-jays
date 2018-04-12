@@ -139,7 +139,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.51947892, 0.0513147265, 60],
+			Vec3 Translation = [0.005859375, -2, 74.9990005],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -151,7 +151,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.2456741,
+			float Size = 22.3130436,
 		},
 		EditorCameraController = 
 		{
@@ -159,7 +159,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-1.51947892, 0.0513147265, 10],
+			Vec3 LookTarget = [0.005859375, -2, 24.9990005],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -179,56 +179,6 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
-		},
-		EditorFlags = 
-		{
-			bool Locked = true,
-			bool Hidden = true,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 2.38418579e-07, 10],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.13499999, 0.05332499, 0.05332499, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Area = 
-		{
-			Vec2 Size = [100, 100],
-			Location Origin = Center,
-		},
-		Fade = 
-		{
-			float TotalFadeTime = 1,
-			float Delay = 1,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 5,
-		},
-		Named = 
-		{
 			string Name = "UI",
 		},
 		Transform = 
@@ -243,7 +193,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 6,
+					uint Id = 5,
 				},
 				Named = 
 				{
@@ -289,7 +239,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 7,
+					uint Id = 6,
 				},
 				Named = 
 				{
@@ -335,7 +285,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 8,
+					uint Id = 7,
 				},
 				Named = 
 				{
@@ -381,7 +331,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 9,
+					uint Id = 8,
 				},
 				Named = 
 				{
@@ -420,7 +370,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 10,
+					uint Id = 9,
 				},
 				Named = 
 				{
@@ -459,7 +409,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 11,
+					uint Id = 10,
 				},
 				Named = 
 				{
@@ -500,7 +450,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 12,
+			uint Id = 11,
 		},
 		Named = 
 		{
@@ -509,7 +459,7 @@ Level =
 		EditorFlags = 
 		{
 			bool Locked = true,
-			bool Hidden = false,
+			bool Hidden = true,
 		},
 		Transform = 
 		{
@@ -538,10 +488,249 @@ Level =
 		Fade = 
 		{
 			float TotalFadeTime = 5,
-			float Delay = 1,
+			float Delay = 9,
 		},
 		TitleBang = 
 		{
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 12,
+				},
+				Named = 
+				{
+					string Name = "Sprite",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = true,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, -1.74999976, -1],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0.13499999, 0.05332499, 0.05332499, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Area = 
+				{
+					Vec2 Size = [100, 100],
+					Location Origin = Center,
+				},
+				Fade = 
+				{
+					float TotalFadeTime = 5,
+					float Delay = 9,
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 13,
+		},
+		Named = 
+		{
+			string Name = "DigipenBlueJyas",
+		},
+		EditorFlags = 
+		{
+			bool Locked = false,
+			bool Hidden = true,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.75, 0.5, 20],
+			Vec3 Scale = [0.5, 0.5, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a2e12f1919b1426:DigipenBlueJyas",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Fade = 
+		{
+			float TotalFadeTime = 2,
+			float Delay = 4,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 14,
+				},
+				Named = 
+				{
+					string Name = "Sprite",
+				},
+				EditorFlags = 
+				{
+					bool Locked = false,
+					bool Hidden = true,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1.5, -1, -1],
+					Vec3 Scale = [200, 200, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0, 0, 0, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Fade = 
+				{
+					float TotalFadeTime = 2,
+					float Delay = 4,
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 15,
+		},
+		Named = 
+		{
+			string Name = "WhiteDigiPen",
+		},
+		EditorFlags = 
+		{
+			bool Locked = false,
+			bool Hidden = true,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, -2, 25],
+			Vec3 Scale = [0.75, 0.75, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a2e6ecff386e28e:WhiteDigiPen",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Fade = 
+		{
+			float TotalFadeTime = 2,
+			float Delay = 1,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 16,
+				},
+				Named = 
+				{
+					string Name = "Sprite",
+				},
+				EditorFlags = 
+				{
+					bool Locked = false,
+					bool Hidden = true,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.333333343, 2.66666675, -1],
+					Vec3 Scale = [133.333344, 133.333344, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0, 0, 0, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Fade = 
+				{
+					float TotalFadeTime = 2,
+					float Delay = 1,
+				},
+			},
 		},
 	},
 },
