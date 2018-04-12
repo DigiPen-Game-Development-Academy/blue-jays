@@ -18,7 +18,7 @@ SoundCue =
 	Array Sounds = 
 	[
 		{
-			string SoundName = "5ab6afe44763abb0:Walk2",
+			string SoundName = "5ab4256c13c17422:TowerPlace",
 			string GeneratedSoundName = "",
 			WhichSoundType WhichToUse = FromFile,
 			float Weight = 1,

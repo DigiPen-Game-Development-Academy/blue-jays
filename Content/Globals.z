@@ -135,6 +135,10 @@ class Globals : ZilchComponent
         // Clamp to max stats
         this.PlayerCurrentHealth = Math.Min(this.PlayerCurrentHealth, this.PlayerMaxHealth);
         this.PlayerCurrentFate = Math.Min(this.PlayerCurrentFate, this.PlayerMaxFate);
+        
+        //Decresse cooldown for chorit
+        
+        this.CurrentChariotCooldown-= event.Dt;
     }
     
     function OnKeyUp(event : KeyboardEvent)

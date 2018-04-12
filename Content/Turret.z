@@ -95,26 +95,29 @@ class TowerLogic : ZilchComponent
     }
     function TowerFlash()
     {
+        var mainSprite = this.Owner.FindChildByName("MainSprite");
         //What ever is on the botom of the tower
         //Botom dissapear
-            var seq = Action.Sequence(this.Owner.Actions);
-             Action.Delay(seq, 0.1);
-             
-            Action.Property(seq, @this.Owner.Sprite.Color, Real4(0, 0, 0, 0), 0.05, Ease.Linear);
-            Console.WriteLine("BottomDissapear");
-            //mainSpirte Dissaper
-            Action.Property(seq, @this.Space.FindObjectByName("MainSprite").Sprite.Color, Real4(255, 255, 255, 0), 0.05, Ease.Linear);
-            Console.WriteLine("MainSpriteDissapear");
-            Action.Delay(seq, 0.1);
-            //BottomReapear
-            Action.Property(seq, @this.Owner.Sprite.Color, Real4(0, 0, 0, 1), 0.05, Ease.Linear);
-            Console.WriteLine("BottomReaper");
-          //MainSpriteReapear
-            Action.Property(seq, @this.Space.FindObjectByName("MainSprite").Sprite.Color, Real4(255, 255, 255, 1), 0.05, Ease.Linear);
-            Console.WriteLine("MainSpriteReaper");
-            Action.Delay(seq, 2);
-           
+        var seq = Action.Sequence(this.Owner.Actions);
         
+        var fadOut = Action.Group(seq);
+        
+        var fadIn = Action.Group(seq);
+        
+        Action.Property(fadOut, @this.Owner.Sprite.Color, Real4(0, 0, 0, 0), 0.5, Ease.Linear);
+        
+        //mainSpirte Dissaper
+        Action.Property(fadOut, @mainSprite.Sprite.Color,Real4(1, 1, 1, 0), 0.5, Ease.Linear);
+        
+        //BottomReapear
+        Action.Property(fadIn, @this.Owner.Sprite.Color, Real4(0, 0, 0, 1), 0.5, Ease.Linear);
+       
+        
+        //MainSpriteReapear
+        Action.Property(fadIn, @mainSprite.Sprite.Color, Real4(1, 1, 1, 1), 0.5, Ease.Linear);
+      
+        
+        Action.Property(seq, @this.Flashing, false, 0, Ease.Linear);
     }
 
     function OnDestroying(event : ZilchEvent)
@@ -124,15 +127,14 @@ class TowerLogic : ZilchComponent
             this.BeamMiddleObject.Destroy();
         }
     }
+    var Flashing : Boolean;
     function OnLogicUpdate(event : UpdateEvent)
     {
-        
-            Console.WriteLine(this.Owner.DestroyTimer.Timer);
-        if (this.Owner.DestroyTimer.Timer <= 5)
+        if (this.Owner.DestroyTimer.Timer <= 5 && this.Flashing == false)
         {
+            this.Flashing = true;
             this.TowerFlash();
-        }   
-         Console.WriteLine("Waring Tower Ruing out of Energy in 5 Seconds");
+        }
 
         if(this.Target == null)
         {
@@ -151,14 +153,15 @@ class TowerLogic : ZilchComponent
             var target = this.Target.Transform.WorldTranslation;
             this.SetPosition(this.BeamEndObject, Math.Lerp(end, target, this.BeamAcceleration * event.Dt));
             this.Target.Health.ChangeHealth(-this.DamagePerSecond * event.Dt);
-            this.Space.SoundSpace.PlayCue(SoundCue.TowerCharge2);
+            //this.Space.SoundSpace.PlayCue(SoundCue.TowerCharge2);
         }
         else
         {
             this.SetPosition(this.BeamEndObject, this.Target.Transform.WorldTranslation);
             
             // @missing Charging sound effect and visual effect
-            //this.Space.SoundSpace.PlayCue(SoundCue.TowerCharge2); DO NOT PLAY THIS ONE YOUR EARS WILL BLEED!!!
+            //this.Space.SoundSpace.PlayCue(SoundCue.TowerCharge2); //DO NOT PLAY THIS ONE YOUR EARS WILL BLEED!!!
+            //what kind of charge effect
             
         }
         
@@ -177,7 +180,7 @@ class TowerLogic : ZilchComponent
             //Reset our time
             this.TimeTillShoot = this.TimeBetweenShots;
             
-            this.Space.SoundSpace.PlayCue(SoundCue.FoolDeath);
+            this.Space.SoundSpace.PlayCue(SoundCue.TowerShoot);
         }
     }
     function EnableBeam()
@@ -204,40 +207,5 @@ class TowerLogic : ZilchComponent
         if (cog == null || cog.Transform == null) return;
         cog.Transform.WorldTranslation = value;
     }
-    /*
-    [Property] var Projectile : Archetype = Archetype.Arrow;
-    [Property] var LaunchSpeed : Real = 1;
-    [Property] var TimeBetweenShots : Real = 1;
-    var TimeTillShoot : Real;
-    
-    function Initialize(init : CogInitializer)
-    {
-        this.TimeTillShoot = this.TimeBetweenShots;
-        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-    }
-    function OnLogicUpdate(event : UpdateEvent)
-    {
-        //couting down timer
-        this.TimeTillShoot -= event.Dt;
-        //check if we can shoot
-        if (this.TimeTillShoot <= 0)
-        {
-            var target = Globals.GetTarget(this.Owner, Team.Enemy);
-            if (target == null) return;
-            
-            var vel = (target.Transform.WorldTranslation - this.Owner.Transform.WorldTranslation) * this.LaunchSpeed;
-            
-            //Create the bullet
-            var arrow = this.Space.CreateAtPosition(this.Projectile, this.Owner.Transform.WorldTranslation + vel / 100);
-            
-            //Launch the bullet
-            arrow.RigidBody.Velocity = vel;
-            
-            //Reset our time
-            this.TimeTillShoot = this.TimeBetweenShots;
-            
-            this.Space.SoundSpace.PlayCue(SoundCue.TowerShoot);
-        }
-    }
-    */
+
 }
