@@ -36,7 +36,7 @@ class CursorLogic : ZilchComponent
             globals.PlayerCurrentFate -= turret.Cost;
             if (globals.CurrentTurretIndex == 2)
                 globals.CurrentChariotCooldown = globals.MaxChariotCooldown;
-                this.Space.SoundSpace.PlayCue(SoundCue.TowerPlace);
+                //this.Space.SoundSpace.PlayCue(SoundCue.TowerPlace);
                 
         }
         else
