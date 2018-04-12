@@ -14,9 +14,9 @@ SampleCurve =
 		},
 		{
 			float Time = 0.5,
-			float Value = 0.996774197,
-			Vec2 TangentIn = [-0.166666687, -0.00266700983],
-			Vec2 TangentOut = [0.166666687, 0.00266700983],
+			float Value = 1,
+			Vec2 TangentIn = [-0.166666657, 0.000311017036],
+			Vec2 TangentOut = [0.166666657, -0.000311017036],
 			uint EditorFlags = 0,
 		},
 		{

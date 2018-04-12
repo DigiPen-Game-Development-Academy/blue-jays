@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.00821781158, 10.8662014, 49.9008369],
+			Vec3 Translation = [2.13759255, -1.96074641, 50.1792259],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 36.3482513,
+			float Size = 39.2992897,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.00821781158, 10.8662014, -0.0991640091],
+			Vec3 LookTarget = [2.13759255, -1.96074641, 0.179226056],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -170,7 +170,6 @@ Level =
 			float Bottom = 21.5,
 			float Left = 19.5,
 			float Right = 19.5,
-			Vec2 Offset = [0, 0],
 		},
 		SoundListener = 
 		{
@@ -1262,12 +1261,19 @@ Level =
 					float Offset = 0.5,
 				},
 			},
-			ArchetypeInstance = 
+			Cog = 
 			{
-				string Name = "5a2c9f1e3a9142df:Spotlight",
 				LinkId = 
 				{
 					uint Id = 31,
+				},
+				Named = 
+				{
+					string Name = "Spotlight",
+				},
+				Archetyped = 
+				{
+					string Name = "5a2c9f1e3a9142df:Spotlight",
 				},
 				Transform = 
 				{
@@ -1275,14 +1281,33 @@ Level =
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [0.614250004, 0.801839948, 0.975000024, 0.664999962],
+					BlendMode BlendMode = Additive,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5274db4c2e7c11f9:Circle",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
 				Area = 
 				{
 					Vec2 Size = [6.68822384, 4.64401817],
 					Location Origin = Center,
 				},
-				Named = 
+				AutoDepth = 
 				{
-					string Name = "Spotlight",
+					bool Local = false,
+					float Offset = 0,
 				},
 			},
 		},
