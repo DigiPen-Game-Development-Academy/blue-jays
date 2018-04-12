@@ -118,13 +118,13 @@ class Health : ZilchComponent
         {
             // Damaged
             this.Owner.DispatchDown(Events.Damaged, ZilchEvent());
-            //this.Space.SoundSpace.PlayCue(SoundCue.Damage);
+            this.Space.SoundSpace.PlayCue(SoundCue.Damage);
         }
         else if (amount > 0)
         {
             // Healed
             this.Owner.DispatchDown(Events.Healed, ZilchEvent());
-            //this.Space.SoundSpace.PlayCue(SoundCue.HealthPowerup);
+            this.Space.SoundSpace.PlayCue(SoundCue.HealthPowerup);
         }
         
         if (this.HealthType == HealthType.Player)
