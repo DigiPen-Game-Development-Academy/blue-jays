@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4.19356394, 14.5867605, 67.5063553],
+			Vec3 Translation = [10.4094849, 11.9119158, 67.5063553],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 26.3430939,
+			float Size = 39.2992706,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [4.19356394, 14.5867605, 17.5063553],
+			Vec3 LookTarget = [10.4094849, 11.9119158, 17.5063553],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -1507,7 +1507,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [12.1320782, 15.0905209, 15],
+			Vec3 Translation = [12.1320782, 15.0905209, 17.5063553],
 			Vec3 Scale = [0.981634796, 0.917134821, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -1645,11 +1645,11 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0.353399992, 0.37795198, 0.464999974, 1],
+			Vec4 Color = [0.581874967, 0.600162446, 0.664999962, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5ab4213431ed1d10:Moon",
+			string SpriteSource = "5ab4535b41677d89:Moon",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -1659,7 +1659,7 @@ Level =
 		},
 		Parallax = 
 		{
-			float RealtiveSpeed = -0.5,
+			float RealtiveSpeed = -0.600000024,
 			CogPath PlayerObject = 
 			{
 				string Path = ":/Camera",
@@ -1671,6 +1671,140 @@ Level =
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
 				uint ResolvedCog = 2,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 40,
+		},
+		Named = 
+		{
+			string Name = "LightRing",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-0.4242419, 0.772605419, -0.507726073],
+			Vec3 Scale = [1, 0.773438692, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.964999914, 0.962973475, 0.762349963, 0.675000012],
+			BlendMode BlendMode = Additive,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5ab44cd1236d26d0:LightRing",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		AutoDepth = 
+		{
+			bool Local = false,
+			float Offset = -0.5,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 41,
+		},
+		Named = 
+		{
+			string Name = "LightRing",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-0.628278017, 0.596615791, 0.494033843],
+			Vec3 Scale = [1, 0.773438692, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.889999986, 0.83166045, 0.582949996, 0.675000012],
+			BlendMode BlendMode = Additive,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5ab44cd1236d26d0:LightRing",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		AutoDepth = 
+		{
+			bool Local = false,
+			float Offset = 0.5,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 42,
+		},
+		Named = 
+		{
+			string Name = "TabelclothEdited",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [9.90747261, 16.1671467, 4],
+			Vec3 Scale = [1.34687185, 1.38273346, 2.31513023],
+			Quat Rotation = [0, 0, 0.405977279, 0.91388315],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.428624988, 0.468044996, 0.675000012, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5a62eba188657bbf:TabelclothEdited",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Parallax = 
+		{
+			float RealtiveSpeed = 0.100000001,
+			CogPath PlayerObject = 
+			{
+				string Path = "",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 4294967293,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
