@@ -6,8 +6,8 @@ class Parallax : ZilchComponent
     [Property]
     var PlayerObject : CogPath = null;
     
-    var PreviousPlayerPosition : Real3 = Real3();
-    
+    var PreviousPlayerPosition : Real2 = Real2();
+    var HasPreviousPosition: Boolean;
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -15,13 +15,21 @@ class Parallax : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        var currentPlayerPosition = this.PlayerObject.Cog.Transform.Translation;
-        var displacement = currentPlayerPosition.Y - this.PreviousPlayerPosition.X;
-        var movement = displacement *this.RealtiveSpeed;
-        var newPosition = this.Owner.Transform.Translation;
-        newPosition.Y -+ movement;
-        this.Owner.Transform.Translation = newPosition;
+        if(this.PlayerObject == null || this.PlayerObject.Cog == null) return;
         
-        this.PreviousPlayerPosition = currentPlayerPosition;
+        var player = this.PlayerObject.Cog;
+        if(this.HasPreviousPosition)
+        {
+        var playerPosition = player.Transform.WorldTranslation.XY;
+        var playerMovement = playerPosition - this.PreviousPlayerPosition;
+        var selfMovement = playerMovement * this.RealtiveSpeed;
+        var selfPosition = this.Owner.Transform.WorldTranslation.XY + selfMovement;
+        selfPosition += selfMovement;
+        this.Owner.Transform.WorldTranslation = 
+            Real3(selfPosition,this.Owner.Transform.WorldTranslation.Z);
+       } 
+       
+        this.HasPreviousPosition = true;
+        this.PreviousPlayerPosition = player.Transform.WorldTranslation.XY;
     }
 }
