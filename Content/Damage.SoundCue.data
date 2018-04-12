@@ -9,7 +9,7 @@ SoundCue =
 	float Pitch = 0,
 	float PitchSemitones = 0,
 	bool UsePitchSemitones = false,
-	float PitchVariation = 0,
+	float PitchVariation = 1.5,
 	float PitchSTVariation = 0,
 	float MinDistance = 1,
 	float MaxDistance = 70,
@@ -19,7 +19,7 @@ SoundCue =
 	[
 		{
 			string SoundName = "5ada0c41e4789e33:Damage",
-			string GeneratedSoundName = "",
+			string GeneratedSoundName = "55017c595ef88bf0:DefaultGeneratedSound",
 			WhichSoundType WhichToUse = FromFile,
 			float Weight = 1,
 			float LoopEndTime = 0,
@@ -34,5 +34,5 @@ SoundCue =
 	],
 	string RolloffCurveName = "",
 	int Version = 1,
-	RolloffCurveType RolloffCurveType = Error,
+	RolloffCurveType RolloffCurveType = Linear,
 },

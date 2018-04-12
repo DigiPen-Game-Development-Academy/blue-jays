@@ -146,13 +146,14 @@ class Health : ZilchComponent
         if (this.HealthType == HealthType.Player)
         {
             // @missing Death effect and lose result
-            //this.Space.SoundSpace.PlayCue(SoundCue.PlayerDeath);
+            this.Space.SoundSpace.PlayCue(SoundCue.PlayerDeath);
+            
             this.GameSession.Globals.GameSpace.LoadLevel(Level.Hub);
         }
         else if (this.HealthType == HealthType.Boss)
         {
             // @missing Death effect and win result
-           // this.Space.SoundSpace.PlayCue(SoundCue.FoolDeath);
+            this.Space.SoundSpace.PlayCue(SoundCue.FoolDeath);
             if (this.GameSession.Globals.BossCurrentHealth <= 0)
             {
                 Console.WriteLine("AHHHHH");
@@ -163,7 +164,7 @@ class Health : ZilchComponent
         else
         {
             // @missing Death effect
-            //this.Space.SoundSpace.PlayCue(SoundCue.FoolDeath); What does this else statment contorl??
+            this.Space.SoundSpace.PlayCue(SoundCue.FoolDeath); 
             this.Owner.Destroy();
         }
     }
