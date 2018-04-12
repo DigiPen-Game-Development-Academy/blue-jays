@@ -1,17 +1,40 @@
 class CinematicAnimation : ZilchComponent
 {
+    
     function Initialize(init : CogInitializer)
     {
-        var sequence = Actions.Sequence(this.Owner.Actions);
-        Actions.Delay(sequence,5);
-        Actions.Property(
-            sequence,
-            @this.Owner.Camera.Size,
-            this.Owner.Camera.Size + 11,
-            3,
-            Ease.SinOut);
+        if (this.Space.CurrentLevel == Level.Find("Fool"))
+            {
+                var sequence = Action.Sequence(this.Owner.Actions);
+                var group = Action.Group(sequence);
+                this.Owner.CameraConstraint.TargetObject = this.Space.FindObjectByName("Fool");
+                Actions.Delay(sequence, 5);
+                Actions.Call(sequence, this.FinishWithFoolCinematic);
+                Actions.Property(
+                sequence,
+                @this.Owner.Camera.Size,
+                this.Owner.Camera.Size + 11,
+                3,
+                Ease.SinOut);
+                
+            }
+        else
+        {
+
+            var sequence = Actions.Sequence(this.Owner.Actions);
+            Actions.Delay(sequence,13  );
+            Actions.Property(
+                sequence,
+                @this.Owner.Camera.Size,
+                this.Owner.Camera.Size + 11,
+                3,
+                Ease.SinOut);
+        }   
             
             
     }
-
+    function FinishWithFoolCinematic()
+    {
+        this.Owner.CameraConstraint.TargetObject = this.Space.FindObjectByName("Player");
+    }
 }
