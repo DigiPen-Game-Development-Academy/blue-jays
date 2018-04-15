@@ -119,7 +119,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 24.3650932,
+			float Size = 18.0501175,
 		},
 		EditorCameraController = 
 		{
@@ -3890,9 +3890,9 @@ Level =
 				{
 					bool Active = true,
 					uint EmitCount = 0,
-					float EmitRate = 10,
+					float EmitRate = 11,
 					float EmitVariance = 0,
-					float Size = 0.100000001,
+					float Size = 0.0500000007,
 					float SizeVariance = 0,
 					float Lifetime = 1.5,
 					float LifetimeVariance = 0.200000003,
