@@ -16,6 +16,14 @@ class PlayerController : ZilchComponent
         this.GameSession.Globals.SingletonPlayer = this;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
+    function PlaySoundOnSpawn()
+    {
+         var sequence = Action.Sequence(this.Owner.Actions);
+         var group = Action.Group(sequence);
+         Actions.Delay(sequence,5);
+           // @this.Owner.SoundSpace.PlayCue(SoundCue.Walk2);
+             this.Space.SoundSpace.PlayCue(SoundCue.Walk2); //I still working on this!!
+    }
     
     function OnLogicUpdate(event : UpdateEvent)
     {
@@ -32,9 +40,10 @@ class PlayerController : ZilchComponent
         }
         else
         {
+           
             if (this.Reversed) vel = -vel;
             this.RigidBody.Velocity = Math.Lerp(this.RigidBody.Velocity, Real3(vel * this.Speed, 0), this.Acceleration * event.Dt);
-            // this.Space.SoundSpace.PlayCue(SoundCue.Walk2); I still working on this!!
+            this.PlaySoundOnSpawn();
         }
     }
 }
