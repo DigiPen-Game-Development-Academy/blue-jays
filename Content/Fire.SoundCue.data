@@ -1,9 +1,9 @@
 SoundCue = 
 {
-	SoundPlayMode PlayMode = Single,
-	float Volume = 0.50999999,
+	SoundPlayMode PlayMode = Looping,
+	float Volume = 0.399999976,
 	float VolumeVariation = 0,
-	float VolumeDB = -5.84859657,
+	float VolumeDB = -7.95880079,
 	bool UseVolumeDB = false,
 	float VolumeDBVariation = 0,
 	float Pitch = 0,
@@ -18,7 +18,7 @@ SoundCue =
 	Array Sounds = 
 	[
 		{
-			string SoundName = "5ab6afe44763abb0:Walk2",
+			string SoundName = "5a9ec16ed4894162:Fire",
 			string GeneratedSoundName = "55017c595ef88bf0:DefaultGeneratedSound",
 			WhichSoundType WhichToUse = FromFile,
 			float Weight = 1,
@@ -32,7 +32,7 @@ SoundCue =
 			string SoundTagName = "551c2d5a29ce571d:DefaultSoundTag",
 		},
 	],
-	string RolloffCurveName = "5a9f7bfdc4b9eb66:RoseThrowRadius",
+	string RolloffCurveName = "",
 	int Version = 1,
 	RolloffCurveType RolloffCurveType = Linear,
 },

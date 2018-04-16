@@ -4,6 +4,11 @@
 class PlayerController : ZilchComponent
 {
     [Dependency] var RigidBody : RigidBody;
+    [Dependency] var SimpleSound : SimpleSound;
+    [Dependency] var SoundEmitter : SoundEmitter;
+    [Dependency] var SoundCue : SoundCue;
+    [Dependency] var SoundSpace : SoundSpace;
+
     
     [Property] var Speed : Real = 10;
     [Property] var Acceleration : Real = 5;
@@ -18,11 +23,14 @@ class PlayerController : ZilchComponent
     }
     function PlaySoundOnSpawn()
     {
-         var sequence = Action.Sequence(this.Owner.Actions);
-         var group = Action.Group(sequence);
-         Actions.Delay(sequence,5);
-           // @this.Owner.SoundSpace.PlayCue(SoundCue.Walk2);
-             this.Space.SoundSpace.PlayCue(SoundCue.Walk2); //I still working on this!!
+        var soundSeq = Action.Sequence(this.Owner.Actions);
+       /* var group = Action.Group(soundSeq);
+        Actions.Property(soundSeq, @this.Space.SoundEmitter.IsPlaying,
+        Boolean = true, 1.0,Ease.Linear);
+        */
+        
+        Actions.Delay(soundSeq,5);
+        this.Space.SoundSpace.PlayCue(SoundCue.Walk2); //I still working on this!!
     }
     
     function OnLogicUpdate(event : UpdateEvent)

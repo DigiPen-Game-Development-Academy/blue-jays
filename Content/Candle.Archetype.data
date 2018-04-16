@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [5.68983269, -0.736681342, 1],
+		Vec3 Translation = [-11.1093264, 9.30345821, -4],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -99,5 +99,19 @@ Cog =
 	{
 		Vec2 Size = [0.100000001, 0.5],
 		Location Origin = Center,
+	},
+	SoundEmitter = 
+	{
+		float Volume = 1,
+		float Pitch = 0,
+		float PitchSemitones = 0,
+		bool UsePitchSemitones = true,
+		bool Positional = true,
+		int Version = 1,
+	},
+	SimpleSound = 
+	{
+		bool StartPlaying = true,
+		string CueName = "5a9ec16ed48bd707:Fire",
 	},
 },
