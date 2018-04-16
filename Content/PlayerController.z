@@ -4,11 +4,6 @@
 class PlayerController : ZilchComponent
 {
     [Dependency] var RigidBody : RigidBody;
-    [Dependency] var SimpleSound : SimpleSound;
-    [Dependency] var SoundEmitter : SoundEmitter;
-    [Dependency] var SoundCue : SoundCue;
-    [Dependency] var SoundSpace : SoundSpace;
-
     
     [Property] var Speed : Real = 10;
     [Property] var Acceleration : Real = 5;
@@ -20,17 +15,6 @@ class PlayerController : ZilchComponent
     {
         this.GameSession.Globals.SingletonPlayer = this;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-    }
-    function PlaySoundOnSpawn()
-    {
-        var soundSeq = Action.Sequence(this.Owner.Actions);
-       /* var group = Action.Group(soundSeq);
-        Actions.Property(soundSeq, @this.Space.SoundEmitter.IsPlaying,
-        Boolean = true, 1.0,Ease.Linear);
-        */
-        
-        Actions.Delay(soundSeq,5);
-        this.Space.SoundSpace.PlayCue(SoundCue.Walk2); //I still working on this!!
     }
     
     function OnLogicUpdate(event : UpdateEvent)
@@ -48,16 +32,20 @@ class PlayerController : ZilchComponent
         }
         else
         {
-           
             if (this.Reversed) vel = -vel;
             this.RigidBody.Velocity = Math.Lerp(this.RigidBody.Velocity, Real3(vel * this.Speed, 0), this.Acceleration * event.Dt);
-            this.PlaySoundOnSpawn();
         }
     }
 }
 class PlayerAnimator : ZilchComponent
 {
     var Previous : Real2;
+    
+    // We want to be able to set the sound to play in the editor
+    [Property]
+    var WalkingSoundToPlay : SoundCue;
+    // We will set the sound that is currently playing in code
+    var WalkingSoundPlaying : SoundInstance;
     
     function Initialize(init : CogInitializer)
     {
@@ -88,6 +76,22 @@ class PlayerAnimator : ZilchComponent
             if (this.Owner.Sprite.SpriteSource != SpriteSource.KingOS_Run)
             {
                 this.Owner.Sprite.SpriteSource = SpriteSource.KingOS_Run;
+            }
+            
+            // If the sound isn't playing
+            if (this.WalkingSoundPlaying == null || this.WalkingSoundPlaying.IsPlaying == false)
+            {
+                // Play the sound and remember which sound is playing (includes looping)
+                this.WalkingSoundPlaying = this.Space.SoundSpace.PlayCue(this.WalkingSoundToPlay);
+            }
+        }
+        else
+        {
+            // If the sound is playing
+            if (this.WalkingSoundPlaying != null && this.WalkingSoundPlaying.IsPlaying)
+            {
+                // Stop the sound that is playing
+                this.WalkingSoundPlaying.Stop();
             }
         }
         
