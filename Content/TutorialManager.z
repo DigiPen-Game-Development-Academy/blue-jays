@@ -1,27 +1,35 @@
 class TutorialManager : ZilchComponent
 {
-    [Property]
-    var ArchetypetoSpawn : Archetype;
-    
-    [Property]
-    var WheretoSpawn : Real3;
+
+[Property]
+ var Delay : Real;
     
     function Initialize(init : CogInitializer)
     {
-        Zero.Connect(this.Space, Events.LevelStarted, this.OnLevelStarted);
-        
+        Zero.Connect(this.Space, Events.LogicUpdate, this.TextConnect);        
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        
+        this.Owner.SpriteText.Visible = false;
     }
-
-    function OnLevelStarted(event : GameEvent)
-    {
-        this.Space.CreateAtPosition(this.ArchetypetoSpawn, this.WheretoSpawn);
-        //this.Space.TimeSpace.Paused;
-    }
-
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        
+        if (this.Delay > 0.0)
+        {
+            this.Delay -= event.Dt;
+        }
     }
+
+   
+    
+     function TextConnect(event : UpdateEvent)
+    
+    {
+                if (this.Delay <= 0.0)
+        {
+            this.Owner.SpriteText.Text = "Left-Click to spawn a Tarot Card. Try Spawing the KNIGHT OF SWORDS.";
+            this.Owner.SpriteText.Visible = true;
+        }
+    }
+
 }
