@@ -89,6 +89,7 @@ Cog =
 		float ChaseAcceleration = 5,
 		float ChaseMoveSpeed = 10,
 		float ChaseTurnSpeed = 3,
+		string FlappingSoundToPlay = "5a37cc0d337b2741:Flapping",
 		Vec2 TurnFrequency = [0.100000001, 1],
 	},
 	Hierarchy = 

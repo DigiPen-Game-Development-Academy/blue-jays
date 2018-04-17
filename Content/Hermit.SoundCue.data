@@ -1,9 +1,9 @@
 SoundCue = 
 {
 	SoundPlayMode PlayMode = Single,
-	float Volume = 0.0399999991,
+	float Volume = 0.800000012,
 	float VolumeVariation = 0,
-	float VolumeDB = -27.9588013,
+	float VolumeDB = -6,
 	bool UseVolumeDB = false,
 	float VolumeDBVariation = 0,
 	float Pitch = 0,
@@ -18,8 +18,8 @@ SoundCue =
 	Array Sounds = 
 	[
 		{
-			string SoundName = "5a9ec16ed4894162:Fire",
-			string GeneratedSoundName = "55017c595ef88bf0:DefaultGeneratedSound",
+			string SoundName = "5a37cd61170cf70b:Hermit",
+			string GeneratedSoundName = "",
 			WhichSoundType WhichToUse = FromFile,
 			float Weight = 1,
 			float LoopEndTime = 0,
@@ -34,5 +34,5 @@ SoundCue =
 	],
 	string RolloffCurveName = "",
 	int Version = 1,
-	RolloffCurveType RolloffCurveType = Linear,
+	RolloffCurveType RolloffCurveType = Error,
 },

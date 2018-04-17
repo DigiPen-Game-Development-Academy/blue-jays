@@ -17,6 +17,11 @@ class PigeonNPC : ZilchComponent
     [Property] var ChaseMoveSpeed : Real = 10.0;
     [Property] var ChaseTurnSpeed : Real = 3.0;
     
+        [Property]
+    var FlappingSoundToPlay : SoundCue;
+    // We will set the sound that is currently playing in code
+    var FlappingSoundPlaying : SoundInstance;
+    
     var Target : Cog;
     // How often to choose a new wander direction (min, max)
     [Property] var TurnFrequency : Real2 = Real2(0.1, 1);
@@ -47,9 +52,22 @@ class PigeonNPC : ZilchComponent
             this.Velocity = Math.RotateTowards(this.Velocity, direction, Math.ToRadians(this.ChaseTurnSpeed) * event.Dt);
             // Speed limiting
             this.Limit(this.ChaseMoveSpeed);
+            if (this.FlappingSoundPlaying == null || this.FlappingSoundPlaying.IsPlaying == false)
+            {
+                // Play the sound and remember which sound is playing (includes looping)
+                this.FlappingSoundPlaying = this.Space.SoundSpace.PlayCue(this.FlappingSoundToPlay);
+            }
+            else
+            {
+             if (this.FlappingSoundPlaying != null && this.FlappingSoundPlaying.IsPlaying)
+            {
+                // Stop the sound that is playing
+                this.FlappingSoundPlaying.Stop();
+            }
+            }
+            
         }
-        //else
-        //{
+    
             // Pick a random direction
             if (this.TurnTimer <= 0)
             {
@@ -65,7 +83,7 @@ class PigeonNPC : ZilchComponent
             if (length != 0) this.Velocity = length * Math.RotateTowards(this.Velocity / length, this.WanderDirection, Math.ToRadians(this.WanderTurnSpeed) * event.Dt);
             // Speed limiting
             this.Limit(this.WanderMoveSpeed);
-        //}
+        
         
         this.Owner.RigidBody.Velocity = Real3(this.Velocity, 0);
     }

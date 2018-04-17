@@ -42,7 +42,11 @@ class Interaction : ZilchComponent
     {
         if (event.OtherObject.PlayerController == null) return;
         
-        if (Zero.Keyboard.KeyIsPressed(Keys.E)) this.Space.LoadLevel(this.Level);
+        if (Zero.Keyboard.KeyIsPressed(Keys.E))
+        {
+            this.Space.SoundSpace.PlayCue(SoundCue.Hermit);
+            this.Space.LoadLevel(this.Level);
+        }
     }
     function OnLogicUpdate(event : UpdateEvent)
     {
