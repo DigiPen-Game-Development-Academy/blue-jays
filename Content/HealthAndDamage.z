@@ -175,7 +175,7 @@ class Health : ZilchComponent
         else if (this.HealthType == HealthType.Boss)
         {
             // @missing Death effect and win result
-            this.Space.SoundSpace.PlayCue(SoundCue.FoolDeath);
+            this.Space.SoundSpace.PlayCue(SoundCue.FoolDeath2);
             if (this.GameSession.Globals.BossCurrentHealth <= 0)
             {
                 Console.WriteLine("AHHHHH");
@@ -186,7 +186,7 @@ class Health : ZilchComponent
         else
         {
             // @missing Death effect
-            this.Space.SoundSpace.PlayCue(SoundCue.FoolDeath); 
+            //this.Space.SoundSpace.PlayCue(SoundCue.FoolDeath); 
             this.Owner.Destroy();
         }
     }

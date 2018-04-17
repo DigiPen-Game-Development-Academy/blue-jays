@@ -14,6 +14,9 @@ GameSession =
 	CameraViewports = 
 	{
 	},
+	ZilchState = 
+	{
+	},
 	Globals = 
 	{
 		float PlayerMaxHealth = 10,
@@ -28,8 +31,8 @@ GameSession =
 		string ArchetypeTower = "5aea1bea3167182a:Tower",
 		string ArchetypeChariot = "5aea7fa45101767f:Chariot",
 		float CostKnight = 1,
-		float CostTower = 3,
-		float CostChariot = 5,
+		float CostTower = 5,
+		float CostChariot = 3,
 		float RadiusKnight = 1,
 		float RadiusTower = 1,
 		float RadiusChariot = 1,

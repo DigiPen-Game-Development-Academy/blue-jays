@@ -51,7 +51,7 @@ class KnightLogic : ZilchComponent
 class ChariotLogic : ZilchComponent
 {
     [Property] var Offset : Real3;
-    
+       var Flashing : Boolean;
     function Initialize(init : CogInitializer)
     {
         var player = this.Space.FindObjectByName("Player");

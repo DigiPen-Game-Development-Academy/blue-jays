@@ -35,6 +35,10 @@ Cog =
 		bool DestroySelf = true,
 		float DestroyDelay = 0,
 	},
+	DestroyTimer = 
+	{
+		float Timer = 20,
+	},
 	Hierarchy = 
 	{
 		Cog = 
@@ -84,8 +88,9 @@ Cog =
 			Health = 
 			{
 				Enum HealthType = PlayerMinion,
-				float Health = 5,
+				float Health = 100,
 				bool Debug = false,
+				string DamageSoundToPlay = "5ada0c41e47a9076:Damage",
 			},
 			Hierarchy = 
 			{

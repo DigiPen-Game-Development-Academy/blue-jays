@@ -53,7 +53,7 @@ Cog =
 	},
 	TowerLogic = 
 	{
-		float TimeBetweenShots = 2,
+		float TimeBetweenShots = 4,
 		float ShootDuration = 2,
 		float BeamAcceleration = 10,
 		float DamagePerSecond = 3,
