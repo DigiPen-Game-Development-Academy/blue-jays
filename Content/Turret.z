@@ -161,7 +161,7 @@ class TowerLogic : ZilchComponent
             var target = this.Target.Transform.WorldTranslation;
             this.SetPosition(this.BeamEndObject, Math.Lerp(end, target, this.BeamAcceleration * event.Dt));
             this.Target.Health.ChangeHealth(-this.DamagePerSecond * event.Dt);
-            //this.Space.SoundSpace.PlayCue(SoundCue.TowerCharge2);
+
             if (this.ChargingSoundPlaying == null || this.ChargingSoundPlaying.IsPlaying == false)
             {
                 // Play the sound and remember which sound is playing (includes looping)
@@ -182,7 +182,6 @@ class TowerLogic : ZilchComponent
             this.SetPosition(this.BeamEndObject, this.Target.Transform.WorldTranslation);
             
             // @missing Charging sound effect and visual effect
-            //athis.Space.SoundSpace.PlayCue(SoundCue.TowerCharge2); //DO NOT PLAY THIS ONE YOUR EARS WILL BLEED!!!
             //what kind of charge effect
             
         }
