@@ -162,20 +162,22 @@ class TowerLogic : ZilchComponent
             this.SetPosition(this.BeamEndObject, Math.Lerp(end, target, this.BeamAcceleration * event.Dt));
             this.Target.Health.ChangeHealth(-this.DamagePerSecond * event.Dt);
 
-            if (this.ChargingSoundPlaying == null || this.ChargingSoundPlaying.IsPlaying == false)
+           /* if (this.ChargingSoundPlaying == null || this.ChargingSoundPlaying.IsPlaying == false)
             {
                 // Play the sound and remember which sound is playing (includes looping)
                 this.ChargingSoundPlaying = this.Space.SoundSpace.PlayCue(this.ChargingSoundToPlay);
             }
               else
-        {
+            {
             // If the sound is playing
             if (this.ChargingSoundPlaying != null && this.ChargingSoundPlaying.IsPlaying)
             {
                 // Stop the sound that is playing
                 this.ChargingSoundPlaying.Stop();
             }
-        }
+            
+            }
+            */
         }
         else
         {
@@ -200,25 +202,16 @@ class TowerLogic : ZilchComponent
             
             //Reset our time
             this.TimeTillShoot = this.TimeBetweenShots;
-            
-           if (this.ShootingSoundPlaying == null || this.ShootingSoundPlaying.IsPlaying == false)
-            {
-                // Play the sound and remember which sound is playing (includes looping)
-                this.ShootingSoundPlaying = this.Space.SoundSpace.PlayCue(this.ShootingSoundToPlay);
-            }
-             else
-        {
-            // If the sound is playing
-            if (this.ShootingSoundPlaying != null && this.ShootingSoundPlaying.IsPlaying)
-            {
-                // Stop the sound that is playing
-                this.ShootingSoundPlaying.Stop();
-            }
-        }
         }
     }
     function EnableBeam()
     {
+        // If the sound is NOT playing
+        if (this.ShootingSoundPlaying == null || this.ShootingSoundPlaying.IsPlaying == false)
+        {
+            // Play the sound and remember which sound is playing (includes looping)
+            this.ShootingSoundPlaying = this.Space.SoundSpace.PlayCue(this.ShootingSoundToPlay);
+        }
         this.BeamEnabled = true;
         this.SetVisible(this.BeamStartObject, true);
         this.SetVisible(this.BeamMiddleObject, true);
@@ -226,6 +219,12 @@ class TowerLogic : ZilchComponent
     }
     function DisableBeam()
     {
+        // If the sound is playing
+        if (this.ShootingSoundPlaying != null && this.ShootingSoundPlaying.IsPlaying)
+        {
+            // Stop the sound that is playing
+            this.ShootingSoundPlaying.Stop();
+        }
         this.BeamEnabled = false;
         this.SetVisible(this.BeamStartObject, false);
         this.SetVisible(this.BeamMiddleObject, false);

@@ -107,6 +107,10 @@ class Health : ZilchComponent
         
         if (this.Health <= 0) this.Die();
     }
+     [Property]
+    var DamageSoundToPlay : SoundCue;
+    // We will set the sound that is currently playing in code
+    var DamageSoundPlaying : SoundInstance;
     
     function ChangeHealth(amount : Real)
     {
@@ -118,7 +122,12 @@ class Health : ZilchComponent
         {
             // Damaged
             this.Owner.DispatchDown(Events.Damaged, ZilchEvent());
-            this.Space.SoundSpace.PlayCue(SoundCue.Damage);
+            //this.Space.SoundSpace.PlayCue(SoundCue.Damage);
+            if (this.DamageSoundPlaying == null || this.DamageSoundPlaying.IsPlaying == false)
+            {
+                // Play the sound and remember which sound is playing (includes looping)
+                this.DamageSoundPlaying = this.Space.SoundSpace.PlayCue(this.DamageSoundToPlay);
+            }
         }
         else if (amount > 0)
         {
@@ -142,7 +151,12 @@ class Health : ZilchComponent
     {
         if (this.Dead) return;
         this.Dead = true;
-        
+         // If the sound is playing
+            if (this.DamageSoundPlaying != null && this.DamageSoundPlaying.IsPlaying)
+            {
+                // Stop the sound that is playing
+                this.DamageSoundPlaying.Stop();
+            }
         if (this.HealthType == HealthType.Player)
         {
             // @missing Death effect and lose result

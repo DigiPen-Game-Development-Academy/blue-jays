@@ -68,6 +68,7 @@ Cog =
 		Enum HealthType = PlayerMinion,
 		float Health = 3,
 		bool Debug = false,
+		string DamageSoundToPlay = "5ada0c41e47a9076:Damage",
 	},
 	DoOnCollide = 
 	{
