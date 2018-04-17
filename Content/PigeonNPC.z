@@ -34,7 +34,22 @@ class PigeonNPC : ZilchComponent
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         this.Space.LevelSettings.PigeonCounter.PigeonCount+=1;
     }
-
+    function PlayFlappingSound()
+    {
+        if (this.FlappingSoundPlaying == null || this.FlappingSoundPlaying.IsPlaying == false)
+            {
+                // Play the sound and remember which sound is playing (includes looping)
+                this.FlappingSoundPlaying = this.Space.SoundSpace.PlayCue(this.FlappingSoundToPlay);
+            }
+            else
+            {
+             if (this.FlappingSoundPlaying != null && this.FlappingSoundPlaying.IsPlaying)
+            {
+                // Stop the sound that is playing
+                this.FlappingSoundPlaying.Stop();
+            }
+            }
+    }
     function OnLogicUpdate(event: UpdateEvent)
     {
         this.Velocity = this.Owner.RigidBody.Velocity.XY;
@@ -52,20 +67,6 @@ class PigeonNPC : ZilchComponent
             this.Velocity = Math.RotateTowards(this.Velocity, direction, Math.ToRadians(this.ChaseTurnSpeed) * event.Dt);
             // Speed limiting
             this.Limit(this.ChaseMoveSpeed);
-            if (this.FlappingSoundPlaying == null || this.FlappingSoundPlaying.IsPlaying == false)
-            {
-                // Play the sound and remember which sound is playing (includes looping)
-                this.FlappingSoundPlaying = this.Space.SoundSpace.PlayCue(this.FlappingSoundToPlay);
-            }
-            else
-            {
-             if (this.FlappingSoundPlaying != null && this.FlappingSoundPlaying.IsPlaying)
-            {
-                // Stop the sound that is playing
-                this.FlappingSoundPlaying.Stop();
-            }
-            }
-            
         }
     
             // Pick a random direction
@@ -84,7 +85,7 @@ class PigeonNPC : ZilchComponent
             // Speed limiting
             this.Limit(this.WanderMoveSpeed);
         
-        
+        this.PlayFlappingSound();
         this.Owner.RigidBody.Velocity = Real3(this.Velocity, 0);
     }
     

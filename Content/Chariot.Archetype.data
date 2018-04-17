@@ -35,10 +35,6 @@ Cog =
 		bool DestroySelf = true,
 		float DestroyDelay = 0,
 	},
-	DestroyTimer = 
-	{
-		float Timer = 20,
-	},
 	Hierarchy = 
 	{
 		Cog = 
