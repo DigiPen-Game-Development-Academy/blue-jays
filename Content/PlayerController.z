@@ -5,6 +5,7 @@ class PlayerController : ZilchComponent
 {
     [Dependency] var RigidBody : RigidBody;
     
+    var Active : Boolean = true;
     [Property] var Speed : Real = 10;
     [Property] var Acceleration : Real = 5;
     [Property] var Deceleration : Real = 10;
@@ -15,10 +16,16 @@ class PlayerController : ZilchComponent
     {
         this.GameSession.Globals.SingletonPlayer = this;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Space, Events.Animation, this.OnAnimation);
     }
-    
+    function OnAnimation(event : AnimationEvent)
+    {
+        this.Active =!event.Starting;
+    }
     function OnLogicUpdate(event : UpdateEvent)
     {
+        if (this.Active ==false) return;
+        
         var vel = Real2();
         if(Zero.Keyboard.KeyIsDown(Keys.D)) vel.X += 1;
         if(Zero.Keyboard.KeyIsDown(Keys.A)) vel.X -= 1;

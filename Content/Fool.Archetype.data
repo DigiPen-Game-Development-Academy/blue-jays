@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 1],
+		Vec3 Translation = [-0.00821781158, 9.9163866, -0.0991638675],
 		Vec3 Scale = [2, 1, 2.14220238],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -69,7 +69,7 @@ Cog =
 	AutoDepth = 
 	{
 		bool Local = false,
-		float Offset = 1,
+		float Offset = 0,
 	},
 	SpriteFlip = 
 	{
@@ -87,13 +87,13 @@ Cog =
 	Health = 
 	{
 		Enum HealthType = Boss,
-		float Health = 1000,
+		float Health = 100,
 		bool Debug = true,
-		string DamageSoundToPlay = "5ada0c41e47a9076:Damage",
+		string DamageSoundToPlay = "",
 	},
 	BossShoot = 
 	{
-		float TimeBetweenShots = -1,
+		float TimeBetweenShots = 1,
 		float ShootSpeed = 20,
 		float ShootSpin = 90,
 		string Projectile = "5a9173e075a148fa:Bomb",

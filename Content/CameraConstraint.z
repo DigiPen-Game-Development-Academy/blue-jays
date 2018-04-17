@@ -1,4 +1,4 @@
-//Author: Callie (with Jeffery's Help)
+//Author: Callie (with Jeff's Help)
 //Purpose: Keep Camera from moving past walls
 
 class CameraConstraint : ZilchComponent
@@ -12,7 +12,7 @@ class CameraConstraint : ZilchComponent
     [Property] var Right : Real = 20;
     [Property] var Offset : Real2;
     
-    var TargetObject : Cog = null;
+    var TargetObject : Cog;
     
     function Initialize(init : CogInitializer)
     {
