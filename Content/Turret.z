@@ -160,7 +160,7 @@ class TowerLogic : ZilchComponent
             var end = this.BeamEndObject.Transform.WorldTranslation;
             var target = this.Target.Transform.WorldTranslation;
             this.SetPosition(this.BeamEndObject, Math.Lerp(end, target, this.BeamAcceleration * event.Dt));
-            this.Target.Health.ChangeHealth(-this.DamagePerSecond * event.Dt, false);
+            this.Target.Health.ChangeHealth(-this.DamagePerSecond * event.Dt);
 
            if (this.ChargingSoundPlaying == null || this.ChargingSoundPlaying.IsPlaying == false)
             {

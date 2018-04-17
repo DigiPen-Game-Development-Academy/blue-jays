@@ -14,9 +14,6 @@ GameSession =
 	CameraViewports = 
 	{
 	},
-	ZilchState = 
-	{
-	},
 	Globals = 
 	{
 		float PlayerMaxHealth = 10,
