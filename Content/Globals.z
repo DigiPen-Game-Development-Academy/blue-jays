@@ -86,16 +86,16 @@ class Globals : ZilchComponent
     {
         // Set up spaces
         this.GameSpace = this.GameSession.CreateNamedSpace("GameSpace", Archetype.Space);
-        this.GameSpace.LoadLevel(Level.Hub);
+        this.GameSpace.LoadLevel(Level.Start );
         this.HUDSpace = this.GameSession.CreateNamedSpace("HUDSpace", Archetype.Space);
         this.HUDSpace.LoadLevel(Level.HUDLevel);
         Console.WriteLine("Game Setup {");
         foreach (var space in this.GameSession.AllSpaces) Console.WriteLine("\t[`space` : `space.CurrentLevel`],");
-        Console.WriteLine("}");
+Console.WriteLine("}");
         
         // Set up cursor
-        var obj = this.HUDSpace.CreateAtPosition(Archetype.Cursor, Real3.Zero);
-        this.SingletonCursor = obj.CursorLogic;
+    var obj = this.HUDSpace.CreateAtPosition(Archetype.Cursor, Real3.Zero);
+    this.SingletonCursor = obj.CursorLogic;
         
         // Set up stats
         this.PlayerCurrentHealth = this.PlayerMaxHealth;

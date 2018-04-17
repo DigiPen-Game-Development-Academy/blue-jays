@@ -8,6 +8,7 @@ class Fade : ZilchComponent
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         this.Owner.Sprite.Visible = true;
+     
         this.OriginalColor = this.Owner.Sprite.Color;
         
     }
