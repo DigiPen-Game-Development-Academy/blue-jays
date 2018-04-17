@@ -139,7 +139,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.00394159742, -1.93505347, 74.9990005],
+			Vec3 Translation = [1.99948502, 0.737991333, 74.9990005],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -151,7 +151,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.0993004,
+			float Size = 10.9479008,
 		},
 		EditorCameraController = 
 		{
@@ -159,7 +159,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.00394159742, -1.93505347, 24.9990005],
+			Vec3 LookTarget = [1.99948502, 0.737991333, 24.9990005],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -555,7 +555,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "DigipenBlueJyas",
+			string Name = "DigipenBlueJays",
 		},
 		EditorFlags = 
 		{
@@ -766,9 +766,39 @@ Level =
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
 		},
-		TutorialManager = 
+	},
+	Cog = 
+	{
+		LinkId = 
 		{
-			float Delay = 14,
+			uint Id = 18,
+		},
+		Named = 
+		{
+			string Name = "CardSelectName",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-1.4514842, 3.68916464, 24.9990005],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "4e7bac697bec55c5:Verdana",
+			uint FontSize = 30,
+			string Text = "Sprite Text...",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
 		},
 	},
 },

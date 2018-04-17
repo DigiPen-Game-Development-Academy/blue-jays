@@ -13,9 +13,15 @@ class CardDisplay : ZilchComponent
             // Selected
             this.Owner.Sprite.Color = Real4(1, 1, 1, 1);
             
+            var cardText = this.Space.FindObjectByName("CardSelectName");
+            
+            
             if (this.Owner.Name == "KnightCard")
             {
                 Console.WriteLine("Knight of Swords");
+                
+                //this.GameSession.CardSelectName.Text = "Knight of Swords";
+                
             }
             
             if (this.Owner.Name == "TowerCard")
@@ -25,6 +31,7 @@ class CardDisplay : ZilchComponent
             if (this.Owner.Name == "ChariotCard")
             {
                 Console.WriteLine("the Chariot");
+                
             }
 
         }

@@ -13,7 +13,7 @@ class TutorialManager : ZilchComponent
 [Property]
  var Delay : Real;
  
-
+var Text : Array[Text];
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.TextConnect);        
@@ -27,10 +27,10 @@ class TutorialManager : ZilchComponent
         if (event.DyingObject.Health != null && event.DyingObject.Health.HealthType == HealthType.EnemyMinion)
         {
             Console.WriteLine(event.DyingObject.Name);
-            this.Owner.SpriteText.Text = "Use the mouse Scroll Wheel to change Tarot. Spawn the TOWER.";
-            this.Owner.SpriteText.Visible = true;
+            var tutorial1 : Boolean = true;
         }
     }
+
 
     function OnLogicUpdate(event : UpdateEvent)
     {
