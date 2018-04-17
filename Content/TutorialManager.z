@@ -1,15 +1,35 @@
+class DeathEvent :ZilchEvent
+{
+    sends Death:DeathEvent;
+    var DyingObject : Cog;
+    constructor (dyingobject:Cog):base ()
+    {
+        this.DyingObject = dyingobject;
+    }
+}
 class TutorialManager : ZilchComponent
 {
 
 [Property]
  var Delay : Real;
-    
+ 
+
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.TextConnect);        
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         
-        this.Owner.SpriteText.Visible = false;
+        
+    }
+
+    function OnDeath(event : DeathEvent)
+    {
+        if (event.DyingObject.Health != null && event.DyingObject.Health.HealthType == HealthType.EnemyMinion)
+        {
+            Console.WriteLine(event.DyingObject.Name);
+            this.Owner.SpriteText.Text = "Use the mouse Scroll Wheel to change Tarot. Spawn the TOWER.";
+            this.Owner.SpriteText.Visible = true;
+        }
     }
 
     function OnLogicUpdate(event : UpdateEvent)
@@ -17,6 +37,14 @@ class TutorialManager : ZilchComponent
         if (this.Delay > 0.0)
         {
             this.Delay -= event.Dt;
+        }
+        
+        Zero.Connect(this.GameSession, Events.Death, this.OnDeath);
+        this.Owner.SpriteText.Visible = false;
+        
+        if(this.Space.CurrentLevel == Level.Find("Fool"))
+        {
+            this.Owner.Destroy();
         }
     }
 
@@ -27,9 +55,13 @@ class TutorialManager : ZilchComponent
     {
                 if (this.Delay <= 0.0)
         {
+            
             this.Owner.SpriteText.Text = "Left-Click to spawn a Tarot Card. Try Spawing the KNIGHT OF SWORDS.";
             this.Owner.SpriteText.Visible = true;
+            
         }
+        
+
     }
 
 }

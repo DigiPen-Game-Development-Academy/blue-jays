@@ -12,6 +12,21 @@ class CardDisplay : ZilchComponent
         {
             // Selected
             this.Owner.Sprite.Color = Real4(1, 1, 1, 1);
+            
+            if (this.Owner.Name == "KnightCard")
+            {
+                Console.WriteLine("Knight of Swords");
+            }
+            
+            if (this.Owner.Name == "TowerCard")
+            {
+                Console.WriteLine("the Tower");
+            }
+            if (this.Owner.Name == "ChariotCard")
+            {
+                Console.WriteLine("the Chariot");
+            }
+
         }
         else
         {

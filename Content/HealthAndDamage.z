@@ -46,7 +46,14 @@ class DoOnCollide : ZilchComponent
             {
                 var seq = Action.Sequence(this.Owner.Actions);
                 Action.Delay(seq, this.DestroyDelay);
-                Action.Call(seq, this.Owner.Destroy);
+                if (this.Owner.Health != null)
+                {
+                    Action.Call(seq, this.Owner.Health.Die);
+                }
+                else
+                {
+                    Action.Call(seq, this.Owner.Destroy);
+                }
             }
             
             if (this.DeactivateSelf)
@@ -151,6 +158,7 @@ class Health : ZilchComponent
     {
         if (this.Dead) return;
         this.Dead = true;
+        this.GameSession.DispatchEvent(Events.Death, DeathEvent(this.Owner));
          // If the sound is playing
             if (this.DamageSoundPlaying != null && this.DamageSoundPlaying.IsPlaying)
             {
