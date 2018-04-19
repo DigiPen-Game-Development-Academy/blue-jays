@@ -8,17 +8,26 @@ class BossShoot : ZilchComponent
     [Property] var ShootSpin : Real = 90;
     [Property] var Projectile : Archetype = Archetype.Arrow;
     var TimeTillShoot : Real;
+    var Active : Boolean = true;
     
     var RNG : Random = new Random();
+    
+        function OnAnimation(event : AnimationEvent)
+    {
+        this.Active =!event.Starting;
+    }
     
     function Initialize(init : CogInitializer)
     {
         this.TimeTillShoot = this.TimeBetweenShots;
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Space, Events.Animation, this.OnAnimation);
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        if (this.Active ==false) return;
+        
         var player = this.GameSession.Globals.SingletonPlayer;
         if (player == null) return;
         
@@ -49,6 +58,8 @@ class BossShoot : ZilchComponent
 
 class BossUltimate : ZilchComponent
 {
+    var Active : Boolean = true;
+    
     [Property] var Projectile : Archetype;
     
     [Property] var RandomRoseLocationSize : Real2 = Real2(10, 7.5);
@@ -71,6 +82,11 @@ class BossUltimate : ZilchComponent
     
     var RandomRoseLocation : Real3;
     
+    function OnAnimation(event : AnimationEvent)
+    {
+        this.Active =!event.Starting;
+    }
+    
     function Initialize(init : CogInitializer)
     {
         this.GameSession.Globals.SingletonFool = this;
@@ -80,6 +96,8 @@ class BossUltimate : ZilchComponent
     
     function OnLogicUpdate(event : UpdateEvent)
     {
+        if (this.Active ==false) return;
+
         if (this.Attacking)
         {
             this.Timer -= event.Dt;

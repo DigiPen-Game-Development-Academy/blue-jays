@@ -17,6 +17,8 @@ class PigeonNPC : ZilchComponent
     [Property] var ChaseMoveSpeed : Real = 10.0;
     [Property] var ChaseTurnSpeed : Real = 3.0;
     
+    var Active : Boolean = true;
+    
         [Property]
     var FlappingSoundToPlay : SoundCue;
     // We will set the sound that is currently playing in code
@@ -28,10 +30,18 @@ class PigeonNPC : ZilchComponent
     var TurnTimer : Real;
     var RNG : Random = new Random();
     
+    function OnAnimation(event : AnimationEvent)
+    {
+        this.Active =!event.Starting;
+    }
+    
     function Initialize(init : CogInitializer)
     {
+        Zero.Connect(this.Space, Events.Animation, this.OnAnimation);
+        
         // We need to update the enemy's behavior every logic update
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        
         this.Space.LevelSettings.PigeonCounter.PigeonCount+=1;
     }
     function PlayFlappingSound()
@@ -52,6 +62,8 @@ class PigeonNPC : ZilchComponent
     }
     function OnLogicUpdate(event: UpdateEvent)
     {
+        if (this.Active ==false) return;
+        
         this.Velocity = this.Owner.RigidBody.Velocity.XY;
         
         if (this.Target != null)

@@ -7,9 +7,16 @@ class FoolMovement : ZilchComponent
     [Property] var MaxY : Real = 7.0;
     [Property] var MinY : Real = -7.0;
     [Property] var MinX : Real = -10.0;
+    var Active : Boolean = true;
     
     var StartPosition : Real3;
     var Direction : Real3;
+    
+    
+    function OnAnimation(event : AnimationEvent)
+    {
+        this.Active =!event.Starting;
+    }
     
     function Initialize(init : CogInitializer)
     {
@@ -18,10 +25,13 @@ class FoolMovement : ZilchComponent
         // track where the fool started and how far he has moved
         this.StartPosition = this.Owner.Transform.Translation;
         this.Owner.RigidBody.Velocity = Real3(0,1,0);
+        Zero.Connect(this.Space, Events.Animation, this.OnAnimation);
     }
 
     function PaceBackAndForth(event: UpdateEvent)
     {
+        if (this.Active ==false) return;
+        
         var pos = this.Owner.Transform.WorldTranslation;
         
         if (this.Direction == Real3.Zero)
