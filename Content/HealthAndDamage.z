@@ -209,6 +209,7 @@ class Health : ZilchComponent
         else
         {
             // @missing Death effect
+            
             this.Owner.Destroy();
         }
     }

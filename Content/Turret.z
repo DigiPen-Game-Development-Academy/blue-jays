@@ -161,26 +161,13 @@ class TowerLogic : ZilchComponent
             var target = this.Target.Transform.WorldTranslation;
             this.SetPosition(this.BeamEndObject, Math.Lerp(end, target, this.BeamAcceleration * event.Dt));
             this.Target.Health.ChangeHealth(-this.DamagePerSecond * event.Dt);
-
-          /* if (this.ChargingSoundPlaying == null || this.ChargingSoundPlaying.IsPlaying == false)
-            {
-                // Play the sound and remember which sound is playing (includes looping)
-                this.ChargingSoundPlaying = this.Space.SoundSpace.PlayCue(this.ChargingSoundToPlay);
-            }
-            */
-            
-            
         }
         else
         {
             this.SetPosition(this.BeamEndObject, this.Target.Transform.WorldTranslation);
             
-            /*if (this.ChargingSoundPlaying != null && this.ChargingSoundPlaying.IsPlaying)
-            {
-                // Stop the sound that is playing
-                this.ChargingSoundPlaying.Stop();
-            }
-            */
+           
+            
             // @missing Charging sound effect and visual effect
             //what kind of charge effect
             
@@ -204,6 +191,12 @@ class TowerLogic : ZilchComponent
     }
     function EnableBeam()
     {
+        if (this.ChargingSoundPlaying != null && this.ChargingSoundPlaying.IsPlaying)
+            {
+                // Stop the sound that is playing
+                this.ChargingSoundPlaying.Stop();
+            }
+         
         // If the sound is NOT playing
         if (this.ShootingSoundPlaying == null || this.ShootingSoundPlaying.IsPlaying == false)
         {
@@ -217,6 +210,12 @@ class TowerLogic : ZilchComponent
     }
     function DisableBeam()
     {
+        if (this.ChargingSoundPlaying == null || this.ChargingSoundPlaying.IsPlaying == false)
+            {
+                // Play the sound and remember which sound is playing (includes looping)
+                this.ChargingSoundPlaying = this.Space.SoundSpace.PlayCue(this.ChargingSoundToPlay);
+            }
+        
         // If the sound is playing
         if (this.ShootingSoundPlaying != null && this.ShootingSoundPlaying.IsPlaying)
         {

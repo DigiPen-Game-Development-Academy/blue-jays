@@ -53,10 +53,10 @@ Cog =
 	},
 	TowerLogic = 
 	{
-		float TimeBetweenShots = 4,
+		float TimeBetweenShots = 3,
 		float ShootDuration = 2,
 		float BeamAcceleration = 10,
-		float DamagePerSecond = 3,
+		float DamagePerSecond = 2,
 		string ShootingSoundToPlay = "5ada0c41e479780f:TowerShoot",
 		string ChargingSoundToPlay = "5ab6971f6c9a96d7:TowerCharge2",
 	},
