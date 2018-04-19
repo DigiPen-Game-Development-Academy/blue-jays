@@ -107,9 +107,9 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.379928112, -1.98106647, 50],
+			Vec3 Translation = [0.528752804, 4.50295925, 49.4971657],
 			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
+			Quat Rotation = [-0.0479123853, 0.0522756614, 0.0025109807, 0.997479558],
 		},
 		Camera = 
 		{
@@ -119,15 +119,15 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 18.268383,
+			float Size = 44.9329338,
 		},
 		EditorCameraController = 
 		{
-			ControlMode ControlMode = ZPlane,
+			ControlMode ControlMode = Orbit,
 			float LookDistance = 50,
-			float VerticalAngle = 0,
-			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.379928112, -1.98106647, -2.08409219e-08],
+			float VerticalAngle = 0.0959931239,
+			float HorizontalAngle = -0.104719706,
+			Vec3 LookTarget = [-4.6736064, -0.289329141, -2.36077014e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -137,6 +137,40 @@ Level =
 			bool DrawDebugObjects = true,
 			bool DrawEditorIcons = true,
 			bool Wireframe = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 4,
+		},
+		Named = 
+		{
+			string Name = "SpriteText",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-7.41457987, -6.84571552, 30],
+			Vec3 Scale = [1.50315166, 1.50315166, 1.50315154],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.539999962, 0.539999962, 0.539999962, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "4e7bac697bec55c5:Verdana",
+			uint FontSize = 19,
+			string Text = "All content © 2018 DigiPen (USA) Corporation, all rights reserved.",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
 		},
 	},
 	Cog = 
@@ -175,7 +209,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 4,
+			uint Id = 5,
 		},
 		Named = 
 		{
@@ -210,7 +244,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 6,
 		},
 		Named = 
 		{
@@ -251,7 +285,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 6,
+					uint Id = 7,
 				},
 				Named = 
 				{
@@ -264,8 +298,8 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0.333333343, 2.66666675, -1],
-					Vec3 Scale = [133.333344, 133.333344, 1],
+					Vec3 Translation = [-4.47034836e-08, 2.66666651, -2.86702538],
+					Vec3 Scale = [133.333328, 133.333328, 3.94128156],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				Sprite = 
@@ -298,7 +332,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 8,
 		},
 		Named = 
 		{
@@ -339,7 +373,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 8,
+					uint Id = 9,
 				},
 				Named = 
 				{
@@ -389,7 +423,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 9,
+					uint Id = 10,
 				},
 				Named = 
 				{
@@ -425,7 +459,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 10,
+			uint Id = 11,
 		},
 		Named = 
 		{
@@ -466,7 +500,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 11,
+					uint Id = 12,
 				},
 				Named = 
 				{

@@ -31,7 +31,7 @@ Level =
 			Vec2 Offset = [0, 0],
 			Vec2 Size = [1, 1],
 			int Layer = 1,
-			bool Active = true,
+			bool Active = false,
 			bool Blocking = true,
 			CogPath Renderer = 
 			{
@@ -458,7 +458,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.99222803, -3.43054962, 9],
+			Vec3 Translation = [0.250406265, -3.06116295, 9],
 			Vec3 Scale = [0.756883621, 0.756883621, 0.756883621],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -474,10 +474,14 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "57343753bb4eaaec:NotoSans-Regular",
 			uint FontSize = 30,
-			string Text = "Sprite Text...",
-			TextAlign Align = Left,
+			string Text = """Left-Click to spawn a Tarot Card. Try Spawing the KNIGHT OF SWORDS.""",
+			TextAlign Align = Center,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
+		},
+		TutorialManager = 
+		{
+			float Delay = 0,
 		},
 	},
 	Cog = 

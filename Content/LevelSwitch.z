@@ -11,6 +11,7 @@ class LevelSwitch : ZilchComponent
         if(Zero.Keyboard.KeyIsDown(Keys.E))
         {
             this.Space.LoadLevel(Level.Hub);
+            this.GameSession.Globals.HUDSpace.LevelSettings.CameraViewport.Active = true;
         }
     }
 }

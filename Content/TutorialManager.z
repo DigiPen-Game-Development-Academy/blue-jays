@@ -16,9 +16,10 @@ class TutorialManager : ZilchComponent
 var Text : Array[Text];
     function Initialize(init : CogInitializer)
     {
-        Zero.Connect(this.Space, Events.LogicUpdate, this.TextConnect);        
-        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+                
         
+        Zero.Connect(this.GameSession, Events.Death, this.OnDeath);
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         
     }
 
@@ -26,7 +27,9 @@ var Text : Array[Text];
     {
         if (event.DyingObject.Health != null && event.DyingObject.Health.HealthType == HealthType.EnemyMinion)
         {
+            
             Console.WriteLine(event.DyingObject.Name);
+            Zero.Connect(this.Space, Events.LogicUpdate, this.TextConnect);
             var tutorial1 : Boolean = true;
         }
     }
@@ -39,7 +42,6 @@ var Text : Array[Text];
             this.Delay -= event.Dt;
         }
         
-        Zero.Connect(this.GameSession, Events.Death, this.OnDeath);
         this.Owner.SpriteText.Visible = false;
         
         if(this.Space.CurrentLevel == Level.Find("Fool"))
