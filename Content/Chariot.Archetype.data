@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
+		Vec3 Translation = [0, 0, 0.5],
 		Vec3 Scale = [8, 2, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -24,6 +24,11 @@ Cog =
 	ChariotLogic = 
 	{
 		Vec3 Offset = [0, 0, 0],
+	},
+	AutoDepth = 
+	{
+		bool Local = false,
+		float Offset = 0.5,
 	},
 	Hierarchy = 
 	{
@@ -73,6 +78,7 @@ Cog =
 			},
 			Health = 
 			{
+				string Level = "",
 				Enum HealthType = PlayerMinion,
 				float Health = 100,
 				bool Debug = false,
@@ -101,7 +107,7 @@ Cog =
 					},
 					Transform = 
 					{
-						Vec3 Translation = [0.0692917407, 1.56694615, 0.00999999978],
+						Vec3 Translation = [0.0692917407, 1.56694615, 0.00999999046],
 						Vec3 Scale = [0.15625, 0.625, 1],
 						Quat Rotation = [0, 0, 0, 1],
 					},
@@ -144,7 +150,7 @@ Cog =
 					},
 					Transform = 
 					{
-						Vec3 Translation = [0.0695911199, 1.56584895, 0.00499999989],
+						Vec3 Translation = [0.0695911199, 1.56584895, 0.00499999523],
 						Vec3 Scale = [0.15625, 0.625, 1],
 						Quat Rotation = [0, 0, 0, 1],
 					},
