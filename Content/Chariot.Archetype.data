@@ -25,16 +25,6 @@ Cog =
 	{
 		Vec3 Offset = [0, 0, 0],
 	},
-	DoOnCollide = 
-	{
-		Enum TeamToAffect = Enemy,
-		float HealthToChange = -5,
-		float FateToChange = 0,
-		bool DeactivateSelf = false,
-		bool AttachSelf = false,
-		bool DestroySelf = true,
-		float DestroyDelay = 0,
-	},
 	Hierarchy = 
 	{
 		Cog = 
@@ -86,7 +76,16 @@ Cog =
 				Enum HealthType = PlayerMinion,
 				float Health = 100,
 				bool Debug = false,
-				string DamageSoundToPlay = "5ada0c41e47a9076:Damage",
+			},
+			DoOnCollide = 
+			{
+				Enum TeamToAffect = Enemy,
+				float HealthToChange = -10,
+				float FateToChange = 0,
+				bool DeactivateSelf = false,
+				bool AttachSelf = false,
+				bool DestroySelf = true,
+				float DestroyDelay = 0,
 			},
 			Hierarchy = 
 			{
