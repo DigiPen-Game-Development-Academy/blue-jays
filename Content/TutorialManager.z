@@ -47,7 +47,7 @@ var Text : Array[Text];
     
     {
 
-        if (pigeonDeathCounter == 1)
+        /*if (pigeonDeathCounter == 1)
         {
             this.Owner.SpriteText.Text = "Each Tarot Card uses a certain amount of Fate. The blue banner represents how \n much fate you have left. The more powerful the card, the more fate it uses.";
         } 
@@ -66,7 +66,7 @@ var Text : Array[Text];
         if (pigeonDeathCounter == 4)
         {
             this.Owner.SpriteText.Text = "When you're ready, go to the HERMIT in the corner to begin the battle \n against the FOOL";
-        }
+        }*/
     }
 
 }
