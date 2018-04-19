@@ -139,7 +139,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.359677613, 0.49409315, 74.9990005],
+			Vec3 Translation = [0.435523391, 0.589304507, 74.9990005],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -151,7 +151,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 13.3717937,
+			float Size = 12.0993004,
 		},
 		EditorCameraController = 
 		{
@@ -159,7 +159,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.359677613, 0.49409315, 24.9990005],
+			Vec3 LookTarget = [0.435523391, 0.589304507, 24.9990005],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -458,7 +458,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.250406265, -3.06116295, 9],
+			Vec3 Translation = [0.200270563, -3.52909184, 9],
 			Vec3 Scale = [0.756883621, 0.756883621, 0.756883621],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -472,7 +472,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "57343753bb4eaaec:NotoSans-Regular",
+			string FontName = "5a395c1f9df5eb63:AGENCYR",
 			uint FontSize = 30,
 			string Text = "Left-Click to spawn a Tarot Card. Try Spawing the KNIGHT OF SWORDS.",
 			TextAlign Align = Center,
