@@ -31,7 +31,7 @@ Level =
 			Vec2 Offset = [0, 0],
 			Vec2 Size = [1, 1],
 			int Layer = 1,
-			bool Active = false,
+			bool Active = true,
 			bool Blocking = true,
 			CogPath Renderer = 
 			{
@@ -474,14 +474,13 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "57343753bb4eaaec:NotoSans-Regular",
 			uint FontSize = 30,
-			string Text = """Left-Click to spawn a Tarot Card. Try Spawing the KNIGHT OF SWORDS.""",
+			string Text = "Left-Click to spawn a Tarot Card. Try Spawing the KNIGHT OF SWORDS.",
 			TextAlign Align = Center,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
 		},
 		TutorialManager = 
 		{
-			float Delay = 0,
 		},
 	},
 	Cog = 
