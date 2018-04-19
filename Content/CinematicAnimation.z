@@ -44,12 +44,12 @@ class CinematicAnimation : ZilchComponent
             this.Space.DispatchEvent(Events.Animation, AnimationEvent(true));
             
             var sequence = Actions.Sequence(this.Owner.Actions);
-            Actions.Delay(sequence,3);
+            Actions.Delay(sequence,1.5);
             Actions.Property(
                 sequence,
                 @this.Owner.Camera.Size,
                 this.Owner.Camera.Size + 11,
-                3,
+                1.5,
                 Ease.SinOut);
             
             Action.Call(sequence, this.FinishWithFoolCinematic);
