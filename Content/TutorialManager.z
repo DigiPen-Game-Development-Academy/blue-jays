@@ -11,27 +11,32 @@ class TutorialManager : ZilchComponent
 {
 
 
- 
-var Text : Array[Text];
     function Initialize(init : CogInitializer)
     {
         
         Zero.Connect(this.GameSession, Events.Death, this.OnDeath);
            
         
-        if(this.Space.CurrentLevel == Level.Find("Fool"))
-        {
-            this.GameSession.Globals.HUDSpace.SpriteText.Visible=false;
-        }
+
+            Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         
     }
 
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.GameSession.Globals.GameSpace.CurrentLevel == Level.Find("Fool"))
+        {
+            this.Owner.Destroy();
+        }
+    }
+    
+    var PigeonDeathCounter :Real = 0;
     function OnDeath(event : DeathEvent)
     {
-        var pigeonDeathCounter = 0;
+        
         if (event.DyingObject.Health != null && event.DyingObject.Health.HealthType == HealthType.EnemyMinion)
         {
-            pigeonDeathCounter += 1;
+            this.PigeonDeathCounter += 1;
             Console.WriteLine(event.DyingObject.Name);
             Zero.Connect(this.Space, Events.LogicUpdate, this.TextConnect);
             
@@ -44,29 +49,28 @@ var Text : Array[Text];
    
     
      function TextConnect(event : UpdateEvent)
-    
     {
-
-        /*if (pigeonDeathCounter == 1)
+        if (this.PigeonDeathCounter == 1)
         {
             this.Owner.SpriteText.Text = "Each Tarot Card uses a certain amount of Fate. The blue banner represents how \n much fate you have left. The more powerful the card, the more fate it uses.";
         } 
 
-        if (pigeonDeathCounter == 2)
+        if (this.PigeonDeathCounter == 2)
         {
             this.Owner.SpriteText.Text = "Use the scroll wheel to change Tarot Cards. Try spawning the TOWER.";
             
         }
         
-        if (pigeonDeathCounter == 3)
+        if (this.PigeonDeathCounter == 3)
         {
             this.Owner.SpriteText.Text = "Use the last Card, the CHARIOT for a powerful impact!";
         } 
 
-        if (pigeonDeathCounter == 4)
+        if (this.PigeonDeathCounter == 4)
         {
             this.Owner.SpriteText.Text = "When you're ready, go to the HERMIT in the corner to begin the battle \n against the FOOL";
-        }*/
+        }
+        
     }
 
 }
