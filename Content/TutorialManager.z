@@ -10,60 +10,63 @@ class DeathEvent :ZilchEvent
 class TutorialManager : ZilchComponent
 {
 
-[Property]
- var Delay : Real;
+
  
 var Text : Array[Text];
     function Initialize(init : CogInitializer)
     {
-                
         
         Zero.Connect(this.GameSession, Events.Death, this.OnDeath);
-        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+           
+        
+        if(this.Space.CurrentLevel == Level.Find("Fool"))
+        {
+            this.GameSession.Globals.HUDSpace.SpriteText.Visible=false;
+        }
         
     }
 
     function OnDeath(event : DeathEvent)
     {
+        var pigeonDeathCounter = 0;
         if (event.DyingObject.Health != null && event.DyingObject.Health.HealthType == HealthType.EnemyMinion)
         {
-            
+            pigeonDeathCounter += 1;
             Console.WriteLine(event.DyingObject.Name);
             Zero.Connect(this.Space, Events.LogicUpdate, this.TextConnect);
-            var tutorial1 : Boolean = true;
+            
+            
         }
     }
 
 
-    function OnLogicUpdate(event : UpdateEvent)
-    {
-        if (this.Delay > 0.0)
-        {
-            this.Delay -= event.Dt;
-        }
-        
-        this.Owner.SpriteText.Visible = false;
-        
-        if(this.Space.CurrentLevel == Level.Find("Fool"))
-        {
-            this.Owner.Destroy();
-        }
-    }
 
    
     
      function TextConnect(event : UpdateEvent)
     
     {
-                if (this.Delay <= 0.0)
+
+        if (pigeonDeathCounter == 1)
         {
-            
-            this.Owner.SpriteText.Text = "Left-Click to spawn a Tarot Card. Try Spawing the KNIGHT OF SWORDS.";
-            this.Owner.SpriteText.Visible = true;
+            this.Owner.SpriteText.Text = "Each Tarot Card uses a certain amount of Fate. The blue banner represents how \n much fate you have left. The more powerful the card, the more fate it uses.";
+        } 
+
+        if (pigeonDeathCounter == 2)
+        {
+            this.Owner.SpriteText.Text = "Use the scroll wheel to change Tarot Cards. Try spawning the TOWER.";
             
         }
         
+        if (pigeonDeathCounter == 3)
+        {
+            this.Owner.SpriteText.Text = "Use the last Card, the CHARIOT for a powerful impact!";
+        } 
 
+        if (pigeonDeathCounter == 4)
+        {
+            this.Owner.SpriteText.Text = "When you're ready, go to the HERMIT in the corner to begin the battle \n against the FOOL";
+        }
     }
 
 }

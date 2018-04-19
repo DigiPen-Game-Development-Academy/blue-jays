@@ -481,7 +481,6 @@ Level =
 		},
 		TutorialManager = 
 		{
-			float Delay = 0,
 		},
 	},
 	Cog = 
