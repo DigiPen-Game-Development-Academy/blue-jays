@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-0.00821781158, 9.9163866, -0.0991638675],
+		Vec3 Translation = [0, 0, 0],
 		Vec3 Scale = [2, 1, 2.14220238],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = true,
+		bool Mode2D = false,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -89,7 +89,6 @@ Cog =
 		Enum HealthType = Boss,
 		float Health = 100,
 		bool Debug = true,
-		string DamageSoundToPlay = "",
 	},
 	BossShoot = 
 	{
