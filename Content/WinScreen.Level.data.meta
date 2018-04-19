@@ -3,7 +3,7 @@ DataContent =
 	DataBuilder = 
 	{
 		string Name = "WinScreen",
-		uint64 ResourceId = 5aa365804d471a52,
+		uint64 ResourceId = 5aa362d9b88dad9d,
 		string LoaderType = "Level",
 		uint Version = 0,
 		bool ShowInEditor = true,
