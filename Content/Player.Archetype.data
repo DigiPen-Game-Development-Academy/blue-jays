@@ -65,10 +65,10 @@ Cog =
 	},
 	Health = 
 	{
+		string Level = "5aa296fcf4715c3c:WinScreen",
 		Enum HealthType = Player,
 		float Health = 10,
 		bool Debug = false,
-		string DamageSoundToPlay = "5ada0c41e47a9076:Damage",
 	},
 	PlayerController = 
 	{

@@ -86,6 +86,7 @@ Cog =
 	},
 	Health = 
 	{
+		string Level = "5aa296fcf4715c3c:WinScreen",
 		Enum HealthType = Boss,
 		float Health = 100,
 		bool Debug = true,

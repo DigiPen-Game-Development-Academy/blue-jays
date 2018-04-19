@@ -74,7 +74,7 @@ class Health : ZilchComponent
 {
     sends Damaged : ZilchEvent;
     sends Healed : ZilchEvent;
-    
+    [Property] var Level : Level;
     [Property] var HealthType : HealthType = HealthType.PlayerMinion;
     var Team : Team {
         get {
@@ -206,6 +206,7 @@ class Health : ZilchComponent
             {
                 Console.WriteLine("AHHHHH");
                 this.DieEffect("Fool");
+                 this.Space.LoadLevel(this.Level);
             }
             
         }

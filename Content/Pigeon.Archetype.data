@@ -65,6 +65,7 @@ Cog =
 	},
 	Health = 
 	{
+		string Level = "5aa296fcf4715c3c:WinScreen",
 		Enum HealthType = EnemyMinion,
 		float Health = 3,
 		bool Debug = false,
