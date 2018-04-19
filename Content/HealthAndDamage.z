@@ -157,6 +157,7 @@ class Health : ZilchComponent
         {
             // Damaged
             this.Owner.DispatchDown(Events.Damaged, ZilchEvent());
+            this.Space.SoundSpace.PlayCue(SoundCue.Damage);
             
      
         }
@@ -174,6 +175,8 @@ class Health : ZilchComponent
         else if (this.HealthType == HealthType.Boss)
         {
             this.GameSession.Globals.BossCurrentHealth = this.Health;
+            this.Space.SoundSpace.PlayCue(SoundCue.Damage);
+            
         }
     }
     
