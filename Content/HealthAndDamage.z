@@ -114,13 +114,41 @@ class Health : ZilchComponent
         
         if (this.Health <= 0) this.Die();
     }
-     [Property]
-    var DamageSoundToPlay : SoundCue;
+   
     // We will set the sound that is currently playing in code
     var DamageSoundPlaying : SoundInstance;
-    
+    var Flashing : Boolean;
+    function DieEffect(nameToSearch : String)
+    {
+         var mainSprite = this.Owner.FindChildByName(nameToSearch);
+           //Botom dissapear
+        var seq = Action.Sequence(this.Owner.Actions);
+
+        var fadOut = Action.Group(seq);
+        
+        var fadIn = Action.Group(seq);
+        
+        var shrink = Action.Group(seq);
+        
+        //Action.Delay(seq,5);
+        //BottomReapear
+        //Action.Property(delyGame @this.Space.TimeSpace.TimeScale, Real ())
+        
+        Action.Property(fadIn, @this.Owner.Sprite.Color, Real4(255, 255, 255, 1), 1.0, Ease.Linear);
+        //MainSpriteReapear
+        Action.Property(fadIn, @mainSprite.Sprite.Color, Real4(255, 255, 255, 1), 1.0, Ease.Linear);
+     
+        Action.Property(shrink, @this.Owner.Transform.Scale, Real3 (0.5, 0.5, 0.5),1.0, Ease.QuadInOut);
+        
+        Action.Property(shrink, @mainSprite.Transform.Scale, Real3 (0.5, 0.5, 0.5),1.0, Ease.Linear);
+        
+        Action.Property(seq, @this.Flashing, false, 0, Ease.Linear);
+        
+        Action.Call(seq, this.LoadHub);
+    }
     function ChangeHealth(amount : Real)
     {
+        
         if (this.Debug) Console.WriteLine("`this.Owner.Name`: `this.Health` + `amount` = `this.Health`");
         
         this.Health += amount;
@@ -129,12 +157,8 @@ class Health : ZilchComponent
         {
             // Damaged
             this.Owner.DispatchDown(Events.Damaged, ZilchEvent());
-            //this.Space.SoundSpace.PlayCue(SoundCue.Damage);
-            if (this.DamageSoundPlaying == null || this.DamageSoundPlaying.IsPlaying == false)
-            {
-                // Play the sound and remember which sound is playing (includes looping)
-                this.DamageSoundPlaying = this.Space.SoundSpace.PlayCue(this.DamageSoundToPlay);
-            }
+            
+     
         }
         else if (amount > 0)
         {
@@ -153,24 +177,23 @@ class Health : ZilchComponent
         }
     }
     
+    function LoadHub()
+    {
+        this.GameSession.Globals.GameSpace.LoadLevel(Level.Hub);
+    }
+    
     var Dead : Boolean;
     function Die()
     {
         if (this.Dead) return;
         this.Dead = true;
         this.GameSession.DispatchEvent(Events.Death, DeathEvent(this.Owner));
-         // If the sound is playing
-            if (this.DamageSoundPlaying != null && this.DamageSoundPlaying.IsPlaying)
-            {
-                // Stop the sound that is playing
-                this.DamageSoundPlaying.Stop();
-            }
+        
         if (this.HealthType == HealthType.Player)
         {
             // @missing Death effect and lose result
             this.Space.SoundSpace.PlayCue(SoundCue.PlayerDeath);
-            
-            this.GameSession.Globals.GameSpace.LoadLevel(Level.Hub);
+            this.DieEffect("MainSprite");
         }
         else if (this.HealthType == HealthType.Boss)
         {
@@ -179,14 +202,13 @@ class Health : ZilchComponent
             if (this.GameSession.Globals.BossCurrentHealth <= 0)
             {
                 Console.WriteLine("AHHHHH");
-                this.GameSession.Globals.GameSpace.LoadLevel(Level.Hub);
+                this.DieEffect("Fool");
             }
             
         }
         else
         {
             // @missing Death effect
-            //this.Space.SoundSpace.PlayCue(SoundCue.FoolDeath); 
             this.Owner.Destroy();
         }
     }
