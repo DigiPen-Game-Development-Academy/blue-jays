@@ -180,7 +180,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.13792419, 4.55170107, -1.31665461e-08],
+			Vec3 Translation = [-1.12126493, 4.55170107, -1.31665461e-08],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -214,7 +214,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-2.27585149, -0.502025306, -1.31665461e-08],
+			Vec3 Translation = [-0.0166635513, -0.502025306, -1.31665461e-08],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -230,13 +230,18 @@ Level =
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 			string FontName = "4e7bac697bec55c5:Verdana",
 			uint FontSize = 50,
-			string Text = " Your Score:",
-			TextAlign Align = Left,
+			string Text = "Score:",
+			TextAlign Align = Center,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
 		},
 		Score = 
 		{
+			string Level = "5aa296fcf4715c3c:WinScreen",
+			Enum HealthType = Boss,
+			float Health = 10,
+			bool Debug = false,
+			int CurentSore = 0,
 		},
 	},
 	Cog = 
@@ -418,7 +423,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.57301402, 2.7444067, -1.31665461e-08],
+			Vec3 Translation = [-0.747234583, 2.7444067, -1.31665461e-08],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -456,7 +461,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.054803133, 3.04157758, -0.0304157753],
+			Vec3 Translation = [-5.64171696, 3.04157758, -0.0304157753],
 			Vec3 Scale = [1.9698478, 0.716308236, 0.895385325],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -668,7 +673,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.970584869, 3.68152261, -1.31665461e-08],
+			Vec3 Translation = [-1.07489753, 3.68152261, -1.31665461e-08],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},

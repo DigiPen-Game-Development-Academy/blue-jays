@@ -217,6 +217,7 @@ class Health : ZilchComponent
     }
     
     var Dead : Boolean;
+    var Score : Real = 0;
     function Die()
     {
         if (this.Dead) return;
@@ -227,7 +228,7 @@ class Health : ZilchComponent
         {
             // @missing Death effect and lose result
             this.Space.SoundSpace.PlayCue(SoundCue.PlayerDeath);
-            //this.DieEffect("MainSprite");
+            this.DieEffect("MainSprite");
         }
         else if (this.HealthType == HealthType.Boss)
         {
