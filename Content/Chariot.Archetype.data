@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0.5],
+		Vec3 Translation = [12.5476599, 6.93021584, 0.430697858],
 		Vec3 Scale = [8, 2, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -86,7 +86,7 @@ Cog =
 			DoOnCollide = 
 			{
 				Enum TeamToAffect = Enemy,
-				float HealthToChange = -10,
+				float HealthToChange = -15,
 				float FateToChange = 0,
 				bool DeactivateSelf = false,
 				bool AttachSelf = false,
@@ -107,7 +107,7 @@ Cog =
 					},
 					Transform = 
 					{
-						Vec3 Translation = [0.0692917407, 1.56694615, 0.00999999046],
+						Vec3 Translation = [0.0692918301, 1.56694555, 0.00999999046],
 						Vec3 Scale = [0.15625, 0.625, 1],
 						Quat Rotation = [0, 0, 0, 1],
 					},
@@ -150,7 +150,7 @@ Cog =
 					},
 					Transform = 
 					{
-						Vec3 Translation = [0.0695911199, 1.56584895, 0.00499999523],
+						Vec3 Translation = [0.0695911646, 1.56584883, 0.00499999523],
 						Vec3 Scale = [0.15625, 0.625, 1],
 						Quat Rotation = [0, 0, 0, 1],
 					},
