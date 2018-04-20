@@ -235,6 +235,9 @@ Level =
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
 		},
+		Score = 
+		{
+		},
 	},
 	Cog = 
 	{
@@ -504,6 +507,7 @@ Level =
 		},
 		Health = 
 		{
+			string Level = "",
 			Enum HealthType = Player,
 			float Health = 10,
 			bool Debug = false,

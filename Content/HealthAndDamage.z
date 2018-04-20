@@ -118,6 +118,35 @@ class Health : ZilchComponent
     // We will set the sound that is currently playing in code
     var DamageSoundPlaying : SoundInstance;
     var Flashing : Boolean;
+       function FoolDieEffect(nameToSearch : String)
+    {
+         var mainSprite = this.Owner.FindChildByName(nameToSearch);
+           //Botom dissapear
+        var seq = Action.Sequence(this.Owner.Actions);
+
+        var fadOut = Action.Group(seq);
+        
+        var fadIn = Action.Group(seq);
+        
+        var shrink = Action.Group(seq);
+        
+        //Action.Delay(seq,5);
+        //BottomReapear
+        //Action.Property(delyGame @this.Space.TimeSpace.TimeScale, Real ())
+        
+        Action.Property(fadIn, @this.Owner.Sprite.Color, Real4(255, 255, 255, 1), 1.0, Ease.Linear);
+        //MainSpriteReapear
+        Action.Property(fadIn, @mainSprite.Sprite.Color, Real4(255, 255, 255, 1), 1.0, Ease.Linear);
+     
+        Action.Property(shrink, @this.Owner.Transform.Scale, Real3 (0.5, 0.5, 0.5),1.0, Ease.QuadInOut);
+        
+        Action.Property(shrink, @mainSprite.Transform.Scale, Real3 (0.5, 0.5, 0.5),1.0, Ease.Linear);
+        
+        Action.Property(seq, @this.Flashing, false, 0, Ease.Linear);
+        
+          this.Space.LoadLevel(Level.WinScreen);
+    }
+   
     function DieEffect(nameToSearch : String)
     {
          var mainSprite = this.Owner.FindChildByName(nameToSearch);
@@ -144,9 +173,11 @@ class Health : ZilchComponent
         
         Action.Property(seq, @this.Flashing, false, 0, Ease.Linear);
         
-        Action.Call(seq, this.LoadHub);
+       
+          Action.Call(seq, this.LoadHub);
     }
     function ChangeHealth(amount : Real)
+     
     {
         
         if (this.Debug) Console.WriteLine("`this.Owner.Name`: `this.Health` + `amount` = `this.Health`");
@@ -196,17 +227,17 @@ class Health : ZilchComponent
         {
             // @missing Death effect and lose result
             this.Space.SoundSpace.PlayCue(SoundCue.PlayerDeath);
-            this.DieEffect("MainSprite");
+            //this.DieEffect("MainSprite");
         }
         else if (this.HealthType == HealthType.Boss)
         {
             // @missing Death effect and win result
             this.Space.SoundSpace.PlayCue(SoundCue.FoolDeath2);
+             this.FoolDieEffect("Fool");
             if (this.GameSession.Globals.BossCurrentHealth <= 0)
             {
                 Console.WriteLine("AHHHHH");
-                this.DieEffect("Fool");
-                 this.Space.LoadLevel(this.Level);
+               
             }
             
         }
