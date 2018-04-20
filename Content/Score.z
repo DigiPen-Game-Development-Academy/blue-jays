@@ -36,7 +36,7 @@ class Score : ZilchComponent
         }
        else if (this.HealthType == HealthType.Boss)
         {
-            this.ScoreNum +100;
+            this.ScoreNum +=100;
             this.ScoreNum ==this.CurentSore;
             if (this.GameSession.Globals.BossCurrentHealth <= 0)
             {

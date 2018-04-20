@@ -14,8 +14,8 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [0, 0, 0],
-		Vec3 Scale = [1.9698478, 0.716308236, 0.895385325],
+		Vec3 Translation = [-0.0299038887, 5.41560125, -0.0541560128],
+		Vec3 Scale = [1.96984994, 0.716307998, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -42,7 +42,7 @@ Cog =
 		bool Asleep = false,
 		bool Kinematic = false,
 		bool RotationLocked = true,
-		bool Mode2D = false,
+		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
 		Vec3 Velocity = [0, 0, 0],
@@ -65,7 +65,7 @@ Cog =
 	},
 	Health = 
 	{
-		string Level = "5aa296fcf4715c3c:WinScreen",
+		string Level = "5a57ab5a6e9c7f68:LoseScreen",
 		Enum HealthType = Player,
 		float Health = 10,
 		bool Debug = false,
